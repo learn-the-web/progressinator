@@ -7,4 +7,4 @@ class ProgressCore(AppConfig):
     verbose_name = 'Progress Core'
 
     def ready(self):
-        import progress.common.signals.property
+        import progress.common.signals.common
