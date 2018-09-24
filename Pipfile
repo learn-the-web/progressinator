@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = "3.7"
+
+[packages]
+gunicorn = "*"
+django = "*"
+psycopg2 = "*"
+django-environ = "*"
+django-debug-toolbar = "*"
+whitenoise = "*"
+brotlipy = "*"
+pdbpp = "*"
+django-localflavor = "*"
+django-lifecycle = "*"
+python-dateutil = "*"
+django-mptt = "*"
+django-mptt-admin = "*"
+django-phonenumber-field = "*"
+phonenumbers = "*"

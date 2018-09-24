@@ -1,0 +1,98 @@
+postcss := ./node_modules/postcss-cli/bin/postcss --config ./config/postcss.config.js
+uglifyjs := ./node_modules/uglify-js/bin/uglifyjs
+
+apppath := ./progress
+publicdist := ./public-dist
+public := ./public
+
+.PHONY: build-docker start stop watch-css build-css watch-build-css watch-css-copy-dist build-js watch-js watch-build-js install migrate debug django-super-user docker-shell docker-clean
+
+build-docker:
+	sudo docker-compose build
+
+start:
+	sudo docker-compose up
+
+stop:
+	sudo docker container stop ltw_progress_django_1 ltw_progress_postgres_1
+
+build-css:
+	$(postcss) $(apppath)/css/main.css --output $(publicdist)/main.min.css
+
+watch-css:
+	parallel --ungroup ::: "make watch-build-css" "make watch-css-copy-dist"
+
+watch-build-css:
+	$(postcss) $(apppath)/css/main.css --output $(publicdist)/main.min.css --watch
+
+watch-css-copy-dist:
+	fswatch --verbose -0 $(publicdist)/* | xargs -0 -n 1 -I {} cp {} $(public)/core/
+
+build-js:
+	cat $(apppath)/js/*.js | $(uglifyjs) --compress --mangle --output $(publicdist)/main.min.js
+
+watch-js:
+	fswatch --verbose -0 $(apppath)/js/*.js | xargs -0 -n 1 make watch-build-js
+
+watch-build-js:
+	cat $(apppath)/js/*.js | $(uglifyjs) --beautify --output $(publicdist)/main.min.js
+	cp $(publicdist)/main.min.js $(public)/core/
+
+install:
+	brew install node terraform fswatch yarn parallel
+	brew cask install docker
+	yarn install
+
+migrate:
+	sudo docker-compose exec django python manage.py makemigrations progress_core
+	sudo docker-compose exec django python manage.py migrate
+
+dbload:
+	sudo docker-compose exec django python manage.py loaddata data/all.json
+
+dbloadmodel:
+	sudo docker-compose exec django python manage.py loaddata data/$(MODEL).json
+
+dbdump:
+	sudo docker-compose exec django python manage.py dumpdata --indent=2 -o data/all.json progress_core
+
+dbdumpmodel:
+	sudo docker-compose exec django python manage.py dumpdata --indent=2 -o data/$(MODEL).json progress_core.$(MODEL)
+
+django-super-user:
+	sudo docker-compose exec django python manage.py createsuperuser
+
+debug:
+	# https://blog.lucasferreira.org/howto/2017/06/03/running-pdb-with-docker-and-gunicorn.html
+	# Ctrl P + Ctrl Q
+	sudo docker attach ltw_progress_django_1
+
+docker-shell:
+	sudo docker exec -it ltw_progress_django_1 bash
+
+docker-clean:
+	sudo docker system prune -f
+	sudo docker system prune -f --volumes
+
+heroku:
+	# https://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
+	heroku create --buildpack https://github.com/heroku/heroku-buildpack-python
+
+	heroku addons:create heroku-postgresql:hobby-dev
+	heroku pg:promote DATABASE_URL
+
+	heroku config:set PYTHONHASHSEED=random
+	heroku config:set WEB_CONCURRENCY=4
+	heroku config:set DJANGO_DEBUG=False
+	heroku config:set DJANGO_SETTINGS_MODULE=config.settings.prod
+	heroku config:set DJANGO_SECRET_KEY="$(openssl rand -base64 64)"
+	heroku config:set DJANGO_ADMIN_URL="$(openssl rand -base64 4096 | tr -dc 'A-HJ-NP-Za-km-z2-9' | head -c 32)/"
+
+heroku-migrate:
+	heroku run python manage.py migrate
+
+heroku-django-super-user:
+	heroku run python manage.py createsuperuser
+
+heroku-push-local-db:
+	heroku pg:push postgres://postgres@localhost:5432/ltw_progress postgresql-rugged-41494 --app floating-tundra-76216
