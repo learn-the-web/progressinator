@@ -4,6 +4,6 @@ from django.urls import reverse
 
 def signin(request):
     context = {
-        'doc_title': 'Sign in'
+        'doc_title': 'Sign in',
     }
     return render(request, 'core/signin.html', context)

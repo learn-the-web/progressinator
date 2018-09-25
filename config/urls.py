@@ -6,6 +6,7 @@ from django.conf import settings
 urlpatterns = [
     path('', include('progress.core.urls')),
     path(settings.ADMIN_URL, admin.site.urls),
+    path('', include('social_django.urls', namespace='social')),
 ]
 
 if settings.DEBUG:

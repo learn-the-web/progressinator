@@ -32,6 +32,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
     'gunicorn',
     'localflavor',
+    'social_django',
 ]
 LOCAL_APPS = [
     'progress.core',
@@ -69,6 +70,8 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -139,3 +142,23 @@ STATICFILES_DIRS = (
 
 
 ADMIN_URL = env('DJANGO_ADMIN_URL')
+
+
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/sign-in'
+LOGOUT_REDIRECT_URL = '/sign-in'
+
+SOCIAL_AUTH_POSTGRES_JSONFIELD = True
+SOCIAL_AUTH_GITHUB_KEY = '3752b529955d95f467e7'
+SOCIAL_AUTH_GITHUB_SECRET = '2dcce1345f94feddc4f4739f896b9d437566893b'
+SOCIAL_AUTH_GITHUB_SCOPE = [
+    'read:user',
+    'user:email',
+]
+# SOCIAL_AUTH_USER_MODEL = 'progress.core.models.User'
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'

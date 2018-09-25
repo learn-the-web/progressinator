@@ -18,6 +18,7 @@ RUN chown -R django /app
 
 WORKDIR /app
 
+RUN pip install --upgrade pip
 RUN pip install pipenv
 RUN pipenv install --system --deploy --ignore-pipfile
 

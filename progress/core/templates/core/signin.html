@@ -1,5 +1,5 @@
 {% extends 'default.html' %}
 
 {% block wrapper %}
-  <a class="btn" href="/">Sign in</a>
+  <a class="btn" href="{% url 'social:begin' 'github' %}">Sign in with GitHub</a>
 {% endblock %}
