@@ -1,0 +1,11 @@
+{% extends 'default.html' %}
+
+{% block wrapper %}
+  <p>{{username}}</p>
+
+  <ol>
+    {% for course in courses %}
+      <li><a href="{% url 'core:grades' course_id=course.course %}">{{course.title}}</a></li>
+    {% endfor %}
+  </ol>
+{% endblock %}

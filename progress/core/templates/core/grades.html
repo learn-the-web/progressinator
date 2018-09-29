@@ -1,5 +1,21 @@
 {% extends 'default.html' %}
 
 {% block wrapper %}
-  <p>{{username}} · {{email}}</p>
+  <p>{{username}}</p>
+
+  <h1>{{course.title}} progress</h1>
+
+  <ol>
+    {% for item in course.assessments %}
+      <li>
+        <h2>
+          {% if item.grade %}
+            {% if item.grade.grade > 0 %}✔{% else %}✘{% endif %}
+          {% endif %}
+          <a href="{{item.url}}">{{item.name}}</a>
+        </h2>
+        <p>{{item.assessment_type | title}} · {{item.grading_type | title}}{% if item.assessment_type == 'exercise' %} · <a href="https://{{username}}.github.io/{{item.id}}/">GitHub</a>{% endif %}</p>
+      </li>
+    {% endfor %}
+  </ol>
 {% endblock %}

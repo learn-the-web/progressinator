@@ -35,6 +35,10 @@ def model_to_dict(mod):
     return dic
 
 
+def build_dict_index(seq, key):
+    return dict((d[key], index) for (index, d) in enumerate(seq))
+
+
 class ChoiceEnum(Enum):
     @classmethod
     def choices(cls):
