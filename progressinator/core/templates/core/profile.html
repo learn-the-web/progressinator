@@ -1,0 +1,39 @@
+{% extends 'default.html' %}
+
+{% block wrapper %}
+  <div class="grid">
+    <section class="class unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b-1-2">
+      <div class="class-desc gutter-1-4">
+        <h2 class="class-heading gutter-1-4 push giga"><span>Progressinator API</span></h2>
+        <p class="push-1-4">Use this API Token for submitting assessments.</p>
+        <label for="api-token" class="giga push-1-2"><strong>Copy &amp; paste this token into Markbot.</strong></label>
+        <input class="tera push-1-2 island-1-2" readonly value="{{api_token}}" id="api-token">
+        <p class="milli push-0"><em>This token should be considered like a password—it should not be shared or transmitted openly.</em></p>
+      </div>
+    </section>
+    <section class="class section-lightest unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b">
+      <div class="class-desc gutter-1-4">
+        <h2 class="class-heading gutter-1-4 giga"><span>Algonquin registration</span></h2>
+        {% if current_section %}
+          <dl class="mega push-0">
+            <dt class="italic milli">Name (from GitHub)</dt>
+            <dd class="push-1-2">{{first_name}} {{last_name}}</dd>
+            <dt class="italic milli">Currently registered course</dt>
+            <dd class="push-1-2"><a href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/">{{current_course.name}} ({{current_course.course_number}})</a></dd>
+            <dt class="italic milli">Section</dt>
+            <dd class="push-1-2">{{current_section}}</dd>
+          </dl>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+
+  <section class="class gutter-1-4 pad-t-1-2 pad-b class-outside">
+    <div class="class-desc gutter-1-4">
+      <h2 class="class-heading gutter-1-4 push giga"><span>GitHub account</span></h2>
+      <p class="max-length not-centered">Your Progressinator account is connected with the “{{username}}” GitHub account.</p>
+      <a class="btn giga" href="{% url 'core:sign_out' %}">Sign out</a>
+    </div>
+  </section>
+
+{% endblock %}

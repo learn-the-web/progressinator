@@ -1,0 +1,914 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "course": "web-dev-6",
+  "title": "Web Dev 6",
+  "description": "No web projects are created by just one person—collaboration with other people is fundamental to successful websites. Teams of students organize and create large-scale websites using project management tools, version control systems, online messaging, and issue trackers.",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/",
+  "course_code": "DSN1692",
+  "year": 2018,
+  "start_week": 3,
+  "professor": {
+    "name": "Thomas",
+    "email": "thomas.bradley@algonquincollege.com",
+    "url": "https://thomasjbradley.ca",
+    "github": "thomasjbradley",
+    "office": false,
+    "office_hours": [
+      
+    ]
+  },
+  "grading_scheme": {
+    "activities": 10,
+    "exercises": 60,
+    "projects": 15,
+    "videos": 20
+  },
+  "grading_scheme_algonquin": {
+    "activities": 4,
+    "exercises": 12,
+    "projects": 84,
+    
+    "videos": 0
+    
+  },
+  "assessments": [
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+{
+  "uri": "ca.learn-the-web.exercises.team-allocation",
+  "id": "team-allocation",
+  "course": "web-dev-6",
+  "name": "Team allocation",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/week-01/#team-allocation",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.github-project-setup",
+  "id": "github-project-setup",
+  "course": "web-dev-6",
+  "name": "GitHub project setup",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/github-project-setup/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.web-app-ux",
+  "id": "web-app-ux",
+  "course": "web-dev-6",
+  "name": "Web app UX",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/week-01/#web-app-ux",
+  "assessment_type": "project",
+  "grading_type": "letter_grade",
+  "points_possible": 100
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+        
+      
+    
+
+  
+    
+      
+
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.",
+  "id": "",
+  "course": "web-dev-6",
+  "name": "Agile development process",
+  "url": "https://learn-the-web.algonquindesign.ca/topics//",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.",
+  "id": "",
+  "course": "web-dev-6",
+  "name": "Using GitHub for project management",
+  "url": "https://learn-the-web.algonquindesign.ca/topics//",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.agile-project-planning",
+  "id": "agile-project-planning",
+  "course": "web-dev-6",
+  "name": "Agile project planning",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/agile-project-planning/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.success-criteria-definitions",
+  "id": "success-criteria-definitions",
+  "course": "web-dev-6",
+  "name": "Success criteria definitions",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/week-02/#success-criteria-definitions",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.security-sniper",
+  "id": "security-sniper",
+  "course": "web-dev-6",
+  "name": "Security Sniper",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/security-sniper/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.team-check-in",
+  "id": "team-check-in",
+  "course": "web-dev-6",
+  "name": "Team check-in",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/week-03/#team-check-in",
+  "assessment_type": "project",
+  "grading_type": "letter_grade",
+  "points_possible": 100
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+        
+      
+    
+
+  
+    
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.usability-testing",
+  "id": "usability-testing",
+  "course": "web-dev-6",
+  "name": "Usability testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/usability-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.web-app-prototype",
+  "id": "web-app-prototype",
+  "course": "web-dev-6",
+  "name": "Web app prototype",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/week-04/#web-app-prototype",
+  "assessment_type": "project",
+  "grading_type": "letter_grade",
+  "points_possible": 100
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+        
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.git-graduator",
+  "id": "git-graduator",
+  "course": "web-dev-6",
+  "name": "Git Graduator",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/git-graduator/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.branch-and-pull-request",
+  "id": "branch-and-pull-request",
+  "course": "web-dev-6",
+  "name": "Branch & pull request",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/branch-and-pull-request/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+
+  
+    
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+
+  
+    
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+
+  
+    
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.usability-testing",
+  "id": "usability-testing",
+  "course": "web-dev-6",
+  "name": "Usability testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/usability-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.accessibility-testing",
+  "id": "accessibility-testing",
+  "course": "web-dev-6",
+  "name": "Accessibility testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.browser-testing",
+  "id": "browser-testing",
+  "course": "web-dev-6",
+  "name": "Browser testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.team-reflection",
+  "id": "team-reflection",
+  "course": "web-dev-6",
+  "name": "Team reflection",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/week-09/#team-reflection",
+  "assessment_type": "project",
+  "grading_type": "letter_grade",
+  "points_possible": 100
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+        
+      
+    
+
+  
+
+],
+"totals": {
+  "weeks": 9,
+  "hours": 27,
+  "homework": 30,
+  "labs": 0,
+  "videos": 2,
+  "lessons": 3,
+  "activities": 2,
+  "exercises": 6,
+  "projects": 4
+}
+}

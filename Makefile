@@ -1,7 +1,7 @@
 postcss := ./node_modules/postcss-cli/bin/postcss --config ./config/postcss.config.js
 uglifyjs := ./node_modules/uglify-js/bin/uglifyjs
 
-apppath := ./progress
+apppath := ./progressinator
 publicdist := ./public-dist
 public := ./public
 
@@ -14,7 +14,7 @@ start:
 	sudo docker-compose up
 
 stop:
-	sudo docker container stop ltw_progress_django_1 ltw_progress_postgres_1
+	sudo docker container stop progressinator_django_1 progressinator_postgres_1
 
 build-css:
 	$(postcss) $(apppath)/css/main.css --output $(publicdist)/main.min.css
@@ -65,10 +65,10 @@ django-super-user:
 debug:
 	# https://blog.lucasferreira.org/howto/2017/06/03/running-pdb-with-docker-and-gunicorn.html
 	# Ctrl P + Ctrl Q
-	sudo docker attach ltw_progress_django_1
+	sudo docker attach progressinator_django_1
 
 docker-shell:
-	sudo docker exec -it ltw_progress_django_1 bash
+	sudo docker exec -it progressinator_django_1 bash
 
 docker-clean:
 	sudo docker system prune -f
@@ -95,4 +95,4 @@ heroku-django-super-user:
 	heroku run python manage.py createsuperuser
 
 heroku-push-local-db:
-	heroku pg:push postgres://postgres@localhost:5432/ltw_progress postgresql-rugged-41494 --app floating-tundra-76216
+	heroku pg:push postgres://postgres@localhost:5432/progressinator postgresql-rugged-41494 --app floating-tundra-76216

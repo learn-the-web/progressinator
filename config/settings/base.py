@@ -10,7 +10,7 @@ DEBUG = False
 
 root = environ.Path(__file__) - 3
 SITE_ROOT = root()
-APPS_DIR = root.path('progress/')
+APPS_DIR = root.path('progressinator/')
 BASE_DIR = SITE_ROOT # For Heroku
 
 
@@ -33,9 +33,12 @@ THIRD_PARTY_APPS = [
     'gunicorn',
     'localflavor',
     'social_django',
+    'import_export',
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 LOCAL_APPS = [
-    'progress.core',
+    'progressinator.core',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -145,13 +148,13 @@ ADMIN_URL = env('DJANGO_ADMIN_URL')
 
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.github.GithubOAuth2',
     'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.github.GithubOAuth2',
 )
 
 LOGIN_REDIRECT_URL = '/'
-LOGIN_URL = '/sign-in'
-LOGOUT_REDIRECT_URL = '/sign-in'
+LOGIN_URL = '/auth/sign-in'
+LOGOUT_REDIRECT_URL = '/auth/sign-in'
 
 SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 SOCIAL_AUTH_GITHUB_KEY = '3752b529955d95f467e7'
@@ -160,5 +163,25 @@ SOCIAL_AUTH_GITHUB_SCOPE = [
     'read:user',
     'user:email',
 ]
-# SOCIAL_AUTH_USER_MODEL = 'progress.core.models.User'
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
+
+
+MARKBOT = {
+    'DESKTOP_VERSION': '7.8.0',
+    'ONLINE_VERSION': '1.0.0',
+    'PASSCODE_HASH': env('MARKBOT_PASSCODE_HASH'),
+}

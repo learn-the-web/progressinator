@@ -1,0 +1,1599 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "course": "javascript",
+  "title": "JavaScript",
+  "short_title": "JS",
+  "description": "Interaction and effects on the web are spectacular when enhanced with the JavaScript programming language. Students create motion graphics and complex interactions to enhance the user experience after learning programming basics with activities like co-op games, interactive code-based quizzes, and programming challenges.",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/",
+  "course_code": "LTW0008",
+  "year": 2018,
+  "start_week": 1,
+  "professor": {
+    "name": "Thomas",
+    "email": "thomas.bradley@algonquincollege.com",
+    "url": "https://thomasjbradley.ca",
+    "github": "thomasjbradley",
+    "office": false,
+    "office_hours": [
+      
+    ]
+  },
+  "grading_scheme": {
+    "activities": 10,
+    "exercises": 60,
+    "projects": 15,
+    "videos": 15
+  },
+  "grading_scheme_algonquin": {
+    "activities": 10,
+    "exercises": 60,
+    "projects": 15,
+    
+    "videos": 15
+    
+  },
+  "assessments": [
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+{
+  "uri": "ca.learn-the-web.videoes.javascript-syntax",
+  "id": "javascript-syntax",
+  "course": "javascript",
+  "name": "JavaScript syntax",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/javascript-syntax/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+      
+    
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.javascript-debugging",
+  "id": "javascript-debugging",
+  "course": "javascript",
+  "name": "JavaScript debugging",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/javascript-debugging/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+      
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.type-trapper",
+  "id": "type-trapper",
+  "course": "javascript",
+  "name": "Type Trapper",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/type-trapper/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.whats-yo-name",
+  "id": "whats-yo-name",
+  "course": "javascript",
+  "name": "What’s yo name?",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/whats-yo-name/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.letter-looper",
+  "id": "letter-looper",
+  "course": "javascript",
+  "name": "Letter looper",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-01/#letter-looper",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.letter-looper-triangle",
+  "id": "letter-looper-triangle",
+  "course": "javascript",
+  "name": "Letter looper triangle",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-01/#letter-looper-triangle",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.phrasal-template-generator",
+  "id": "phrasal-template-generator",
+  "course": "javascript",
+  "name": "Phrasal template generator",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-01/#phrasal-template-generator",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.logic-luminary",
+  "id": "logic-luminary",
+  "course": "javascript",
+  "name": "Logic Luminary",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/logic-luminary/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.contact-list-generator",
+  "id": "contact-list-generator",
+  "course": "javascript",
+  "name": "Contact list generator",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/contact-list-generator/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.hidden-message-fixer",
+  "id": "hidden-message-fixer",
+  "course": "javascript",
+  "name": "Hidden message fixer",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-02/#hidden-message-fixer",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.insect-injector",
+  "id": "insect-injector",
+  "course": "javascript",
+  "name": "Insect injector",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-02/#insect-injector",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.berry-blobber",
+  "id": "berry-blobber",
+  "course": "javascript",
+  "name": "Berry blobber",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-02/#berry-blobber",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.dom",
+  "id": "dom",
+  "course": "javascript",
+  "name": "Document object model",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/dom/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+      
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.loop-lancer",
+  "id": "loop-lancer",
+  "course": "javascript",
+  "name": "Loop Lancer",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/loop-lancer/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.working-with-jquery",
+  "id": "working-with-jquery",
+  "course": "javascript",
+  "name": "Working with jQuery",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/working-with-jquery/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.js-heart-css",
+  "id": "js-heart-css",
+  "course": "javascript",
+  "name": "JS ❤ CSS",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-03/#js-heart-css",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.html-rearranger",
+  "id": "html-rearranger",
+  "course": "javascript",
+  "name": "HTML rearranger",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-03/#html-rearranger",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.grain-globber",
+  "id": "grain-globber",
+  "course": "javascript",
+  "name": "Grain globber",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-03/#grain-globber",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.bug-basher",
+  "id": "bug-basher",
+  "course": "javascript",
+  "name": "Bug Basher",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/bug-basher/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.circle-mover",
+  "id": "circle-mover",
+  "course": "javascript",
+  "name": "Circle mover",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/circle-mover/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.circle-maker",
+  "id": "circle-maker",
+  "course": "javascript",
+  "name": "Circle maker",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-04/#circle-maker",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.circle-colourer",
+  "id": "circle-colourer",
+  "course": "javascript",
+  "name": "Circle colourer",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-04/#circle-colourer",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.simple-to-do-list",
+  "id": "simple-to-do-list",
+  "course": "javascript",
+  "name": "Simple to-do list",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-04/#simple-to-do-list",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.javascript-jquery-accessibility",
+  "id": "javascript-jquery-accessibility",
+  "course": "javascript",
+  "name": "JavaScript, jQuery & accessibility",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/javascript-jquery-accessibility/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.prodigious-picker",
+  "id": "prodigious-picker",
+  "course": "javascript",
+  "name": "Prodigious Picker",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/prodigious-picker/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.spacing-superstar",
+  "id": "spacing-superstar",
+  "course": "javascript",
+  "name": "Spacing Superstar",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/spacing-superstar/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.",
+  "id": "",
+  "course": "javascript",
+  "name": "Implementing ARIA",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript//",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.",
+  "id": "",
+  "course": "javascript",
+  "name": "ARIA ready?",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript//",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.",
+  "id": "",
+  "course": "javascript",
+  "name": "It’s more than just mice",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript//",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.javascript-jquery-effects",
+  "id": "javascript-jquery-effects",
+  "course": "javascript",
+  "name": "JavaScript + jQuery effects",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/javascript-jquery-effects/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+      
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.aria-activist",
+  "id": "aria-activist",
+  "course": "javascript",
+  "name": "ARIA Activist",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/aria-activist/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.bubble-popper",
+  "id": "bubble-popper",
+  "course": "javascript",
+  "name": "Bubble popper",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/bubble-popper/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.effect-triggers",
+  "id": "effect-triggers",
+  "course": "javascript",
+  "name": "Effect triggers",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-06/#effect-triggers",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.retro-sign",
+  "id": "retro-sign",
+  "course": "javascript",
+  "name": "Retro sign",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-06/#retro-sign",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.randomized-starfield-banner",
+  "id": "randomized-starfield-banner",
+  "course": "javascript",
+  "name": "Randomized starfield banner",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-06/#randomized-starfield-banner",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.bracket-bamboozler",
+  "id": "bracket-bamboozler",
+  "course": "javascript",
+  "name": "Bracket Bamboozler",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/bracket-bamboozler/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.document-defeater",
+  "id": "document-defeater",
+  "course": "javascript",
+  "name": "Document Defeater",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/document-defeater/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.jquery-waypoints-svg",
+  "id": "jquery-waypoints-svg",
+  "course": "javascript",
+  "name": "jQuery waypoints + SVG",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/jquery-waypoints-svg/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.jquery-smooth-scrolling-navigation",
+  "id": "jquery-smooth-scrolling-navigation",
+  "course": "javascript",
+  "name": "jQuery smooth scrolling navigation",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/jquery-smooth-scrolling-navigation/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.",
+  "id": "",
+  "course": "javascript",
+  "name": "Parallax, schmarallax",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript//",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.javascript-journeyer",
+  "id": "javascript-journeyer",
+  "course": "javascript",
+  "name": "JavaScript Journeyer",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/javascript-journeyer/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.responsive-infographic-paper-plan",
+  "id": "responsive-infographic-paper-plan",
+  "course": "javascript",
+  "name": "Responsive infographic paper plan",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-08/#responsive-infographic-paper-plan",
+  "assessment_type": "paper",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.responsive-infographic",
+  "id": "responsive-infographic",
+  "course": "javascript",
+  "name": "Responsive infographic",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-08/#responsive-infographic",
+  "assessment_type": "project",
+  "grading_type": "letter_grade",
+  "points_possible": 100
+  
+}
+
+        
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.browser-testing",
+  "id": "browser-testing",
+  "course": "javascript",
+  "name": "Browser testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.accessibility-testing",
+  "id": "accessibility-testing",
+  "course": "javascript",
+  "name": "Accessibility testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+}
+
+      
+    
+
+  
+
+  
+  
+],
+"totals": {
+  "weeks": 8,
+  "hours": 45,
+  "homework": 90,
+  "labs": 0,
+  "videos": 5,
+  "lessons": 8,
+  "activities": 10,
+  "exercises": 21,
+  "projects": 1
+}
+}

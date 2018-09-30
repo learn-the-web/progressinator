@@ -4,7 +4,7 @@ from django.conf.urls import url
 from django.conf import settings
 
 urlpatterns = [
-    path('', include('progress.core.urls')),
+    path('', include('progressinator.core.urls')),
     path(settings.ADMIN_URL, admin.site.urls),
     path('', include('social_django.urls', namespace='social')),
 ]

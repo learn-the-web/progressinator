@@ -1,17 +1,17 @@
 {
-  "name": "ltw_progress",
+  "name": "progressinator",
   "version": "0.0.1",
   "author": "Thomas J Bradley <hey@thomasjbradley.ca>",
   "engines": {
-    "node": "10.2.x",
-    "yarn": "1.7.0"
+    "node": "10.x.x",
+    "yarn": "1.x.x"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:acgd-learn-the-web/progress.git"
+    "url": "git@github.com:acgd-learn-the-web/progressinator.git"
   },
   "bugs": {
-    "url": "https://github.com/acgd-learn-the-web/progress/issues"
+    "url": "https://github.com/acgd-learn-the-web/progressinator/issues"
   },
   "devDependencies": {
     "cssnano": "^3.10.0",

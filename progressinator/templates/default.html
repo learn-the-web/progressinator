@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>{{doc_title}} · Progress · Learn the Web</title>
+  {% include 'shared/head.html' %}
+  <link href="{% static 'core/main.min.css' %}" rel="stylesheet">
+</head>
+<body>
+
+  {% include 'shared/icons.html' %}
+  {% include 'shared/icons-course.html' %}
+  {% include 'shared/icons-progress.html' %}
+  {% include 'shared/icons-topics.html' %}
+  {% include 'shared/masthead-micro.html' %}
+
+  <main role="main">
+    {% block wrapper %}{% endblock %}
+    {% include 'shared/markbot.html' %}
+  </main>
+
+  {% include 'shared/footer.html' %}
+
+  <script>{% include 'shared/fontfaceobserver.js' %}</script>
+  <script>{% include 'shared/alegreya-observer.min.js' %}</script>
+  <script>{% include 'shared/source-code-pro-observer.min.js' %}</script>
+  <script src="https://learn-the-web.algonquindesign.ca/js/common.min.js?v=progressinator/{{app_version}}"></script>
+
+</body>
+</html>

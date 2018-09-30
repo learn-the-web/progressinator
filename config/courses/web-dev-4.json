@@ -1,0 +1,1963 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "course": "web-dev-4",
+  "title": "Web Dev 4",
+  "description": "Design consistency in large websites is hard to achieve. Using visual design & code best practices, students build a cohesive library of common components, patterns, and styles. Small teams will exchange pattern libraries and demonstrate the many components by creating full page template deliverables.",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/",
+  "course_code": "DSN1678",
+  "year": 2018,
+  "start_week": 3,
+  "professor": {
+    "name": "Thomas",
+    "email": "thomas.bradley@algonquincollege.com",
+    "url": "https://thomasjbradley.ca",
+    "github": "thomasjbradley",
+    "office": false,
+    "office_hours": [
+      
+    ]
+  },
+  "grading_scheme": {
+    "activities": 10,
+    "exercises": 60,
+    "projects": 15,
+    "videos": 20
+  },
+  "grading_scheme_algonquin": {
+    "activities": 15,
+    "exercises": 65,
+    "projects": 20,
+    
+    "videos": 0
+    
+  },
+  "assessments": [
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+{
+  "uri": "ca.learn-the-web.activities.acronym-annihilator",
+  "id": "acronym-annihilator",
+  "course": "web-dev-4",
+  "name": "Acronym Annihilator",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/acronym-annihilator/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.responsive-banner",
+  "id": "responsive-banner",
+  "course": "web-dev-4",
+  "name": "Responsive banner",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-01/#responsive-banner",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-ux",
+  "id": "ecommerce-ux",
+  "course": "web-dev-4",
+  "name": "eCommerce UX",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-01/#ecommerce-ux",
+  "assessment_type": "project",
+  "grading_type": "letter_grade",
+  "points_possible": 100
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+        
+      
+    
+
+  
+    
+      
+
+  
+
+  
+  
+
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.browser-buster",
+  "id": "browser-buster",
+  "course": "web-dev-4",
+  "name": "Browser Buster",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/browser-buster/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-ux-inspiration",
+  "id": "ecommerce-ux-inspiration",
+  "course": "web-dev-4",
+  "name": "eCommerce UX inspiration",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-02/#ecommerce-ux-inspiration",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-ux-check-in",
+  "id": "ecommerce-ux-check-in",
+  "course": "web-dev-4",
+  "name": "eCommerce UX check-in",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-02/#ecommerce-ux-check-in",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+
+  
+    
+      
+
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.",
+  "id": "",
+  "course": "web-dev-4",
+  "name": "CSS variables",
+  "url": "https://learn-the-web.algonquindesign.ca/topics//",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.",
+  "id": "",
+  "course": "web-dev-4",
+  "name": "Pattern libraries",
+  "url": "https://learn-the-web.algonquindesign.ca/topics//",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.using-css-variables",
+  "id": "using-css-variables",
+  "course": "web-dev-4",
+  "name": "Using CSS variables",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/using-css-variables/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.pattern-library-set-up",
+  "id": "pattern-library-set-up",
+  "course": "web-dev-4",
+  "name": "Pattern library set-up",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/pattern-library-set-up/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.typography-colours",
+  "id": "typography-colours",
+  "course": "web-dev-4",
+  "name": "Typography & colours",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-03/#typography-colours",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.markdown",
+  "id": "markdown",
+  "course": "web-dev-4",
+  "name": "Markdown",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/markdown/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.yaml",
+  "id": "yaml",
+  "course": "web-dev-4",
+  "name": "YAML",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/yaml/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.pattern-library-readme",
+  "id": "pattern-library-readme",
+  "course": "web-dev-4",
+  "name": "Pattern library README",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/pattern-library-readme/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.making-a-new-pattern",
+  "id": "making-a-new-pattern",
+  "course": "web-dev-4",
+  "name": "Making a new pattern",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/making-a-new-pattern/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.buttons",
+  "id": "buttons",
+  "course": "web-dev-4",
+  "name": "Buttons!",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-04/#buttons",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.icons",
+  "id": "icons",
+  "course": "web-dev-4",
+  "name": "Icons",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-04/#icons",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.images-cards",
+  "id": "images-cards",
+  "course": "web-dev-4",
+  "name": "Images & cards",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-04/#images-cards",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.multi-file-patterns",
+  "id": "multi-file-patterns",
+  "course": "web-dev-4",
+  "name": "Multi-file patterns",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/multi-file-patterns/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.designing-form-errors",
+  "id": "designing-form-errors",
+  "course": "web-dev-4",
+  "name": "Designing form errors",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/designing-form-errors/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.forms",
+  "id": "forms",
+  "course": "web-dev-4",
+  "name": "Forms & fields",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-05/#forms",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.url-explorer",
+  "id": "url-explorer",
+  "course": "web-dev-4",
+  "name": "URL Explorer",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/url-explorer/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.accessibility-testing",
+  "id": "accessibility-testing",
+  "course": "web-dev-4",
+  "name": "Accessibility testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.navigations-sections",
+  "id": "navigations-sections",
+  "course": "web-dev-4",
+  "name": "Navigations & sections",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-07/#navigations-sections",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.variable-validator",
+  "id": "variable-validator",
+  "course": "web-dev-4",
+  "name": "Variable Validator",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/variable-validator/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.browser-testing",
+  "id": "browser-testing",
+  "course": "web-dev-4",
+  "name": "Browser testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.headers-footers",
+  "id": "headers-footers",
+  "course": "web-dev-4",
+  "name": "Headers & footers",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-08/#headers-footers",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+
+  
+
+  
+  
+
+  
+    
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videoes.",
+  "id": "",
+  "course": "web-dev-4",
+  "name": "Advanced CSS interactions",
+  "url": "https://learn-the-web.algonquindesign.ca/topics//",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.specificity-spy",
+  "id": "specificity-spy",
+  "course": "web-dev-4",
+  "name": "Specificity Spy",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/specificity-spy/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.javascript-less-carousel",
+  "id": "javascript-less-carousel",
+  "course": "web-dev-4",
+  "name": "JavaScript-less carousel",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/javascript-less-carousel/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.the-leftovers",
+  "id": "the-leftovers",
+  "course": "web-dev-4",
+  "name": "The leftovers",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-09/#the-leftovers",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.selector-surgeon",
+  "id": "selector-surgeon",
+  "course": "web-dev-4",
+  "name": "Selector Surgeon",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/selector-surgeon/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.building-pages-with-patterns",
+  "id": "building-pages-with-patterns",
+  "course": "web-dev-4",
+  "name": "Building pages with patterns",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/building-pages-with-patterns/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-homepage-template",
+  "id": "ecommerce-homepage-template",
+  "course": "web-dev-4",
+  "name": "Homepage template",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-10/#ecommerce-homepage-template",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.markdown-manipulator",
+  "id": "markdown-manipulator",
+  "course": "web-dev-4",
+  "name": "Markdown Manipulator",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/markdown-manipulator/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-product-list-page-template",
+  "id": "ecommerce-product-list-page-template",
+  "course": "web-dev-4",
+  "name": "Product list page template",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-11/#ecommerce-product-list-page-template",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.activities.yaml-yodeller",
+  "id": "yaml-yodeller",
+  "course": "web-dev-4",
+  "name": "YAML Yodeller",
+  "url": "https://activities.learn-the-web.algonquindesign.ca/yaml-yodeller/",
+  "assessment_type": "activity",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-checkout-form-page-template",
+  "id": "ecommerce-checkout-form-page-template",
+  "course": "web-dev-4",
+  "name": "Checkout form page template",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-12/#ecommerce-checkout-form-page-template",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.repo-setup-and-branching",
+  "id": "repo-setup-and-branching",
+  "course": "web-dev-4",
+  "name": "Repo setup & branching",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/repo-setup-and-branching/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-project-hand-off-and-documentation",
+  "id": "ecommerce-project-hand-off-and-documentation",
+  "course": "web-dev-4",
+  "name": "Project hand-off & documentation",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-13/#ecommerce-project-hand-off-and-documentation",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.ecommerce-product-details-page-template",
+  "id": "ecommerce-product-details-page-template",
+  "course": "web-dev-4",
+  "name": "Product details page template",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-13/#ecommerce-product-details-page-template",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.pattern-library-integration",
+  "id": "pattern-library-integration",
+  "course": "web-dev-4",
+  "name": "Pattern library integration",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/pattern-library-integration/",
+  "assessment_type": "lesson",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.finalized-pattern-library",
+  "id": "finalized-pattern-library",
+  "course": "web-dev-4",
+  "name": "Finalized pattern library",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-14/#finalized-pattern-library",
+  "assessment_type": "project",
+  "grading_type": "letter_grade",
+  "points_possible": 100
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+        
+      
+    
+
+  
+
+  
+
+  
+  
+
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.accessibility-testing",
+  "id": "accessibility-testing",
+  "course": "web-dev-4",
+  "name": "Accessibility testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.browser-testing",
+  "id": "browser-testing",
+  "course": "web-dev-4",
+  "name": "Browser testing",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
+  "assessment_type": "basic",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
+    
+      
+    
+
+  
+
+  
+],
+"totals": {
+  "weeks": 15,
+  "hours": 45,
+  "homework": 90,
+  "labs": 0,
+  "videos": 5,
+  "lessons": 10,
+  "activities": 8,
+  "exercises": 20,
+  "projects": 2
+}
+}

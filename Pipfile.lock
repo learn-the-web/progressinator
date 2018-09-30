@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b442ddbc9730de8580a04afd249ddfd3d11b73ed58e5520b7f0c66afd8bf1bbe"
+            "sha256": "45e3623af3bf06a66d618f9696477f45fbdac024c927c60e016a565ee5316599"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,13 +16,6 @@
         ]
     },
     "default": {
-        "babel": {
-            "hashes": [
-                "sha256:6778d85147d5d85345c14a26aada5e478ab04e39b078b0745ee6870c2b5cf669",
-                "sha256:8cba50f48c529ca3fa18cf81fa9403be176d374ac4d60738b839122dfaaa3d23"
-            ],
-            "version": "==2.6.0"
-        },
         "brotlipy": {
             "hashes": [
                 "sha256:07194f4768eb62a4f4ea76b6d0df6ade185e24ebd85877c351daa0a069f1111a",
@@ -142,12 +135,9 @@
             "index": "pypi",
             "version": "==0.4.5"
         },
-        "django-js-asset": {
-            "hashes": [
-                "sha256:30149158206f693a5d027fe590096fc84495486bd11cd77d395b4f2ec27fc1d0",
-                "sha256:a395d8d19eb201ea8d2bd4f145b38f1717cd74c0f609f040141d8724c5a27f36"
-            ],
-            "version": "==1.1.0"
+        "django-import-export": {
+            "git": "https://github.com/django-import-export/django-import-export.git",
+            "ref": "54232db4a511cc5f0b085c6bb192c3619f27e452"
         },
         "django-lifecycle": {
             "hashes": [
@@ -164,28 +154,13 @@
             "index": "pypi",
             "version": "==2.1"
         },
-        "django-mptt": {
+        "djangorestframework": {
             "hashes": [
-                "sha256:18a41d1b56ca7c02a5b04d246e33ee2d18f6ee5459c02ed1d945f5abdef23a2e",
-                "sha256:689a04cce0981671d6061a9928c33a16b47abb0d4cd43cf7dec31ae284fdae9d"
+                "sha256:b6714c3e4b0f8d524f193c91ecf5f5450092c2145439ac2769711f7eba89a9d9",
+                "sha256:c375e4f95a3a64fccac412e36fb42ba36881e52313ec021ef410b40f67cddca4"
             ],
             "index": "pypi",
-            "version": "==0.9.1"
-        },
-        "django-mptt-admin": {
-            "hashes": [
-                "sha256:506fe294c4c034c2b9fb70208fb923c413ba4c008f019f2dfac914eabf3986bf",
-                "sha256:aebde7aebd5a469aea0bb1b182857f722f9d028e2f1f915f1f47ea2c49a4ad39"
-            ],
-            "index": "pypi",
-            "version": "==0.6.0"
-        },
-        "django-phonenumber-field": {
-            "hashes": [
-                "sha256:08257904750d7329b2b11dd9d8d6b7ceb261980db555bb426d9900fa390e2a4c"
-            ],
-            "index": "pypi",
-            "version": "==2.0.1"
+            "version": "==3.8.2"
         },
         "fancycompleter": {
             "hashes": [
@@ -323,6 +298,14 @@
                 "sha256:e21232e2465808c0e892e0e4dbb8c2faafec16ac6dc067dd546e9b466f3deac8"
             ],
             "version": "==1.0.0"
+        },
+        "semantic-version": {
+            "hashes": [
+                "sha256:2a4328680073e9b243667b201119772aefc5fc63ae32398d6afafff07c4f54c0",
+                "sha256:2d06ab7372034bcb8b54f2205370f4aa0643c133b7e6dbd129c5200b83ab394b"
+            ],
+            "index": "pypi",
+            "version": "==2.6.0"
         },
         "six": {
             "hashes": [

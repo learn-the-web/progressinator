@@ -9,7 +9,7 @@ volumes:
 services:
 
   postgres:
-    image: ltw_progress_postgres
+    image: progressinator_postgres
     build:
       context: .
       dockerfile: ./config/postgres/Dockerfile
@@ -22,7 +22,7 @@ services:
       - "5432:5432"
 
   django:
-    image: ltw_progress_django
+    image: progressinator_django
     build:
       context: .
       dockerfile: ./config/django/Dockerfile

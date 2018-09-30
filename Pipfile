@@ -19,3 +19,7 @@ django-localflavor = "*"
 django-lifecycle = "*"
 python-dateutil = "*"
 social-auth-app-django = "*"
+django-import-export = {git = "https://github.com/django-import-export/django-import-export.git"}
+phonenumbers = "*"
+djangorestframework = "*"
+semantic-version = "*"
