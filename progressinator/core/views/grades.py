@@ -23,6 +23,7 @@ import logging
 @login_required
 def courses(request):
     context = {
+        'app_version': settings.APP_PKG['version'],
         'doc_title': 'Courses',
         'username': request.user.username,
         'email': request.user.email,
@@ -50,6 +51,7 @@ def course_grades(request, course_id):
             amount_complete += prog.grade * course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin']
 
     context = {
+        'app_version': settings.APP_PKG['version'],
         'doc_title': f"Grades for {course['title']}",
         'h1_title': course['title'],
         'username': request.user.username,

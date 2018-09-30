@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 from rest_framework.authtoken.models import Token
 from progressinator.core.models import UserProfile
 
@@ -13,6 +14,7 @@ def index(request):
     profile = UserProfile.objects.filter(user=request.user).select_related('current_course')
 
     context = {
+        'app_version': settings.APP_PKG['version'],
         'doc_title': 'Profile · Learn the Web',
         'username': request.user.username,
         'first_name': request.user.first_name,

@@ -1,5 +1,6 @@
 import os
 import environ
+import json
 
 
 env = environ.Env()
@@ -185,3 +186,7 @@ MARKBOT = {
     'ONLINE_VERSION': '1.0.0',
     'PASSCODE_HASH': env('MARKBOT_PASSCODE_HASH'),
 }
+
+
+with open(str(root.path('package.json'))) as json_data:
+    APP_PKG = json.load(json_data)
