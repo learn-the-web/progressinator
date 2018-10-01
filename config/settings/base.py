@@ -16,7 +16,7 @@ BASE_DIR = SITE_ROOT # For Heroku
 
 
 ALLOWED_HOSTS = [
-    'floating-tundra-76216.herokuapp.com',
+    'progress.learn-the-web.algonquindesign.ca',
 ]
 
 
