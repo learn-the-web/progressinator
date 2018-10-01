@@ -15,7 +15,7 @@ def index(request):
 
     context = {
         'app_version': settings.APP_PKG['version'],
-        'doc_title': 'Profile · Learn the Web',
+        'doc_title': 'Profile',
         'username': request.user.username,
         'first_name': request.user.first_name,
         'last_name': request.user.last_name,
