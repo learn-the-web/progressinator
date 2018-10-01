@@ -16,7 +16,7 @@
 {
   "course": "web-dev-2",
   "title": "Web Dev 2",
-  
+
   "description": "The web is accessible to all human beings on the planet. Using grid systems, type systems, and reusable code, students construct modular and flexible web architectures to support the many different screen dimensions, platforms, and needs of people connected to the web.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-2/",
   "course_code": "DSN1675",
@@ -29,7 +29,7 @@
     "github": "thomasjbradley",
     "office": false,
     "office_hours": [
-      
+
     ]
   },
   "grading_scheme": {
@@ -42,68 +42,68 @@
     "activities": 15,
     "exercises": 70,
     "projects": 15,
-    
+
     "videos": 0
-    
+
   },
   "assessments": [
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,27 +119,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,27 +155,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -191,27 +191,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -227,29 +227,29 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -257,7 +257,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.grids",
+  "uri": "ca.learn-the-web.videos.grids",
   "id": "grids",
   "course": "web-dev-2",
   "name": "Grids",
@@ -265,35 +265,35 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -309,27 +309,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -345,27 +345,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -381,27 +381,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -417,42 +417,42 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -468,29 +468,29 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -506,27 +506,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -542,29 +542,29 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -572,7 +572,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.modular-typography",
+  "uri": "ca.learn-the-web.videos.modular-typography",
   "id": "modular-typography",
   "course": "web-dev-2",
   "name": "Modular typography",
@@ -580,33 +580,33 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -622,27 +622,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -658,27 +658,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -694,27 +694,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -730,46 +730,46 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -785,29 +785,29 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -823,27 +823,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -859,65 +859,65 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
 
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -933,29 +933,29 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -971,27 +971,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1007,29 +1007,29 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1037,7 +1037,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.modules",
+  "uri": "ca.learn-the-web.videos.modules",
   "id": "modules",
   "course": "web-dev-2",
   "name": "Modules",
@@ -1045,35 +1045,35 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1089,27 +1089,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1125,27 +1125,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1161,27 +1161,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1197,27 +1197,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1233,48 +1233,48 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1290,27 +1290,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1326,27 +1326,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1362,27 +1362,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1390,7 +1390,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.forms",
+  "uri": "ca.learn-the-web.videos.forms",
   "id": "forms",
   "course": "web-dev-2",
   "name": "Forms",
@@ -1398,33 +1398,33 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1440,27 +1440,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1476,27 +1476,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1512,29 +1512,29 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1542,7 +1542,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.tables",
+  "uri": "ca.learn-the-web.videos.tables",
   "id": "tables",
   "course": "web-dev-2",
   "name": "Tables",
@@ -1550,33 +1550,33 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1592,27 +1592,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1628,27 +1628,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1664,27 +1664,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1700,29 +1700,29 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1730,7 +1730,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.accessibility",
+  "uri": "ca.learn-the-web.videos.accessibility",
   "id": "accessibility",
   "course": "web-dev-2",
   "name": "Accessibility",
@@ -1738,37 +1738,37 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1784,27 +1784,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1820,27 +1820,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1856,46 +1856,46 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1911,27 +1911,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1947,27 +1947,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1983,27 +1983,27 @@
   "assessment_type": "paper",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2019,57 +2019,57 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-        
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2085,27 +2085,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2121,27 +2121,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2157,57 +2157,57 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2223,26 +2223,26 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-    
 
-  
 
-  
+
+
+
+
+
+
+
+
+
+
 ],
 "totals": {
   "weeks": 15,

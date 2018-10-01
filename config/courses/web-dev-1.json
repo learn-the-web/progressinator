@@ -16,7 +16,7 @@
 {
   "course": "web-dev-1",
   "title": "Web Dev 1",
-  
+
   "description": "Web development is the production of functional, interactive websites accomplished through the use of the HTML and CSS coding languages. Using video tutorials, step-by-step online lessons, and automation, students explore processes such as semantics and mobile-first architecture, and tools like cloud platforms and version control, in tandem with precise organization principles and current best practices.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/",
   "course_code": "DSN1674",
@@ -29,21 +29,21 @@
     "github": "thomasjbradley",
     "office": "J104",
     "office_hours": [
-      
+
         {
           "day": 1,
           "start_time": 12,
           "end_time": 2
         }
         ,
-      
+
         {
           "day": 4,
           "start_time": 15,
           "end_time": 17
         }
-        
-      
+
+
     ]
   },
   "grading_scheme": {
@@ -56,80 +56,80 @@
     "activities": 15,
     "exercises": 70,
     "projects": 15,
-    
+
     "videos": 0
-    
+
   },
   "assessments": [
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
-  
 
-  
 
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
 
-  
 
-  
-  
 
-  
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,7 +137,7 @@
 
 
 {
-  "uri": "ca.learn-the-web.videoes.using-urls",
+  "uri": "ca.learn-the-web.videos.using-urls",
   "id": "using-urls",
   "course": "web-dev-1",
   "name": "Using URLs",
@@ -145,65 +145,65 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W37-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W37-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W37-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W37-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -219,51 +219,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W37-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W37-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W37-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W37-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -279,51 +279,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W37-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W37-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W37-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W37-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -339,53 +339,53 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W38-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W38-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W38-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W38-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -393,7 +393,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.version-control-github",
+  "uri": "ca.learn-the-web.videos.version-control-github",
   "id": "version-control-github",
   "course": "web-dev-1",
   "name": "Version control & GitHub",
@@ -401,59 +401,59 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W38-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W38-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W38-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W38-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -469,51 +469,51 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W38-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W38-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W38-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W38-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -529,51 +529,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W38-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W38-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W38-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W38-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -589,51 +589,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W38-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W38-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W38-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W38-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -649,53 +649,53 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W39-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W39-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W39-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W39-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -703,7 +703,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.html-semantics",
+  "uri": "ca.learn-the-web.videos.html-semantics",
   "id": "html-semantics",
   "course": "web-dev-1",
   "name": "HTML semantics",
@@ -711,44 +711,44 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W39-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W39-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W39-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W39-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
 
 
 
@@ -756,7 +756,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.html-indentation",
+  "uri": "ca.learn-the-web.videos.html-indentation",
   "id": "html-indentation",
   "course": "web-dev-1",
   "name": "HTML indentation",
@@ -764,44 +764,44 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W39-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W39-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W39-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W39-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
 
 
 
@@ -809,7 +809,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.marking-up-a-webpage",
+  "uri": "ca.learn-the-web.videos.marking-up-a-webpage",
   "id": "marking-up-a-webpage",
   "course": "web-dev-1",
   "name": "Marking up a webpage",
@@ -817,61 +817,61 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W39-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W39-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W39-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W39-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -887,51 +887,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W39-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W39-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W39-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W39-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -947,51 +947,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W39-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W39-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W39-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W39-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1007,51 +1007,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1067,51 +1067,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1119,7 +1119,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.using-css",
+  "uri": "ca.learn-the-web.videos.using-css",
   "id": "using-css",
   "course": "web-dev-1",
   "name": "Using CSS",
@@ -1127,44 +1127,44 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
 
 
 
@@ -1172,7 +1172,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.css-indentation",
+  "uri": "ca.learn-the-web.videos.css-indentation",
   "id": "css-indentation",
   "course": "web-dev-1",
   "name": "CSS indentation",
@@ -1180,46 +1180,46 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1227,7 +1227,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.basic-typography",
+  "uri": "ca.learn-the-web.videos.basic-typography",
   "id": "basic-typography",
   "course": "web-dev-1",
   "name": "Basic typography",
@@ -1235,61 +1235,61 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1305,51 +1305,51 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1365,51 +1365,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1425,51 +1425,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W40-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W40-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W40-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W40-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1485,51 +1485,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W41-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W41-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W41-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W41-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1545,51 +1545,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W41-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W41-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W41-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W41-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1597,7 +1597,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.box-model",
+  "uri": "ca.learn-the-web.videos.box-model",
   "id": "box-model",
   "course": "web-dev-1",
   "name": "Everything is a box",
@@ -1605,44 +1605,44 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W41-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W41-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W41-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W41-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
 
 
 
@@ -1650,7 +1650,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.flow-display",
+  "uri": "ca.learn-the-web.videos.flow-display",
   "id": "flow-display",
   "course": "web-dev-1",
   "name": "Flow & display",
@@ -1658,65 +1658,65 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W41-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W41-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W41-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W41-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1732,51 +1732,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W41-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W41-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W41-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W41-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1792,51 +1792,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W41-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W41-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W41-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W41-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1852,51 +1852,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W42-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W42-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W42-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W42-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1912,70 +1912,70 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W42-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W42-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W42-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W42-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1991,53 +1991,53 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W42-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W42-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W42-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W42-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2053,51 +2053,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W42-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W42-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W42-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W42-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2113,51 +2113,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W43-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W43-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W43-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W43-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2173,89 +2173,89 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W43-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W43-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W43-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W43-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
 
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2271,51 +2271,51 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W44-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W44-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W44-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W44-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2331,51 +2331,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W44-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W44-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W44-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W44-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2391,51 +2391,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W44-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W44-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W44-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W44-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2451,51 +2451,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W45-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W45-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W45-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W45-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2503,7 +2503,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.position-zindex",
+  "uri": "ca.learn-the-web.videos.position-zindex",
   "id": "position-zindex",
   "course": "web-dev-1",
   "name": "Position & z-index",
@@ -2511,59 +2511,59 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W45-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W45-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W45-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W45-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2579,51 +2579,51 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W45-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W45-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W45-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W45-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2639,51 +2639,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W45-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W45-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W45-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W45-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2699,51 +2699,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W45-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W45-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W45-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W45-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2759,51 +2759,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W46-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W46-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W46-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W46-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2819,51 +2819,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W46-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W46-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W46-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W46-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2871,7 +2871,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.all-devices-setup",
+  "uri": "ca.learn-the-web.videos.all-devices-setup",
   "id": "all-devices-setup",
   "course": "web-dev-1",
   "name": "All devices setup",
@@ -2879,44 +2879,44 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W46-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W46-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W46-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W46-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
 
 
 
@@ -2924,7 +2924,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.media-queries",
+  "uri": "ca.learn-the-web.videos.media-queries",
   "id": "media-queries",
   "course": "web-dev-1",
   "name": "Media queries",
@@ -2932,57 +2932,57 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W46-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W46-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W46-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W46-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2998,51 +2998,51 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W46-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W46-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W46-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W46-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3058,51 +3058,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W46-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W46-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W46-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W46-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3118,51 +3118,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W47-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W47-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W47-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W47-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3178,66 +3178,66 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W47-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W47-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W47-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W47-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3253,53 +3253,53 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W47-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W47-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W47-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W47-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3315,51 +3315,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W47-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W47-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W47-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W47-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3375,51 +3375,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W48-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W48-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W48-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W48-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3435,64 +3435,64 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W48-4T08:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W48-1T08:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W48-4T12:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W48-1T14:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3508,53 +3508,53 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W48-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W48-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W48-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W48-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3570,51 +3570,51 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W48-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W48-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W48-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W48-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3630,79 +3630,79 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W50-4T23:59"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W50-1T23:59"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W50-4T23:59"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W50-1T23:59"
       }
-    
+
   ]
-  
+
 }
 
-        
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3718,53 +3718,53 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W49-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W49-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W49-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W49-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3780,75 +3780,75 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W49-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W49-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W49-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W49-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3864,48 +3864,48 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
-      
+
+
       {
         "course_section": "010",
         "due": "2018-W50-4T11:00"
       },
-    
-      
+
+
       {
         "course_section": "020",
         "due": "2018-W50-1T11:00"
       },
-    
-      
+
+
       {
         "course_section": "030",
         "due": "2018-W50-4T15:00"
       },
-    
-      
+
+
       {
         "course_section": "040",
         "due": "2018-W50-1T17:00"
       }
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-    
 
-  
+
+
+
+
+
+
+
+
+
 
 ],
 "totals": {

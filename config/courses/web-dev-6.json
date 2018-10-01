@@ -16,7 +16,7 @@
 {
   "course": "web-dev-6",
   "title": "Web Dev 6",
-  
+
   "description": "No web projects are created by just one person—collaboration with other people is fundamental to successful websites. Teams of students organize and create large-scale websites using project management tools, version control systems, online messaging, and issue trackers.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/",
   "course_code": "DSN1692",
@@ -29,7 +29,7 @@
     "github": "thomasjbradley",
     "office": false,
     "office_hours": [
-      
+
     ]
   },
   "grading_scheme": {
@@ -42,59 +42,59 @@
     "activities": 4,
     "exercises": 12,
     "projects": 84,
-    
+
     "videos": 0
-    
+
   },
   "assessments": [
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,27 +110,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -146,27 +146,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -182,30 +182,30 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-        
-      
-    
 
-  
-    
-      
 
-  
 
-  
-  
 
-  
-    
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -213,7 +213,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.",
+  "uri": "ca.learn-the-web.videos.",
   "id": "",
   "course": "web-dev-6",
   "name": "Agile development process",
@@ -221,20 +221,20 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-      
-      
+
+
+
+
+
+
+
 
 
 
@@ -242,7 +242,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.videoes.",
+  "uri": "ca.learn-the-web.videos.",
   "id": "",
   "course": "web-dev-6",
   "name": "Using GitHub for project management",
@@ -250,37 +250,37 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-      
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -296,27 +296,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -332,53 +332,53 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -394,29 +394,29 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -432,52 +432,52 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-        
-      
-    
 
-  
-    
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -493,27 +493,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -529,49 +529,49 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-        
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -587,27 +587,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -623,145 +623,145 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
 
-  
-    
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
 
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-    
-      
-    
 
-  
-    
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-    
-      
-    
-      
-    
 
-  
-    
-      
-    
 
-  
 
-  
 
-  
-  
 
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -777,27 +777,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -813,27 +813,27 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -849,29 +849,29 @@
   "assessment_type": "basic",
   "grading_type": "pass_fail",
   "points_possible": 1
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-      
-    
 
-  
-    
-      
-    
-      
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -887,18 +887,18 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-  
+
   ,"due_dates": [
-    
+
   ]
-  
+
 }
 
-        
-      
-    
 
-  
+
+
+
+
 
 ],
 "totals": {
