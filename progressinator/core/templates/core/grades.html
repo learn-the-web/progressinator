@@ -65,14 +65,15 @@
                 <a href="{{item.url}}">{{item.name}}</a>
                 <span class="not-bold micro color-grey">{{item.assessment_each_algonquin | pretty_percent_small}}</span>
               </h3>
-              <small class="block micro italic">
+              <small class="block micro">
                 <i class="icon i-3-4"></i>
-                {{item.assessment_type | title}}
-                <span class="color-grey-dark">
+                {% if item.user_due_date_algonquin %}<time datetime="{{item.user_due_date_algonquin | date:'c'}}">Due: <strong>{{item.user_due_date_algonquin | date:'N j, Y @ H:i'}}</strong></time> ·{% endif %}
+                <span class="italic">{{item.assessment_type | title}}</span>
+                <span class="color-grey-dark italic">
                   {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
                   {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
                 </span>
-                {% if item.assessment_type == 'exercise' %} <span class="color-grey-dark">·</span> <a href="https://{{username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
+                {% if item.assessment_type == 'exercise' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
               </small>
             </li>
           {% endfor %}

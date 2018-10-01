@@ -1,0 +1,2221 @@
+{
+  "course": "web-dev-1",
+  "title": "Web Dev 1",
+  "description": "Web development is the production of functional, interactive websites accomplished through the use of the HTML and CSS coding languages. Using video tutorials, step-by-step online lessons, and automation, students explore processes such as semantics and mobile-first architecture, and tools like cloud platforms and version control, in tandem with precise organization principles and current best practices.",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/",
+  "course_code": "DSN1674",
+  "year": 2018,
+  "start_week": 36,
+  "professor": {
+    "name": "Thomas",
+    "email": "thomas.bradley@algonquincollege.com",
+    "url": "https://thomasjbradley.ca",
+    "github": "thomasjbradley",
+    "office": "J104",
+    "office_hours": [
+      {
+        "day": 1,
+        "start_time": 12,
+        "end_time": 2
+      },
+      {
+        "day": 4,
+        "start_time": 15,
+        "end_time": 17
+      }
+    ]
+  },
+  "grading_scheme": {
+    "activities": 0.1000000000000000055511151231257827021181583404541015625,
+    "exercises": 0.59999999999999997779553950749686919152736663818359375,
+    "projects": 0.1499999999999999944488848768742172978818416595458984375,
+    "videos": 0.1499999999999999944488848768742172978818416595458984375
+  },
+  "grading_scheme_algonquin": {
+    "activities": 0.1499999999999999944488848768742172978818416595458984375,
+    "exercises": 0.6999999999999999555910790149937383830547332763671875,
+    "projects": 0.1499999999999999944488848768742172978818416595458984375,
+    "videos": 0
+  },
+  "assessments": [
+    {
+      "uri": "ca.learn-the-web.videos.using-urls",
+      "id": "using-urls",
+      "course": "web-dev-1",
+      "name": "Using URLs",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/using-urls/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W37-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W37-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W37-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W37-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-09-13T08:00:00",
+        "020": "2018-09-10T08:00:00",
+        "030": "2018-09-13T12:00:00",
+        "040": "2018-09-10T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.install-all-the-things",
+      "id": "install-all-the-things",
+      "course": "web-dev-1",
+      "name": "Install all the things!",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/install-all-the-things/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W37-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W37-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W37-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W37-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-13T11:00:00",
+        "020": "2018-09-10T11:00:00",
+        "030": "2018-09-13T15:00:00",
+        "040": "2018-09-10T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.set-up-your-code-editor",
+      "id": "set-up-your-code-editor",
+      "course": "web-dev-1",
+      "name": "Set up your code editor",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/set-up-your-code-editor/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W37-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W37-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W37-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W37-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-13T11:00:00",
+        "020": "2018-09-10T11:00:00",
+        "030": "2018-09-13T15:00:00",
+        "040": "2018-09-10T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.submit-github-account",
+      "id": "submit-github-account",
+      "course": "web-dev-1",
+      "name": "Submit GitHub account",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-02/#submit-github-account",
+      "assessment_type": "basic",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W38-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W38-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W38-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W38-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-20T08:00:00",
+        "020": "2018-09-17T08:00:00",
+        "030": "2018-09-20T12:00:00",
+        "040": "2018-09-17T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.version-control-github",
+      "id": "version-control-github",
+      "course": "web-dev-1",
+      "name": "Version control & GitHub",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/version-control-github/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W38-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W38-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W38-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W38-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-09-20T08:00:00",
+        "020": "2018-09-17T08:00:00",
+        "030": "2018-09-20T12:00:00",
+        "040": "2018-09-17T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.keyboard-commander",
+      "id": "keyboard-commander",
+      "course": "web-dev-1",
+      "name": "Keyboard Commander",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/keyboard-commander/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W38-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W38-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W38-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W38-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-09-20T11:00:00",
+        "020": "2018-09-17T11:00:00",
+        "030": "2018-09-20T15:00:00",
+        "040": "2018-09-17T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.website-on-github",
+      "id": "website-on-github",
+      "course": "web-dev-1",
+      "name": "Website on GitHub",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/website-on-github/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W38-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W38-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W38-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W38-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-20T11:00:00",
+        "020": "2018-09-17T11:00:00",
+        "030": "2018-09-20T15:00:00",
+        "040": "2018-09-17T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.using-markbot",
+      "id": "using-markbot",
+      "course": "web-dev-1",
+      "name": "Using Markbot",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/using-markbot/",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W38-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W38-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W38-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W38-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-20T11:00:00",
+        "020": "2018-09-17T11:00:00",
+        "030": "2018-09-20T15:00:00",
+        "040": "2018-09-17T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.create-tagged-issue",
+      "id": "create-tagged-issue",
+      "course": "web-dev-1",
+      "name": "Create tagged issue",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/create-tagged-issue/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W39-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W39-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W39-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W39-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-27T08:00:00",
+        "020": "2018-09-24T08:00:00",
+        "030": "2018-09-27T12:00:00",
+        "040": "2018-09-24T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.html-semantics",
+      "id": "html-semantics",
+      "course": "web-dev-1",
+      "name": "HTML semantics",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/html-semantics/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W39-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W39-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W39-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W39-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-09-27T08:00:00",
+        "020": "2018-09-24T08:00:00",
+        "030": "2018-09-27T12:00:00",
+        "040": "2018-09-24T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.html-indentation",
+      "id": "html-indentation",
+      "course": "web-dev-1",
+      "name": "HTML indentation",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/html-indentation/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W39-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W39-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W39-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W39-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-09-27T08:00:00",
+        "020": "2018-09-24T08:00:00",
+        "030": "2018-09-27T12:00:00",
+        "040": "2018-09-24T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.marking-up-a-webpage",
+      "id": "marking-up-a-webpage",
+      "course": "web-dev-1",
+      "name": "Marking up a webpage",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/marking-up-a-webpage/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W39-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W39-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W39-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W39-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-09-27T08:00:00",
+        "020": "2018-09-24T08:00:00",
+        "030": "2018-09-27T12:00:00",
+        "040": "2018-09-24T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.html-document-setup",
+      "id": "html-document-setup",
+      "course": "web-dev-1",
+      "name": "HTML document setup",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/html-document-setup/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W39-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W39-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W39-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W39-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-27T11:00:00",
+        "020": "2018-09-24T11:00:00",
+        "030": "2018-09-27T15:00:00",
+        "040": "2018-09-24T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.masthead-semantics",
+      "id": "masthead-semantics",
+      "course": "web-dev-1",
+      "name": "Masthead semantics",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-04/#masthead-semantics",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W39-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W39-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W39-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W39-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-09-27T11:00:00",
+        "020": "2018-09-24T11:00:00",
+        "030": "2018-09-27T15:00:00",
+        "040": "2018-09-24T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.html-validation-fixes",
+      "id": "html-validation-fixes",
+      "course": "web-dev-1",
+      "name": "HTML validation fixes",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-04/#html-validation-fixes",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T08:00:00",
+        "020": "2018-10-01T08:00:00",
+        "030": "2018-10-04T12:00:00",
+        "040": "2018-10-01T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.content-semantics",
+      "id": "content-semantics",
+      "course": "web-dev-1",
+      "name": "Content semantics",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-04/#content-semantics",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T08:00:00",
+        "020": "2018-10-01T08:00:00",
+        "030": "2018-10-04T12:00:00",
+        "040": "2018-10-01T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.using-css",
+      "id": "using-css",
+      "course": "web-dev-1",
+      "name": "Using CSS",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/using-css/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T08:00:00",
+        "020": "2018-10-01T08:00:00",
+        "030": "2018-10-04T12:00:00",
+        "040": "2018-10-01T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.css-indentation",
+      "id": "css-indentation",
+      "course": "web-dev-1",
+      "name": "CSS indentation",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/css-indentation/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T08:00:00",
+        "020": "2018-10-01T08:00:00",
+        "030": "2018-10-04T12:00:00",
+        "040": "2018-10-01T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.basic-typography",
+      "id": "basic-typography",
+      "course": "web-dev-1",
+      "name": "Basic typography",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/basic-typography/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T08:00:00",
+        "020": "2018-10-01T08:00:00",
+        "030": "2018-10-04T12:00:00",
+        "040": "2018-10-01T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.semantics-specifier",
+      "id": "semantics-specifier",
+      "course": "web-dev-1",
+      "name": "Semantics Specifier",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/semantics-specifier/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T11:00:00",
+        "020": "2018-10-01T11:00:00",
+        "030": "2018-10-04T15:00:00",
+        "040": "2018-10-01T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.dinosaur-designs",
+      "id": "dinosaur-designs",
+      "course": "web-dev-1",
+      "name": "Dinosaur designs",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/dinosaur-designs/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T11:00:00",
+        "020": "2018-10-01T11:00:00",
+        "030": "2018-10-04T15:00:00",
+        "040": "2018-10-01T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.use-all-the-selectors",
+      "id": "use-all-the-selectors",
+      "course": "web-dev-1",
+      "name": "Use all the selectors!",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-05/#use-all-the-selectors",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W40-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W40-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W40-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W40-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-04T11:00:00",
+        "020": "2018-10-01T11:00:00",
+        "030": "2018-10-04T15:00:00",
+        "040": "2018-10-01T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.css-validation-fixes",
+      "id": "css-validation-fixes",
+      "course": "web-dev-1",
+      "name": "CSS validation fixes",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-05/#css-validation-fixes",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W41-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W41-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W41-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W41-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-11T08:00:00",
+        "020": "2018-10-08T08:00:00",
+        "030": "2018-10-11T12:00:00",
+        "040": "2018-10-08T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.stylish-beets",
+      "id": "stylish-beets",
+      "course": "web-dev-1",
+      "name": "Stylish beets",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-05/#stylish-beets",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W41-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W41-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W41-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W41-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-11T08:00:00",
+        "020": "2018-10-08T08:00:00",
+        "030": "2018-10-11T12:00:00",
+        "040": "2018-10-08T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.box-model",
+      "id": "box-model",
+      "course": "web-dev-1",
+      "name": "Everything is a box",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/box-model/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W41-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W41-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W41-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W41-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-10-11T08:00:00",
+        "020": "2018-10-08T08:00:00",
+        "030": "2018-10-11T12:00:00",
+        "040": "2018-10-08T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.flow-display",
+      "id": "flow-display",
+      "course": "web-dev-1",
+      "name": "Flow & display",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/flow-display/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W41-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W41-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W41-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W41-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-10-11T08:00:00",
+        "020": "2018-10-08T08:00:00",
+        "030": "2018-10-11T12:00:00",
+        "040": "2018-10-08T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.developer-tools",
+      "id": "developer-tools",
+      "course": "web-dev-1",
+      "name": "Developer tools",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/developer-tools/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W41-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W41-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W41-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W41-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-11T11:00:00",
+        "020": "2018-10-08T11:00:00",
+        "030": "2018-10-11T15:00:00",
+        "040": "2018-10-08T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.cards",
+      "id": "cards",
+      "course": "web-dev-1",
+      "name": "Cards",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/cards/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W41-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W41-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W41-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W41-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-11T11:00:00",
+        "020": "2018-10-08T11:00:00",
+        "030": "2018-10-11T15:00:00",
+        "040": "2018-10-08T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.horizontal-nav",
+      "id": "horizontal-nav",
+      "course": "web-dev-1",
+      "name": "Horizontal navigation",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-06/#horizontal-nav",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W42-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W42-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W42-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W42-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-18T08:00:00",
+        "020": "2018-10-15T08:00:00",
+        "030": "2018-10-18T12:00:00",
+        "040": "2018-10-15T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.sections",
+      "id": "sections",
+      "course": "web-dev-1",
+      "name": "Sections",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-06/#sections",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W42-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W42-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W42-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W42-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-18T08:00:00",
+        "020": "2018-10-15T08:00:00",
+        "030": "2018-10-18T12:00:00",
+        "040": "2018-10-15T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.display-dominator",
+      "id": "display-dominator",
+      "course": "web-dev-1",
+      "name": "Display Dominator",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/display-dominator/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W42-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W42-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W42-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W42-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-10-18T11:00:00",
+        "020": "2018-10-15T11:00:00",
+        "030": "2018-10-18T15:00:00",
+        "040": "2018-10-15T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.navigation-highlight",
+      "id": "navigation-highlight",
+      "course": "web-dev-1",
+      "name": "Navigation highlight",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-07/#navigation-highlight",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W42-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W42-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W42-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W42-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-18T11:00:00",
+        "020": "2018-10-15T11:00:00",
+        "030": "2018-10-18T15:00:00",
+        "040": "2018-10-15T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.button-styles",
+      "id": "button-styles",
+      "course": "web-dev-1",
+      "name": "Button styles",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-07/#button-styles",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W43-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W43-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W43-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W43-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-25T08:00:00",
+        "020": "2018-10-22T08:00:00",
+        "030": "2018-10-25T12:00:00",
+        "040": "2018-10-22T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.link-card",
+      "id": "link-card",
+      "course": "web-dev-1",
+      "name": "Link card",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-07/#link-card",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W43-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W43-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W43-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W43-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-10-25T08:00:00",
+        "020": "2018-10-22T08:00:00",
+        "030": "2018-10-25T12:00:00",
+        "040": "2018-10-22T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.ingenious-indentor",
+      "id": "ingenious-indentor",
+      "course": "web-dev-1",
+      "name": "Ingenious Indentor",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/ingenious-indentor/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W44-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W44-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W44-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W44-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-11-01T11:00:00",
+        "020": "2018-10-29T11:00:00",
+        "030": "2018-11-01T15:00:00",
+        "040": "2018-10-29T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.flexing-your-muscles",
+      "id": "flexing-your-muscles",
+      "course": "web-dev-1",
+      "name": "Flexing your muscles",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/flexing-your-muscles/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W44-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W44-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W44-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W44-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-01T11:00:00",
+        "020": "2018-10-29T11:00:00",
+        "030": "2018-11-01T15:00:00",
+        "040": "2018-10-29T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.header-icons",
+      "id": "header-icons",
+      "course": "web-dev-1",
+      "name": "Header icons",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-09/#header-icons",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W44-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W44-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W44-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W44-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-01T11:00:00",
+        "020": "2018-10-29T11:00:00",
+        "030": "2018-11-01T15:00:00",
+        "040": "2018-10-29T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.columns-of-cards",
+      "id": "columns-of-cards",
+      "course": "web-dev-1",
+      "name": "Columns of cards",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-09/#columns-of-cards",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W45-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W45-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W45-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W45-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-08T08:00:00",
+        "020": "2018-11-05T08:00:00",
+        "030": "2018-11-08T12:00:00",
+        "040": "2018-11-05T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.position-zindex",
+      "id": "position-zindex",
+      "course": "web-dev-1",
+      "name": "Position & z-index",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/position-zindex/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W45-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W45-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W45-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W45-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-11-08T08:00:00",
+        "020": "2018-11-05T08:00:00",
+        "030": "2018-11-08T12:00:00",
+        "040": "2018-11-05T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.em-enforcer",
+      "id": "em-enforcer",
+      "course": "web-dev-1",
+      "name": "Em Enforcer",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/em-enforcer/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W45-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W45-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W45-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W45-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-11-08T11:00:00",
+        "020": "2018-11-05T11:00:00",
+        "030": "2018-11-08T15:00:00",
+        "040": "2018-11-05T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.making-an-image-card",
+      "id": "making-an-image-card",
+      "course": "web-dev-1",
+      "name": "Making an image card",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/making-an-image-card/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W45-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W45-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W45-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W45-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-08T11:00:00",
+        "020": "2018-11-05T11:00:00",
+        "030": "2018-11-08T15:00:00",
+        "040": "2018-11-05T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.hero-banner",
+      "id": "hero-banner",
+      "course": "web-dev-1",
+      "name": "Hero banner",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-10/#hero-banner",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W45-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W45-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W45-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W45-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-08T11:00:00",
+        "020": "2018-11-05T11:00:00",
+        "030": "2018-11-08T15:00:00",
+        "040": "2018-11-05T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.call-to-action-banner",
+      "id": "call-to-action-banner",
+      "course": "web-dev-1",
+      "name": "Call to action banner",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-10/#call-to-action-banner",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W46-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W46-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W46-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W46-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-15T08:00:00",
+        "020": "2018-11-12T08:00:00",
+        "030": "2018-11-15T12:00:00",
+        "040": "2018-11-12T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.exploding-robot-head",
+      "id": "exploding-robot-head",
+      "course": "web-dev-1",
+      "name": "Exploding robot head",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-10/#exploding-robot-head",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W46-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W46-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W46-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W46-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-15T08:00:00",
+        "020": "2018-11-12T08:00:00",
+        "030": "2018-11-15T12:00:00",
+        "040": "2018-11-12T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.all-devices-setup",
+      "id": "all-devices-setup",
+      "course": "web-dev-1",
+      "name": "All devices setup",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/all-devices-setup/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W46-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W46-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W46-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W46-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-11-15T08:00:00",
+        "020": "2018-11-12T08:00:00",
+        "030": "2018-11-15T12:00:00",
+        "040": "2018-11-12T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos.media-queries",
+      "id": "media-queries",
+      "course": "web-dev-1",
+      "name": "Media queries",
+      "url": "https://learn-the-web.algonquindesign.ca/topics/media-queries/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W46-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W46-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W46-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W46-1T14:00"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-11-15T08:00:00",
+        "020": "2018-11-12T08:00:00",
+        "030": "2018-11-15T12:00:00",
+        "040": "2018-11-12T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.responsive-navigation",
+      "id": "responsive-navigation",
+      "course": "web-dev-1",
+      "name": "Responsive navigation",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/responsive-navigation/",
+      "assessment_type": "lesson",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W46-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W46-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W46-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W46-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-15T11:00:00",
+        "020": "2018-11-12T11:00:00",
+        "030": "2018-11-15T15:00:00",
+        "040": "2018-11-12T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.hide-show-responsively",
+      "id": "hide-show-responsively",
+      "course": "web-dev-1",
+      "name": "Hide & show responsively",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-11/#hide-show-responsively",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W46-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W46-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W46-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W46-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-15T11:00:00",
+        "020": "2018-11-12T11:00:00",
+        "030": "2018-11-15T15:00:00",
+        "040": "2018-11-12T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.responsive-typography",
+      "id": "responsive-typography",
+      "course": "web-dev-1",
+      "name": "Responsive typography",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-11/#responsive-typography",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W47-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W47-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W47-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W47-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-22T08:00:00",
+        "020": "2018-11-19T08:00:00",
+        "030": "2018-11-22T12:00:00",
+        "040": "2018-11-19T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.responsive-icon-cards",
+      "id": "responsive-icon-cards",
+      "course": "web-dev-1",
+      "name": "Responsive icon cards",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-11/#responsive-icon-cards",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W47-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W47-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W47-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W47-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-22T08:00:00",
+        "020": "2018-11-19T08:00:00",
+        "030": "2018-11-22T12:00:00",
+        "040": "2018-11-19T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.dev-tool-dynamo",
+      "id": "dev-tool-dynamo",
+      "course": "web-dev-1",
+      "name": "Dev Tool Dynamo",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/dev-tool-dynamo/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W47-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W47-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W47-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W47-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-11-22T11:00:00",
+        "020": "2018-11-19T11:00:00",
+        "030": "2018-11-22T15:00:00",
+        "040": "2018-11-19T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.image-grid",
+      "id": "image-grid",
+      "course": "web-dev-1",
+      "name": "Image grid",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-12/#image-grid",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W47-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W47-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W47-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W47-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-22T11:00:00",
+        "020": "2018-11-19T11:00:00",
+        "030": "2018-11-22T15:00:00",
+        "040": "2018-11-19T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.responsive-header",
+      "id": "responsive-header",
+      "course": "web-dev-1",
+      "name": "Responsive header",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-12/#responsive-header",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W48-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W48-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W48-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W48-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-29T08:00:00",
+        "020": "2018-11-26T08:00:00",
+        "030": "2018-11-29T12:00:00",
+        "040": "2018-11-26T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.responsive-section",
+      "id": "responsive-section",
+      "course": "web-dev-1",
+      "name": "Responsive section",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-12/#responsive-section",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W48-4T08:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W48-1T08:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W48-4T12:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W48-1T14:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-29T08:00:00",
+        "020": "2018-11-26T08:00:00",
+        "030": "2018-11-29T12:00:00",
+        "040": "2018-11-26T14:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.hex-hacker",
+      "id": "hex-hacker",
+      "course": "web-dev-1",
+      "name": "Hex Hacker",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/hex-hacker/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W48-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W48-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W48-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W48-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-11-29T11:00:00",
+        "020": "2018-11-26T11:00:00",
+        "030": "2018-11-29T15:00:00",
+        "040": "2018-11-26T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.responsive-image-caption",
+      "id": "responsive-image-caption",
+      "course": "web-dev-1",
+      "name": "Responsive image & caption",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-13/#responsive-image-caption",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W48-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W48-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W48-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W48-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-11-29T11:00:00",
+        "020": "2018-11-26T11:00:00",
+        "030": "2018-11-29T15:00:00",
+        "040": "2018-11-26T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.confectionery-website-prototype",
+      "id": "confectionery-website-prototype",
+      "course": "web-dev-1",
+      "name": "Confectionery website prototype",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-13/#confectionery-website-prototype",
+      "assessment_type": "project",
+      "grading_type": "letter_grade",
+      "points_possible": 100,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W50-4T23:59"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W50-1T23:59"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W50-4T23:59"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W50-1T23:59"
+        }
+      ],
+      "assessment_each": 0.01153846153846153736732826899924475583247840404510498046875,
+      "assessment_each_algonquin": 0.1499999999999999944488848768742172978818416595458984375,
+      "due_dates_algonquin": {
+        "010": "2018-12-13T23:59:00",
+        "020": "2018-12-10T23:59:00",
+        "030": "2018-12-13T23:59:00",
+        "040": "2018-12-10T23:59:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.activities.character-classifier",
+      "id": "character-classifier",
+      "course": "web-dev-1",
+      "name": "Character Classifier",
+      "url": "https://activities.learn-the-web.algonquindesign.ca/character-classifier/",
+      "assessment_type": "activity",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W49-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W49-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W49-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W49-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0125000000000000006938893903907228377647697925567626953125,
+      "assessment_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+      "due_dates_algonquin": {
+        "010": "2018-12-06T11:00:00",
+        "020": "2018-12-03T11:00:00",
+        "030": "2018-12-06T15:00:00",
+        "040": "2018-12-03T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.confectionery-website-check-in",
+      "id": "confectionery-website-check-in",
+      "course": "web-dev-1",
+      "name": "Confectionery website check-in",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-14/#confectionery-website-check-in",
+      "assessment_type": "basic",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W49-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W49-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W49-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W49-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-12-06T11:00:00",
+        "020": "2018-12-03T11:00:00",
+        "030": "2018-12-06T15:00:00",
+        "040": "2018-12-03T17:00:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "id": "browser-testing",
+      "course": "web-dev-1",
+      "name": "Browser testing",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
+      "assessment_type": "exercise",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W50-4T11:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W50-1T11:00"
+        },
+        {
+          "course_section": "030",
+          "due": "2018-W50-4T15:00"
+        },
+        {
+          "course_section": "040",
+          "due": "2018-W50-1T17:00"
+        }
+      ],
+      "assessment_each": 0.0222222222222222230703092549219945794902741909027099609375,
+      "assessment_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+      "due_dates_algonquin": {
+        "010": "2018-12-13T11:00:00",
+        "020": "2018-12-10T11:00:00",
+        "030": "2018-12-13T15:00:00",
+        "040": "2018-12-10T17:00:00"
+      }
+    }
+  ],
+  "totals": {
+    "weeks": 15,
+    "hours": 45,
+    "homework": 45,
+    "labs": 0,
+    "videos": 13,
+    "lessons": 11,
+    "activities": 8,
+    "exercises": 27,
+    "projects": 1,
+    "activities_each": 0.0125000000000000006938893903907228377647697925567626953125,
+    "exercises_each": 0.0222222222222222230703092549219945794902741909027099609375,
+    "projects_each": 0.1499999999999999944488848768742172978818416595458984375,
+    "videos_each": 0.01153846153846153736732826899924475583247840404510498046875,
+    "activities_each_algonquin": 0.0187499999999999993061106096092771622352302074432373046875,
+    "exercises_each_algonquin": 0.0259259259259259251806373214321865816600620746612548828125,
+    "projects_each_algonquin": 0.1499999999999999944488848768742172978818416595458984375,
+    "videos_each_algonquin": 0
+  }
+}

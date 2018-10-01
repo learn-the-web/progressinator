@@ -1,4 +1,4 @@
-import decimal
+from datetime import datetime
 
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -13,11 +13,9 @@ from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 
 from progressinator.core.lib import Courses, MarkbotHelper
-from progressinator.core.models import UserProgress
+from progressinator.core.models import UserProgress, UserProfile
 from progressinator.core.serializers import UserProgressSerializer
 from progressinator.common.util import build_dict_index
-
-import logging
 
 
 @login_required
@@ -42,13 +40,18 @@ def course_grades(request, course_id):
         return redirect('core:courses')
 
     assessment_index = build_dict_index(course['assessments'], 'uri')
+    user_profile = UserProfile.objects.filter(user=request.user)
     user_grades = UserProgress.objects.filter(user=request.user)
-    amount_complete = decimal.Decimal(0)
+    amount_complete = 0.0
 
     for prog in user_grades:
         if prog.assessment_uri in assessment_index:
             course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             amount_complete += prog.grade * course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin']
+
+    for a in course['assessments']:
+        if user_profile.count() > 0:
+            a['user_due_date_algonquin'] = datetime.fromisoformat(a['due_dates_algonquin'][user_profile[0].current_section])
 
     context = {
         'app_version': settings.APP_PKG['version'],
@@ -56,11 +59,12 @@ def course_grades(request, course_id):
         'h1_title': course['title'],
         'username': request.user.username,
         'email': request.user.email,
-        'course': course,
         'amount_complete': amount_complete,
+        'course': course,
     }
 
-    logging.debug(course)
+    if user_profile.count() > 0:
+        context['user_profile'] = user_profile[0]
 
     return render(request, 'core/grades.html', context)
 

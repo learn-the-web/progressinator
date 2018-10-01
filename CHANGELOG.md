@@ -5,6 +5,24 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.1.0]
+
+### Added
+
+- Added more details and information to the profile page.
+- Add due dates below each assessment.
+
+### Changed
+
+- Change the colour of the assessment icons to match Markbot.
+- Adjust the spacing of headings for slightly better alignment.
+
+### Fixed
+
+- Fixed a few of the page titles that had duplicated information.
+
+---
+
 ## [1.0.2] — 2018-10-01
 
 ### Fixed

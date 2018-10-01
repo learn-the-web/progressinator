@@ -23,3 +23,4 @@ django-import-export = {git = "https://github.com/django-import-export/django-im
 phonenumbers = "*"
 djangorestframework = "*"
 semantic-version = "*"
+simplejson = "*"

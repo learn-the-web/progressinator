@@ -16,6 +16,9 @@ start:
 stop:
 	sudo docker container stop progressinator_django_1 progressinator_postgres_1
 
+build-courses:
+	pipenv run python ./scripts/compile-courses.py
+
 build-css:
 	$(postcss) $(apppath)/css/main.css --output $(publicdist)/main.min.css
 
