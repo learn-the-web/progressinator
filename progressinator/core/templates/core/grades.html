@@ -41,21 +41,27 @@
           {% for item in course.assessments %}
             <li class="push-1-4">
               <h3 class="kilo push-0">
-                <i class="icon i-3-4">
-                  {% if item.grade %}
-                    {% if item.grade.grade > 0 %}
-                      <svg aria-label="Pass" title="Pass"><use xlink:href="#icon-grade-pass"></use></svg>
-                    {% else %}
-                      <svg aria-label="Fail" title="Fail"><use xlink:href="#icon-grade-fail"></use></svg>
-                    {% endif %}
+                {% if item.grade %}
+                  {% if item.grade.grade > 0 %}
+                    <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
+                      <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                    </i>
                   {% else %}
-                    {% if item.assessment_each_algonquin == 0 %}
-                      <svg class="color-grey-dark" aria-label="Not graded" title="Not graded"><use xlink:href="#icon-grade-closed"></use></svg>
-                    {% else %}
-                      <svg aria-label="Not submitted" title="Not submitted"><use xlink:href="#icon-grade-open"></use></svg>
-                    {% endif %}
+                    <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
+                      <svg><use xlink:href="#icon-grade-fail"></use></svg>
+                    </i>
                   {% endif %}
-                </i>
+                {% else %}
+                  {% if item.assessment_each_algonquin == 0 %}
+                    <i class="icon i-3-4 color-grey" aria-label="Not graded" title="Not graded">
+                      <svg><use xlink:href="#icon-grade-closed"></use></svg>
+                    </i>
+                  {% else %}
+                    <i class="icon i-3-4" aria-label="Not submitted" title="Not submitted">
+                      <svg><use xlink:href="#icon-grade-open"></use></svg>
+                    </i>
+                  {% endif %}
+                {% endif %}
                 <a href="{{item.url}}">{{item.name}}</a>
                 <span class="not-bold micro color-grey">{{item.assessment_each_algonquin | pretty_percent_small}}</span>
               </h3>

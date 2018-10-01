@@ -1,0 +1,47 @@
+:root {
+  --color-pass: #6dd110;
+  --color-pass-light: #c1e89b;
+  --color-pass-dark: #417d0a;
+  --color-fail: #f33;
+  --color-fail-light: #ff9494;
+  --color-fail-dark: #991f1f;
+  --color-warning: #ffd30d;
+  --color-warning-light: #ffefab;
+  --color-warning-dark: #b09000;
+}
+
+.color-pass {
+  color: var(--color-pass);
+}
+
+.color-pass-light {
+  color: var(--color-pass-light);
+}
+
+.color-pass-dark {
+  color: var(--color-pass-dark);
+}
+
+.color-fail {
+  color: var(--color-fail);
+}
+
+.color-fail-light {
+  color: var(--color-fail-light);
+}
+
+.color-fail-dark {
+  color: var(--color-fail-dark);
+}
+
+.color-warning {
+  color: var(--color-warning);
+}
+
+.color-warning-light {
+  color: var(--color-warning-light);
+}
+
+.color-warning-dark {
+  color: var(--color-warning-dark);
+}
