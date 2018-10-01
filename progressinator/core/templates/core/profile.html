@@ -2,18 +2,18 @@
 
 {% block wrapper %}
   <div class="grid">
-    <section class="class unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b-1-2">
+    <section class="class unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b-2">
       <div class="class-desc gutter-1-4">
-        <h2 class="class-heading gutter-1-4 push giga"><span>Progressinator API</span></h2>
+        <h2 class="class-heading push-1-2 giga">Progressinator API</h2>
         <p class="push-1-4">Use this API Token for submitting assessments.</p>
         <label for="api-token" class="giga push-1-2"><strong>Copy &amp; paste this token into Markbot.</strong></label>
         <input class="tera push-1-2 island-1-2" readonly value="{{api_token}}" id="api-token">
         <p class="milli push-0"><em>This token should be considered like a password—it should not be shared or transmitted openly.</em></p>
       </div>
     </section>
-    <section class="class section-lightest unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b">
+    <section class="class section-lightest unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b-2">
       <div class="class-desc gutter-1-4">
-        <h2 class="class-heading gutter-1-4 giga"><span>Algonquin registration</span></h2>
+        <h2 class="class-heading giga push-1-2">Algonquin registration</h2>
         <dl class="mega push-0">
           <dt class="italic milli">Name (from GitHub)</dt>
           <dd class="push-1-2">{{first_name}} {{last_name}}</dd>
@@ -25,18 +25,35 @@
           {% endif %}
         </dl>
         {% if not current_section %}
-          <p><em>You are not currently a registered <a href="https://algonquindesign.ca" rel="external">Algonquin College Graphic Design</a> student.</em></p>
+          <div class="max-length not-centered">
+            <p class="push-0"><strong>You are not currently a registered <a href="https://algonquindesign.ca" rel="external">Algonquin College Graphic Design</a> student.</strong></p>
+            <small class="block italic">If you know you’re an Algonquin student, check with your teacher to confirm you’ve been assigned a course &amp; section</small>
+          </div>
         {% endif %}
       </div>
     </section>
   </div>
 
-  <section class="class gutter-1-4 pad-t-1-2 pad-b class-outside">
-    <div class="class-desc gutter-1-4">
-      <h2 class="class-heading gutter-1-4 push giga"><span>GitHub account</span></h2>
-      <p class="max-length not-centered">Your Progressinator account is connected with the “{{username}}” GitHub account.</p>
-      <a class="btn giga" href="{% url 'core:sign_out' %}">Sign out</a>
-    </div>
-  </section>
+  <div class="grid">
+    <section class="class unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 class-outside pad-b">
+      <div class="class-desc gutter-1-4">
+        <h2 class="class-heading push-1-2 giga">GitHub account</h2>
+        <p class="max-length not-centered push-1-4 italic">Your Progressinator account is associated with your GitHub account.</p>
+        <dl class="list-group-inline">
+          <dt>Username</dt>
+          <dd class="push-0"><a href="https://github.com/{{username}}" rel="external">{{username}}</a></dd>
+          <dt>Repositories</dt>
+          <dd class="push-0"><a href="https://github.com/{{username}}?tab=repositories" rel="external">{{username}}’s repos</a></dd>
+        </dl>
+        <a class="btn mega" href="{% url 'core:sign_out' %}">Sign out</a>
+      </div>
+    </section>
+    <section class="class unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 section-muted-medium pad-b">
+      <div class="class-desc gutter-1-4">
+        <h2 class="class-heading push-1-2 giga">Progressinator account</h2>
+        <p><strong>Danger Zone!</strong> Deleting your account cannot be undone. <em>All of your grades will be permanently erased.</em></p>
+        <a class="btn milli btn-danger" href="#">Delete account</a>
+      </div>
+    </section>
 
 {% endblock %}

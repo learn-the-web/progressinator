@@ -1,3 +1,15 @@
+.btn-danger {
+  background-color: var(--color-fail);
+  border-color: var(--color-fail);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-fail-dark);
+  border-color: var(--color-fail-dark);
+  color: #fff;
+}
+
 .section-lightest .class-heading {
   border-color: #25796e;
 }
