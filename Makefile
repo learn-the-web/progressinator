@@ -98,4 +98,4 @@ heroku-django-super-user:
 	heroku run python manage.py createsuperuser
 
 heroku-push-local-db:
-	heroku pg:push postgres://postgres@localhost:5432/progressinator postgresql-rugged-41494 --app floating-tundra-76216
+	heroku pg:push postgres://progressinator@localhost:5432/progressinator postgresql-fluffy-48259 --app learn-the-web-progress
