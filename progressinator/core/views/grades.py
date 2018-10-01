@@ -91,7 +91,7 @@ def submit_assessment(request):
                 'detail': "Incomplete or missing arguments—double check you have the most recent version of Markbot",
                 }, status=status.HTTP_406_NOT_ACCEPTABLE)
 
-        previousSubmission = UserProgress.objects.filter(assessment_uri=serializer.validated_data['assessment_uri'])
+        previousSubmission = UserProgress.objects.filter(user=request.user, assessment_uri=serializer.validated_data['assessment_uri'])
 
         if previousSubmission.count() > 0:
             return JsonResponse({
