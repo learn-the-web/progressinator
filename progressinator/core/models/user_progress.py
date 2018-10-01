@@ -7,7 +7,7 @@ from django_lifecycle import LifecycleModelMixin, hook
 class UserProgress(LifecycleModelMixin, models.Model):
     created = models.DateTimeField(auto_now_add=True, null=True)
     submitted_by = models.CharField(max_length=256, null=True)
-    signature = models.CharField(max_length=256, null=True)
+    signature = models.CharField(max_length=256, blank=True, null=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='grades')
     assessment_uri = models.CharField(max_length=256, null=True)
     grade = models.IntegerField(null=True)
