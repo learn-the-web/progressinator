@@ -16,6 +16,7 @@
 {
   "course": "web-dev-5",
   "title": "Web Dev 5",
+  
   "description": "Graphic designers are hired for their personality and their work quality. The first interaction potential employers have is through the designer’s online presence—most importantly a portfolio website. Leasing personal domains, configuring servers for email addresses, and peer reviews are some of the topics explored to launch a successful personal portfolio website.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/",
   "course_code": "DSN1686",
@@ -49,7 +50,7 @@
     "activities": 10,
     "exercises": 60,
     "projects": 15,
-    "videos": 20
+    "videos": 15
   },
   "grading_scheme_algonquin": {
     "activities": 10,
@@ -141,13 +142,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W36-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W36-5T11:00"
       }
     
@@ -214,13 +215,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W37-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W37-5T11:00"
       }
     
@@ -262,13 +263,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W37-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W37-5T11:00"
       }
     
@@ -310,13 +311,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W38-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W38-5T08:00"
       }
     
@@ -360,13 +361,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W38-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W38-5T08:00"
       }
     
@@ -412,13 +413,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W38-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W38-5T11:00"
       }
     
@@ -460,13 +461,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W38-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W38-5T11:00"
       }
     
@@ -508,13 +509,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W39-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W39-5T08:00"
       }
     
@@ -558,13 +559,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W39-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W39-5T08:00"
       }
     
@@ -620,13 +621,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W39-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W39-5T11:00"
       }
     
@@ -668,13 +669,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W39-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W39-5T11:00"
       }
     
@@ -716,13 +717,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W39-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W39-5T11:00"
       }
     
@@ -764,13 +765,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W41-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W41-5T08:00"
       }
     
@@ -847,13 +848,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W41-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W41-5T08:00"
       }
     
@@ -905,13 +906,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W41-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W41-5T11:00"
       }
     
@@ -953,13 +954,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W41-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W41-5T11:00"
       }
     
@@ -1001,13 +1002,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W42-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W42-5T08:00"
       }
     
@@ -1051,13 +1052,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W42-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W42-5T08:00"
       }
     
@@ -1092,13 +1093,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W42-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W42-5T08:00"
       }
     
@@ -1154,13 +1155,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W42-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W42-5T11:00"
       }
     
@@ -1202,13 +1203,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W42-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W42-5T11:00"
       }
     
@@ -1250,13 +1251,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W42-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W42-5T11:00"
       }
     
@@ -1298,13 +1299,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W43-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W43-5T08:00"
       }
     
@@ -1346,13 +1347,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W46-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W46-5T08:00"
       }
     
@@ -1415,13 +1416,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W44-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W44-5T08:00"
       }
     
@@ -1467,13 +1468,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W44-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W44-5T11:00"
       }
     
@@ -1515,13 +1516,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W44-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W44-5T11:00"
       }
     
@@ -1593,13 +1594,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W45-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W45-5T11:00"
       }
     
@@ -1643,13 +1644,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W45-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W45-5T11:00"
       }
     
@@ -1711,13 +1712,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W46-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W46-5T11:00"
       }
     
@@ -1759,13 +1760,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W46-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W46-5T11:00"
       }
     
@@ -1809,13 +1810,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W47-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W47-5T08:00"
       }
     
@@ -1861,13 +1862,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W47-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W47-5T08:00"
       }
     
@@ -1917,13 +1918,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W47-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W47-5T11:00"
       }
     
@@ -1967,13 +1968,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W47-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W47-5T11:00"
       }
     
@@ -2017,13 +2018,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W48-3T14:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W48-5T08:00"
       }
     
@@ -2086,13 +2087,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W48-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W48-5T11:00"
       }
     
@@ -2134,13 +2135,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W48-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W48-5T11:00"
       }
     
@@ -2182,13 +2183,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W48-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W48-5T11:00"
       }
     
@@ -2230,13 +2231,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W50-3T23:59"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W50-5T23:59"
       }
     
@@ -2290,13 +2291,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W49-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W49-5T11:00"
       }
     
@@ -2338,13 +2339,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W49-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W49-5T11:00"
       }
     
@@ -2412,13 +2413,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W50-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W50-5T11:00"
       }
     
@@ -2460,13 +2461,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W50-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W50-5T11:00"
       }
     
@@ -2508,13 +2509,13 @@
     
       
       {
-        "course_section": "",
+        "course_section": "010",
         "due": "2018-W50-3T17:00"
       },
     
       
       {
-        "course_section": "",
+        "course_section": "020",
         "due": "2018-W50-5T11:00"
       }
     

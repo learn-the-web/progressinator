@@ -16,6 +16,7 @@
 {
   "course": "web-dev-2",
   "title": "Web Dev 2",
+  
   "description": "The web is accessible to all human beings on the planet. Using grid systems, type systems, and reusable code, students construct modular and flexible web architectures to support the many different screen dimensions, platforms, and needs of people connected to the web.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-2/",
   "course_code": "DSN1675",
@@ -35,7 +36,7 @@
     "activities": 10,
     "exercises": 60,
     "projects": 15,
-    "videos": 20
+    "videos": 15
   },
   "grading_scheme_algonquin": {
     "activities": 15,

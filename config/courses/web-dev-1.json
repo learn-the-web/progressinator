@@ -16,6 +16,7 @@
 {
   "course": "web-dev-1",
   "title": "Web Dev 1",
+  
   "description": "Web development is the production of functional, interactive websites accomplished through the use of the HTML and CSS coding languages. Using video tutorials, step-by-step online lessons, and automation, students explore processes such as semantics and mobile-first architecture, and tools like cloud platforms and version control, in tandem with precise organization principles and current best practices.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/",
   "course_code": "DSN1674",
@@ -49,7 +50,7 @@
     "activities": 10,
     "exercises": 60,
     "projects": 15,
-    "videos": 20
+    "videos": 15
   },
   "grading_scheme_algonquin": {
     "activities": 15,

@@ -16,6 +16,7 @@
 {
   "course": "web-dev-6",
   "title": "Web Dev 6",
+  
   "description": "No web projects are created by just one person—collaboration with other people is fundamental to successful websites. Teams of students organize and create large-scale websites using project management tools, version control systems, online messaging, and issue trackers.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-6/",
   "course_code": "DSN1692",
@@ -35,7 +36,7 @@
     "activities": 10,
     "exercises": 60,
     "projects": 15,
-    "videos": 20
+    "videos": 15
   },
   "grading_scheme_algonquin": {
     "activities": 4,

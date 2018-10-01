@@ -16,6 +16,7 @@
 {
   "course": "web-dev-4",
   "title": "Web Dev 4",
+  
   "description": "Design consistency in large websites is hard to achieve. Using visual design & code best practices, students build a cohesive library of common components, patterns, and styles. Small teams will exchange pattern libraries and demonstrate the many components by creating full page template deliverables.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/",
   "course_code": "DSN1678",
@@ -35,7 +36,7 @@
     "activities": 10,
     "exercises": 60,
     "projects": 15,
-    "videos": 20
+    "videos": 15
   },
   "grading_scheme_algonquin": {
     "activities": 15,
