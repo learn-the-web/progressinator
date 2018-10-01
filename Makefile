@@ -78,6 +78,9 @@ heroku:
 	# https://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
 	heroku create --buildpack https://github.com/heroku/heroku-buildpack-python
 
+	heroku buildpacks:add --index 1 heroku/nodejs
+	heroku buildpacks:add --index 2 heroku/python
+
 	heroku addons:create heroku-postgresql:hobby-dev
 	heroku pg:promote DATABASE_URL
 
