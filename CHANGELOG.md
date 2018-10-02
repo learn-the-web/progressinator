@@ -10,7 +10,8 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Added more details and information to the profile page.
-- Add due dates below each assessment.
+- Added due dates below each assessment & matching coloured icons.
+- Added more submission details below each graded assessment.
 
 ### Changed
 
