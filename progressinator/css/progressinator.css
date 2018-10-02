@@ -30,6 +30,47 @@
   text-align: right;
 }
 
+.assessment-item {
+  padding-left: 1.4em;
+  position: relative;
+}
+
+.assessment-title .icon {
+  position: absolute;
+  left: 0;
+  top: .2em;
+}
+
+.assessment-details {
+  line-height: 1.4;
+}
+
+.assessment-details summary {
+  position: relative;
+  list-style-type: none;
+}
+
+.assessment-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.assessment-details summary::before {
+  content: " ";
+  position: absolute;
+  left: -.9em;
+  height: .8em;
+  width: .8em;
+  top: .25em;
+
+  background: inline("../img-embed/details-triangle.svg") no-repeat center center / contain transparent;
+
+  list-style-type: none;
+}
+
+.assessment-details[open] summary::before {
+  background-image: inline("../img-embed/details-triangle-open.svg");
+}
+
 #api-token {
   padding: .2em .4em;
   height: auto;

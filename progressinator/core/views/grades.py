@@ -1,5 +1,6 @@
 from datetime import datetime
 import pytz
+import dateutil.parser
 
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -54,6 +55,8 @@ def course_grades(request, course_id):
             prog.late = False
             if prog.created and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']:
                 prog.late = True
+            if prog.details and 'started' in prog.details: prog.details['started'] = dateutil.parser.isoparse(prog.details['started'])
+            if prog.details and 'finished' in prog.details: prog.details['finished'] = dateutil.parser.isoparse(prog.details['finished'])
             course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             amount_complete += prog.grade * course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin']
 
