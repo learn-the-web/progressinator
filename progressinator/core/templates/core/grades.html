@@ -43,9 +43,15 @@
               <h3 class="kilo push-0">
                 {% if item.grade %}
                   {% if item.grade.grade > 0 %}
-                    <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
-                      <svg><use xlink:href="#icon-grade-pass"></use></svg>
-                    </i>
+                    {% if item.grade.late %}
+                      <i class="icon i-3-4 color-warning" aria-label="Pass — Late" title="Pass — Late">
+                        <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                      </i>
+                    {% else %}
+                      <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
+                        <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                      </i>
+                    {% endif %}
                   {% else %}
                     <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
                       <svg><use xlink:href="#icon-grade-fail"></use></svg>
@@ -53,7 +59,7 @@
                   {% endif %}
                 {% else %}
                   {% if item.assessment_each_algonquin == 0 %}
-                    <i class="icon i-3-4 color-grey" aria-label="Not graded" title="Not graded">
+                    <i class="icon i-3-4 color-grey" aria-label="Doesn’t contribute to your grade" title="Doesn’t contribute to your grade">
                       <svg><use xlink:href="#icon-grade-closed"></use></svg>
                     </i>
                   {% else %}

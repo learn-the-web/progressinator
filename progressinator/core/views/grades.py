@@ -1,4 +1,5 @@
 from datetime import datetime
+import pytz
 
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -44,14 +45,17 @@ def course_grades(request, course_id):
     user_grades = UserProgress.objects.filter(user=request.user)
     amount_complete = 0.0
 
-    for prog in user_grades:
-        if prog.assessment_uri in assessment_index:
-            course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
-            amount_complete += prog.grade * course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin']
-
     for a in course['assessments']:
         if user_profile.count() > 0:
-            a['user_due_date_algonquin'] = datetime.fromisoformat(a['due_dates_algonquin'][user_profile[0].current_section])
+            a['user_due_date_algonquin'] = datetime.fromisoformat(a['due_dates_algonquin'][user_profile[0].current_section]).replace(tzinfo=pytz.UTC)
+
+    for prog in user_grades:
+        if prog.assessment_uri in assessment_index:
+            prog.late = False
+            if prog.created and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']:
+                prog.late = True
+            course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
+            amount_complete += prog.grade * course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin']
 
     context = {
         'app_version': settings.APP_PKG['version'],
