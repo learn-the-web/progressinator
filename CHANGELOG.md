@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.1.1]
+
+### Fixed
+
+- Fixed a bug when the user didn’t have a profile, yet it still tried to apply due dates.
+
+---
+
 ## [1.1.0]
 
 ### Added

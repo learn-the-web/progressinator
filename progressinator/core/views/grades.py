@@ -53,7 +53,9 @@ def course_grades(request, course_id):
     for prog in user_grades:
         if prog.assessment_uri in assessment_index:
             prog.late = False
-            if prog.created and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']:
+            if (prog.created
+                and 'user_due_date_algonquin' in course['assessments'][assessment_index[prog.assessment_uri]]
+                and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']):
                 prog.late = True
             if prog.details and 'started' in prog.details: prog.details['started'] = dateutil.parser.isoparse(prog.details['started'])
             if prog.details and 'finished' in prog.details: prog.details['finished'] = dateutil.parser.isoparse(prog.details['finished'])
