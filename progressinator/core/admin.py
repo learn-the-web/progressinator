@@ -38,6 +38,19 @@ class UserProgressAdmin(ImportExportActionModelAdmin):
     resource_class = UserProgressResource
     autocomplete_fields = ['user']
 
+class UserProfileResource(resources.ModelResource):
+    class Meta:
+        model = UserProfile
+        skip_unchanged = True
+        report_skipped = True
+        fields = ('id', 'user', 'user__username', 'user__first_name', 'user__last_name', 'current_course', 'current_course__slug', 'current_section')
+        export_order = ('id', 'user', 'user__username', 'user__first_name', 'user__last_name', 'current_course',  'current_course__slug','current_section')
+
+@admin.register(UserProfile)
+class UserProfileAdmin(ImportExportActionModelAdmin):
+    resource_class = UserProfileResource
+    autocomplete_fields = ['user']
+
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
     inlines = (UserProfileTabularInline, )
