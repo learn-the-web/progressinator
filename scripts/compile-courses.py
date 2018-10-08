@@ -28,9 +28,9 @@ def setup_course(course):
     for a in course['assessments']:
         a['assessment_each'] = course['totals']['exercises_each']
         a['assessment_each_algonquin'] = course['totals']['exercises_each_algonquin']
-        if 'activit' in a['assessment_type']:
-            a['assessment_each'] = course['totals']['activities_each']
-            a['assessment_each_algonquin'] = course['totals']['activities_each_algonquin']
+        if 'activit' in a['assessment_type'] or 'lesson' in a['assessment_type']:
+            a['assessment_each'] = course['totals']['activities_plus_lessons_each']
+            a['assessment_each_algonquin'] = course['totals']['activities_plus_lessons_each_algonquin']
         if 'video' in a['assessment_type']:
             a['assessment_each'] = course['totals']['videos_each']
             a['assessment_each_algonquin'] = course['totals']['videos_each_algonquin']

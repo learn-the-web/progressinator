@@ -47,7 +47,7 @@ def course_grades(request, course_id):
     amount_complete = 0.0
 
     for a in course['assessments']:
-        if user_profile.count() > 0:
+        if user_profile.count() > 0 and 'due_dates_algonquin' in a:
             a['user_due_date_algonquin'] = datetime.fromisoformat(a['due_dates_algonquin'][user_profile[0].current_section]).replace(tzinfo=pytz.UTC)
 
     for prog in user_grades:

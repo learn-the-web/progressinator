@@ -34,12 +34,14 @@
   },
   "grading_scheme": {
     "activities": 10,
+    "activities_plus_lessons": 10,
     "exercises": 60,
     "projects": 15,
     "videos": 15
   },
   "grading_scheme_algonquin": {
     "activities": 15,
+    "activities_plus_lessons": 15,
     "exercises": 70,
     "projects": 15,
     
@@ -2252,6 +2254,7 @@
   "videos": 6,
   "lessons": 7,
   "activities": 11,
+  "activities_plus_lessons": 18,
   "exercises": 28,
   "projects": 1
 }
