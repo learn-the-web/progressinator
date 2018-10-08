@@ -5,6 +5,23 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.2.0]
+
+### Added
+
+- Added proper support for showing letter grades on projects.
+- Allow user profiles to be imported & exported in Django Admin.
+
+### Changed
+
+- Restricted to a small set of available sections for user profiles.
+
+### Fixed
+
+- Fixed a bug in the grade weights where certain exercises weren’t categorized properly.
+
+---
+
 ## [1.1.1]
 
 ### Fixed
