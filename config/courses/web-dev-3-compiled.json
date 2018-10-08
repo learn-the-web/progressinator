@@ -33,7 +33,7 @@
       "course": "web-dev-3",
       "name": "Submit GitHub account",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-01/#submit-github-account",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -59,7 +59,7 @@
       "course": "web-dev-3",
       "name": "Update your computer!",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/update-your-computer/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -267,7 +267,7 @@
       "course": "web-dev-3",
       "name": "Production prepping & compression",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-03/#production-prepping-compression",
-      "assessment_type": "download-markbot",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1307,7 +1307,7 @@
       "course": "web-dev-3",
       "name": "Animal rescue website UX",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-13/#animal-rescue-website-ux",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1385,7 +1385,7 @@
       "course": "web-dev-3",
       "name": "Animal rescue website check-in",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-14/#animal-rescue-website-check-in",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1411,7 +1411,7 @@
       "course": "web-dev-3",
       "name": "Performance testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/performance-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1437,7 +1437,7 @@
       "course": "web-dev-3",
       "name": "Accessibility testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1463,7 +1463,7 @@
       "course": "web-dev-3",
       "name": "Browser testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [

@@ -16,7 +16,7 @@
 {
   "course": "web-dev-4",
   "title": "Web Dev 4",
-
+  
   "description": "Design consistency in large websites is hard to achieve. Using visual design & code best practices, students build a cohesive library of common components, patterns, and styles. Small teams will exchange pattern libraries and demonstrate the many components by creating full page template deliverables.",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/",
   "course_code": "DSN1678",
@@ -29,7 +29,7 @@
     "github": "thomasjbradley",
     "office": false,
     "office_hours": [
-
+      
     ]
   },
   "grading_scheme": {
@@ -42,64 +42,64 @@
     "activities": 15,
     "exercises": 65,
     "projects": 20,
-
+    
     "videos": 0
-
+    
   },
   "assessments": [
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -115,29 +115,29 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -153,27 +153,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
 
 
 
@@ -189,39 +189,39 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+        
+      
+    
 
+  
+    
+      
 
+  
 
+  
+  
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -237,27 +237,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -270,30 +270,30 @@
   "course": "web-dev-4",
   "name": "eCommerce UX inspiration",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-02/#ecommerce-ux-inspiration",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -306,37 +306,37 @@
   "course": "web-dev-4",
   "name": "eCommerce UX check-in",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-02/#ecommerce-ux-check-in",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
+    
+      
+    
 
+  
+    
+      
 
+  
 
+  
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
 
 
 
@@ -352,20 +352,20 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
-
-
-
-
-
-
-
+      
+      
+    
+  
+    
+      
+      
 
 
 
@@ -381,31 +381,31 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+      
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -421,27 +421,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -457,27 +457,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -493,29 +493,29 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
+    
+      
 
+  
 
+  
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
 
 
 
@@ -531,20 +531,20 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
-
-
-
-
-
-
-
+      
+      
+    
+  
+    
+      
+      
 
 
 
@@ -560,35 +560,35 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+      
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -604,27 +604,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -640,27 +640,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -676,27 +676,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -712,27 +712,27 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -748,42 +748,42 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -799,27 +799,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -835,27 +835,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -871,67 +871,67 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
 
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -947,29 +947,29 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -982,30 +982,30 @@
   "course": "web-dev-4",
   "name": "Accessibility testing",
   "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1021,42 +1021,42 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1072,29 +1072,29 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1107,30 +1107,30 @@
   "course": "web-dev-4",
   "name": "Browser testing",
   "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1146,29 +1146,29 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
+    
+      
 
+  
 
+  
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
 
 
 
@@ -1184,35 +1184,35 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+      
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1228,27 +1228,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1264,29 +1264,29 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1302,50 +1302,50 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1361,27 +1361,27 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1397,29 +1397,29 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1435,38 +1435,38 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1482,31 +1482,31 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1522,38 +1522,38 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1569,31 +1569,31 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1609,48 +1609,48 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
+    
+      
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1666,27 +1666,27 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1699,30 +1699,30 @@
   "course": "web-dev-4",
   "name": "Project hand-off & documentation",
   "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-4/week-13/#ecommerce-project-hand-off-and-documentation",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1738,46 +1738,46 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1793,31 +1793,31 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
 
 
 
@@ -1833,51 +1833,51 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+        
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1890,30 +1890,30 @@
   "course": "web-dev-4",
   "name": "Accessibility testing",
   "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1926,29 +1926,29 @@
   "course": "web-dev-4",
   "name": "Browser testing",
   "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
   ,"due_dates": [
-
+    
   ]
-
+  
 }
 
+      
+    
 
+  
+    
+      
+    
+      
+    
 
+  
 
-
-
-
-
-
-
-
-
-
-
+  
 ],
 "totals": {
   "weeks": 15,

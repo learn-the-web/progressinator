@@ -29,7 +29,7 @@
     "github": "thomasjbradley",
     "office": false,
     "office_hours": [
-
+      
     ]
   },
   "grading_scheme": {
@@ -42,35 +42,35 @@
     "activities": 10,
     "exercises": 60,
     "projects": 15,
-
+    
     "videos": 15
-
+    
   },
   "assessments": [
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
+  
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
 
 
 
@@ -86,16 +86,16 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
-
-
-
-
-
-
-
+      
+      
+    
+  
+    
+      
+      
 
 
 
@@ -111,29 +111,29 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+      
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -149,23 +149,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -181,23 +181,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -213,23 +213,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -245,23 +245,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -277,40 +277,40 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -326,23 +326,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -358,23 +358,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -390,23 +390,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -422,23 +422,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -454,23 +454,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
 
 
 
@@ -486,27 +486,27 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+      
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -522,23 +522,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -554,23 +554,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -586,23 +586,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -618,23 +618,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -650,36 +650,36 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -695,23 +695,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -727,23 +727,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -759,23 +759,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -791,23 +791,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -823,23 +823,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
 
 
 
@@ -855,33 +855,33 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+      
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -897,23 +897,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -929,23 +929,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -961,23 +961,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -993,23 +993,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1025,23 +1025,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
 
 
 
@@ -1057,27 +1057,27 @@
   "assessment_type": "video",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+      
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1093,23 +1093,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1125,23 +1125,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1157,23 +1157,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1189,23 +1189,23 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1221,34 +1221,34 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1264,23 +1264,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1296,23 +1296,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1328,23 +1328,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1360,23 +1360,23 @@
   "assessment_type": "lesson",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1392,44 +1392,44 @@
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
+  
 
+  
+  
 
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1445,23 +1445,23 @@
   "assessment_type": "activity",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1474,26 +1474,26 @@
   "course": "javascript",
   "name": "Responsive infographic paper plan",
   "url": "https://learn-the-web.algonquindesign.ca/courses/javascript/week-08/#responsive-infographic-paper-plan",
-  "assessment_type": "paper",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
 
 
 
@@ -1509,24 +1509,24 @@
   "assessment_type": "project",
   "grading_type": "letter_grade",
   "points_possible": 100
-
+  
 }
 
+        
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1539,26 +1539,26 @@
   "course": "javascript",
   "name": "Browser testing",
   "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 
 
@@ -1571,19 +1571,19 @@
   "course": "javascript",
   "name": "Accessibility testing",
   "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
-  "assessment_type": "basic",
+  "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
-
+  
 }
 
+      
+    
 
+  
 
-
-
-
-
-
+  
+  
 ],
 "totals": {
   "weeks": 8,

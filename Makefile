@@ -16,6 +16,15 @@ start:
 stop:
 	sudo docker container stop progressinator_django_1 progressinator_postgres_1
 
+copy-courses:
+	cp /db/learn-the-web/www/_site/courses/web-dev-1/course.json ./config/courses/web-dev-1.json
+	cp /db/learn-the-web/www/_site/courses/web-dev-2/course.json ./config/courses/web-dev-2.json
+	cp /db/learn-the-web/www/_site/courses/web-dev-3/course.json ./config/courses/web-dev-3.json
+	cp /db/learn-the-web/www/_site/courses/web-dev-4/course.json ./config/courses/web-dev-4.json
+	cp /db/learn-the-web/www/_site/courses/web-dev-5/course.json ./config/courses/web-dev-5.json
+	cp /db/learn-the-web/www/_site/courses/web-dev-6/course.json ./config/courses/web-dev-6.json
+	cp /db/learn-the-web/www/_site/courses/javascript/course.json ./config/courses/javascript.json
+
 build-courses:
 	pipenv run python ./scripts/compile-courses.py
 

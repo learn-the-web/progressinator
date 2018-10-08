@@ -44,7 +44,7 @@
       "course": "web-dev-5",
       "name": "Update your computer!",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/update-your-computer/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -70,7 +70,7 @@
       "course": "web-dev-5",
       "name": "Portfolio inspiration",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/week-02/#portfolio-inspiration",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -96,7 +96,7 @@
       "course": "web-dev-5",
       "name": "Choosing a domain",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/week-02/#choosing-a-domain",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -226,7 +226,7 @@
       "course": "web-dev-5",
       "name": "Portfolio content",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/week-03/#portfolio-content",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -330,7 +330,7 @@
       "course": "web-dev-5",
       "name": "Paper wireframes",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/week-04/#paper-wireframes",
-      "assessment_type": "paper",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -772,7 +772,7 @@
       "course": "web-dev-5",
       "name": "Portfolio check-in",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/week-10/#portfolio-check-in",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -824,7 +824,7 @@
       "course": "web-dev-5",
       "name": "Browser testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1032,7 +1032,7 @@
       "course": "web-dev-5",
       "name": "Accessibility testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1136,7 +1136,7 @@
       "course": "web-dev-5",
       "name": "Performance testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/performance-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1162,7 +1162,7 @@
       "course": "web-dev-5",
       "name": "Accessibility testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/accessibility-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -1188,7 +1188,7 @@
       "course": "web-dev-5",
       "name": "Browser testing",
       "url": "https://learn-the-web.algonquindesign.ca/courses/shared/browser-testing/",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [

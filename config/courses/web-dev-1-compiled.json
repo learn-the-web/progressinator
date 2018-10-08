@@ -152,7 +152,7 @@
       "course": "web-dev-1",
       "name": "Submit GitHub account",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-02/#submit-github-account",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
@@ -2132,7 +2132,7 @@
       "course": "web-dev-1",
       "name": "Confectionery website check-in",
       "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-14/#confectionery-website-check-in",
-      "assessment_type": "basic",
+      "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
       "due_dates": [
