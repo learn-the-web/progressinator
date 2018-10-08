@@ -1,4 +1,5 @@
 from datetime import datetime
+import decimal
 import pytz
 import dateutil.parser
 
@@ -44,7 +45,7 @@ def course_grades(request, course_id):
     assessment_index = build_dict_index(course['assessments'], 'uri')
     user_profile = UserProfile.objects.filter(user=request.user)
     user_grades = UserProgress.objects.filter(user=request.user)
-    amount_complete = 0.0
+    amount_complete = decimal.Decimal(0.0)
 
     for a in course['assessments']:
         if user_profile.count() > 0 and 'due_dates_algonquin' in a:
@@ -60,7 +61,7 @@ def course_grades(request, course_id):
             if prog.details and 'started' in prog.details: prog.details['started'] = dateutil.parser.isoparse(prog.details['started'])
             if prog.details and 'finished' in prog.details: prog.details['finished'] = dateutil.parser.isoparse(prog.details['finished'])
             course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
-            amount_complete += prog.grade * course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin']
+            amount_complete += prog.grade * decimal.Decimal(course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin'])
 
     context = {
         'app_version': settings.APP_PKG['version'],

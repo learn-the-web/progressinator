@@ -69,11 +69,15 @@
                   {% endif %}
                 {% endif %}
                 <a href="{{item.url}}">{{item.name}}</a>
-                <span class="not-bold micro color-grey">{{item.assessment_each_algonquin | pretty_percent_small}}</span>
+                <strong>
+                  {% if item.grade and item.grading_type == 'letter_grade' %}
+                    {{item.grade.grade_as_letter}}
+                  {% endif %}
+                </strong>
               </h3>
               <small class="assessment-info block micro">
                 {% if item.user_due_date_algonquin %}<time datetime="{{item.user_due_date_algonquin | date:'c'}}">Due: {% if not item.grade %}<strong>{% endif %}{{item.user_due_date_algonquin | date:'N j, Y @ H:i'}}{% if not item.grade %}</strong>{% endif %}</time> ·{% endif %}
-                <span class="italic">{{item.assessment_type | title}}</span>
+                <span class="italic">{{item.assessment_type | title}} @ {{item.assessment_each_algonquin | pretty_percent_small}}</span>
                 <span class="color-grey-dark italic">
                   {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
                   {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
