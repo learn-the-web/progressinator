@@ -5,6 +5,18 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.2.1]
+
+### Changed
+
+- Moved the API code into its own separate view for better organization.
+
+### Fixed
+
+- Fixed a bug with Markbot submission after the change to decimal-based grades.
+
+---
+
 ## [1.2.0]
 
 ### Added
