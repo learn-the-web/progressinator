@@ -10,6 +10,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Moved the API code into its own separate view for better organization.
+- Enforce the newest version of Markbot.
 
 ### Fixed
 
