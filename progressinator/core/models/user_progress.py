@@ -17,7 +17,6 @@ class UserProgress(LifecycleModelMixin, models.Model):
 
     @property
     def grade_as_letter(self):
-        import logging; logging.debug(self.grade)
         if (self.grade >= .9):
             return "A+"
         elif self.grade >= .85 and self.grade < .9:

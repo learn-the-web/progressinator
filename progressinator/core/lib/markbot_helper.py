@@ -31,7 +31,7 @@ class MarkbotHelper:
             ghUsername,
             data['submitted_by'],
             data['assessment_uri'],
-            data['grade'],
+            data['grade'] if not float(data['grade']).is_integer() else int(data['grade']),
             data['cheated'],
             settings.MARKBOT['PASSCODE_HASH'],
             ], separators=(',', ':')).encode('ascii')).hexdigest()
