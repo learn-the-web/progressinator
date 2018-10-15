@@ -1,0 +1,33 @@
+{% extends 'default.html' %}
+
+{% block wrapper %}
+  <div class="wrapper gutter-1-2 push pad-t pad-b-1-8">
+    {% for course in courses %}
+      <section class="push" tabindex="-1">
+        <div class="grid grid-middle pad-t-1-4 pad-b-1-4">
+          <div class="unit [ xs-1-2 ]">
+            <div class="push-1-4">
+              <h2 class="exa push-0"><a href="{% url 'core:teacher_course' course_id=course.course %}">{{course.title}}</a></h2>
+            </div>
+          </div>
+          <div class="unit [ xs-1-2 ] text-right">
+            <a class="btn btn-muted milli" href="{% url 'core:teacher_course' course_id=course.course %}" aria-label="View {{course.title}} progress">
+              <span class="icon-label">View grades</span>
+              <i class="icon i-20 i-shift-right"><svg><use xlink:href="#icon-right" /></svg></i>
+            </a>
+          </div>
+        </div>
+        <hr class="push-1-8">
+        <ol class="week-list-tasks list-group-inline milli italic pad-t-1-4 push-0">
+          <li><strong>{{course.totals.students | default:0}} student{% if course.totals.students != 1 %}s{% endif %}</strong></li>
+          <li>{{course.totals.weeks}} week{% if course.totals.weeks != 1 %}s{% endif %}</li>
+          <li>{{course.totals.videos}} video playlist{% if course.totals.videos != 1 %}s{% endif %}</li>
+          <li>{{course.totals.activities}} activit{% if course.totals.videos == 1 %}y{% else %}ies{% endif %}</li>
+          <li>{{course.totals.lessons}} step-by-step lesson{% if course.totals.lessons != 1 %}s{% endif %}</li>
+          <li>{{course.totals.exercises}} exercise{% if course.totals.exercises != 1 %}s{% endif %}</li>
+          <li>{{course.totals.projects}} big project{% if course.totals.projects != 1 %}s{% endif %}</li>
+        </ol>
+      </section>
+    {% endfor %}
+  </div>
+{% endblock %}

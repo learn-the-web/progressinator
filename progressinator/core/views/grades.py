@@ -22,7 +22,6 @@ def courses(request):
         'app_version': settings.APP_PKG['version'],
         'doc_title': 'Courses',
         'username': request.user.username,
-        'email': request.user.email,
         'courses': Courses.all(),
         'nav_current': 'courses',
     }
@@ -38,13 +37,16 @@ def course_grades(request, course_id):
         return redirect('core:courses')
 
     assessment_index = build_dict_index(course['assessments'], 'uri')
-    user_profile = UserProfile.objects.filter(user=request.user)
+    try:
+        user_profile = UserProfile.objects.get(user=request.user)
+    except:
+        user_profile = None
     user_grades = UserProgress.objects.filter(user=request.user)
     amount_complete = decimal.Decimal(0.0)
 
     for a in course['assessments']:
-        if user_profile.count() > 0 and 'due_dates_algonquin' in a:
-            a['user_due_date_algonquin'] = datetime.fromisoformat(a['due_dates_algonquin'][user_profile[0].current_section]).replace(tzinfo=pytz.UTC)
+        if user_profile and 'due_dates_algonquin' in a and user_profile.current_section in a['due_dates_algonquin']:
+            a['user_due_date_algonquin'] = datetime.fromisoformat(a['due_dates_algonquin'][user_profile.current_section]).replace(tzinfo=pytz.UTC)
 
     for prog in user_grades:
         if prog.assessment_uri in assessment_index:
@@ -63,13 +65,12 @@ def course_grades(request, course_id):
         'doc_title': f"Grades for {course['title']}",
         'h1_title': course['title'],
         'username': request.user.username,
-        'email': request.user.email,
         'amount_complete': amount_complete,
         'course': course,
     }
 
-    if user_profile.count() > 0:
-        context['user_profile'] = user_profile[0]
+    if user_profile:
+        context['user_profile'] = user_profile
 
     return render(request, 'core/grades.html', context)
 
