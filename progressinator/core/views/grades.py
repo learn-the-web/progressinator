@@ -20,7 +20,7 @@ from progressinator.common.util import build_dict_index
 def courses(request):
     context = {
         'app_version': settings.APP_PKG['version'],
-        'doc_title': 'Courses',
+        'doc_title': "Courses",
         'username': request.user.username,
         'courses': Courses.all(),
         'nav_current': 'courses',

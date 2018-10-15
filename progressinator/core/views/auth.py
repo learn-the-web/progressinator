@@ -8,7 +8,7 @@ from django.conf import settings
 def signin(request):
     context = {
         'app_version': settings.APP_PKG['version'],
-        'doc_title': 'Sign in',
+        'doc_title': "Sign in",
         'hide_nav': True,
     }
     return render(request, 'core/signin.html', context)
