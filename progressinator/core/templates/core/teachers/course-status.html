@@ -7,7 +7,7 @@
   <div class="grid">
     <div class="class unit [ xs-1 s-1 m-3-5 ] pad-b-1-2">
       <section class="class-desc section-lightest gutter-1-2 pad-t-1-2 pad-b-1-2">
-        <h2 class="class-heading push-1-2 giga">Overview</h2>
+        <h2 class="class-heading push-1-2 giga">Grade overview</h2>
         <dl class="grid">
           <div class="unit [ xs-1-2 m-1-4 ]">
             <dt class="italic milli">Grade avg</dt>
@@ -55,8 +55,21 @@
         </table>
       </section>
     </div>
-    <div class="class class-outside unit [ xs-1 s-1 m-2-5 ] gutter-1-2 pad-t-1-2 pad-b">
-      <section class="class-desc gutter-1-4">
+    <div class="class class-outside unit [ xs-1 s-1 m-2-5 ] pad-b">
+      <section class="class-desc section-muted-medium gutter-1-2 pad-t-1-2 pad-b-1-2">
+        <h2 class="class-heading push-1-2 giga">Assessment overview</h2>
+        <dl class="grid">
+          <div class="unit [ xs-1-2 m-1-2 ]">
+            <dt class="italic milli">Total assessments</dt>
+            <dd class="push-0 yotta bold">{{stats_assessments_no_zeros}} <span class="color-grey-dark not-bold">({{stats_assessments_total}})</span></dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-2 ]">
+            <dt class="italic milli">Pass rate avg</dt>
+            <dd class="push-0 yotta bold">{{stats_pass_rate_avg | pretty_percent_small}}</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="class-desc gutter-1-2 pad-t-1-2">
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
         <table>
           <thead>

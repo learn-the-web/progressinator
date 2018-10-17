@@ -50,6 +50,7 @@ def course_status(request, course_id):
     max_assessments_per_section = grade_helper.max_assessments_per_section(course['assessments'])
     stats_actual_total = 0
     stats_grade_total = 0
+    stats_pass_rate_total = 0
 
     for student in students:
         student_grades = (grade_helper.calc_grade(g, assessment_index, course['assessments']) for g in all_grades if g.user_id == student.user_id)
@@ -70,6 +71,7 @@ def course_status(request, course_id):
             assessment['total_students_pass_rate'] = assessment['total_students_pass'] / students.count()
         else:
             assessment['total_students_pass_rate'] = 0
+        stats_pass_rate_total += assessment['total_students_pass_rate']
 
     context = {
         'app_version': settings.APP_PKG['version'],
@@ -81,6 +83,9 @@ def course_status(request, course_id):
         'students': students,
         'stats_grade_avg': stats_grade_total / students.count(),
         'stats_actual_avg': stats_actual_total / students.count(),
+        'stats_assessments_total': len(course['assessments']),
+        'stats_assessments_no_zeros': len(course['assessments']) - len([a for a in course['assessments'] if a['assessment_each_algonquin'] <= 0]),
+        'stats_pass_rate_avg': stats_pass_rate_total / len(course['assessments']),
     }
 
     return render(request, 'core/teachers/course-status.html', context)
