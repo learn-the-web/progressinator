@@ -4,6 +4,8 @@ from django.db import models
 from django.contrib.postgres.fields import JSONField
 from django_lifecycle import LifecycleModelMixin, hook
 
+from progressinator.common import grades
+
 
 class UserProgress(LifecycleModelMixin, models.Model):
     created = models.DateTimeField(auto_now_add=True, null=True)
@@ -17,32 +19,7 @@ class UserProgress(LifecycleModelMixin, models.Model):
 
     @property
     def grade_as_letter(self):
-        if (self.grade >= .9):
-            return "A+"
-        elif self.grade >= .85 and self.grade < .9:
-            return "A"
-        elif self.grade >= .80 and self.grade < .85:
-            return "A-"
-        elif self.grade >= .77 and self.grade < .80:
-            return "B+"
-        elif self.grade >= .73 and self.grade < .77:
-            return "B"
-        elif self.grade >= .70 and self.grade < .73:
-            return "B-"
-        elif self.grade >= .67 and self.grade < .70:
-            return "C+"
-        elif self.grade >= .63 and self.grade < .67:
-            return "C"
-        elif self.grade >= .60 and self.grade < .63:
-            return "C-"
-        elif self.grade >= .57 and self.grade < .60:
-            return "D+"
-        elif self.grade >= .53 and self.grade < .57:
-            return "D"
-        elif self.grade >= .50 and self.grade < .53:
-            return "D-"
-        else:
-            return "F"
+        return grades.grade_as_letter(self.grade)
 
     @hook('before_save')
     def _save_grade(self):

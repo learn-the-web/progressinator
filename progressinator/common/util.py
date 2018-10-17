@@ -39,6 +39,10 @@ def build_dict_index(seq, key):
     return dict((d[key], index) for (index, d) in enumerate(seq))
 
 
+def build_queryset_index(seq, key):
+    return dict((getattr(d, key), index) for (index, d) in enumerate(seq))
+
+
 class ChoiceEnum(Enum):
     @classmethod
     def choices(cls):

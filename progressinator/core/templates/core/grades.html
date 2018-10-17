@@ -1,40 +1,48 @@
 {% extends 'default.html' %}
 
 {% load data %}
+{% load grades %}
 
 {% block wrapper %}
   <div class="grid">
-    <div class="class unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b-1-2">
+    <section class="class unit [ xs-1 s-1 m-2-5 ] gutter-1-4 pad-t-1-2 pad-b-1-2">
       <div class="class-desc gutter-1-4">
         <h2 class="class-heading push giga">Grade</h2>
-        <h3 class="tenamega push brand-dark" aria-label="{{amount_complete | pretty_percent_small}} complete this course" title="{{amount_complete | pretty_percent_small}} complete this course">{{amount_complete | pretty_percent_small}}</h3>
+        <h3 class="tenamega push brand-dark push-1-4" aria-label="{{current_grade | pretty_percent_small}} complete this course" title="{{current_grade | pretty_percent_small}} complete this course">{{current_grade | pretty_percent_small}} {% if current_grade_max %}<span class="color-grey not-bold peta">out of</span> <span class="color-grey-dark not-bold exa">{{current_grade_max | pretty_percent_small}}</span>{% endif %}</h3>
+        {% if current_grade_average %}
+          <strong class="tera ib push color-grey pad-b-1-2">
+            <span class="not-bold italic">Projected grade:</span>
+            <span class="brand-dark">{{current_grade_average | grade_as_letter}}</span>
+            (<span class="not-bold italic color-grey-dark">{{current_grade_average | grade_as_status}}</span>)
+          </strong>
+        {% endif %}
         <hr class="push-1-2">
         <h3 class="mega not-bold push-1-4">Marking scheme</h3>
         <dl class="marking-scheme list-group-inline milli color-grey-dark">
           <dt class="push-0">Videos</dt>
           <dd class="push-0">
             <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.videos | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.videos}}</span> @ {{course.totals.videos_each_algonquin | pretty_percent_small}} each)</span>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.videos}}</span> @ <data value="{{course.totals.videos_each_algonquin | times:100}}%" title="{{course.totals.videos_each_algonquin | times:100}}%">≈{{course.totals.videos_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
           <dt class="push-0">Activities</dt>
           <dd class="push-0">
             <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.activities | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.activities_plus_lessons}}</span> @ {{course.totals.activities_plus_lessons_each_algonquin | pretty_percent_small}} each)</span>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.activities_plus_lessons}}</span> @ <data value="{{course.totals.activities_plus_lessons_each_algonquin | times:100}}%" title="{{course.totals.activities_plus_lessons_each_algonquin | times:100}}%">≈{{course.totals.activities_plus_lessons_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
           <dt class="push-0">Exercises</dt>
           <dd class="push-0">
             <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.exercises | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.exercises}}</span> @ {{course.totals.exercises_each_algonquin | pretty_percent_small}} each)</span>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.exercises}}</span> @ <data value="{{course.totals.exercises_each_algonquin | times:100}}%" title="{{course.totals.exercises_each_algonquin | times:100}}%">≈{{course.totals.exercises_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
           <dt class="push-0">Projects</dt>
           <dd class="push-0">
             <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.projects | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.projects}}</span> @ {{course.totals.projects_each_algonquin | pretty_percent_small}} each)</span>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.projects}}</span> @ <data value="{{course.totals.projects_each_algonquin | times:100}}%" title="{{course.totals.projects_each_algonquin | times:100}}%">≈{{course.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
         </dl>
       </div>
-    </div>
-    <div class="class class-outside unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b">
+    </section>
+    <section class="class class-outside unit [ xs-1 s-1 m-3-5 ] gutter-1-4 pad-t-1-2 pad-b">
       <div class="class-desc gutter-1-4">
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
         <ol class="assessment-list list-group push-0">
@@ -77,7 +85,7 @@
               </h3>
               <small class="assessment-info block micro">
                 {% if item.user_due_date_algonquin %}<time datetime="{{item.user_due_date_algonquin | date:'c'}}">Due: {% if not item.grade %}<strong>{% endif %}{{item.user_due_date_algonquin | date:'N j, Y @ H:i'}}{% if not item.grade %}</strong>{% endif %}</time> ·{% endif %}
-                <span class="italic">{{item.assessment_type | title}} @ {{item.assessment_each_algonquin | pretty_percent_small}}</span>
+                <span class="italic">{{item.assessment_type | title}} @ ≈{{item.assessment_each_algonquin | pretty_percent_small}}</span>
                 <span class="color-grey-dark italic">
                   {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
                   {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
@@ -119,6 +127,6 @@
           {% endfor %}
         </ol>
       </div>
-    </div>
+    </section>
   </div>
 {% endblock %}

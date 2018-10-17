@@ -8,7 +8,11 @@ from progressinator.core.models import UserProfile
 
 @login_required
 def index(request):
-    api_token = Token.objects.get(user=request.user)
+    try:
+        api_token = Token.objects.get(user=request.user)
+    except:
+        api_token = ""
+
     try:
         profile = UserProfile.objects.get(user=request.user)
     except:

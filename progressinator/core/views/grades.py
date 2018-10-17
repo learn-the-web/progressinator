@@ -10,6 +10,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 
+import progressinator.common.grades as grade_helper
 from progressinator.core.lib import Courses
 from progressinator.core.models import UserProgress, UserProfile
 from progressinator.core.serializers import UserProgressSerializer
@@ -36,13 +37,15 @@ def course_grades(request, course_id):
     except:
         return redirect('core:courses')
 
-    assessment_index = build_dict_index(course['assessments'], 'uri')
     try:
         user_profile = UserProfile.objects.get(user=request.user)
     except:
         user_profile = None
+
+    assessment_index = build_dict_index(course['assessments'], 'uri')
     user_grades = UserProgress.objects.filter(user=request.user)
-    amount_complete = decimal.Decimal(0.0)
+    current_grade = decimal.Decimal(0.0)
+    max_assessments_per_section = grade_helper.max_assessments_per_section(course['assessments'])
 
     for a in course['assessments']:
         if user_profile and 'due_dates_algonquin' in a and user_profile.current_section in a['due_dates_algonquin']:
@@ -58,14 +61,21 @@ def course_grades(request, course_id):
             if prog.details and 'started' in prog.details: prog.details['started'] = dateutil.parser.isoparse(prog.details['started'])
             if prog.details and 'finished' in prog.details: prog.details['finished'] = dateutil.parser.isoparse(prog.details['finished'])
             course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
-            amount_complete += prog.grade * decimal.Decimal(course['assessments'][assessment_index[prog.assessment_uri]]['assessment_each_algonquin'])
+            current_grade += grade_helper.calc_grade(prog, assessment_index, course['assessments'])
+
+    if user_profile:
+        current_grade_max = max_assessments_per_section[user_profile.current_section]
+    else:
+        current_grade_max = False
 
     context = {
         'app_version': settings.APP_PKG['version'],
         'doc_title': f"Grades for {course['title']}",
         'h1_title': course['title'],
         'username': request.user.username,
-        'amount_complete': amount_complete,
+        'current_grade': current_grade,
+        'current_grade_max': current_grade_max,
+        'current_grade_average': current_grade / current_grade_max if current_grade_max else False,
         'course': course,
     }
 

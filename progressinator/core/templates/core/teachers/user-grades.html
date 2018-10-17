@@ -1,5 +1,140 @@
 {% extends 'default.html' %}
 
+{% load data %}
+{% load grades %}
+
 {% block wrapper %}
 
+  <div class="grid">
+    <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2">
+      <section class="section-lightest gutter-1-2 pad-t-1-2 pad-b push-1-2">
+        <h2 class="push-0">{{student_profile.user.first_name}} {{student_profile.user.last_name}}</h2>
+        <a class="mega ib push-1-4" href="https://github.com/{{student_profile.user.username}}" rel="external">{{student_profile.user.username}} »</a>
+        <p class="push-0 mega italic">
+          <a href="{% url 'core:teacher_course' course_id=course.course %}">{{student_profile.current_course.name}}</a>
+          · {{student_profile.current_section}}
+        </p>
+      </section>
+      <section class="class-desc gutter-1-2">
+        <h2 class="class-heading push giga">Grade</h2>
+        <h3 class="tenamega push brand-dark push-1-4" aria-label="{{current_grade | pretty_percent_small}} complete this course" title="{{current_grade | pretty_percent_small}} complete this course">{{current_grade | pretty_percent_small}} <span class="color-grey not-bold peta">out of</span> <span class="color-grey-dark not-bold exa">{{current_grade_max | pretty_percent_small}}</span></h3>
+        <strong class="tera ib push color-grey pad-b-1-2">
+          <span class="not-bold italic">Projected grade:</span>
+          <span class="brand-dark">{{current_grade_average | grade_as_letter}}</span>
+          (<span class="not-bold italic color-grey-dark">{{current_grade_average | grade_as_status}}</span>)
+        </strong>
+        <hr class="push-1-2">
+        <h3 class="mega not-bold push-1-4">Marking scheme</h3>
+        <dl class="marking-scheme list-group-inline milli color-grey-dark">
+          <dt class="push-0">Videos</dt>
+          <dd class="push-0">
+            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.videos | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.videos}}</span> @ <data value="{{course.totals.videos_each_algonquin | times:100}}%" title="{{course.totals.videos_each_algonquin | times:100}}%">≈{{course.totals.videos_each_algonquin | pretty_percent_small}}</data> each)</span>
+          </dd>
+          <dt class="push-0">Activities</dt>
+          <dd class="push-0">
+            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.activities | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.activities_plus_lessons}}</span> @ <data value="{{course.totals.activities_plus_lessons_each_algonquin | times:100}}%" title="{{course.totals.activities_plus_lessons_each_algonquin | times:100}}%">≈{{course.totals.activities_plus_lessons_each_algonquin | pretty_percent_small}}</data> each)</span>
+          </dd>
+          <dt class="push-0">Exercises</dt>
+          <dd class="push-0">
+            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.exercises | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.exercises}}</span> @ <data value="{{course.totals.exercises_each_algonquin | times:100}}%" title="{{course.totals.exercises_each_algonquin | times:100}}%">≈{{course.totals.exercises_each_algonquin | pretty_percent_small}}</data> each)</span>
+          </dd>
+          <dt class="push-0">Projects</dt>
+          <dd class="push-0">
+            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.projects | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.totals.projects}}</span> @ <data value="{{course.totals.projects_each_algonquin | times:100}}%" title="{{course.totals.projects_each_algonquin | times:100}}%">≈{{course.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
+          </dd>
+        </dl>
+      </section>
+    </div>
+
+    <section class="class class-outside unit [ xs-1 s-1 m-3-5 ] gutter-1-4 pad-t-1-2 pad-b">
+      <div class="class-desc gutter-1-4">
+        <h2 class="class-heading push-1-2 giga">Assessments</h2>
+        <ol class="assessment-list list-group push-0">
+          {% for item in course.assessments %}
+            <li class="assessment-item push-1-2">
+              <h3 class="assessment-title kilo push-0">
+                {% if item.grade %}
+                  {% if item.grade.grade > 0 %}
+                    {% if item.grade.late %}
+                      <i class="icon i-3-4 color-warning" aria-label="Pass — Late" title="Pass — Late">
+                        <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                      </i>
+                    {% else %}
+                      <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
+                        <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                      </i>
+                    {% endif %}
+                  {% else %}
+                    <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
+                      <svg><use xlink:href="#icon-grade-fail"></use></svg>
+                    </i>
+                  {% endif %}
+                {% else %}
+                  {% if item.assessment_each_algonquin == 0 %}
+                    <i class="icon i-3-4 color-grey" aria-label="Doesn’t contribute to your grade" title="Doesn’t contribute to your grade">
+                      <svg><use xlink:href="#icon-grade-closed"></use></svg>
+                    </i>
+                  {% else %}
+                    <i class="icon i-3-4" aria-label="Not submitted" title="Not submitted">
+                      <svg><use xlink:href="#icon-grade-open"></use></svg>
+                    </i>
+                  {% endif %}
+                {% endif %}
+                <a href="{{item.url}}">{{item.name}}</a>
+                <strong>
+                  {% if item.grade and item.grading_type == 'letter_grade' %}
+                    {{item.grade.grade_as_letter}}
+                  {% endif %}
+                </strong>
+              </h3>
+              <small class="assessment-info block micro">
+                {% if item.user_due_date_algonquin %}<time datetime="{{item.user_due_date_algonquin | date:'c'}}">Due: {% if not item.grade %}<strong>{% endif %}{{item.user_due_date_algonquin | date:'N j, Y @ H:i'}}{% if not item.grade %}</strong>{% endif %}</time> ·{% endif %}
+                <span class="italic">{{item.assessment_type | title}} @ ≈{{item.assessment_each_algonquin | pretty_percent_small}}</span>
+                <span class="color-grey-dark italic">
+                  {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
+                  {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
+                </span>
+                {% if item.assessment_type == 'exercise' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{student_profile.user.username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
+              </small>
+              {% if item.grade %}
+                <details class="assessment-details micro push-0">
+                  <summary class="bold">Details &amp; comments…</summary>
+                  <dl class="list-group-inline push-0">
+                    <dt class="italic push-0">Submission time</dt>
+                    <dd class="push-0"><time datetime="{{item.grade.created | date:'c'}}">{{item.grade.created | date:'N j, Y @ H:i'}}</time></dd>
+                    <dt class="italic push-0">Submission by</dt>
+                    <dd class="push-0">{{item.grade.submitted_by}}</dd>
+                    {% if item.grade.details.started %}
+                      <dt class="italic push-0">Start time</dt>
+                      <dd class="push-0">{{item.grade.details.started | date:'N j, Y @ H:i'}}</dd>
+                    {% endif %}
+                    {% if item.grade.details.finished %}
+                      <dt class="italic push-0">End time</dt>
+                      <dd class="push-0">{{item.grade.details.finished | date:'N j, Y @ H:i'}}</dd>
+                    {% endif %}
+                    {% if item.grade.details.estimated_time %}
+                      <dt class="italic push-0">Estimated completion</dt>
+                      <dd class="push-0">~{{item.grade.details.estimated_time}} h</dd>
+                    {% endif %}
+                    {% if item.grade.details.number_of_commits %}
+                      <dt class="italic push-0">№ of commits</dt>
+                      <dd class="push-0">{{item.grade.details.number_of_commits}}</dd>
+                    {% endif %}
+                  </dl>
+                  {% if item.grade.details.comment %}
+                    <strong class="italic push-0 not-bold">Comments</strong>
+                    <p class="push-0">{{item.grade.details.comment}}</p>
+                  {% endif %}
+                </details>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+  </div>
 {% endblock %}

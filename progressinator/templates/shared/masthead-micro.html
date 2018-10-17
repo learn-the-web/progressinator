@@ -14,7 +14,7 @@
           {% if request.user.is_staff %}
             <li>
               <a class="btn btn-ghost micro {% if nav_current == 'teachers' %}nav-current{% endif %}" href="{% url 'core:teacher_courses' %}">
-                <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-nav" /></svg></i>
+                <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-star" /></svg></i>
                 <span class="icon-label">Teachers</span>
               </a>
             </li>
