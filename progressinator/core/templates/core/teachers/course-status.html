@@ -5,15 +5,32 @@
 
 {% block wrapper %}
   <div class="grid">
-    <div class="class unit [ xs-1 s-1 m-3-5 ] gutter-1-4 pad-t-1-2 pad-b-1-2">
-      <div class="class-desc gutter-1-4">
+    <div class="class unit [ xs-1 s-1 m-3-5 ] pad-b-1-2">
+      <section class="class-desc section-lightest gutter-1-2 pad-t-1-2 pad-b-1-2">
+        <h2 class="class-heading push-1-2 giga">Overview</h2>
+        <dl class="grid">
+          <div class="unit [ xs-1-2 m-1-4 ]">
+            <dt class="italic milli">Grade avg</dt>
+            <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_letter}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-4 ]">
+            <dt class="italic milli">Actual avg</dt>
+            <dd class="push-0 yotta bold brand-dark">{{stats_actual_avg | pretty_percent_small}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-2 ]">
+            <dt class="italic milli">Status avg</dt>
+            <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_status}}</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="class-desc gutter-1-2 pad-t-1-2">
         <h2 class="class-heading push-1-2 giga">Students</h2>
         <table>
           <thead>
             <tr>
               <th scope="col" colspan="8">Name</th>
-              <th scope="col" colspan="2">Avg</th>
-              <th scope="col" colspan="3">Grade</th>
+              <th scope="col" colspan="2">Grade</th>
+              <th scope="col" colspan="3">Actual</th>
               <th scope="col" colspan="3">Max</th>
               <th scope="col" colspan="3">Status</th>
               <th scope="col" colspan="5">GitHub</th>
@@ -25,7 +42,7 @@
                 <th scope="row" colspan="8">
                   <a href="{% url 'core:teacher_user_grades' course_id=course.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
                 </th>
-                <td colspan="2"><strong>{{student.current_grade_average | grade_as_letter}}</strong></td>
+                <td class="brand-dark" colspan="2"><strong>{{student.current_grade_average | grade_as_letter}}</strong></td>
                 <td class="color-grey-dark" colspan="3">{{student.current_grade | pretty_percent_small}}</td>
                 <td class="color-grey" colspan="3">{{student.current_grade_max | pretty_percent_small}}</td>
                 <td class="milli italic" colspan="3">{{student.current_grade_average | grade_as_status}}</td>
@@ -36,10 +53,10 @@
             {% endfor %}
           </tbody>
         </table>
-      </div>
+      </section>
     </div>
-    <div class="class class-outside unit [ xs-1 s-1 m-2-5 ] gutter-1-4 pad-t-1-2 pad-b">
-      <div class="class-desc gutter-1-4">
+    <div class="class class-outside unit [ xs-1 s-1 m-2-5 ] gutter-1-2 pad-t-1-2 pad-b">
+      <section class="class-desc gutter-1-4">
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
         <table>
           <thead>
@@ -67,7 +84,7 @@
             {% endfor %}
           </tbody>
         </table>
-      </div>
+      </section>
     </div>
   </div>
 {% endblock %}
