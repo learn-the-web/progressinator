@@ -1,0 +1,103 @@
+{% extends 'default.html' %}
+
+{% load data %}
+{% load grades %}
+
+{% block wrapper %}
+  <div class="grid">
+    <div class="class unit [ xs-1 s-1 m-3-5 ] pad-b-1-2">
+      <section class="class-desc section-lightest gutter-1-2 pad-t-1-2 pad-b-1-2">
+        <h2 class="class-heading push-1-2 giga">Grade overview</h2>
+        <dl class="grid">
+          <div class="unit [ xs-1-2 m-1-4 ]">
+            <dt class="italic milli">Grade avg</dt>
+            <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_letter}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-4 ]">
+            <dt class="italic milli">Actual avg</dt>
+            <dd class="push-0 yotta bold brand-dark">{{stats_actual_avg | pretty_percent_small}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-2 ]">
+            <dt class="italic milli">Status avg</dt>
+            <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_status}}</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="class-desc gutter-1-2 pad-t-1-2">
+        <h2 class="class-heading push-1-2 giga">Students</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" colspan="8">Name</th>
+              <th scope="col" colspan="2">Grade</th>
+              <th scope="col" colspan="3">Actual</th>
+              <th scope="col" colspan="3">Max</th>
+              <th scope="col" colspan="3">Status</th>
+              <th scope="col" colspan="5">GitHub</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for student in students %}
+              <tr>
+                <th scope="row" colspan="8">
+                  <a href="{% url 'core:teacher_user_grades' course_id=course.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
+                </th>
+                <td class="brand-dark" colspan="2"><strong>{{student.current_grade_average | grade_as_letter}}</strong></td>
+                <td class="color-grey-dark" colspan="3">{{student.current_grade | pretty_percent_small}}</td>
+                <td class="color-grey" colspan="3">{{student.current_grade_max | pretty_percent_small}}</td>
+                <td class="milli italic" colspan="3">{{student.current_grade_average | grade_as_status}}</td>
+                <td class="milli" colspan="5">
+                  <a href="https://github.com/{{student.user.username}}" rel="external">{{student.user.username}}</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <div class="class class-outside unit [ xs-1 s-1 m-2-5 ] pad-b">
+      <section class="class-desc section-muted-medium gutter-1-2 pad-t-1-2 pad-b-1-2">
+        <h2 class="class-heading push-1-2 giga">Assessment overview</h2>
+        <dl class="grid">
+          <div class="unit [ xs-1-2 m-1-2 ]">
+            <dt class="italic milli">Total assessments</dt>
+            <dd class="push-0 yotta bold">{{stats_assessments_no_zeros}} <span class="color-grey-dark not-bold">({{stats_assessments_total}})</span></dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-2 ]">
+            <dt class="italic milli">Pass rate avg</dt>
+            <dd class="push-0 yotta bold">{{stats_pass_rate_avg | pretty_percent_small}}</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="class-desc gutter-1-2 pad-t-1-2">
+        <h2 class="class-heading push-1-2 giga">Assessments</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" colspan="11">Name</th>
+              <th scope="col" colspan="4">Late</th>
+              <th scope="col" colspan="4">Worth</th>
+              <th scope="col" colspan="5">Pass rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in course.assessments %}
+              <tr>
+                <th scope="row" colspan="11">
+                  {% if item.assessment_each_algonquin == 0 %}
+                    <a class="not-bold" href="#">{{item.name}}</a>
+                  {% else %}
+                    <a href="#">{{item.name}}</a>
+                  {% endif %}
+                </th>
+                <td class="milli color-grey" colspan="4">{{item.assessment_type | title}}</td>
+                <td class="color-grey" colspan="4">≈{{item.assessment_each_algonquin | pretty_percent_small}}</td>
+                <td colspan="5">{{item.total_students_pass_rate | pretty_percent_small}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+{% endblock %}

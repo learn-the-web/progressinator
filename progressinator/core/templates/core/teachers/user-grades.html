@@ -4,18 +4,25 @@
 {% load grades %}
 
 {% block wrapper %}
+
   <div class="grid">
-    <section class="class unit [ xs-1 s-1 m-2-5 ] gutter-1-4 pad-t-1-2 pad-b-1-2">
-      <div class="class-desc gutter-1-4">
+    <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2">
+      <section class="section-lightest gutter-1-2 pad-t-1-2 pad-b push-1-2">
+        <h2 class="push-0">{{student_profile.user.first_name}} {{student_profile.user.last_name}}</h2>
+        <a class="mega ib push-1-4" href="https://github.com/{{student_profile.user.username}}" rel="external">{{student_profile.user.username}} »</a>
+        <p class="push-0 mega italic">
+          <a href="{% url 'core:teacher_course' course_id=course.course %}">{{student_profile.current_course.name}}</a>
+          · {{student_profile.current_section}}
+        </p>
+      </section>
+      <section class="class-desc gutter-1-2">
         <h2 class="class-heading push giga">Grade</h2>
-        <h3 class="tenamega push brand-dark push-1-4" aria-label="{{current_grade | pretty_percent_small}} complete this course" title="{{current_grade | pretty_percent_small}} complete this course">{{current_grade | pretty_percent_small}} {% if current_grade_max %}<span class="color-grey not-bold peta">out of</span> <span class="color-grey-dark not-bold exa">{{current_grade_max | pretty_percent_small}}</span>{% endif %}</h3>
-        {% if current_grade_average %}
-          <strong class="tera ib push color-grey pad-b-1-2">
-            <span class="not-bold italic">Projected grade:</span>
-            <span class="brand-dark">{{current_grade_average | grade_as_letter}}</span>
-            (<span class="not-bold italic color-grey-dark">{{current_grade_average | grade_as_status}}</span>)
-          </strong>
-        {% endif %}
+        <h3 class="tenamega push brand-dark push-1-4" aria-label="{{current_grade | pretty_percent_small}} complete this course" title="{{current_grade | pretty_percent_small}} complete this course">{{current_grade | pretty_percent_small}} <span class="color-grey not-bold peta">out of</span> <span class="color-grey-dark not-bold exa">{{current_grade_max | pretty_percent_small}}</span></h3>
+        <strong class="tera ib push color-grey pad-b-1-2">
+          <span class="not-bold italic">Projected grade:</span>
+          <span class="brand-dark">{{current_grade_average | grade_as_letter}}</span>
+          (<span class="not-bold italic color-grey-dark">{{current_grade_average | grade_as_status}}</span>)
+        </strong>
         <hr class="push-1-2">
         <h3 class="mega not-bold push-1-4">Marking scheme</h3>
         <dl class="marking-scheme list-group-inline milli color-grey-dark">
@@ -40,8 +47,9 @@
             <span class="nano">(<span class="marking-scheme-total">{{course.totals.projects}}</span> @ <data value="{{course.totals.projects_each_algonquin | times:100}}%" title="{{course.totals.projects_each_algonquin | times:100}}%">≈{{course.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
         </dl>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <section class="class class-outside unit [ xs-1 s-1 m-3-5 ] gutter-1-4 pad-t-1-2 pad-b">
       <div class="class-desc gutter-1-4">
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
@@ -90,7 +98,7 @@
                   {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
                   {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
                 </span>
-                {% if item.assessment_type == 'exercise' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
+                {% if item.assessment_type == 'exercise' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{student_profile.user.username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
               </small>
               {% if item.grade %}
                 <details class="assessment-details micro push-0">

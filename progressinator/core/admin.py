@@ -15,11 +15,8 @@ class UserProfileTabularInline(admin.TabularInline):
     model = UserProfile
     exclude = ('api_key', )
 
-class UserProgressInline(admin.TabularInline):
-    model = UserProgress
-
 class UserAdmin(BaseUserAdmin):
-    inlines = (UserProfileStackedInline, UserProgressInline)
+    inlines = (UserProfileStackedInline, )
 
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)

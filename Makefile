@@ -111,3 +111,7 @@ heroku-django-super-user:
 
 heroku-push-local-db:
 	heroku pg:push postgres://progressinator@localhost:5432/progressinator postgresql-fluffy-48259 --app learn-the-web-progress
+
+heroku-schedule-db-backup:
+	# https://devcenter.heroku.com/articles/heroku-postgres-backups
+	heroku pg:backups:schedule DATABASE_URL --at '02:00 America/Toronto' --app learn-the-web-progress
