@@ -110,3 +110,13 @@
 .assessment-statuses {
   min-width: 24em;
 }
+
+@media only screen and (min-width: 80em) {
+
+  .grade-statuses-scroll,
+  .assessment-statuses-scroll {
+    overflow: hidden;
+  }
+
+
+}

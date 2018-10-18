@@ -13,10 +13,10 @@
           <strong class="tera ib push color-grey pad-b-1-2">
             <span class="not-bold italic">Projected grade:</span>
             <span class="brand-dark grade-projected-{{current_grade_average | grade_as_status | slugify}}">
-              {{current_grade_average | grade_as_letter}}
               {% if current_grade_average < .6 %}
                 <i class="grade-item-grade-icon icon i-1-2"><svg><use xlink:href="#icon-grade-avg-{{current_grade_average | grade_as_status | slugify}}"></use></svg></i>
               {% endif %}
+              {{current_grade_average | grade_as_letter}}
             </span>
             (<span class="not-bold italic color-grey-dark">{{current_grade_average | grade_as_status}}</span>)
           </strong>
