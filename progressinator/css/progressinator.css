@@ -80,6 +80,10 @@
   height: auto;
 }
 
+.grade-statuses {
+  min-width: 36em;
+}
+
 .grade-status-failing {
 
 }
@@ -101,4 +105,8 @@
 .grade-projected-failing,
 .grade-status-failing .grade-item-grade {
   color: var(--color-fail-dark);
+}
+
+.assessment-statuses {
+  min-width: 24em;
 }
