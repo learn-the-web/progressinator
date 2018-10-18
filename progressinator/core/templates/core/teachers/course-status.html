@@ -7,21 +7,21 @@
   <div class="grid">
     <div class="class unit [ xs-1 s-1 m-1 l-3-5 ] pad-b-1-2">
       <section class="class-desc section-lightest gutter-1-2 pad-t-1-2 pad-b-1-2">
-        <h2 class="class-heading push-1-2 giga">Grade overview</h2>
+        <h2 class="class-heading push-1-2 giga">Grade overview <a class="right normal italic" href="{{course.url}}">{{course.title}} »</a></h2>
         <dl class="grid">
-          <div class="unit [ xs-1-2 m-1-2 l-1-5 ]">
+          <div class="unit [ xs-1-2 m-1-5 ]">
             <dt class="italic milli">№ students</dt>
             <dd class="push-0 yotta bold brand-dark">{{students | length}}</dd>
           </div>
-          <div class="unit [ xs-1-2 m-1-2 l-1-5 ]">
+          <div class="unit [ xs-1-2 m-1-5 ]">
             <dt class="italic milli">Grade avg</dt>
             <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_letter}}</dd>
           </div>
-          <div class="unit [ xs-1-2 m-1-2 l-1-5 ]">
+          <div class="unit [ xs-1-2 m-1-5 ]">
             <dt class="italic milli">Actual avg</dt>
             <dd class="push-0 yotta bold brand-dark">{{stats_actual_avg | pretty_percent_small}}</dd>
           </div>
-          <div class="unit [ xs-1-2 m-1-2 l-2-5 ]">
+          <div class="unit [ xs-1-2 m-2-5 ]">
             <dt class="italic milli">Status avg</dt>
             <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_status}}</dd>
           </div>
@@ -68,8 +68,8 @@
     </div>
     <div class="class class-outside unit [ xs-1 s-1 m-1 l-2-5 ] pad-b">
       <section class="class-desc section-muted-medium gutter-1-2 pad-t-1-2 pad-b-1-2">
-        <h2 class="class-heading push-1-2 giga">Assessment overview</h2>
-        <dl class="grid">
+        <h2 class="class-heading push-1-2 giga">Assessment overview <a class="right normal italic" href="{{course.url}}#marking-scheme">Grade scheme »</a></h2>
+        <dl class="grid push-1-2">
           <div class="unit [ xs-1-2 m-1-2 ]">
             <dt class="italic milli">№ assessments</dt>
             <dd class="push-0 yotta bold">{{stats_assessments_no_zeros}} <span class="color-grey-dark not-bold">({{stats_assessments_total}})</span></dd>
@@ -77,6 +77,29 @@
           <div class="unit [ xs-1-2 m-1-2 ]">
             <dt class="italic milli">Pass rate avg</dt>
             <dd class="push-0 yotta bold">{{stats_pass_rate_avg | pretty_percent_small}}</dd>
+          </div>
+        </dl>
+        <hr class="hr-dark push-1-2">
+        <dl class="grid">
+          <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
+            <dt class="italic milli">№&nbsp;videos</dt>
+            <dd class="push-0 milli"><span class="bold">{{course.totals.videos}}</span> ≈{{course.totals.videos_each_algonquin | pretty_percent_small}}</dd>
+          </div>
+          <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
+            <dt class="italic milli">№&nbsp;activities</dt>
+            <dd class="push-0 milli"><span class="bold">{{course.totals.activities}}</span> ≈{{course.totals.activities_each_algonquin | pretty_percent_small}}</dd>
+          </div>
+          <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
+            <dt class="italic milli">№&nbsp;lessons</dt>
+            <dd class="push-0 milli"><span class="bold">{{course.totals.activities}}</span> ≈{{course.totals.activities_each_algonquin | pretty_percent_small}}</dd>
+          </div>
+          <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
+            <dt class="italic milli">№&nbsp;exercises</dt>
+            <dd class="push-0 milli"><span class="bold">{{course.totals.exercises}}</span> ≈{{course.totals.exercises_each_algonquin | pretty_percent_small}}</dd>
+          </div>
+          <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
+            <dt class="italic milli">№&nbsp;projects</dt>
+            <dd class="push-0 milli"><span class="bold">{{course.totals.projects}}</span> ≈{{course.totals.projects_each_algonquin | pretty_percent_small}}</dd>
           </div>
         </dl>
       </section>
