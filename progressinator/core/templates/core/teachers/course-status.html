@@ -8,11 +8,7 @@
     <div class="class unit [ xs-1 s-1 m-1 l-3-5 ] pad-b-1-2">
       <section class="class-desc section-lightest gutter-1-2 pad-t-1-2 pad-b-1-2">
         <h2 class="class-heading push-1-2 giga">Grade overview <a class="right normal italic" href="{{course.url}}">{{course.title}} »</a></h2>
-        <dl class="grid">
-          <div class="unit [ xs-1-2 m-1-5 ]">
-            <dt class="italic milli">№ students</dt>
-            <dd class="push-0 yotta bold brand-dark">{{students | length}}</dd>
-          </div>
+        <dl class="grid push-1-2">
           <div class="unit [ xs-1-2 m-1-5 ]">
             <dt class="italic milli">Grade avg</dt>
             <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_letter}}</dd>
@@ -21,9 +17,42 @@
             <dt class="italic milli">Actual avg</dt>
             <dd class="push-0 yotta bold brand-dark">{{stats_actual_avg | pretty_percent_small}}</dd>
           </div>
+          <div class="unit [ xs-1-2 m-1-5 ]">
+            <dt class="italic milli">Max avg</dt>
+            <dd class="push-0 yotta brand-dark">{{stats_max_avg | pretty_percent_small}}</dd>
+          </div>
           <div class="unit [ xs-1-2 m-2-5 ]">
             <dt class="italic milli">Status avg</dt>
             <dd class="push-0 yotta bold brand-dark">{{stats_grade_avg | grade_as_status}}</dd>
+          </div>
+        </dl>
+        <hr class="hr-brand-light push-1-2">
+        <dl class="grid">
+          <div class="unit [ xs-1-2 m-1-5 ]">
+            <dt class="italic milli">№ students</dt>
+            <dd class="push-0 milli bold"><strong>{{students | length}}</strong></dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-5 ]">
+            <dt class="italic milli">№ excellent</dt>
+            <dd class="push-0 milli color-pass-dark bold">{{stats_grade_status.Excellent}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-5 ]">
+            <dt class="italic milli">№ satisfactory</dt>
+            <dd class="push-0 milli color-pass-dark bold">{{stats_grade_status.Satisfactory}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-5 ]">
+            <dt class="italic milli">№ weak</dt>
+            <dd class="push-0 milli color-warning-dark bold">
+              {{stats_grade_status.Weak}}
+              <i class="icon i-1-2"><svg><use xlink:href="#icon-grade-avg-weak"></use></svg></i>
+            </dd>
+          </div>
+          <div class="unit [ xs-1-2 m-1-5 ]">
+            <dt class="italic milli">№ failing</dt>
+            <dd class="push-0 milli color-fail-dark bold">
+              {{stats_grade_status.Failing}}
+              <i class="icon i-1-2"><svg><use xlink:href="#icon-grade-avg-failing"></use></svg></i>
+            </dd>
           </div>
         </dl>
       </section>

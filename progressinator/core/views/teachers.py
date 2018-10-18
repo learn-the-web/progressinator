@@ -49,8 +49,15 @@ def course_status(request, course_id):
     all_grades = UserProgress.objects.filter(user_id__in=(s.user_id for s in students))
     max_assessments_per_section = grade_helper.max_assessments_per_section(course['assessments'])
     stats_actual_total = 0
+    stats_max_total = 0
     stats_grade_total = 0
     stats_pass_rate_total = 0
+    stats_grade_status = {
+        'Excellent': 0,
+        'Satisfactory': 0,
+        'Weak': 0,
+        'Failing': 0,
+    }
 
     for student in students:
         student_grades = (grade_helper.calc_grade(g, assessment_index, course['assessments']) for g in all_grades if g.user_id == student.user_id)
@@ -59,6 +66,8 @@ def course_status(request, course_id):
         student.current_grade_average = student.current_grade / student.current_grade_max
         stats_grade_total += student.current_grade_average
         stats_actual_total += student.current_grade
+        stats_max_total += student.current_grade_max
+        stats_grade_status[grade_helper.grade_as_status(student.current_grade_average)] += 1
 
     for prog in all_grades:
         if prog.assessment_uri in assessment_index and prog.grade > 0:
@@ -83,6 +92,8 @@ def course_status(request, course_id):
         'students': students,
         'stats_grade_avg': stats_grade_total / students.count(),
         'stats_actual_avg': stats_actual_total / students.count(),
+        'stats_max_avg': stats_max_total / students.count(),
+        'stats_grade_status': stats_grade_status,
         'stats_assessments_total': len(course['assessments']),
         'stats_assessments_no_zeros': len(course['assessments']) - len([a for a in course['assessments'] if a['assessment_each_algonquin'] <= 0]),
         'stats_pass_rate_avg': stats_pass_rate_total / len(course['assessments']),
