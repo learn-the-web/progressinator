@@ -115,7 +115,7 @@
 
   .grade-statuses-scroll,
   .assessment-statuses-scroll {
-    overflow: hidden;
+    overflow: visible;
   }
 
 }

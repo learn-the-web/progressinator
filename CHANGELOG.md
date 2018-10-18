@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.4.1] — 2018-10-18
+
+### Fixed
+
+- Fixed the `overflow` for the grade tables on larger screen sizes.
+
+---
+
 ## [1.4.0] — 2018-10-18
 
 ### Added
