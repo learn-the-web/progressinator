@@ -38,11 +38,16 @@
           </thead>
           <tbody>
             {% for student in students %}
-              <tr>
-                <th scope="row" colspan="8">
+              <tr class="grade-status-{{student.current_grade_average | grade_as_status | slugify}}">
+                <th class="grade-item-name" scope="row" colspan="8">
                   <a href="{% url 'core:teacher_user_grades' course_id=course.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
                 </th>
-                <td class="brand-dark" colspan="2"><strong>{{student.current_grade_average | grade_as_letter}}</strong></td>
+                <td class="grade-item-grade color-pass-dark" colspan="2">
+                  <strong>{{student.current_grade_average | grade_as_letter}}</strong>
+                  {% if student.current_grade_average < .6 %}
+                    <i class="grade-item-grade-icon icon i-1-2"><svg><use xlink:href="#icon-grade-avg-{{student.current_grade_average | grade_as_status | slugify}}"></use></svg></i>
+                  {% endif %}
+                </td>
                 <td class="color-grey-dark" colspan="3">{{student.current_grade | pretty_percent_small}}</td>
                 <td class="color-grey" colspan="3">{{student.current_grade_max | pretty_percent_small}}</td>
                 <td class="milli italic" colspan="3">{{student.current_grade_average | grade_as_status}}</td>

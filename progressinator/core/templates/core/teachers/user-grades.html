@@ -20,7 +20,12 @@
         <h3 class="tenamega push brand-dark push-1-4" aria-label="{{current_grade | pretty_percent_small}} complete this course" title="{{current_grade | pretty_percent_small}} complete this course">{{current_grade | pretty_percent_small}} <span class="color-grey not-bold peta">out of</span> <span class="color-grey-dark not-bold exa">{{current_grade_max | pretty_percent_small}}</span></h3>
         <strong class="tera ib push color-grey pad-b-1-2">
           <span class="not-bold italic">Projected grade:</span>
-          <span class="brand-dark">{{current_grade_average | grade_as_letter}}</span>
+          <span class="brand-dark grade-projected-{{current_grade_average | grade_as_status | slugify}}">
+            {{current_grade_average | grade_as_letter}}
+            {% if current_grade_average < .6 %}
+              <i class="grade-item-grade-icon icon i-1-2"><svg><use xlink:href="#icon-grade-avg-{{current_grade_average | grade_as_status | slugify}}"></use></svg></i>
+            {% endif %}
+          </span>
           (<span class="not-bold italic color-grey-dark">{{current_grade_average | grade_as_status}}</span>)
         </strong>
         <hr class="push-1-2">

@@ -79,3 +79,26 @@
   padding: .2em .4em;
   height: auto;
 }
+
+.grade-status-failing {
+
+}
+
+.grade-item-grade-icon {
+  transform: translateY(-.1em) scale(.8);
+}
+
+.grade-projected-excellent,
+.grade-projected-satisfactory {
+  color: var(--color-pass-dark);
+}
+
+.grade-projected-weak,
+.grade-status-weak .grade-item-grade {
+  color: var(--color-warning-dark);
+}
+
+.grade-projected-failing,
+.grade-status-failing .grade-item-grade {
+  color: var(--color-fail-dark);
+}
