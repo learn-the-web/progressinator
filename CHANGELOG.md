@@ -5,6 +5,19 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.4.0] — 2018-10-18
+
+### Added
+
+- The number of students to the stats on the course status page.
+- A statistic summary of the grading scheme & student number statics to the grade overview.
+
+### Fixed
+
+- Fixed some responsive bugs on the course status page.
+
+---
+
 ## [1.3.0] — 2018-10-18
 
 ### Added
