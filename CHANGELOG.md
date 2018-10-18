@@ -5,7 +5,27 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.2.1]
+## [1.3.0] — 2018-10-18
+
+### Added
+
+- Added a whole teacher section where teachers can see all the grades for Algonquin’s registered students.
+
+### Changed
+
+- Changed the grade checkmarks to black for better colour contrast.
+
+---
+
+## [1.2.2] — 2018-10-15
+
+### Changed
+
+- Removed the secret token from the repository—whoops!
+
+---
+
+## [1.2.1] — 2018-10-09
 
 ### Changed
 
@@ -18,7 +38,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.2.0]
+## [1.2.0] — 2018-10-08
 
 ### Added
 
@@ -35,7 +55,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.1.1]
+## [1.1.1] — 2018-10-02
 
 ### Fixed
 
@@ -43,7 +63,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.1.0]
+## [1.1.0] — 2018-10-02
 
 ### Added
 
