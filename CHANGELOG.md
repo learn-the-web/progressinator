@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [Unreleased]
+
+### Changed
+
+- Changed the stats to use multiplication symbols instead of almost equals symbols for more clarity.
+
+---
+
 ## [1.4.1] — 2018-10-18
 
 ### Fixed
