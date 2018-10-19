@@ -1,5 +1,6 @@
 {% extends 'default.html' %}
 
+{% load tz %}
 {% load data %}
 {% load grades %}
 
@@ -97,7 +98,7 @@
                 </strong>
               </h3>
               <small class="assessment-info block micro">
-                {% if item.user_due_date_algonquin %}<time datetime="{{item.user_due_date_algonquin | date:'c'}}">Due: {% if not item.grade %}<strong>{% endif %}{{item.user_due_date_algonquin | date:'N j, Y @ H:i'}}{% if not item.grade %}</strong>{% endif %}</time> ·{% endif %}
+                {% if item.user_due_date_algonquin %}<time datetime="{{item.user_due_date_algonquin | timezone:'America/Toronto' | date:'c'}}">Due: {% if not item.grade %}<strong>{% endif %}{{item.user_due_date_algonquin | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}{% if not item.grade %}</strong>{% endif %}</time> ·{% endif %}
                 <span class="italic">{{item.assessment_type | title}} @ ≈{{item.assessment_each_algonquin | pretty_percent_small}}</span>
                 <span class="color-grey-dark italic">
                   {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
@@ -110,16 +111,16 @@
                   <summary class="bold">Details &amp; comments…</summary>
                   <dl class="list-group-inline push-0">
                     <dt class="italic push-0">Submission time</dt>
-                    <dd class="push-0"><time datetime="{{item.grade.created | date:'c'}}">{{item.grade.created | date:'N j, Y @ H:i'}}</time></dd>
+                    <dd class="push-0"><time datetime="{{item.grade.created | timezone:'America/Toronto' | date:'c'}}">{{item.grade.created | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</time></dd>
                     <dt class="italic push-0">Graded by</dt>
                     <dd class="push-0">{{item.grade.submitted_by}}</dd>
                     {% if item.grade.details.started %}
                       <dt class="italic push-0">Start time</dt>
-                      <dd class="push-0">{{item.grade.details.started | date:'N j, Y @ H:i'}}</dd>
+                      <dd class="push-0">{{item.grade.details.started | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
                     {% endif %}
                     {% if item.grade.details.finished %}
                       <dt class="italic push-0">End time</dt>
-                      <dd class="push-0">{{item.grade.details.finished | date:'N j, Y @ H:i'}}</dd>
+                      <dd class="push-0">{{item.grade.details.finished | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
                     {% endif %}
                     {% if item.grade.details.estimated_time %}
                       <dt class="italic push-0">Estimated completion</dt>

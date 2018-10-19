@@ -1,6 +1,6 @@
 import decimal
-import dateutil.parser
 from datetime import date, datetime
+import pendulum
 import simplejson as json
 
 
@@ -41,7 +41,7 @@ def setup_course(course):
         if 'due_dates' in a:
             for dd in a['due_dates']:
                 if 'due_dates_algonquin' not in a: a['due_dates_algonquin'] = {}
-                a['due_dates_algonquin'][dd['course_section']] = dateutil.parser.isoparse(dd['due'])
+                a['due_dates_algonquin'][dd['course_section']] = pendulum.parse(dd['due'], tz='America/Toronto')
 
     return course
 

@@ -1,7 +1,5 @@
-from datetime import datetime
-import decimal
-import pytz
-import dateutil.parser
+import decimal, math
+import pendulum
 
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -49,7 +47,7 @@ def course_grades(request, course_id):
 
     for a in course['assessments']:
         if user_profile and 'due_dates_algonquin' in a and user_profile.current_section in a['due_dates_algonquin']:
-            a['user_due_date_algonquin'] = datetime.fromisoformat(a['due_dates_algonquin'][user_profile.current_section]).replace(tzinfo=pytz.UTC)
+            a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][user_profile.current_section])
 
     for prog in user_grades:
         if prog.assessment_uri in assessment_index:
@@ -58,8 +56,8 @@ def course_grades(request, course_id):
                 and 'user_due_date_algonquin' in course['assessments'][assessment_index[prog.assessment_uri]]
                 and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']):
                 prog.late = True
-            if prog.details and 'started' in prog.details: prog.details['started'] = dateutil.parser.isoparse(prog.details['started'])
-            if prog.details and 'finished' in prog.details: prog.details['finished'] = dateutil.parser.isoparse(prog.details['finished'])
+            if prog.details and 'started' in prog.details: prog.details['started'] = pendulum.parse(prog.details['started'])
+            if prog.details and 'finished' in prog.details: prog.details['finished'] = pendulum.parse(prog.details['finished'])
             course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             current_grade += grade_helper.calc_grade(prog, assessment_index, course['assessments'])
 
