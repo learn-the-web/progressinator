@@ -12,6 +12,10 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 - Changed the stats to use multiplication symbols instead of almost equals symbols for more clarity.
 - The domain for the CSRF cookie & the signed in session length.
 
+### Fixed
+
+- Fixed a timezone bug related to due dates & submission lateness.
+
 ---
 
 ## [1.4.1] — 2018-10-18
