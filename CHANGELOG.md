@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.4.3] — 2018-10-21
+
+### Fixed
+
+- Added the missing timezone filter to the student grades template.
+
+---
+
 ## [1.4.2] — 2018-10-19
 
 ### Changed
