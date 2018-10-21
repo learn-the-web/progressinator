@@ -75,6 +75,14 @@
   background-image: inline("../img-embed/details-triangle-open.svg");
 }
 
+.assessment-details-comments {
+  margin-left: .2em;
+  padding-left: .4em;
+  border-left: .15em solid #d9d8e3;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 #api-token {
   padding: .2em .4em;
   height: auto;
@@ -109,6 +117,11 @@
 
 .assessment-statuses {
   min-width: 24em;
+}
+
+.assessment-grade-form {
+  padding: 0;
+  border: 0;
 }
 
 @media only screen and (min-width: 80em) {

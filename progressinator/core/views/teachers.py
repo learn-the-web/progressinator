@@ -7,17 +7,19 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.admin.views.decorators import staff_member_required
 from django.conf import settings
+from django.utils.html import strip_tags
+from django import forms
 
 from progressinator.common.util import build_dict_index, build_queryset_index
 import progressinator.common.grades as grade_helper
 from progressinator.core.lib import Courses
-from progressinator.core.models import UserProgress, UserProfile, Course
+from progressinator.core.models import UserProgress, UserProgressForm, UserProfile, Course
 from progressinator.core.serializers import UserProgressSerializer
 
 import logging
 
 
-@staff_member_required
+@staff_member_required(login_url='core:sign_in')
 def courses(request):
     context = {
         'app_version': settings.APP_PKG['version'],
@@ -34,7 +36,7 @@ def courses(request):
     return render(request, 'core/teachers/courses.html', context)
 
 
-@staff_member_required
+@staff_member_required(login_url='core:sign_in')
 def course_status(request, course_id):
     course_in_db = get_object_or_404(Course, slug=course_id);
 
@@ -101,7 +103,7 @@ def course_status(request, course_id):
     return render(request, 'core/teachers/course-status.html', context)
 
 
-@staff_member_required
+@staff_member_required(login_url='core:sign_in')
 def user_grades(request, course_id, user_id):
     course_in_db = get_object_or_404(Course, slug=course_id);
 
@@ -115,12 +117,18 @@ def user_grades(request, course_id, user_id):
     except:
         student_profile = None
 
-    user_grades = UserProgress.objects.filter(user=user_id)
+    user_grades = list(UserProgress.objects.filter(user=user_id))
     current_grade = decimal.Decimal(0.0)
     assessment_index = build_dict_index(course['assessments'], 'uri')
     max_assessments_per_section = grade_helper.max_assessments_per_section(course['assessments'])
 
     for a in course['assessments']:
+        if a['assessment_each_algonquin'] > 0:
+            a['FORM'] = UserProgressForm(initial={
+                'user': student_profile,
+                'submitted_by': f"{request.user.first_name} {request.user.last_name}",
+                'assessment_uri': a['uri'],
+            })
         if student_profile and 'due_dates_algonquin' in a and student_profile.current_section in a['due_dates_algonquin']:
             a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][student_profile.current_section], tz='America/Toronto')
 
@@ -135,6 +143,8 @@ def user_grades(request, course_id, user_id):
             if prog.details and 'finished' in prog.details: prog.details['finished'] = pendulum.parse(prog.details['finished'])
             course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             current_grade += grade_helper.calc_grade(prog, assessment_index, course['assessments'])
+            if 'FORM' in course['assessments'][assessment_index[prog.assessment_uri]]:
+                course['assessments'][assessment_index[prog.assessment_uri]]['FORM'] = UserProgressForm(instance=prog)
 
     current_grade_max = max_assessments_per_section[student_profile.current_section]
 
@@ -156,7 +166,83 @@ def user_grades(request, course_id, user_id):
     return render(request, 'core/teachers/user-grades.html', context)
 
 
-@staff_member_required
+@staff_member_required(login_url='core:sign_in')
+def user_grades_save(request, course_id, user_id):
+    if request.method != 'POST' and 'user_progress_id' not in request.POST:
+        return redirect('core:teacher_user_grades', course_id=course_id, user_id=user_id)
+
+    course_in_db = get_object_or_404(Course, slug=course_id);
+    posted_grades = {'update': [], 'create': []}
+
+    try:
+        course = Courses.get(course_id)
+    except:
+        return redirect('core:teacher_courses')
+
+    try:
+        student_profile = UserProfile.objects.get(user=user_id)
+    except:
+        student_profile = None
+
+    def comment_is_different(data1, data2):
+        comment1 = ''
+        comment2 = ''
+
+        if data1 and 'comment' in data1: comment1 = data1['comment']
+        if 'details' in data2 and 'comment' in data2['details']: comment2 = data2['details']['comment']
+
+        return comment1 != comment2
+
+    user_grades = list(UserProgress.objects.filter(user=user_id))
+    user_grades_index = build_queryset_index(user_grades, 'assessment_uri')
+
+    post_user_progress_id = request.POST.getlist('user_progress_id')
+    post_grade = request.POST.getlist('grade')
+    post_assessment_uri = request.POST.getlist('assessment_uri')
+    post_submitted_by = request.POST.getlist('submitted_by')
+    post_comments = request.POST.getlist('comment')
+
+    for (i, prog_id) in enumerate(post_user_progress_id):
+        the_grade = strip_tags(post_grade[i].strip())
+        user_progress_model = {
+            'grade': decimal.Decimal(the_grade) if the_grade is not '' else '',
+            'assessment_uri': strip_tags(post_assessment_uri[i].strip()),
+            'user_id': user_id,
+            'submitted_by': strip_tags(post_submitted_by[i].strip()),
+        }
+        if post_comments[i].strip() is not '':
+            user_progress_model['details'] = {
+                'comment': strip_tags(post_comments[i].strip())
+            }
+
+        if post_grade[i].strip() is not '':
+            if prog_id.strip() is '':
+                posted_grades['create'].append(UserProgress(**user_progress_model))
+            else:
+                current_user_progress = user_grades[user_grades_index[user_progress_model['assessment_uri']]]
+
+                if current_user_progress.grade != user_progress_model['grade'] or comment_is_different(current_user_progress.details, user_progress_model):
+                    current_user_progress.grade = user_progress_model['grade']
+                    current_user_progress.submitted_by = user_progress_model['submitted_by']
+                    current_user_progress.cheated = False
+                    if 'details' in user_progress_model:
+                        if not isinstance(current_user_progress.details, dict): current_user_progress.details = {}
+                        current_user_progress.details['comment'] = user_progress_model['details']['comment']
+                    posted_grades['update'].append(current_user_progress)
+
+    for model_type in ('update', 'create'):
+        for prog in posted_grades[model_type]:
+            try:
+                prog.full_clean()
+                prog.save()
+            except:
+                pass
+
+    # return render(request, 'core/teachers/blank.html')
+    return redirect('core:teacher_user_grades', course_id=course_id, user_id=user_id)
+
+
+@staff_member_required(login_url='core:sign_in')
 def assessment_grades(request, course_id, assessment_id):
     course_in_db = get_object_or_404(Course, slug=course_id);
 

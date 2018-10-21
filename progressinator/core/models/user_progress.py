@@ -3,6 +3,7 @@ from django.conf import settings
 from django.db import models
 from django.contrib.postgres.fields import JSONField
 from django_lifecycle import LifecycleModelMixin, hook
+from django import forms
 
 from progressinator.common import grades
 
@@ -15,6 +16,7 @@ class UserProgress(LifecycleModelMixin, models.Model):
     assessment_uri = models.CharField(max_length=256, null=True)
     grade = models.DecimalField(max_digits=4, decimal_places=3, null=True)
     cheated = models.NullBooleanField(default=False)
+    # excuse_lateness = models.NullBooleanField(default=False, null=True)
     details = JSONField(blank=True, null=True)
 
     @property
@@ -37,3 +39,18 @@ class UserProgress(LifecycleModelMixin, models.Model):
         verbose_name_plural = "user progress"
         get_latest_by = 'created'
         ordering = ('created',)
+
+
+class UserProgressForm(forms.ModelForm):
+    class Meta:
+        model = UserProgress
+        exclude = ('user', 'created', 'signature', 'cheated', 'details')
+        widgets = {
+            'submitted_by': forms.HiddenInput(),
+            'user': forms.HiddenInput(),
+            'assessment_uri': forms.HiddenInput(),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(UserProgressForm, self).__init__(*args, **kwargs)
+        self.fields['grade'].required = False
