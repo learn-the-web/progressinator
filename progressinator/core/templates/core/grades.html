@@ -5,9 +5,20 @@
 {% load grades %}
 
 {% block wrapper %}
+
   <div class="grid">
-    <section class="class unit [ xs-1 s-1 m-2-5 ] gutter-1-4 pad-t-1-2 pad-b-1-2">
-      <div class="class-desc gutter-1-4">
+    <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2">
+      {% if allow_grade_editing and user.is_staff %}
+        <section class="section-lightest gutter-1-2 pad-t-1-2 pad-b push-1-2">
+          <h2 class="push-0">{{student_profile.user.first_name}} {{student_profile.user.last_name}}</h2>
+          <a class="mega ib push-1-4" href="https://github.com/{{student_profile.user.username}}" rel="external">{{student_profile.user.username}} »</a>
+          <p class="push-0 mega italic">
+            <a href="{% url 'core:teacher_course' course_id=course.course %}">{{student_profile.current_course.name}}</a>
+            · {{student_profile.current_section}}
+          </p>
+        </section>
+      {% endif %}
+      <section class="class-desc gutter-1-2">
         <h2 class="class-heading push giga">Grade</h2>
         <h3 class="tenamega push brand-dark push-1-4" aria-label="{{current_grade | pretty_percent_small}} complete this course" title="{{current_grade | pretty_percent_small}} complete this course">{{current_grade | pretty_percent_small}} {% if current_grade_max %}<span class="color-grey not-bold peta">out of</span> <span class="color-grey-dark not-bold exa">{{current_grade_max | pretty_percent_small}}</span>{% endif %}</h3>
         {% if current_grade_average %}
@@ -46,93 +57,173 @@
             <span class="nano">(<span class="marking-scheme-total">{{course.totals.projects}}</span> @ <data value="{{course.totals.projects_each_algonquin | times:100}}%" title="{{course.totals.projects_each_algonquin | times:100}}%">≈{{course.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
         </dl>
-      </div>
-    </section>
+      </section>
+    </div>
+
     <section class="class class-outside unit [ xs-1 s-1 m-3-5 ] gutter-1-4 pad-t-1-2 pad-b">
       <div class="class-desc gutter-1-4">
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
-        <ol class="assessment-list list-group push-0">
-          {% for item in course.assessments %}
-            <li class="assessment-item push-1-2">
-              <h3 class="assessment-title kilo push-0">
-                {% if item.grade %}
-                  {% if item.grade.grade > 0 %}
-                    {% if item.grade.late %}
-                      <i class="icon i-3-4 color-warning" aria-label="Pass — Late" title="Pass — Late">
-                        <svg><use xlink:href="#icon-grade-pass"></use></svg>
+        {% if allow_grade_editing and perms.progress_core.change_userprogress %}
+          <form method="post" id="grades-form" action="{% url 'core:teacher_user_grades_save' course_id=course.course user_id=student_profile.user_id %}">
+            <div class="grade-form-actions island-1-4 text-right milli">
+              <button class="milli btn" id="grades-edit" type="button">Edit grades</button>
+              <button class="milli btn btn-light" id="grades-save" type="submit" hidden disabled>Save grades</button>
+            </div>
+        {% endif %}
+          <ol class="assessment-list list-group push-0">
+            {% for item in course.assessments %}
+              <li class="assessment-item push-1-2">
+                <h3 class="assessment-title kilo push-0">
+                  {% if item.grade %}
+                    {% if item.grade.grade > 0 %}
+                      {% if item.grade.late %}
+                        <i class="icon i-3-4 color-warning" aria-label="Pass — Late" title="Pass — Late">
+                          <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                        </i>
+                      {% else %}
+                        <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
+                          <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                        </i>
+                      {% endif %}
+                    {% else %}
+                      <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
+                        <svg><use xlink:href="#icon-grade-fail"></use></svg>
+                      </i>
+                    {% endif %}
+                  {% else %}
+                    {% if item.assessment_each_algonquin == 0 %}
+                      <i class="icon i-3-4 color-grey" aria-label="Doesn’t contribute to your grade" title="Doesn’t contribute to your grade">
+                        <svg><use xlink:href="#icon-grade-closed"></use></svg>
                       </i>
                     {% else %}
-                      <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
-                        <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                      <i class="icon i-3-4" aria-label="Not submitted" title="Not submitted">
+                        <svg><use xlink:href="#icon-grade-open"></use></svg>
                       </i>
                     {% endif %}
-                  {% else %}
-                    <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
-                      <svg><use xlink:href="#icon-grade-fail"></use></svg>
-                    </i>
                   {% endif %}
-                {% else %}
-                  {% if item.assessment_each_algonquin == 0 %}
-                    <i class="icon i-3-4 color-grey" aria-label="Doesn’t contribute to your grade" title="Doesn’t contribute to your grade">
-                      <svg><use xlink:href="#icon-grade-closed"></use></svg>
-                    </i>
-                  {% else %}
-                    <i class="icon i-3-4" aria-label="Not submitted" title="Not submitted">
-                      <svg><use xlink:href="#icon-grade-open"></use></svg>
-                    </i>
+                  <a href="{{item.url}}">{{item.name}}</a>
+                  <strong>
+                    {% if item.grade and item.grading_type == 'letter_grade' %}
+                      {{item.grade.grade_as_letter}}
+                    {% endif %}
+                  </strong>
+                </h3>
+                <small class="assessment-info block micro">
+                  {% if item.user_due_date_algonquin %}
+                    <time datetime="{{item.user_due_date_algonquin | timezone:'America/Toronto' | date:'c'}}">
+                      Due:
+                      {% if item.assessment_each_algonquin != 0 %}
+                        {% if not item.grade %}<strong>{% endif %}
+                      {% endif %}
+                      {{item.user_due_date_algonquin | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}
+                      {% if item.assessment_each_algonquin != 0 %}
+                        {% if not item.grade %}</strong>{% endif %}
+                      {% endif %}
+                    </time> ·
                   {% endif %}
+                  <span class="italic">{{item.assessment_type | title}} @ ≈{{item.assessment_each_algonquin | pretty_percent_small}}</span>
+                  <span class="color-grey-dark italic">
+                    {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
+                    {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
+                  </span>
+                  {% if item.assessment_type == 'exercise' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{github_username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
+                </small>
+                {% if item.grade %}
+                  <details class="assessment-details micro push-0">
+                    <summary class="bold">Details &amp; comments…</summary>
+                    <dl class="list-group-inline push-0">
+                      <dt class="italic push-0">Submission time</dt>
+                      <dd class="push-0"><time datetime="{{item.grade.created | timezone:'America/Toronto' | date:'c'}}">{{item.grade.created | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</time></dd>
+                      <dt class="italic push-0">Graded by</dt>
+                      <dd class="push-0">{{item.grade.submitted_by}}</dd>
+                      {% if item.grade.excuse_lateness %}
+                        <dt class="italic push-0">Lateness excused</dt>
+                        <dd class="push-0">
+                          {% for opt in excuse_lateness_options %}
+                            {% if item.grade.excuse_lateness == opt.0 %}{{opt.1}}{% endif %}
+                          {% endfor %}
+                        </dd>
+                      {% endif %}
+                      {% if item.grade.details.started %}
+                        <dt class="italic push-0">Start time</dt>
+                        <dd class="push-0">{{item.grade.details.started | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
+                      {% endif %}
+                      {% if item.grade.details.finished %}
+                        <dt class="italic push-0">End time</dt>
+                        <dd class="push-0">{{item.grade.details.finished | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
+                      {% endif %}
+                      {% if item.grade.details.estimated_time %}
+                        <dt class="italic push-0">Estimated completion</dt>
+                        <dd class="push-0">~{{item.grade.details.estimated_time}} h</dd>
+                      {% endif %}
+                      {% if item.grade.details.number_of_commits %}
+                        <dt class="italic push-0">№ of commits</dt>
+                        <dd class="push-0">{{item.grade.details.number_of_commits}}</dd>
+                      {% endif %}
+                    </dl>
+                    {% if item.grade.details.comment %}
+                      <strong class="italic push-0 not-bold">Comments</strong>
+                      <p class="assessment-details-comments push-0">{{item.grade.details.comment}}</p>
+                    {% endif %}
+                  </details>
                 {% endif %}
-                <a href="{{item.url}}">{{item.name}}</a>
-                <strong>
-                  {% if item.grade and item.grading_type == 'letter_grade' %}
-                    {{item.grade.grade_as_letter}}
-                  {% endif %}
-                </strong>
-              </h3>
-              <small class="assessment-info block micro">
-                {% if item.user_due_date_algonquin %}<time datetime="{{item.user_due_date_algonquin | timezone:'America/Toronto' | date:'c'}}">Due: {% if not item.grade %}<strong>{% endif %}{{item.user_due_date_algonquin | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}{% if not item.grade %}</strong>{% endif %}</time> ·{% endif %}
-                <span class="italic">{{item.assessment_type | title}} @ ≈{{item.assessment_each_algonquin | pretty_percent_small}}</span>
-                <span class="color-grey-dark italic">
-                  {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
-                  {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
-                </span>
-                {% if item.assessment_type == 'exercise' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
-              </small>
-              {% if item.grade %}
-                <details class="assessment-details micro push-0">
-                  <summary class="bold">Details &amp; comments…</summary>
-                  <dl class="list-group-inline push-0">
-                    <dt class="italic push-0">Submission time</dt>
-                    <dd class="push-0"><time datetime="{{item.grade.created | timezone:'America/Toronto' | date:'c'}}">{{item.grade.created | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</time></dd>
-                    <dt class="italic push-0">Graded by</dt>
-                    <dd class="push-0">{{item.grade.submitted_by}}</dd>
-                    {% if item.grade.details.started %}
-                      <dt class="italic push-0">Start time</dt>
-                      <dd class="push-0">{{item.grade.details.started | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
-                    {% endif %}
-                    {% if item.grade.details.finished %}
-                      <dt class="italic push-0">End time</dt>
-                      <dd class="push-0">{{item.grade.details.finished | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
-                    {% endif %}
-                    {% if item.grade.details.estimated_time %}
-                      <dt class="italic push-0">Estimated completion</dt>
-                      <dd class="push-0">~{{item.grade.details.estimated_time}} h</dd>
-                    {% endif %}
-                    {% if item.grade.details.number_of_commits %}
-                      <dt class="italic push-0">№ of commits</dt>
-                      <dd class="push-0">{{item.grade.details.number_of_commits}}</dd>
-                    {% endif %}
-                  </dl>
-                  {% if item.grade.details.comment %}
-                    <strong class="italic push-0 not-bold">Comments</strong>
-                    <p class="push-0">{{item.grade.details.comment}}</p>
-                  {% endif %}
-                </details>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ol>
+                {% if allow_grade_editing and item.assessment_each_algonquin > 0 and perms.progress_core.change_userprogress %}
+                  <div class="grade-form-wrap pad-t-1-4 pad-b-1-4" hidden>
+                    <fieldset class="grade-form push-0 milli">
+                      <legend class="visually-hidden">Update grade for {{item.name}}</legend>
+                      <div class="grade-form-item grade-form-item-grade">
+                        <label for="grade-{{item.uri | slugify}}">Grade:</label>
+                        <input type="number" name="grade" id="grade-{{item.uri | slugify}}" value="{{item.grade.grade}}" step="0.001">
+                      </div>
+                      <div class="grade-form-item grade-form-item-excuse-lateness pad-t-1-8">
+                        <label for="lateness-{{item.uri | slugify}}">Excuse&nbsp;lateness:</label>
+                        <select name="excuse_lateness" id="lateness-{{item.uri | slugify}}">
+                          <option value=""></option>
+                          {% for opt in excuse_lateness_options %}
+                            <option value="{{opt.0}}" {% if item.grade.excuse_lateness == opt.0 %}selected{% endif %}>{{opt.1}}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                      <hr class="grade-form-sep">
+                      <div class="grade-form-comment">
+                        <label for="comment-{{item.uri | slugify}}">Comments:</label>
+                        <textarea class="micro" name="comment" id="comment-{{item.uri | slugify}}">{{item.grade.details.comment | escape}}</textarea>
+                      </div>
+                      {% for hidden in item.FORM.hidden_fields %}{{hidden}}{% endfor %}
+                      <input name="user_progress_id" type="hidden" value="{{item.grade.id}}">
+                    </fieldset>
+                  </div>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        {% if allow_grade_editing and perms.progress_core.change_userprogress %}
+          {% csrf_token %}
+          </form>
+        {% endif %}
       </div>
     </section>
   </div>
+
+  {% if allow_grade_editing and perms.progress_core.change_userprogress %}
+    <script>
+      const btnEdit = document.getElementById('grades-edit');
+      const btnSave = document.getElementById('grades-save');
+
+      btnEdit.addEventListener('click', (e) => {
+        e.preventDefault();
+        [].forEach.call(document.querySelectorAll('.grade-form-wrap'), (gradeForm) => {
+          gradeForm.hidden = false;
+          btnSave.hidden = btnSave.disabled = false;
+          btnEdit.hidden = btnEdit.disabled = true;
+        });
+      });
+
+      document.getElementById('grades-form').addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+          e.currentTarget.submit();
+        }
+      });
+    </script>
+  {% endif %}
 {% endblock %}

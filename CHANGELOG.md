@@ -5,6 +5,26 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.5.1] — 2018-10-21
+
+### Changed
+
+- Allow HTML tags within comments but force them to be escaped on output.
+
+---
+
+## [1.5.0] — 2018-10-21
+
+### Added
+
+- Add the ability to edit grades for a single student when the staff user level has the correct permissions.
+
+### Fixed
+
+- Fixed bugs on the courses that aren’t currently running to allow the pages to display.
+
+---
+
 ## [1.4.3] — 2018-10-21
 
 ### Fixed
