@@ -11,6 +11,10 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 - Add the ability to edit grades for a single student when the staff user level has the correct permissions.
 
+### Fixed
+
+- Fixed bugs on the courses that aren’t currently running to allow the pages to display.
+
 ---
 
 ## [1.4.3] — 2018-10-21
