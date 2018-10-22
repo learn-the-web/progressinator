@@ -40,7 +40,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.submit-github-account",
@@ -53,7 +54,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.html-writer",
@@ -66,7 +68,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.responsive-image-section",
@@ -79,7 +82,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.grids",
@@ -92,7 +96,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.025000000000000001387778780781445675529539585113525390625,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.definition-devastator",
@@ -105,7 +110,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.making-responsive-grids",
@@ -118,7 +124,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.using-gridifier",
@@ -131,7 +138,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.grid-layout",
@@ -144,7 +152,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.fraction-fragmenter",
@@ -157,7 +166,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.hot-grid-dle",
@@ -170,7 +180,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.grid-ception",
@@ -183,7 +194,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.modular-typography",
@@ -196,7 +208,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.025000000000000001387778780781445675529539585113525390625,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.media-query-manager",
@@ -209,7 +222,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.using-a-type-system",
@@ -222,7 +236,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.section",
@@ -235,7 +250,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.banner",
@@ -248,7 +264,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.type-trasher",
@@ -261,7 +278,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.trendy-fruit",
@@ -274,7 +292,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.content-page",
@@ -287,7 +306,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.grid-genius",
@@ -300,7 +320,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.modular-nav",
@@ -313,7 +334,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.lists-n-grids",
@@ -326,7 +348,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.modules",
@@ -339,7 +362,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.025000000000000001387778780781445675529539585113525390625,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.commit-connoisseur",
@@ -352,7 +376,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.button-systems",
@@ -365,7 +390,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.embed-containers",
@@ -378,7 +404,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.icons",
@@ -391,7 +418,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.list-groups",
@@ -404,7 +432,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.just-your-type",
@@ -417,7 +446,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.just-your-type",
@@ -430,7 +460,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.just-your-type",
@@ -443,7 +474,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.forms",
@@ -456,7 +488,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.025000000000000001387778780781445675529539585113525390625,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.contact-form",
@@ -469,7 +502,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.registration-form",
@@ -482,7 +516,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.volunteer-form",
@@ -495,7 +530,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.tables",
@@ -508,7 +544,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.025000000000000001387778780781445675529539585113525390625,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.form-finalizer",
@@ -521,7 +558,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.data-table",
@@ -534,7 +572,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.events-calendar",
@@ -547,7 +586,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.more-than-just-datum",
@@ -560,7 +600,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.accessibility",
@@ -573,7 +614,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.025000000000000001387778780781445675529539585113525390625,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.basic-accessibility",
@@ -586,7 +628,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.accessibility-fixer-upper",
@@ -599,7 +642,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.arrrgenes-treasure-tours",
@@ -612,7 +656,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.table-tabulator",
@@ -625,7 +670,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.module-mogul",
@@ -638,7 +684,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.saas-website-sketches",
@@ -651,7 +698,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.saas-website",
@@ -664,7 +712,8 @@
       "points_possible": 100,
       "due_dates": [],
       "assessment_each": 0.025000000000000001387778780781445675529539585113525390625,
-      "assessment_each_algonquin": 0.1499999999999999944488848768742172978818416595458984375
+      "assessment_each_algonquin": 0.1499999999999999944488848768742172978818416595458984375,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.accessibility-atomizer",
@@ -677,7 +726,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.accessibility-testing",
@@ -690,7 +740,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.saas-website-check-in",
@@ -703,7 +754,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.browser-testing",
@@ -716,7 +768,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.021428571428571428769682682968777953647077083587646484375,
-      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625
+      "assessment_each_algonquin": 0.025000000000000001387778780781445675529539585113525390625,
+      "due_dates_algonquin": []
     }
   ],
   "totals": {

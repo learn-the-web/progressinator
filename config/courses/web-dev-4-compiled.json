@@ -40,7 +40,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.responsive-banner",
@@ -53,7 +54,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-ux",
@@ -66,7 +68,8 @@
       "points_possible": 100,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.1000000000000000055511151231257827021181583404541015625
+      "assessment_each_algonquin": 0.1000000000000000055511151231257827021181583404541015625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.browser-buster",
@@ -79,7 +82,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-ux-inspiration",
@@ -92,7 +96,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-ux-check-in",
@@ -105,7 +110,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.",
@@ -118,7 +124,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.",
@@ -131,7 +138,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.using-css-variables",
@@ -144,7 +152,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.pattern-library-set-up",
@@ -157,7 +166,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.typography-colours",
@@ -170,7 +180,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.markdown",
@@ -183,7 +194,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.yaml",
@@ -196,7 +208,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.pattern-library-readme",
@@ -209,7 +222,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.making-a-new-pattern",
@@ -222,7 +236,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.buttons",
@@ -235,7 +250,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.icons",
@@ -248,7 +264,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.images-cards",
@@ -261,7 +278,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.multi-file-patterns",
@@ -274,7 +292,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.designing-form-errors",
@@ -287,7 +306,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.forms",
@@ -300,7 +320,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.url-explorer",
@@ -313,7 +334,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.accessibility-testing",
@@ -326,7 +348,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.navigations-sections",
@@ -339,7 +362,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.variable-validator",
@@ -352,7 +376,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.browser-testing",
@@ -365,7 +390,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.headers-footers",
@@ -378,7 +404,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.videos.",
@@ -391,7 +418,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.specificity-spy",
@@ -404,7 +432,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.javascript-less-carousel",
@@ -417,7 +446,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.the-leftovers",
@@ -430,7 +460,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.selector-surgeon",
@@ -443,7 +474,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.building-pages-with-patterns",
@@ -456,7 +488,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-homepage-template",
@@ -469,7 +502,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.markdown-manipulator",
@@ -482,7 +516,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-product-list-page-template",
@@ -495,7 +530,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.activities.yaml-yodeller",
@@ -508,7 +544,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-checkout-form-page-template",
@@ -521,7 +558,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.repo-setup-and-branching",
@@ -534,7 +572,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-project-hand-off-and-documentation",
@@ -547,7 +586,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.ecommerce-product-details-page-template",
@@ -560,7 +600,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.pattern-library-integration",
@@ -573,7 +614,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.005555555555555555767577313730498644872568547725677490234375,
-      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125
+      "assessment_each_algonquin": 0.00833333333333333321768510160154619370587170124053955078125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.finalized-pattern-library",
@@ -586,7 +628,8 @@
       "points_possible": 100,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.1000000000000000055511151231257827021181583404541015625
+      "assessment_each_algonquin": 0.1000000000000000055511151231257827021181583404541015625,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.accessibility-testing",
@@ -599,7 +642,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     },
     {
       "uri": "ca.learn-the-web.exercises.browser-testing",
@@ -612,7 +656,8 @@
       "points_possible": 1,
       "due_dates": [],
       "assessment_each": 0.0299999999999999988897769753748434595763683319091796875,
-      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125
+      "assessment_each_algonquin": 0.0325000000000000011102230246251565404236316680908203125,
+      "due_dates_algonquin": []
     }
   ],
   "totals": {

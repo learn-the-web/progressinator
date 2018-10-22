@@ -92,6 +92,9 @@
               {% endfor %}
             </tbody>
           </table>
+          {% if not students %}
+            <strong class="giga">No students registered in this course for the term.</strong>
+          {% endif %}
         </div>
       </section>
     </div>
