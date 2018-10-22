@@ -10,7 +10,7 @@ from django.conf import settings
 
 import progressinator.common.grades as grade_helper
 from progressinator.core.lib import Courses
-from progressinator.core.models import UserProgress, UserProfile
+from progressinator.core.models import UserProgress, UserProgressLatenessChoices, UserProfile
 from progressinator.core.serializers import UserProgressSerializer
 from progressinator.common.util import build_dict_index
 
@@ -54,7 +54,9 @@ def course_grades(request, course_id):
             prog.late = False
             if (prog.created
                 and 'user_due_date_algonquin' in course['assessments'][assessment_index[prog.assessment_uri]]
-                and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']):
+                and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']
+                and (prog.excuse_lateness == 'LATENESS_NOT_EXCUSED' or not prog.excuse_lateness)
+                ):
                 prog.late = True
             if prog.details and 'started' in prog.details: prog.details['started'] = pendulum.parse(prog.details['started'])
             if prog.details and 'finished' in prog.details: prog.details['finished'] = pendulum.parse(prog.details['finished'])
@@ -71,10 +73,12 @@ def course_grades(request, course_id):
         'doc_title': f"Grades for {course['title']}",
         'h1_title': course['title'],
         'username': request.user.username,
+        'github_username': request.user.username,
         'current_grade': current_grade,
         'current_grade_max': current_grade_max,
         'current_grade_average': current_grade / current_grade_max if current_grade_max else False,
         'course': course,
+        'excuse_lateness_options': UserProgressLatenessChoices.choices(),
     }
 
     if user_profile:

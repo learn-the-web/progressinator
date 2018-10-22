@@ -6,6 +6,15 @@ from django_lifecycle import LifecycleModelMixin, hook
 from django import forms
 
 from progressinator.common import grades
+from progressinator.common.util import ChoiceEnum
+
+
+class UserProgressLatenessChoices(ChoiceEnum):
+    LATENESS_ABSENT = 'Absent'
+    LATENESS_SICK = 'Sick'
+    LATENESS_PERSONAL = 'Personal'
+    LATENESS_EXCEPTION = 'Exception'
+    LATENESS_NOT_EXCUSED = 'Not excused'
 
 
 class UserProgress(LifecycleModelMixin, models.Model):
@@ -16,7 +25,7 @@ class UserProgress(LifecycleModelMixin, models.Model):
     assessment_uri = models.CharField(max_length=256, null=True)
     grade = models.DecimalField(max_digits=4, decimal_places=3, null=True)
     cheated = models.NullBooleanField(default=False)
-    # excuse_lateness = models.NullBooleanField(default=False, null=True)
+    excuse_lateness = models.CharField(choices=UserProgressLatenessChoices.choices(), max_length=50, blank=True, null=True)
     details = JSONField(blank=True, null=True)
 
     @property

@@ -13,7 +13,7 @@ from django import forms
 from progressinator.common.util import build_dict_index, build_queryset_index
 import progressinator.common.grades as grade_helper
 from progressinator.core.lib import Courses
-from progressinator.core.models import UserProgress, UserProgressForm, UserProfile, Course
+from progressinator.core.models import UserProgress, UserProgressForm, UserProgressLatenessChoices, UserProfile, Course
 from progressinator.core.serializers import UserProgressSerializer
 
 import logging
@@ -28,6 +28,7 @@ def courses(request):
         'courses': Courses.all(),
         'nav_current': 'teachers',
         'h1_title': "Teachers ·",
+        'hide_markbot': True,
     }
 
     for course in context['courses']:
@@ -89,6 +90,7 @@ def course_status(request, course_id):
         'username': request.user.username,
         'nav_current': 'teachers',
         'h1_title': f"{course['title']} ·",
+        'hide_markbot': True,
         'course': course,
         'students': students,
         'stats_grade_avg': stats_grade_total / students.count(),
@@ -137,7 +139,9 @@ def user_grades(request, course_id, user_id):
             prog.late = False
             if (prog.created
                 and 'user_due_date_algonquin' in course['assessments'][assessment_index[prog.assessment_uri]]
-                and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']):
+                and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']
+                and (prog.excuse_lateness == 'LATENESS_NOT_EXCUSED' or not prog.excuse_lateness)
+                ):
                 prog.late = True
             if prog.details and 'started' in prog.details: prog.details['started'] = pendulum.parse(prog.details['started'])
             if prog.details and 'finished' in prog.details: prog.details['finished'] = pendulum.parse(prog.details['finished'])
@@ -152,18 +156,22 @@ def user_grades(request, course_id, user_id):
         'app_version': settings.APP_PKG['version'],
         'doc_title': f"{student_profile.user.first_name} {student_profile.user.last_name} · Teachers",
         'username': request.user.username,
+        'github_username': student_profile.user.username,
         'nav_current': 'teachers',
         'h1_title': f"{student_profile.user.first_name} {student_profile.user.last_name} ·",
+        'allow_grade_editing': True,
+        'hide_markbot': True,
         'current_grade': current_grade,
         'current_grade_max': current_grade_max,
         'current_grade_average': current_grade / current_grade_max,
         'course': course,
+        'excuse_lateness_options': UserProgressLatenessChoices.choices(),
     }
 
     if student_profile:
         context['student_profile'] = student_profile
 
-    return render(request, 'core/teachers/user-grades.html', context)
+    return render(request, 'core/grades.html', context)
 
 
 @staff_member_required(login_url='core:sign_in')
@@ -200,6 +208,7 @@ def user_grades_save(request, course_id, user_id):
     post_grade = request.POST.getlist('grade')
     post_assessment_uri = request.POST.getlist('assessment_uri')
     post_submitted_by = request.POST.getlist('submitted_by')
+    post_excuse_lateness = request.POST.getlist('excuse_lateness')
     post_comments = request.POST.getlist('comment')
 
     for (i, prog_id) in enumerate(post_user_progress_id):
@@ -209,6 +218,7 @@ def user_grades_save(request, course_id, user_id):
             'assessment_uri': strip_tags(post_assessment_uri[i].strip()),
             'user_id': user_id,
             'submitted_by': strip_tags(post_submitted_by[i].strip()),
+            'excuse_lateness': post_excuse_lateness[i],
         }
         if post_comments[i].strip() is not '':
             user_progress_model['details'] = {
@@ -221,10 +231,14 @@ def user_grades_save(request, course_id, user_id):
             else:
                 current_user_progress = user_grades[user_grades_index[user_progress_model['assessment_uri']]]
 
-                if current_user_progress.grade != user_progress_model['grade'] or comment_is_different(current_user_progress.details, user_progress_model):
+                if (current_user_progress.grade != user_progress_model['grade']
+                    or comment_is_different(current_user_progress.details, user_progress_model)
+                    or current_user_progress.excuse_lateness != user_progress_model['excuse_lateness']
+                    ):
                     current_user_progress.grade = user_progress_model['grade']
                     current_user_progress.submitted_by = user_progress_model['submitted_by']
                     current_user_progress.cheated = False
+                    current_user_progress.excuse_lateness = user_progress_model['excuse_lateness']
                     if 'details' in user_progress_model:
                         if not isinstance(current_user_progress.details, dict): current_user_progress.details = {}
                         current_user_progress.details['comment'] = user_progress_model['details']['comment']
@@ -238,7 +252,7 @@ def user_grades_save(request, course_id, user_id):
             except:
                 pass
 
-    # return render(request, 'core/teachers/blank.html')
+    # return render(request, 'core/teachers/assessment-grades.html')
     return redirect('core:teacher_user_grades', course_id=course_id, user_id=user_id)
 
 
@@ -257,5 +271,6 @@ def assessment_grades(request, course_id, assessment_id):
         'username': request.user.username,
         'nav_current': 'teachers',
         'h1_title': "Assessment ·",
+        'hide_markbot': True,
     }
     return render(request, 'core/teachers/assessment-grades.html', context)
