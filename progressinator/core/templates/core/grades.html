@@ -187,7 +187,7 @@
                       <hr class="grade-form-sep">
                       <div class="grade-form-comment">
                         <label for="comment-{{item.uri | slugify}}">Comments:</label>
-                        <textarea class="micro" name="comment" id="comment-{{item.uri | slugify}}">{{item.grade.details.comment}}</textarea>
+                        <textarea class="micro" name="comment" id="comment-{{item.uri | slugify}}">{{item.grade.details.comment | escape}}</textarea>
                       </div>
                       {% for hidden in item.FORM.hidden_fields %}{{hidden}}{% endfor %}
                       <input name="user_progress_id" type="hidden" value="{{item.grade.id}}">

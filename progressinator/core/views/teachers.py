@@ -222,7 +222,7 @@ def user_grades_save(request, course_id, user_id):
         }
         if post_comments[i].strip() is not '':
             user_progress_model['details'] = {
-                'comment': strip_tags(post_comments[i].strip())
+                'comment': post_comments[i].strip()
             }
 
         if post_grade[i].strip() is not '':

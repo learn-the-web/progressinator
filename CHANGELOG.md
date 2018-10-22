@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.5.1] — 2018-10-21
+
+### Changed
+
+- Allow HTML tags within comments but force them to be escaped on output.
+
+---
+
 ## [1.5.0] — 2018-10-21
 
 ### Added
