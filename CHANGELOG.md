@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.5.2] — 2018-10-22
+
+### Fixed
+
+- Reset the cookie domains to fix the CSRF token from not working.
+
+---
+
 ## [1.5.1] — 2018-10-21
 
 ### Changed
