@@ -5,6 +5,18 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [Unreleased]
+
+### Changed
+
+- Added “View on GitHub” links for the lessons.
+
+### Fixed
+
+- Removed the extra spacing at the bottom of the tables.
+
+---
+
 ## [1.5.2] — 2018-10-22
 
 ### Fixed
