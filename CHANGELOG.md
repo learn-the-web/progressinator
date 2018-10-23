@@ -5,7 +5,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [Unreleased]
+## [1.5.3] — 2018-10-22
 
 ### Changed
 
