@@ -57,7 +57,17 @@
         </dl>
       </section>
       <section class="class-desc gutter-1-2 pad-t-1-2">
-        <h2 class="class-heading push-1-2 giga">Students</h2>
+        <div class="relative">
+          <h2 class="class-heading push-1-2 giga">Students</h2>
+          <div class="pin-rc italic milli" aria-role="toolbar" aria-label="Group by section" aria-controls="student-sections">
+            <ol class="course-section-list list-group-inline push-0">
+              <li><button class="course-section-btn btn btn-invisible" data-course-section="all" aria-pressed="true">All</button></li>
+              {% for section in course.assessments.1.due_dates %}
+                <li><button class="course-section-btn btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false">{{section.course_section}}</button></li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
         <div class="grade-statuses-scroll scrollable">
           <table class="grade-statuses push-0">
             <thead>
@@ -70,9 +80,9 @@
                 <th scope="col" colspan="5">GitHub</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="student-sections">
               {% for student in students %}
-                <tr class="grade-status-{{student.current_grade_average | grade_as_status | slugify}}">
+                <tr class="grade-status-{{student.current_grade_average | grade_as_status | slugify}}" data-course-section="{{student.current_section}}">
                   <th class="grade-item-name" scope="row" colspan="8">
                     <a href="{% url 'core:teacher_user_grades' course_id=course.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
                   </th>
@@ -168,4 +178,27 @@
       </section>
     </div>
   </div>
+
+  <script>
+    const courseSectionBtnList = document.querySelector('.course-section-list');
+
+    courseSectionBtnList.addEventListener('click', (e) => {
+      if (e.target.dataset.courseSection) {
+        document.querySelector('.course-section-btn[aria-pressed="true"]').setAttribute('aria-pressed', false);
+        e.target.setAttribute('aria-pressed', true);
+
+        [].forEach.call(document.querySelectorAll('#student-sections tr[data-course-section]'), (elem) => {
+          elem.hidden = false;
+          elem.removeAttribute('aria-hidden');
+        });
+
+        if (e.target.dataset.courseSection !== 'all') {
+          [].forEach.call(document.querySelectorAll(`#student-sections tr:not([data-course-section="${e.target.dataset.courseSection}"])`), (elem) => {
+            elem.hidden = true;
+            elem.setAttribute('aria-hidden', true);
+          });
+        }
+      }
+    });
+  </script>
 {% endblock %}
