@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.6.1] — 2018-10-25
+
+### Fixed
+
+- Fixed a typo in one of the headings of the assignment list.
+
+---
+
 ## [1.6.0] — 2018-10-25
 
 ### Added
