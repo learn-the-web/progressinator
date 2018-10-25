@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.6.0] — 2018-10-25
+
+### Added
+
+- The ability to filter the student list by section on the course status page.
+
+---
+
 ## [1.5.3] — 2018-10-22
 
 ### Changed
