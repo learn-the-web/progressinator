@@ -103,6 +103,8 @@
   
   
   
+  
+  
 
   
   
@@ -2237,6 +2239,59 @@
 
   
     
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videos.flexbox",
+  "id": "flexbox",
+  "course": "web-dev-1",
+  "name": "Flexbox",
+  "url": "https://learn-the-web.algonquindesign.ca/topics/flexbox/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+      
+      {
+        "course_section": "010",
+        "due": "2018-W44-4T08:00"
+      },
+    
+      
+      {
+        "course_section": "020",
+        "due": "2018-W44-1T08:00"
+      },
+    
+      
+      {
+        "course_section": "030",
+        "due": "2018-W44-4T12:00"
+      },
+    
+      
+      {
+        "course_section": "040",
+        "due": "2018-W44-1T14:00"
+      }
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
   
     
   
@@ -3915,7 +3970,7 @@
   "hours": 45,
   "homework": 45,
   "labs": 15,
-  "videos": 13,
+  "videos": 14,
   "lessons": 11,
   "activities": 8,
   "activities_plus_lessons": 19,
