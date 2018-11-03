@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.6.2] — 2018-11-03
+
+### Changed
+
+- Changed the Markbot version number to enforce a newer version on all the students.
+
+---
+
 ## [1.6.1] — 2018-10-25
 
 ### Fixed
