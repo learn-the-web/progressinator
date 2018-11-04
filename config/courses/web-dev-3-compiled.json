@@ -940,11 +940,11 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.different-crops, same image",
-      "id": "different-crops, same image",
+      "uri": "ca.learn-the-web.exercises.different-crops-same-image",
+      "id": "different-crops-same-image",
       "course": "web-dev-3",
       "name": "Different crops, same image",
-      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/different-crops, same image/",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/different-crops-same-image/",
       "assessment_type": "lesson",
       "grading_type": "pass_fail",
       "points_possible": 1,
