@@ -1958,11 +1958,11 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.exercises.action-hero-card-with-action",
-  "id": "action-hero-card-with-action",
+  "uri": "ca.learn-the-web.exercises.action-hero-card-with-actions",
+  "id": "action-hero-card-with-actions",
   "course": "web-dev-3",
   "name": "Action hero card with actions",
-  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-10/#action-hero-card-with-action",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-10/#action-hero-card-with-actions",
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
