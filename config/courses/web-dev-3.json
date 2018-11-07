@@ -2086,6 +2086,47 @@
     
   
     
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.videos./topics/media-queries/#print-styles",
+  "id": "/topics/media-queries/#print-styles",
+  "course": "web-dev-3",
+  "name": "Print media queries",
+  "url": "https://learn-the-web.algonquindesign.ca/topics//topics/media-queries/#print-styles/",
+  "assessment_type": "video",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+      
+      {
+        "course_section": "010",
+        "due": "2018-W46-2T14:00"
+      },
+    
+      
+      {
+        "course_section": "020",
+        "due": "2018-W46-2T18:00"
+      }
+    
+  ]
+  
+}
+
+      
+      
+    
+  
+    
   
     
   
@@ -2254,11 +2295,11 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.exercises.all-the-humans",
-  "id": "all-the-humans",
+  "uri": "ca.learn-the-web.exercises.kraken-good-accessibility",
+  "id": "kraken-good-accessibility",
   "course": "web-dev-3",
-  "name": "All the humans",
-  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-11/#all-the-humans",
+  "name": "Kraken good accessibility",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-11/#kraken-good-accessibility",
   "assessment_type": "exercise",
   "grading_type": "pass_fail",
   "points_possible": 1
@@ -3018,7 +3059,7 @@
   "hours": 45,
   "homework": 45,
   "labs": 15,
-  "videos": 9,
+  "videos": 10,
   "lessons": 12,
   "activities": 10,
   "activities_plus_lessons": 22,

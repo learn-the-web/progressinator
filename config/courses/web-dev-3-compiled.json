@@ -178,7 +178,7 @@
           "due": "2018-W38-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-09-18T14:00:00-04:00",
@@ -308,7 +308,7 @@
           "due": "2018-W39-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-09-25T14:00:00-04:00",
@@ -334,7 +334,7 @@
           "due": "2018-W39-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-09-25T14:00:00-04:00",
@@ -464,7 +464,7 @@
           "due": "2018-W40-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-10-02T14:00:00-04:00",
@@ -620,7 +620,7 @@
           "due": "2018-W41-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-10-09T14:00:00-04:00",
@@ -724,7 +724,7 @@
           "due": "2018-W42-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-10-16T14:00:00-04:00",
@@ -828,7 +828,7 @@
           "due": "2018-W44-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-10-30T14:00:00-04:00",
@@ -1036,7 +1036,33 @@
           "due": "2018-W46-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
+      "assessment_each_algonquin": 0,
+      "due_dates_algonquin": {
+        "010": "2018-11-13T14:00:00-05:00",
+        "020": "2018-11-13T18:00:00-05:00"
+      }
+    },
+    {
+      "uri": "ca.learn-the-web.videos./topics/media-queries/#print-styles",
+      "id": "/topics/media-queries/#print-styles",
+      "course": "web-dev-3",
+      "name": "Print media queries",
+      "url": "https://learn-the-web.algonquindesign.ca/topics//topics/media-queries/#print-styles/",
+      "assessment_type": "video",
+      "grading_type": "pass_fail",
+      "points_possible": 1,
+      "due_dates": [
+        {
+          "course_section": "010",
+          "due": "2018-W46-2T14:00"
+        },
+        {
+          "course_section": "020",
+          "due": "2018-W46-2T18:00"
+        }
+      ],
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-11-13T14:00:00-05:00",
@@ -1122,11 +1148,11 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.all-the-humans",
-      "id": "all-the-humans",
+      "uri": "ca.learn-the-web.exercises.kraken-good-accessibility",
+      "id": "kraken-good-accessibility",
       "course": "web-dev-3",
-      "name": "All the humans",
-      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-11/#all-the-humans",
+      "name": "Kraken good accessibility",
+      "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-3/week-11/#kraken-good-accessibility",
       "assessment_type": "exercise",
       "grading_type": "pass_fail",
       "points_possible": 1,
@@ -1166,7 +1192,7 @@
           "due": "2018-W47-2T18:00"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0,
       "due_dates_algonquin": {
         "010": "2018-11-20T14:00:00-05:00",
@@ -1348,7 +1374,7 @@
           "due": "2018-W50-2T23:59"
         }
       ],
-      "assessment_each": 0.0166666666666666664353702032030923874117434024810791015625,
+      "assessment_each": 0.01499999999999999944488848768742172978818416595458984375,
       "assessment_each_algonquin": 0.1499999999999999944488848768742172978818416595458984375,
       "due_dates_algonquin": {
         "010": "2018-12-11T23:59:00-05:00",
@@ -1491,7 +1517,7 @@
     "hours": 45,
     "homework": 45,
     "labs": 15,
-    "videos": 9,
+    "videos": 10,
     "lessons": 12,
     "activities": 10,
     "activities_plus_lessons": 22,
@@ -1501,7 +1527,7 @@
     "activities_plus_lessons_each": 0.00454545454545454523376246669386091525666415691375732421875,
     "exercises_each": 0.025000000000000001387778780781445675529539585113525390625,
     "projects_each": 0.1499999999999999944488848768742172978818416595458984375,
-    "videos_each": 0.0166666666666666664353702032030923874117434024810791015625,
+    "videos_each": 0.01499999999999999944488848768742172978818416595458984375,
     "activities_each_algonquin": 0.01499999999999999944488848768742172978818416595458984375,
     "activities_plus_lessons_each_algonquin": 0.006818181818181817850643700040791372884996235370635986328125,
     "exercises_each_algonquin": 0.0291666666666666636598126416402010363526642322540283203125,
