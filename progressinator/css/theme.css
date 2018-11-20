@@ -2,9 +2,15 @@
   --color-pass: #6dd110;
   --color-pass-light: #c1e89b;
   --color-pass-dark: #417d0a;
+
   --color-fail: #f33;
   --color-fail-light: #ff9494;
   --color-fail-dark: #991f1f;
+
+  --color-fail-close: #ff9600;
+  --color-fail-close-light: #ffd599;
+  --color-fail-close-dark: #b56b00;
+
   --color-warning: #ffd30d;
   --color-warning-light: #ffefab;
   --color-warning-dark: #b09000;

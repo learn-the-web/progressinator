@@ -61,9 +61,9 @@
           <h2 class="class-heading push-1-2 giga">Students</h2>
           <div class="pin-rc italic milli" aria-role="toolbar" aria-label="Group by section" aria-controls="student-sections">
             <ol class="course-section-list list-group-inline push-0">
-              <li><button class="course-section-btn btn btn-invisible" data-course-section="all" aria-pressed="true">All</button></li>
+              <li><a class="course-section-btn btn btn-invisible" data-course-section="all" aria-pressed="true" href="#">All</a></li>
               {% for section in course.assessments.1.due_dates %}
-                <li><button class="course-section-btn btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false">{{section.course_section}}</button></li>
+                <li><a class="course-section-btn btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false" href="#{{section.course_section}}">{{section.course_section}}</a></li>
               {% endfor %}
             </ol>
           </div>
@@ -82,14 +82,14 @@
             </thead>
             <tbody id="student-sections">
               {% for student in students %}
-                <tr class="grade-status-{{student.current_grade_average | grade_as_status | slugify}}" data-course-section="{{student.current_section}}">
+                <tr class="grade-status-{{student.current_grade_average | grade_as_status_fine_grained | slugify}}" data-course-section="{{student.current_section}}">
                   <th class="grade-item-name" scope="row" colspan="8">
                     <a href="{% url 'core:teacher_user_grades' course_id=course.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
                   </th>
                   <td class="grade-item-grade color-pass-dark" colspan="2">
-                    <strong>{{student.current_grade_average | grade_as_letter}}</strong>
+                    <strong title="{{student.current_grade_average | pretty_percent_small}}">{{student.current_grade_average | grade_as_letter}}</strong>
                     {% if student.current_grade_average < .6 %}
-                      <i class="grade-item-grade-icon icon i-1-2"><svg><use xlink:href="#icon-grade-avg-{{student.current_grade_average | grade_as_status | slugify}}"></use></svg></i>
+                      <i class="grade-item-grade-icon icon i-1-2"><svg><use xlink:href="#icon-grade-avg-{{student.current_grade_average | grade_as_status_fine_grained | slugify}}"></use></svg></i>
                     {% endif %}
                   </td>
                   <td class="color-grey-dark" colspan="3">{{student.current_grade | pretty_percent_small}}</td>
@@ -198,6 +198,13 @@
             elem.setAttribute('aria-hidden', true);
           });
         }
+      }
+    });
+
+    window.addEventListener('load', (e) => {
+      if (window.location.hash) {
+        const btn = courseSectionBtnList.querySelector(`a[href="${window.location.hash}"]`);
+        if (btn) btn.click();
       }
     });
   </script>
