@@ -34,9 +34,35 @@
   text-align: right;
 }
 
-.assessment-item {
+.assessment-item-content {
   padding-left: 1.4em;
-  position: relative;
+}
+
+.assessment-item-past-due + .assessment-item-pre-due {
+  border-top: .2em dotted #63666a;
+}
+
+.assessment-item-past-due + .assessment-item-pre-due::before {
+  content: "Today";
+  left: 50%;
+  margin: 0;
+  padding: .2em 1em;
+  position: absolute;
+  top: -1em;
+  width: auto;
+
+  background-color: #f5f2f0;
+  transform: translateX(-50%);
+
+  color: #63666a;
+  font-size: 60%;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.assessment-item-pre-due + .assessment-item-pre-due {
+  padding-top: 0;
 }
 
 .assessment-title .icon {

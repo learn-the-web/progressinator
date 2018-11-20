@@ -79,6 +79,7 @@ def course_grades(request, course_id):
         'current_grade_average': current_grade / current_grade_max if current_grade_max else False,
         'course': course,
         'excuse_lateness_options': UserProgressLatenessChoices.choices(),
+        'today': pendulum.now(tz='America/Toronto')
     }
 
     if user_profile:

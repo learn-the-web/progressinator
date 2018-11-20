@@ -166,6 +166,7 @@ def user_grades(request, course_id, user_id):
         'current_grade_average': current_grade / current_grade_max,
         'course': course,
         'excuse_lateness_options': UserProgressLatenessChoices.choices(),
+        'today': pendulum.now(tz='America/Toronto')
     }
 
     if student_profile:
