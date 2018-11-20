@@ -5,6 +5,21 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.6.3] — 2018-11-19
+
+### Added
+
+- Added a line underneath the currently due assessments in the list to help understand the current location in the course.
+
+### Changed
+
+- Clarified the failures that were close to passing with a slightly different colour.
+- Clarified the language for the grade view to help students understand.
+- Filtering by section now remembers the section when refreshing, using URL hashes for storage.
+- Letter grade assessments show as “Ungraded” by default when submitted with Markbot.
+
+---
+
 ## [1.6.2] — 2018-11-03
 
 ### Changed
