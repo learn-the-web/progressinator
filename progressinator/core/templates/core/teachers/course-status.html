@@ -61,9 +61,9 @@
           <h2 class="class-heading push-1-2 giga">Students</h2>
           <div class="pin-rc italic milli" aria-role="toolbar" aria-label="Group by section" aria-controls="student-sections">
             <ol class="course-section-list list-group-inline push-0">
-              <li><button class="course-section-btn btn btn-invisible" data-course-section="all" aria-pressed="true">All</button></li>
+              <li><a class="course-section-btn btn btn-invisible" data-course-section="all" aria-pressed="true" href="#">All</a></li>
               {% for section in course.assessments.1.due_dates %}
-                <li><button class="course-section-btn btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false">{{section.course_section}}</button></li>
+                <li><a class="course-section-btn btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false" href="#{{section.course_section}}">{{section.course_section}}</a></li>
               {% endfor %}
             </ol>
           </div>
@@ -198,6 +198,13 @@
             elem.setAttribute('aria-hidden', true);
           });
         }
+      }
+    });
+
+    window.addEventListener('load', (e) => {
+      if (window.location.hash) {
+        const btn = courseSectionBtnList.querySelector(`a[href="${window.location.hash}"]`);
+        if (btn) btn.click();
       }
     });
   </script>

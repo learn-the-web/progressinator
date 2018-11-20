@@ -269,6 +269,11 @@
   border-bottom: .15em solid #fff;
 }
 
+.course-section-btn:focus {
+  position: relative;
+  z-index: 10;
+}
+
 .course-section-btn[aria-pressed="true"] {
   border-color: currentcolor;
 }
