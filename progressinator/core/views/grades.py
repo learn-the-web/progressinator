@@ -17,6 +17,11 @@ from progressinator.common.util import build_dict_index
 
 @login_required
 def courses(request):
+    try:
+        user_profile = UserProfile.objects.get(user=request.user)
+    except:
+        user_profile = None
+
     context = {
         'app_version': settings.APP_PKG['version'],
         'doc_title': "Courses",
@@ -25,7 +30,12 @@ def courses(request):
         'nav_current': 'courses',
     }
 
-    return render(request, 'core/courses.html', context)
+    response = render(request, 'core/courses.html', context)
+
+    if user_profile:
+        response.set_cookie('ltw-course-section', f'{user_profile.current_course.slug}-{user_profile.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
+
+    return response
 
 
 @login_required
@@ -85,5 +95,10 @@ def course_grades(request, course_id):
     if user_profile:
         context['user_profile'] = user_profile
 
-    return render(request, 'core/grades.html', context)
+    response = render(request, 'core/grades.html', context)
+
+    if user_profile:
+        response.set_cookie('ltw-course-section', f'{course["course"]}-{user_profile.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
+
+    return response
 

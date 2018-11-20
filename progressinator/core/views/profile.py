@@ -33,4 +33,9 @@ def index(request):
         context['current_course'] = profile.current_course
         context['current_section'] = profile.current_section
 
-    return render(request, 'core/profile.html', context)
+    response = render(request, 'core/profile.html', context)
+
+    if profile:
+        response.set_cookie('ltw-course-section', f'{profile.current_course.slug}-{profile.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
+
+    return response
