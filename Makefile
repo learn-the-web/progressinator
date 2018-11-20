@@ -110,7 +110,10 @@ heroku-django-super-user:
 	heroku run python manage.py createsuperuser
 
 heroku-push-local-db:
-	heroku pg:push postgres://progressinator@localhost:5432/progressinator postgresql-fluffy-48259 --app learn-the-web-progress
+	heroku pg:push DATABASE_URL postgresql-fluffy-48259 --app learn-the-web-progress
+
+heroku-pull-remote-db:
+	heroku pg:pull postgresql-fluffy-48259 DATABASE_URL --app learn-the-web-progress
 
 heroku-schedule-db-backup:
 	# https://devcenter.heroku.com/articles/heroku-postgres-backups
