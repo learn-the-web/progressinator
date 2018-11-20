@@ -16,3 +16,8 @@ def grade_as_letter(value):
 @register.filter
 def grade_as_status(value):
     return grades.grade_as_status(value)
+
+
+@register.filter
+def grade_as_status_fine_grained(value):
+    return grades.grade_as_status_fine_grained(value)

@@ -43,6 +43,19 @@ def grade_as_status(grade):
     else:
         return "Failing"
 
+def grade_as_status_fine_grained(grade):
+    """Change a percent into an Algonquin mid-term status grade"""
+    if grade >= .80:
+        return "Excellent"
+    elif grade >= .60 and grade < .80:
+        return "Satisfactory"
+    elif grade >= .50 and grade < .60:
+        return "Weak"
+    elif grade >= .40 and grade < .50:
+        return "Failing, close"
+    else:
+        return "Failing"
+
 
 def calc_grade(grade, assessment_index, assessments):
     if grade.assessment_uri in assessment_index:

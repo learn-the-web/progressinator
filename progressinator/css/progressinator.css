@@ -141,6 +141,11 @@
   color: var(--color-fail-dark);
 }
 
+.grade-projected-failing-close,
+.grade-status-failing-close .grade-item-grade {
+  color: var(--color-fail-close-dark);
+}
+
 .assessment-statuses {
   min-width: 24em;
 }
