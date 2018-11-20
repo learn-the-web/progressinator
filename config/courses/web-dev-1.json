@@ -3667,6 +3667,66 @@
   
     
       
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+,{
+  "uri": "ca.learn-the-web.exercises.confectionery-website-sketches",
+  "id": "confectionery-website-sketches",
+  "course": "web-dev-1",
+  "name": "Confectionery website sketches",
+  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-1/week-13/#confectionery-website-sketches",
+  "assessment_type": "exercise",
+  "grading_type": "pass_fail",
+  "points_possible": 1
+  
+  ,"due_dates": [
+    
+      
+      {
+        "course_section": "010",
+        "due": "2018-W49-4T08:00"
+      },
+    
+      
+      {
+        "course_section": "020",
+        "due": "2018-W49-1T08:00"
+      },
+    
+      
+      {
+        "course_section": "030",
+        "due": "2018-W49-4T12:00"
+      },
+    
+      
+      {
+        "course_section": "040",
+        "due": "2018-W49-1T14:00"
+      }
+    
+  ]
+  
+}
+
+      
+    
+
+  
+    
+      
         
         
         
@@ -3977,7 +4037,7 @@
   "lessons": 11,
   "activities": 8,
   "activities_plus_lessons": 19,
-  "exercises": 27,
+  "exercises": 28,
   "projects": 1
 }
 }
