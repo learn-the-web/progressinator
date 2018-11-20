@@ -93,9 +93,15 @@
                             <svg><use xlink:href="#icon-grade-pass"></use></svg>
                           </i>
                         {% else %}
-                          <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
-                            <svg><use xlink:href="#icon-grade-pass"></use></svg>
-                          </i>
+                          {% if item.grade and item.grading_type == 'letter_grade' and 'Markbot' in item.grade.submitted_by %}
+                            <i class="icon i-3-4 color-grey" aria-label="Submission accepted, ungraded" title="Submission accepted, ungraded">
+                              <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                            </i>
+                          {% else %}
+                            <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
+                              <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                            </i>
+                          {% endif %}
                         {% endif %}
                       {% else %}
                         <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
@@ -116,7 +122,11 @@
                     <a href="{{item.url}}">{{item.name}}</a>
                     <strong>
                       {% if item.grade and item.grading_type == 'letter_grade' %}
-                        {{item.grade.grade_as_letter}}
+                        {% if 'Markbot' in item.grade.submitted_by %}
+                          Ungraded
+                        {% else %}
+                          {{item.grade.grade_as_letter}}
+                        {% endif %}
                       {% endif %}
                     </strong>
                   </h3>

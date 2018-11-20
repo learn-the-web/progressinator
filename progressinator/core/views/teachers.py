@@ -237,7 +237,7 @@ def user_grades_save(request, course_id, user_id):
                     or current_user_progress.excuse_lateness != user_progress_model['excuse_lateness']
                     ):
                     current_user_progress.grade = user_progress_model['grade']
-                    current_user_progress.submitted_by = user_progress_model['submitted_by']
+                    current_user_progress.submitted_by = f"{request.user.first_name} {request.user.last_name}"
                     current_user_progress.cheated = False
                     current_user_progress.excuse_lateness = user_progress_model['excuse_lateness']
                     if 'details' in user_progress_model:
