@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.7.0] — 2018-11-20
+
+### Added
+
+- Cookies will now be set that record the student’s current Algonquin College section to allow for real due dates on the rest of Learn the Web.
+
+---
+
 ## [1.6.3] — 2018-11-19
 
 ### Added
