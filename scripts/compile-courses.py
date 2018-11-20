@@ -1,4 +1,5 @@
 import decimal
+from shutil import copyfile
 from datetime import date, datetime
 import pendulum
 import simplejson as json
@@ -50,6 +51,7 @@ def setup_course(course):
 
 
 for course_id in registered_courses:
+    copyfile(f'/db/learn-the-web/www/_site/courses/{course_id}/course.json', f'config/courses/{course_id}.json')
     with open(f'config/courses/{course_id}.json') as json_data:
         course = setup_course(json.load(json_data))
         json.dump(course, open(f'config/courses/{course_id}-compiled.json', 'w'), indent=2, default=json_serial)
