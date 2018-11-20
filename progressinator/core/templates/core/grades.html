@@ -20,7 +20,18 @@
       {% endif %}
       <section class="class-desc gutter-1-2">
         <h2 class="class-heading push giga">Grade</h2>
-        <h3 class="tenamega push brand-dark push-1-4" aria-label="{{current_grade | pretty_percent_small}} complete this course" title="{{current_grade | pretty_percent_small}} complete this course">{{current_grade | pretty_percent_small}} {% if current_grade_max %}<span class="color-grey not-bold peta">out of</span> <span class="color-grey-dark not-bold exa">{{current_grade_max | pretty_percent_small}}</span>{% endif %}</h3>
+        <dl class="grid push">
+          <div class="unit [ xs-1-2 s-1-2 m-1 l-1-2 ] brand-dark relative">
+            <dt class="giga italic absolute pin-lb">Actual grade</dt>
+            <dd class="tenamega bold">{{current_grade | pretty_percent_small}}</dd>
+          </div>
+          {% if current_grade_max %}
+            <div class="unit [ xs-1-2 s-1-2 m-1 l-1-2 ] brand-dark relative">
+              <dt class="giga color-grey italic absolute pin-lb">of course completed</dt>
+              <dd class="tenamega color-grey">{{current_grade_max | pretty_percent_small}}</dd>
+            </div>
+          {% endif %}
+        </dl>
         {% if current_grade_average %}
           <strong class="tera ib push color-grey pad-b-1-2">
             <span class="not-bold italic">Projected grade:</span>
