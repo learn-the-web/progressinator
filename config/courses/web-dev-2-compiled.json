@@ -730,7 +730,7 @@
       "due_dates_algonquin": []
     },
     {
-      "uri": "ca.learn-the-web.exercises.accessibility-testing",
+      "uri": "ca.learn-the-web.exercises.saas-a11y-testing",
       "id": "accessibility-testing",
       "course": "web-dev-2",
       "name": "Accessibility testing",
@@ -758,7 +758,7 @@
       "due_dates_algonquin": []
     },
     {
-      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "uri": "ca.learn-the-web.exercises.saas-browser-testing",
       "id": "browser-testing",
       "course": "web-dev-2",
       "name": "Browser testing",

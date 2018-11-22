@@ -16,7 +16,7 @@
       {
         "day": 1,
         "start_time": 12,
-        "end_time": 2
+        "end_time": 14
       },
       {
         "day": 4,
@@ -821,7 +821,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "uri": "ca.learn-the-web.exercises.portfolio-interim-browser-testing",
       "id": "browser-testing",
       "course": "web-dev-5",
       "name": "Browser testing",
@@ -1029,7 +1029,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.accessibility-testing",
+      "uri": "ca.learn-the-web.exercises.portfolio-interim-a11y-testing",
       "id": "accessibility-testing",
       "course": "web-dev-5",
       "name": "Accessibility testing",
@@ -1133,7 +1133,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.performance-testing",
+      "uri": "ca.learn-the-web.exercises.portfolio-final-perf-testing",
       "id": "performance-testing",
       "course": "web-dev-5",
       "name": "Performance testing",
@@ -1159,7 +1159,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.accessibility-testing",
+      "uri": "ca.learn-the-web.exercises.portfolio-final-a11y-testing",
       "id": "accessibility-testing",
       "course": "web-dev-5",
       "name": "Accessibility testing",
@@ -1185,7 +1185,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "uri": "ca.learn-the-web.exercises.portfolio-final-browser-testing",
       "id": "browser-testing",
       "course": "web-dev-5",
       "name": "Browser testing",

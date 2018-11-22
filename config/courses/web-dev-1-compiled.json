@@ -16,7 +16,7 @@
       {
         "day": 1,
         "start_time": 12,
-        "end_time": 2
+        "end_time": 14
       },
       {
         "day": 4,
@@ -2237,7 +2237,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "uri": "ca.learn-the-web.exercises.confectionery-browser-testing",
       "id": "browser-testing",
       "course": "web-dev-1",
       "name": "Browser testing",

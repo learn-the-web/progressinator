@@ -1434,7 +1434,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.performance-testing",
+      "uri": "ca.learn-the-web.exercises.animal-rescue-perf-testing",
       "id": "performance-testing",
       "course": "web-dev-3",
       "name": "Performance testing",
@@ -1460,7 +1460,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.accessibility-testing",
+      "uri": "ca.learn-the-web.exercises.animal-rescue-a11y-testing",
       "id": "accessibility-testing",
       "course": "web-dev-3",
       "name": "Accessibility testing",
@@ -1486,7 +1486,7 @@
       }
     },
     {
-      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "uri": "ca.learn-the-web.exercises.animal-rescue-browser-testing",
       "id": "browser-testing",
       "course": "web-dev-3",
       "name": "Browser testing",

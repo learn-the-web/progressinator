@@ -338,7 +338,7 @@
       "due_dates_algonquin": []
     },
     {
-      "uri": "ca.learn-the-web.exercises.accessibility-testing",
+      "uri": "ca.learn-the-web.exercises.pattern-lib-patterns-a11y-testing",
       "id": "accessibility-testing",
       "course": "web-dev-4",
       "name": "Accessibility testing",
@@ -380,7 +380,7 @@
       "due_dates_algonquin": []
     },
     {
-      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "uri": "ca.learn-the-web.exercises.pattern-lib-patterns-browser-testing",
       "id": "browser-testing",
       "course": "web-dev-4",
       "name": "Browser testing",
@@ -632,7 +632,7 @@
       "due_dates_algonquin": []
     },
     {
-      "uri": "ca.learn-the-web.exercises.accessibility-testing",
+      "uri": "ca.learn-the-web.exercises.pattern-lib-final-a11y-testing",
       "id": "accessibility-testing",
       "course": "web-dev-4",
       "name": "Accessibility testing",
@@ -646,7 +646,7 @@
       "due_dates_algonquin": []
     },
     {
-      "uri": "ca.learn-the-web.exercises.browser-testing",
+      "uri": "ca.learn-the-web.exercises.pattern-lib-final-browser-testing",
       "id": "browser-testing",
       "course": "web-dev-4",
       "name": "Browser testing",

@@ -66,6 +66,8 @@
   
   
   
+  
+  
 
   
   
@@ -88,6 +90,8 @@
     
       
     
+      
+      
       
       
       
@@ -124,6 +128,8 @@
 
   
     
+      
+      
       
       
       
@@ -283,6 +289,8 @@
       
       
       
+      
+      
 
 
 
@@ -310,6 +318,8 @@
 
   
     
+      
+      
       
       
       
@@ -372,6 +382,8 @@
 
   
     
+      
+      
       
       
       
@@ -480,6 +492,8 @@
       
       
       
+      
+      
 
 
 
@@ -487,7 +501,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.exercises.usability-testing",
+  "uri": "ca.learn-the-web.exercises.interactive-prototype-interim-usability-testing",
   "id": "usability-testing",
   "course": "web-dev-6",
   "name": "Usability testing",
@@ -574,6 +588,8 @@
       
       
       
+      
+      
 
 
 
@@ -601,6 +617,8 @@
 
   
     
+      
+      
       
       
       
@@ -764,6 +782,8 @@
       
       
       
+      
+      
 
 
 
@@ -771,7 +791,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.exercises.usability-testing",
+  "uri": "ca.learn-the-web.exercises.interactive-prototype-final-usability-testing",
   "id": "usability-testing",
   "course": "web-dev-6",
   "name": "Usability testing",
@@ -800,6 +820,8 @@
       
       
       
+      
+      
 
 
 
@@ -807,7 +829,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.exercises.accessibility-testing",
+  "uri": "ca.learn-the-web.exercises.interactive-prototype-final-a11y-testing",
   "id": "accessibility-testing",
   "course": "web-dev-6",
   "name": "Accessibility testing",
@@ -836,6 +858,8 @@
       
       
       
+      
+      
 
 
 
@@ -843,7 +867,7 @@
 
 
 ,{
-  "uri": "ca.learn-the-web.exercises.browser-testing",
+  "uri": "ca.learn-the-web.exercises.interactive-prototype-final-browser-testing",
   "id": "browser-testing",
   "course": "web-dev-6",
   "name": "Browser testing",
