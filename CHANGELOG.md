@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.7.1] — 2018-11-22
+
+### Fixed
+
+- Fixed a bug when trying to load a user profile and it doesn’t match the currently viewed course.
+
+---
+
 ## [1.7.0] — 2018-11-20
 
 ### Added

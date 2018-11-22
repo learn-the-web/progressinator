@@ -73,7 +73,7 @@ def course_grades(request, course_id):
             course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             current_grade += grade_helper.calc_grade(prog, assessment_index, course['assessments'])
 
-    if user_profile:
+    if user_profile and user_profile.current_course.slug == course_id and user_profile.current_section in max_assessments_per_section:
         current_grade_max = max_assessments_per_section[user_profile.current_section]
     else:
         current_grade_max = False
