@@ -2168,54 +2168,6 @@
   
     
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
-
-
-
-
-
-,{
-  "uri": "ca.learn-the-web.exercises.lazy-loading-images",
-  "id": "lazy-loading-images",
-  "course": "web-dev-5",
-  "name": "Lazy-loading images",
-  "url": "https://learn-the-web.algonquindesign.ca/courses/web-dev-5/lazy-loading-images/",
-  "assessment_type": "lesson",
-  "grading_type": "pass_fail",
-  "points_possible": 1
-  
-  ,"due_dates": [
-    
-      
-      {
-        "course_section": "010",
-        "due": "2018-W48-3T17:00"
-      },
-    
-      
-      {
-        "course_section": "020",
-        "due": "2018-W48-5T11:00"
-      }
-    
-  ]
-  
-}
-
-      
-    
-
-  
     
       
       
@@ -2619,9 +2571,9 @@
   "homework": 45,
   "labs": 15,
   "videos": 7,
-  "lessons": 10,
+  "lessons": 9,
   "activities": 8,
-  "activities_plus_lessons": 18,
+  "activities_plus_lessons": 17,
   "exercises": 17,
   "projects": 3
 }
