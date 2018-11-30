@@ -7,7 +7,7 @@
 {% block wrapper %}
 
   <div class="grid">
-    <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2">
+    <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2 {% if not allow_grade_editing or not user.is_staff %}pad-t-1-2{% endif %}">
       {% if allow_grade_editing and user.is_staff %}
         <section class="section-lightest gutter-1-2 pad-t-1-2 pad-b push-1-2">
           <h2 class="push-0">{{student_profile.user.first_name}} {{student_profile.user.last_name}}</h2>
