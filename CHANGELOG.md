@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.7.5] — 2018-12-06
+
+### Fixed
+
+- Fixed a bug I created earlier where grades were being attributed to the wrong assessments.
+
+---
+
 ## [1.7.4] — 2018-12-06
 
 ### Changed

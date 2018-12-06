@@ -50,7 +50,6 @@ def course_grades(request, course_id):
     except:
         user_profile = None
 
-    assessment_index = build_dict_index(course['assessments'], 'uri')
     user_grades = UserProgress.objects.filter(user=request.user)
     current_grade = decimal.Decimal(0.0)
     max_assessments_per_section = grade_helper.max_assessments_per_section(course['assessments'])
@@ -59,8 +58,9 @@ def course_grades(request, course_id):
         if user_profile and 'due_dates_algonquin' in a and user_profile.current_section in a['due_dates_algonquin']:
             a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][user_profile.current_section])
 
-    # if user_profile and user_profile.current_section:
-        # course['assessments'] = sorted(course['assessments'], key=lambda k: k['user_due_date_algonquin'])
+    if user_profile and user_profile.current_section:
+        course['assessments'] = sorted(course['assessments'], key=lambda k: k['user_due_date_algonquin'])
+    assessment_index = build_dict_index(course['assessments'], 'uri')
 
     for prog in user_grades:
         if prog.assessment_uri in assessment_index:
