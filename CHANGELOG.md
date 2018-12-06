@@ -5,6 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.7.4] — 2018-12-06
+
+### Changed
+
+- Reorder the assessments in the grade list by due date, also fixes the double “Today” separator better.
+- Highlight actual failing grades over a threshold on the grade status page.
+
+---
+
 ## [1.7.3] — 2018-12-06
 
 ### Fixed
