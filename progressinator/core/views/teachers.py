@@ -134,6 +134,9 @@ def user_grades(request, course_id, user_id):
         if student_profile and 'due_dates_algonquin' in a and student_profile.current_section in a['due_dates_algonquin']:
             a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][student_profile.current_section], tz='America/Toronto')
 
+    if student_profile and student_profile.current_section:
+        course['assessments'] = sorted(course['assessments'], key=lambda k: k['user_due_date_algonquin'])
+
     for prog in user_grades:
         if prog.assessment_uri in assessment_index:
             prog.late = False
