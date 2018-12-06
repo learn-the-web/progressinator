@@ -5,6 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.7.3] — 2018-12-06
+
+### Fixed
+
+- Removed extra padding at the bottom of the grades list.
+- Fixed the doubling of the “Today” separator in the grades list.
+
+---
+
 ## [1.7.2] — 2018-12-06
 
 ### Fixed
