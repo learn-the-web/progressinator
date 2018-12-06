@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.7.2] — 2018-12-06
+
+### Fixed
+
+- Fixed a bug where ungraded projects were added as part of the actual grade.
+
+---
+
 ## [1.7.1] — 2018-11-22
 
 ### Fixed
