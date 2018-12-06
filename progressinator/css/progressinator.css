@@ -38,11 +38,11 @@
   padding-left: 1.4em;
 }
 
-.assessment-item-past-due + .assessment-item-pre-due {
+.assessment-item-past-due + .assessment-item-pre-due:last-of-type {
   border-top: .2em dotted #63666a;
 }
 
-.assessment-item-past-due + .assessment-item-pre-due::before {
+.assessment-item-past-due + .assessment-item-pre-due:last-of-type::before {
   content: "Today";
   left: 50%;
   margin: 0;
@@ -61,7 +61,8 @@
   text-transform: uppercase;
 }
 
-.assessment-item-pre-due + .assessment-item-pre-due {
+.assessment-item-pre-due + .assessment-item-pre-due,
+.assessment-item-past-due + .assessment-item-pre-due:not(:last-of-type) {
   padding-top: 0;
 }
 
