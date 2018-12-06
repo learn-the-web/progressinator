@@ -59,6 +59,8 @@ def grade_as_status_fine_grained(grade):
 
 def calc_grade(grade, assessment_index, assessments):
     if grade.assessment_uri in assessment_index:
+        if assessments[assessment_index[grade.assessment_uri]]['grading_type'] == 'letter_grade' and 'Markbot' in grade.submitted_by:
+            return 0
         return grade.grade * decimal.Decimal(assessments[assessment_index[grade.assessment_uri]]['assessment_each_algonquin'])
     return 0
 
