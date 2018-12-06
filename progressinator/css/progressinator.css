@@ -146,6 +146,10 @@
   color: var(--color-fail-close-dark);
 }
 
+.grade-actual-highlight-low {
+  border-bottom: .05em dotted var(--color-fail-dark);
+}
+
 .assessment-statuses {
   min-width: 24em;
 }

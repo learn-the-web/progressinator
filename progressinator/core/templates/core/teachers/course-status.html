@@ -92,7 +92,7 @@
                       <i class="grade-item-grade-icon icon i-1-2"><svg><use xlink:href="#icon-grade-avg-{{student.current_grade_average | grade_as_status_fine_grained | slugify}}"></use></svg></i>
                     {% endif %}
                   </td>
-                  <td class="color-grey-dark" colspan="3">{{student.current_grade | pretty_percent_small}}</td>
+                  <td class="color-grey-dark" colspan="3"><span class="{% if student.current_grade_max > .65 and student.current_grade < .5 %}grade-actual-highlight-low{% endif %}">{{student.current_grade | pretty_percent_small}}</span></td>
                   <td class="color-grey" colspan="3">{{student.current_grade_max | pretty_percent_small}}</td>
                   <td class="milli italic" colspan="3">{{student.current_grade_average | grade_as_status}}</td>
                   <td class="milli" colspan="5">
