@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.8.1] — 2018-12-10
+
+### Fixed
+
+- Added the missing “View on GitHub” link for projects.
+
+---
+
 ## [1.8.0] — 2018-12-10
 
 ### Added

@@ -155,7 +155,7 @@
                       {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
                       {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
                     </span>
-                    {% if item.assessment_type == 'exercise' or item.assessment_type == 'lesson' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{github_username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
+                    {% if item.assessment_type == 'exercise' or item.assessment_type == 'lesson' or item.assessment_type == 'project' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{github_username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
                   </small>
                   {% if item.grade %}
                     <details class="assessment-details micro push-0">
