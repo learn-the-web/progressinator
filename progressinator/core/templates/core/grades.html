@@ -76,9 +76,16 @@
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
         {% if allow_grade_editing and perms.progress_core.change_userprogress %}
           <form method="post" id="grades-form" action="{% url 'core:teacher_user_grades_save' course_id=course.course user_id=student_profile.user_id %}">
-            <div class="grade-form-actions island-1-4 text-right milli">
-              <button class="milli btn" id="grades-edit" type="button">Edit grades</button>
-              <button class="milli btn btn-light" id="grades-save" type="submit" hidden disabled>Save grades</button>
+            <div class="grade-form-actions island-1-4 text-right milli relative">
+              <div class="grade-actions-default pin-lc gutter-1-4" id="grade-actions-default-controls" hidden>
+                <label class="push-r-1-4" for="grade-actions-default">Set ungraded as:</label>
+                <input class="push-r-1-4" type="number" id="grade-actions-default" value="0" step="0.001">
+                <button class="pico btn" id="grade-actions-default-go" type="button"><span class="ib gutter-1-4">Go</span></button>
+              </div>
+              <div class="grade-actions-save-edit">
+                <button class="milli btn" id="grades-edit" type="button">Edit grades</button>
+                <button class="milli btn btn-light" id="grades-save" type="submit" hidden disabled>Save grades</button>
+              </div>
             </div>
         {% endif %}
           <ol class="assessment-list list-group push-0">
@@ -232,13 +239,24 @@
     <script>
       const btnEdit = document.getElementById('grades-edit');
       const btnSave = document.getElementById('grades-save');
+      const defaultControls = document.getElementById('grade-actions-default-controls');
+      const btnDefaultGo = document.getElementById('grade-actions-default-go');
+      const inputDefault = document.getElementById('grade-actions-default');
 
       btnEdit.addEventListener('click', (e) => {
         e.preventDefault();
+        defaultControls.hidden = false;
         [].forEach.call(document.querySelectorAll('.grade-form-wrap'), (gradeForm) => {
           gradeForm.hidden = false;
           btnSave.hidden = btnSave.disabled = false;
           btnEdit.hidden = btnEdit.disabled = true;
+        });
+      });
+
+      btnDefaultGo.addEventListener('click', (e) => {
+        e.preventDefault();
+        [].forEach.call(document.querySelectorAll('.grade-form input[name="grade"]'), (gradeInput) => {
+          if (gradeInput.value === '') gradeInput.value = inputDefault.value;
         });
       });
 

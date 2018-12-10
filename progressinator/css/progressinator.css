@@ -257,11 +257,25 @@
   z-index: 1000;
 
   background-color: #00675a;
+  box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .grade-form-actions .btn[disabled] {
   opacity: .7;
   pointer-events: none;
+}
+
+.grade-actions-default {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+#grade-actions-default {
+  width: 3em;
+  border-radius: .2em;
+  border: 0;
+  color: #000;
 }
 
 .course-section-list {

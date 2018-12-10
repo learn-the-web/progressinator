@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.8.0] — 2018-12-10
+
+### Added
+
+- Added a “Set ungraded as…” feature to help with finalizing end-of-term grades.
+
+---
+
 ## [1.7.5] — 2018-12-06
 
 ### Fixed
