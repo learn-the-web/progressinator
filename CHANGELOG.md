@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.8.2] — 2018-12-15
+
+### Fixed
+
+- Made the grade to letter comparisons more accurate by quantizing the decimal places.
+
+---
+
 ## [1.8.1] — 2018-12-10
 
 ### Fixed

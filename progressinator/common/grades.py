@@ -2,31 +2,34 @@ import decimal, math
 import pendulum
 
 
+TWO_DECIMALS = decimal.Decimal('0.000')
+
+
 def grade_as_letter(grade):
     """Change a percent into an Algonquin letter grade"""
-    if grade >= .90:
+    if grade >= decimal.Decimal(.90).quantize(TWO_DECIMALS):
         return "A+"
-    elif grade >= .85 and grade < .90:
+    elif grade >= decimal.Decimal(.85).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.90).quantize(TWO_DECIMALS):
         return "A"
-    elif grade >= .80 and grade < .85:
+    elif grade >= decimal.Decimal(.80).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.85).quantize(TWO_DECIMALS):
         return "A-"
-    elif grade >= .77 and grade < .80:
+    elif grade >= decimal.Decimal(.77).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.80).quantize(TWO_DECIMALS):
         return "B+"
-    elif grade >= .73 and grade < .77:
+    elif grade >= decimal.Decimal(.73).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.77).quantize(TWO_DECIMALS):
         return "B"
-    elif grade >= .70 and grade < .73:
+    elif grade >= decimal.Decimal(.70).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.73).quantize(TWO_DECIMALS):
         return "B-"
-    elif grade >= .67 and grade < .70:
+    elif grade >= decimal.Decimal(.67).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.70).quantize(TWO_DECIMALS):
         return "C+"
-    elif grade >= .63 and grade < .67:
+    elif grade >= decimal.Decimal(.63).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.67).quantize(TWO_DECIMALS):
         return "C"
-    elif grade >= .60 and grade < .63:
+    elif grade >= decimal.Decimal(.60).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.63).quantize(TWO_DECIMALS):
         return "C-"
-    elif grade >= .57 and grade < .60:
+    elif grade >= decimal.Decimal(.57).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.60).quantize(TWO_DECIMALS):
         return "D+"
-    elif grade >= .53 and grade < .57:
+    elif grade >= decimal.Decimal(.53).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.57).quantize(TWO_DECIMALS):
         return "D"
-    elif grade >= .50 and grade < .53:
+    elif grade >= decimal.Decimal(.50).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.53).quantize(TWO_DECIMALS):
         return "D-"
     else:
         return "F"
@@ -34,24 +37,24 @@ def grade_as_letter(grade):
 
 def grade_as_status(grade):
     """Change a percent into an Algonquin mid-term status grade"""
-    if grade >= .80:
+    if grade >= decimal.Decimal(.80).quantize(TWO_DECIMALS):
         return "Excellent"
-    elif grade >= .60 and grade < .80:
+    elif grade >= decimal.Decimal(.60).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.80).quantize(TWO_DECIMALS):
         return "Satisfactory"
-    elif grade >= .50 and grade < .60:
+    elif grade >= decimal.Decimal(.50).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.60).quantize(TWO_DECIMALS):
         return "Weak"
     else:
         return "Failing"
 
 def grade_as_status_fine_grained(grade):
     """Change a percent into an Algonquin mid-term status grade"""
-    if grade >= .80:
+    if grade >= decimal.Decimal(.80).quantize(TWO_DECIMALS):
         return "Excellent"
-    elif grade >= .60 and grade < .80:
+    elif grade >= decimal.Decimal(.60).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.80).quantize(TWO_DECIMALS):
         return "Satisfactory"
-    elif grade >= .50 and grade < .60:
+    elif grade >= decimal.Decimal(.50).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.60).quantize(TWO_DECIMALS):
         return "Weak"
-    elif grade >= .40 and grade < .50:
+    elif grade >= decimal.Decimal(.40).quantize(TWO_DECIMALS) and grade < decimal.Decimal(.50).quantize(TWO_DECIMALS):
         return "Failing, close"
     else:
         return "Failing"
