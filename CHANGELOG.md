@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [1.9.0] — 2018-12-21
+
+### Added
+
+- Added the ability to email individual students & groupings of students (pass, fail).
+
+---
+
 ## [1.8.2] — 2018-12-15
 
 ### Fixed
