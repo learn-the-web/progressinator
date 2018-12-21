@@ -105,7 +105,7 @@
           </table>
           {% if students %}
             <ul class="list-group-inline pad-t-1-2 push-0 italic week-list-tasks">
-              <li class="week-list-task-no-sep color-grey-dark" aria-label="Email students…"><i class="icon i-3-4"><svg><use xlink:href="#icon-mail"></use></svg></i></li>
+              <li class="week-list-task-no-sep color-grey-dark push-r-1-4" aria-label="Email students…"><i class="icon i-3-4"><svg><use xlink:href="#icon-mail"></use></svg></i></li>
               <li class="pad-t-1-8"><a href="mailto:?bcc={% for student in students %}{{student.user.email}}{% if not forloop.last %},{% endif %}{% endfor %}">Email everybody</a></li>
               <li class="pad-t-1-8"><a href="mailto:?bcc={% for student in students %}{% if student.current_grade >= .5 %}{{student.user.email}}{% if not forloop.last %},{% endif %}{% endif %}{% endfor %}">Email passing students</a></li>
               <li class="pad-t-1-8"><a href="mailto:?bcc={% for student in students %}{% if student.current_grade < .5 %}{{student.user.email}}{% if not forloop.last %},{% endif %}{% endif %}{% endfor %}">Email failing students</a></li>

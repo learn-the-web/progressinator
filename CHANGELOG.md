@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [Unreleased]
+
+### Fixed
+
+- Added a little bit of space beside the email all icon.
+
+---
+
 ## [1.9.0] — 2018-12-21
 
 ### Added
