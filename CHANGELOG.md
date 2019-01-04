@@ -5,7 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [Unreleased]
+## [1.10.0]
+
+### Added
+
+- Added the new Term model to allow for easier future migrations.
+
+### Changed
+
+- Moved all the course information into the database instead of JSON files—preparing for the transition to allow multiple terms.
 
 ### Fixed
 
