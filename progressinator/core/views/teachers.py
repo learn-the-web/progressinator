@@ -12,8 +12,7 @@ from django import forms
 
 from progressinator.common.util import build_dict_index, build_queryset_index
 import progressinator.common.grades as grade_helper
-from progressinator.core.lib import Courses
-from progressinator.core.models import UserProgress, UserProgressForm, UserProgressLatenessChoices, UserProfile, Course
+from progressinator.core.models import UserProgress, UserProgressForm, UserProgressLatenessChoices, UserProfile, Course, Term
 from progressinator.core.serializers import UserProgressSerializer
 
 import logging
@@ -25,14 +24,14 @@ def courses(request):
         'app_version': settings.APP_PKG['version'],
         'doc_title': "Courses · Teachers",
         'username': request.user.username,
-        'courses': Courses.all(),
+        'courses': Course.objects.all(),
         'nav_current': 'teachers',
         'h1_title': "Teachers ·",
         'hide_markbot': True,
     }
 
     for course in context['courses']:
-        course['totals']['students'] = Course.objects.get(slug=course['course']).profiles.count()
+        course.data['totals']['students'] = Course.objects.get(slug=course.slug).profiles.count()
 
     return render(request, 'core/teachers/courses.html', context)
 
@@ -42,14 +41,14 @@ def course_status(request, course_id):
     course_in_db = get_object_or_404(Course, slug=course_id);
 
     try:
-        course = Courses.get(course_id)
+        course = Course.objects.get(slug=course_id)
     except:
         return redirect('core:teacher_courses')
 
     students = UserProfile.objects.filter(current_course=course_in_db).select_related('user').order_by('user__last_name', 'user__first_name')
-    assessment_index = build_dict_index(course['assessments'], 'uri')
+    assessment_index = build_dict_index(course.data['assessments'], 'uri')
     all_grades = UserProgress.objects.filter(user_id__in=(s.user_id for s in students))
-    max_assessments_per_section = grade_helper.max_assessments_per_section(course['assessments'])
+    max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
     stats_actual_total = 0
     stats_max_total = 0
     stats_grade_total = 0
@@ -62,7 +61,7 @@ def course_status(request, course_id):
     }
 
     for student in students:
-        student_grades = (grade_helper.calc_grade(g, assessment_index, course['assessments']) for g in all_grades if g.user_id == student.user_id)
+        student_grades = (grade_helper.calc_grade(g, assessment_index, course.data['assessments']) for g in all_grades if g.user_id == student.user_id)
         student.current_grade = decimal.Decimal(math.fsum(student_grades))
         student.current_grade_max = max_assessments_per_section[student.current_section]
         student.current_grade_average = student.current_grade / student.current_grade_max
@@ -73,11 +72,11 @@ def course_status(request, course_id):
 
     for prog in all_grades:
         if prog.assessment_uri in assessment_index and prog.grade > 0:
-            if 'total_students_pass' not in course['assessments'][assessment_index[prog.assessment_uri]]:
-                course['assessments'][assessment_index[prog.assessment_uri]]['total_students_pass'] = 0
-            course['assessments'][assessment_index[prog.assessment_uri]]['total_students_pass'] += 1
+            if 'total_students_pass' not in course.data['assessments'][assessment_index[prog.assessment_uri]]:
+                course.data['assessments'][assessment_index[prog.assessment_uri]]['total_students_pass'] = 0
+            course.data['assessments'][assessment_index[prog.assessment_uri]]['total_students_pass'] += 1
 
-    for assessment in course['assessments']:
+    for assessment in course.data['assessments']:
         if 'total_students_pass' in assessment:
             assessment['total_students_pass_rate'] = assessment['total_students_pass'] / students.count()
         else:
@@ -86,10 +85,10 @@ def course_status(request, course_id):
 
     context = {
         'app_version': settings.APP_PKG['version'],
-        'doc_title': f"{course['title']} · Teachers",
+        'doc_title': f"{course.data['title']} · Teachers",
         'username': request.user.username,
         'nav_current': 'teachers',
-        'h1_title': f"{course['title']} ·",
+        'h1_title': f"{course.data['title']} ·",
         'hide_markbot': True,
         'course': course,
         'students': students,
@@ -97,9 +96,9 @@ def course_status(request, course_id):
         'stats_actual_avg': stats_actual_total / students.count() if students.count() > 0 else 0,
         'stats_max_avg': stats_max_total / students.count() if students.count() > 0 else 0,
         'stats_grade_status': stats_grade_status,
-        'stats_assessments_total': len(course['assessments']),
-        'stats_assessments_no_zeros': len(course['assessments']) - len([a for a in course['assessments'] if a['assessment_each_algonquin'] <= 0]),
-        'stats_pass_rate_avg': stats_pass_rate_total / len(course['assessments']),
+        'stats_assessments_total': len(course.data['assessments']),
+        'stats_assessments_no_zeros': len(course.data['assessments']) - len([a for a in course.data['assessments'] if a['assessment_each_algonquin'] <= 0]),
+        'stats_pass_rate_avg': stats_pass_rate_total / len(course.data['assessments']),
     }
 
     return render(request, 'core/teachers/course-status.html', context)
@@ -110,7 +109,7 @@ def user_grades(request, course_id, user_id):
     course_in_db = get_object_or_404(Course, slug=course_id);
 
     try:
-        course = Courses.get(course_id)
+        course = Course.objects.get(slug=course_id)
     except:
         return redirect('core:teacher_courses')
 
@@ -121,9 +120,9 @@ def user_grades(request, course_id, user_id):
 
     user_grades = list(UserProgress.objects.filter(user=user_id))
     current_grade = decimal.Decimal(0.0)
-    max_assessments_per_section = grade_helper.max_assessments_per_section(course['assessments'])
+    max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
 
-    for a in course['assessments']:
+    for a in course.data['assessments']:
         if a['assessment_each_algonquin'] > 0:
             a['FORM'] = UserProgressForm(initial={
                 'user': student_profile,
@@ -134,24 +133,24 @@ def user_grades(request, course_id, user_id):
             a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][student_profile.current_section], tz='America/Toronto')
 
     if student_profile and student_profile.current_section:
-        course['assessments'] = sorted(course['assessments'], key=lambda k: k['user_due_date_algonquin'])
-    assessment_index = build_dict_index(course['assessments'], 'uri')
+        course.data['assessments'] = sorted(course.data['assessments'], key=lambda k: k['user_due_date_algonquin'])
+    assessment_index = build_dict_index(course.data['assessments'], 'uri')
 
     for prog in user_grades:
         if prog.assessment_uri in assessment_index:
             prog.late = False
             if (prog.created
-                and 'user_due_date_algonquin' in course['assessments'][assessment_index[prog.assessment_uri]]
-                and prog.created > course['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']
+                and 'user_due_date_algonquin' in course.data['assessments'][assessment_index[prog.assessment_uri]]
+                and prog.created > course.data['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']
                 and (prog.excuse_lateness == 'LATENESS_NOT_EXCUSED' or not prog.excuse_lateness)
                 ):
                 prog.late = True
             if prog.details and 'started' in prog.details: prog.details['started'] = pendulum.parse(prog.details['started'])
             if prog.details and 'finished' in prog.details: prog.details['finished'] = pendulum.parse(prog.details['finished'])
-            course['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
-            current_grade += grade_helper.calc_grade(prog, assessment_index, course['assessments'])
-            if 'FORM' in course['assessments'][assessment_index[prog.assessment_uri]]:
-                course['assessments'][assessment_index[prog.assessment_uri]]['FORM'] = UserProgressForm(instance=prog)
+            course.data['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
+            current_grade += grade_helper.calc_grade(prog, assessment_index, course.data['assessments'])
+            if 'FORM' in course.data['assessments'][assessment_index[prog.assessment_uri]]:
+                course.data['assessments'][assessment_index[prog.assessment_uri]]['FORM'] = UserProgressForm(instance=prog)
 
     current_grade_max = max_assessments_per_section[student_profile.current_section]
 
@@ -187,7 +186,7 @@ def user_grades_save(request, course_id, user_id):
     posted_grades = {'update': [], 'create': []}
 
     try:
-        course = Courses.get(course_id)
+        course = Course.objects.get(slug=course_id)
     except:
         return redirect('core:teacher_courses')
 
@@ -265,7 +264,7 @@ def assessment_grades(request, course_id, assessment_id):
     course_in_db = get_object_or_404(Course, slug=course_id);
 
     try:
-        course = Courses.get(course_id)
+        course = Course.objects.get(slug=course_id)
     except:
         return redirect('core:teacher_courses')
 

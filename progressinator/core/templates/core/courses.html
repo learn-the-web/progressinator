@@ -6,34 +6,34 @@
       <section class="topic-section pad-t pad-b" tabindex="-1">
         <div class="wrapper">
           <div class="topic-wrap">
-            <h2 class="topic-heading" aria-label="{{course.title}}">
-              <a class="link-box link-box-no-mark" href="{% url 'core:grades' course_id=course.course %}">
+            <h2 class="topic-heading" aria-label="{{course.data.data.title}}">
+              <a class="link-box link-box-no-mark" href="{% url 'core:grades' course_id=course.slug %}">
                 <i class="icon i-48 push-1-4"><svg><use xlink:href="#icon-topic-{% if forloop.counter > 6 %}infinite{% else %}{{forloop.counter}}{% endif %}"/></svg></i>
-                <span class="mega topic-heading-text">{% if course.short_title %}{{course.short_title}}{% else %}{{course.title}}{% endif %}</span>
+                <span class="mega topic-heading-text">{% if course.data.data.short_title %}{{course.data.data.short_title}}{% else %}{{course.data.data.title}}{% endif %}</span>
               </a>
             </h2>
             <div class="grid grid-middle pad-t-1-4 pad-b-1-4">
               <div class="unit [ xs-1-2 ]">
                 <div class="push-1-4">
-                  <a class="exa bold" href="{% url 'core:grades' course_id=course.course %}">{{course.title}}</a>
+                  <a class="exa bold" href="{% url 'core:grades' course_id=course.slug %}">{{course.data.title}}</a>
                 </div>
               </div>
               <div class="unit [ xs-1-2 ] text-right">
-                <a class="btn btn-muted milli" href="{% url 'core:grades' course_id=course.course %}" aria-label="View {{course.title}} progress">
+                <a class="btn btn-muted milli" href="{% url 'core:grades' course_id=course.slug %}" aria-label="View {{course.data.title}} progress">
                   <span class="icon-label">View progress</span>
                   <i class="icon i-20 i-shift-right"><svg><use xlink:href="#icon-right" /></svg></i>
                 </a>
               </div>
             </div>
             <hr class="push-1-4">
-            <p class="push-0">{{course.description}}</p>
+            <p class="push-0">{{course.data.description}}</p>
             <ol class="week-list-tasks list-group-inline milli italic pad-t-1-4 push-0">
-              <li>{{course.totals.weeks}} week{% if course.totals.weeks != 1 %}s{% endif %}</li>
-              <li>{{course.totals.videos}} video playlist{% if course.totals.videos != 1 %}s{% endif %}</li>
-              <li>{{course.totals.activities}} activit{% if course.totals.videos == 1 %}y{% else %}ies{% endif %}</li>
-              <li>{{course.totals.lessons}} step-by-step lesson{% if course.totals.lessons != 1 %}s{% endif %}</li>
-              <li>{{course.totals.exercises}} exercise{% if course.totals.exercises != 1 %}s{% endif %}</li>
-              <li>{{course.totals.projects}} big project{% if course.totals.projects != 1 %}s{% endif %}</li>
+              <li>{{course.data.totals.weeks}} week{% if course.data.totals.weeks != 1 %}s{% endif %}</li>
+              <li>{{course.data.totals.videos}} video playlist{% if course.data.totals.videos != 1 %}s{% endif %}</li>
+              <li>{{course.data.totals.activities}} activit{% if course.data.totals.videos == 1 %}y{% else %}ies{% endif %}</li>
+              <li>{{course.data.totals.lessons}} step-by-step lesson{% if course.data.totals.lessons != 1 %}s{% endif %}</li>
+              <li>{{course.data.totals.exercises}} exercise{% if course.data.totals.exercises != 1 %}s{% endif %}</li>
+              <li>{{course.data.totals.projects}} big project{% if course.data.totals.projects != 1 %}s{% endif %}</li>
             </ol>
           </div>
         </div>

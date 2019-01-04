@@ -7,7 +7,7 @@
   <div class="grid">
     <div class="class unit [ xs-1 s-1 m-1 l-3-5 ] pad-b">
       <section class="class-desc section-lightest gutter-1-2 pad-t-1-2 pad-b-1-2">
-        <h2 class="class-heading push-1-2 giga">Grade overview <a class="right normal italic" href="{{course.url}}">{{course.title}} »</a></h2>
+        <h2 class="class-heading push-1-2 giga">Grade overview <a class="right normal italic" href="{{course.data.url}}">{{course.data.title}} »</a></h2>
         <dl class="grid push-1-2">
           <div class="unit [ xs-1-2 m-1-5 ]">
             <dt class="italic milli">Grade avg</dt>
@@ -62,7 +62,7 @@
           <div class="pin-rc italic milli" aria-role="toolbar" aria-label="Group by section" aria-controls="student-sections">
             <ol class="course-section-list list-group-inline push-0">
               <li><a class="course-section-btn btn btn-invisible" data-course-section="all" aria-pressed="true" href="#">All</a></li>
-              {% for section in course.assessments.1.due_dates %}
+              {% for section in course.data.assessments.1.due_dates %}
                 <li><a class="course-section-btn btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false" href="#{{section.course_section}}">{{section.course_section}}</a></li>
               {% endfor %}
             </ol>
@@ -84,7 +84,7 @@
               {% for student in students %}
                 <tr class="grade-status-{{student.current_grade_average | grade_as_status_fine_grained | slugify}}" data-course-section="{{student.current_section}}">
                   <th class="grade-item-name" scope="row" colspan="8">
-                    <a href="{% url 'core:teacher_user_grades' course_id=course.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
+                    <a href="{% url 'core:teacher_user_grades' course_id=course.data.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
                     <a class="icon i-1-2 link-box-no-mark color-grey" href="mailto:{{student.user.email}}"><svg><use xlink:href="#icon-mail"></use></svg></a>
                   </th>
                   <td class="grade-item-grade color-pass-dark" colspan="2">
@@ -118,7 +118,7 @@
     </div>
     <div class="class class-outside unit [ xs-1 s-1 m-1 l-2-5 ] pad-b">
       <section class="class-desc section-muted-medium gutter-1-2 pad-t-1-2 pad-b-1-2">
-        <h2 class="class-heading push-1-2 giga">Assessment overview <a class="right normal italic" href="{{course.url}}#marking-scheme">Grade scheme »</a></h2>
+        <h2 class="class-heading push-1-2 giga">Assessment overview <a class="right normal italic" href="{{course.data.url}}#marking-scheme">Grade scheme »</a></h2>
         <dl class="grid push-1-2">
           <div class="unit [ xs-1-2 m-1-2 ]">
             <dt class="italic milli">№ assessments</dt>
@@ -133,23 +133,23 @@
         <dl class="grid">
           <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
             <dt class="italic milli">№&nbsp;videos</dt>
-            <dd class="push-0 milli"><span class="bold">{{course.totals.videos}}</span> × {{course.totals.videos_each_algonquin | pretty_percent_small}}</dd>
+            <dd class="push-0 milli"><span class="bold">{{course.data.totals.videos}}</span> × {{course.data.totals.videos_each_algonquin | pretty_percent_small}}</dd>
           </div>
           <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
             <dt class="italic milli">№&nbsp;activities</dt>
-            <dd class="push-0 milli"><span class="bold">{{course.totals.activities}}</span> × {{course.totals.activities_each_algonquin | pretty_percent_small}}</dd>
+            <dd class="push-0 milli"><span class="bold">{{course.data.totals.activities}}</span> × {{course.data.totals.activities_each_algonquin | pretty_percent_small}}</dd>
           </div>
           <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
             <dt class="italic milli">№&nbsp;lessons</dt>
-            <dd class="push-0 milli"><span class="bold">{{course.totals.activities}}</span> × {{course.totals.activities_each_algonquin | pretty_percent_small}}</dd>
+            <dd class="push-0 milli"><span class="bold">{{course.data.totals.activities}}</span> × {{course.data.totals.activities_each_algonquin | pretty_percent_small}}</dd>
           </div>
           <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
             <dt class="italic milli">№&nbsp;exercises</dt>
-            <dd class="push-0 milli"><span class="bold">{{course.totals.exercises}}</span> × {{course.totals.exercises_each_algonquin | pretty_percent_small}}</dd>
+            <dd class="push-0 milli"><span class="bold">{{course.data.totals.exercises}}</span> × {{course.data.totals.exercises_each_algonquin | pretty_percent_small}}</dd>
           </div>
           <div class="unit [ xs-1-3 m-1-5 l-1-5 ]">
             <dt class="italic milli">№&nbsp;projects</dt>
-            <dd class="push-0 milli"><span class="bold">{{course.totals.projects}}</span> × {{course.totals.projects_each_algonquin | pretty_percent_small}}</dd>
+            <dd class="push-0 milli"><span class="bold">{{course.data.totals.projects}}</span> × {{course.data.totals.projects_each_algonquin | pretty_percent_small}}</dd>
           </div>
         </dl>
       </section>
@@ -166,7 +166,7 @@
               </tr>
             </thead>
             <tbody>
-              {% for item in course.assessments %}
+              {% for item in course.data.assessments %}
                 <tr>
                   <th scope="row" colspan="11">
                     {% if item.assessment_each_algonquin == 0 %}

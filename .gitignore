@@ -3,6 +3,7 @@ public/*
 public-dist/*
 *.min.css
 data
+config/courses
 
 # Python
 __pycache__

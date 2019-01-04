@@ -21,7 +21,7 @@
           <dd class="push-1-2"><a href="mailto:{{email}}">{{email}}</a></dd>
           {% if current_section %}
             <dt class="italic milli">Currently registered course</dt>
-            <dd class="push-1-2"><a href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/">{{current_course.name}} ({{current_course.course_number}})</a></dd>
+            <dd class="push-1-2"><a href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/">{{current_course.data.title}} ({{current_course.data.course_code}})</a></dd>
             <dt class="italic milli">Section</dt>
             <dd class="push-1-2">{{current_section}}</dd>
           {% endif %}
@@ -54,7 +54,8 @@
       <div class="class-desc gutter-1-4">
         <h2 class="class-heading push-1-2 giga">Progressinator account</h2>
         <p><strong>Danger Zone!</strong> Deleting your account cannot be undone. <em>All of your grades will be permanently erased.</em></p>
-        <a class="btn milli btn-danger" href="#">Delete account</a>
+        <strong>This feature is not currently implemented.</strong>
+        {# <a class="btn milli btn-danger" href="#">Delete account</a> #}
       </div>
     </section>
   </div>

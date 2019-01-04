@@ -13,7 +13,7 @@
           <h2 class="push-0">{{student_profile.user.first_name}} {{student_profile.user.last_name}}</h2>
           <a class="mega ib push-1-4" href="https://github.com/{{student_profile.user.username}}" rel="external">{{student_profile.user.username}} »</a>
           <p class="push-0 mega italic">
-            <a href="{% url 'core:teacher_course' course_id=course.course %}">{{student_profile.current_course.name}}</a>
+            <a href="{% url 'core:teacher_course' course_id=course.slug %}">{{student_profile.current_course.data.title}}</a>
             · {{student_profile.current_section}}
           </p>
         </section>
@@ -49,23 +49,23 @@
         <dl class="marking-scheme list-group-inline milli color-grey-dark">
           <dt class="push-0">Videos</dt>
           <dd class="push-0">
-            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.videos | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.videos}}</span> @ <data value="{{course.totals.videos_each_algonquin | times:100}}%" title="{{course.totals.videos_each_algonquin | times:100}}%">≈{{course.totals.videos_each_algonquin | pretty_percent_small}}</data> each)</span>
+            <strong class="marking-scheme-amount">{{course.data.grading_scheme_algonquin.videos | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.data.totals.videos}}</span> @ <data value="{{course.data.totals.videos_each_algonquin | times:100}}%" title="{{course.data.totals.videos_each_algonquin | times:100}}%">≈{{course.data.totals.videos_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
           <dt class="push-0">Activities</dt>
           <dd class="push-0">
-            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.activities | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.activities_plus_lessons}}</span> @ <data value="{{course.totals.activities_plus_lessons_each_algonquin | times:100}}%" title="{{course.totals.activities_plus_lessons_each_algonquin | times:100}}%">≈{{course.totals.activities_plus_lessons_each_algonquin | pretty_percent_small}}</data> each)</span>
+            <strong class="marking-scheme-amount">{{course.data.grading_scheme_algonquin.activities | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.data.totals.activities_plus_lessons}}</span> @ <data value="{{course.data.totals.activities_plus_lessons_each_algonquin | times:100}}%" title="{{course.data.totals.activities_plus_lessons_each_algonquin | times:100}}%">≈{{course.data.totals.activities_plus_lessons_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
           <dt class="push-0">Exercises</dt>
           <dd class="push-0">
-            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.exercises | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.exercises}}</span> @ <data value="{{course.totals.exercises_each_algonquin | times:100}}%" title="{{course.totals.exercises_each_algonquin | times:100}}%">≈{{course.totals.exercises_each_algonquin | pretty_percent_small}}</data> each)</span>
+            <strong class="marking-scheme-amount">{{course.data.grading_scheme_algonquin.exercises | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.data.totals.exercises}}</span> @ <data value="{{course.data.totals.exercises_each_algonquin | times:100}}%" title="{{course.data.totals.exercises_each_algonquin | times:100}}%">≈{{course.data.totals.exercises_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
           <dt class="push-0">Projects</dt>
           <dd class="push-0">
-            <strong class="marking-scheme-amount">{{course.grading_scheme_algonquin.projects | pretty_percent_strip}}</strong>
-            <span class="nano">(<span class="marking-scheme-total">{{course.totals.projects}}</span> @ <data value="{{course.totals.projects_each_algonquin | times:100}}%" title="{{course.totals.projects_each_algonquin | times:100}}%">≈{{course.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
+            <strong class="marking-scheme-amount">{{course.data.grading_scheme_algonquin.projects | pretty_percent_strip}}</strong>
+            <span class="nano">(<span class="marking-scheme-total">{{course.data.totals.projects}}</span> @ <data value="{{course.data.totals.projects_each_algonquin | times:100}}%" title="{{course.data.totals.projects_each_algonquin | times:100}}%">≈{{course.data.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
         </dl>
       </section>
@@ -75,7 +75,7 @@
       <div class="class-desc gutter-1-4">
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
         {% if allow_grade_editing and perms.progress_core.change_userprogress %}
-          <form method="post" id="grades-form" action="{% url 'core:teacher_user_grades_save' course_id=course.course user_id=student_profile.user_id %}">
+          <form method="post" id="grades-form" action="{% url 'core:teacher_user_grades_save' course_id=course.slug user_id=student_profile.user_id %}">
             <div class="grade-form-actions island-1-4 text-right milli relative">
               <div class="grade-actions-default pin-lc gutter-1-4" id="grade-actions-default-controls" hidden>
                 <label class="push-r-1-4" for="grade-actions-default">Set ungraded as:</label>
@@ -89,7 +89,7 @@
             </div>
         {% endif %}
           <ol class="assessment-list list-group push-0">
-            {% for item in course.assessments %}
+            {% for item in course.data.assessments %}
               <li class="assessment-item relative push-1-2 {% if item.user_due_date_algonquin < today %}assessment-item-past-due{% else %}assessment-item-pre-due pad-t-1-2{% endif %}">
                 <div class="assessment-item-content relative">
                   <h3 class="assessment-title kilo push-0">
