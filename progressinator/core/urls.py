@@ -10,6 +10,7 @@ urlpatterns = [
     path('auth/sign-in/', auth.signin, name='sign_in'),
     path('auth/sign-out/', auth.signout, name='sign_out'),
     path('profile/', profile.index, name='profile'),
+    path('profile/save/', profile.save, name='profile_save'),
     path('teachers/courses/', teachers.courses, name='teacher_courses'),
     path('teachers/courses/<slug:course_id>/', teachers.course_status, name='teacher_course'),
     path('teachers/courses/<slug:course_id>/users/<int:user_id>/', teachers.user_grades, name='teacher_user_grades'),

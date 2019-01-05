@@ -48,6 +48,10 @@ class ChoiceEnum(Enum):
         return tuple((x.name, x.value) for x in cls)
 
     @classmethod
+    def choice_values(cls):
+        return tuple((x.value, x.value) for x in cls)
+
+    @classmethod
     def _(cls, x):
         return str(cls[x].name)
 

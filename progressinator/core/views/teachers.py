@@ -15,8 +15,6 @@ import progressinator.common.grades as grade_helper
 from progressinator.core.models import UserProgress, UserProgressForm, UserProgressLatenessChoices, UserProfile, Course, Term
 from progressinator.core.serializers import UserProgressSerializer
 
-import logging
-
 
 @staff_member_required(login_url='core:sign_in')
 def courses(request):

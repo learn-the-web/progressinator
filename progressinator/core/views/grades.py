@@ -14,8 +14,6 @@ from progressinator.core.serializers import UserProgressSerializer
 from progressinator.common.util import build_dict_index
 from progressinator.core.lib import CourseHelper
 
-import logging
-
 
 @login_required
 def courses(request):

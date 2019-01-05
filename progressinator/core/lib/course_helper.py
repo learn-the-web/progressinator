@@ -1,5 +1,4 @@
 from progressinator.common.util import model_to_dict
-import logging
 
 
 class CourseHelper:
