@@ -5,6 +5,7 @@ from django.contrib.postgres.fields import JSONField
 
 class Course(models.Model):
     slug = models.SlugField(null=True)
+    term = models.ForeignKey('Term', on_delete=models.CASCADE, related_name='courses', null=True)
     order = models.SmallIntegerField(blank=True, null=True)
     data = JSONField(blank=True, null=True)
 

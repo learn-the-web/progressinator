@@ -188,5 +188,10 @@ MARKBOT = {
 }
 
 
+COURSES = {
+    'SELF_DIRECTED_ID': 0,
+}
+
+
 with open(str(root.path('package.json'))) as json_data:
     APP_PKG = json.load(json_data)

@@ -12,27 +12,37 @@ import progressinator.common.grades as grade_helper
 from progressinator.core.models import Term, Course, UserProgress, UserProgressLatenessChoices, UserProfile
 from progressinator.core.serializers import UserProgressSerializer
 from progressinator.common.util import build_dict_index
+from progressinator.core.lib import CourseHelper
+
+import logging
 
 
 @login_required
 def courses(request):
     try:
-        user_profile = UserProfile.objects.get(user=request.user)
+        user_profiles = UserProfile.objects.filter(user=request.user).select_related('current_course', 'current_course__term')
     except:
-        user_profile = None
+        user_profiles = None
+
+    courses = CourseHelper.courses_as_dict(Course.objects.filter(term=settings.COURSES['SELF_DIRECTED_ID']))
+    user_courses = CourseHelper.courses_as_dict(Course.objects.filter(id__in=(p.current_course_id for p in user_profiles))) if user_profiles else None
+    if user_courses: courses.update(user_courses)
+    user_profiles_details = CourseHelper.user_profiles_as_dict(user_profiles) if user_profiles else None
 
     context = {
         'app_version': settings.APP_PKG['version'],
         'doc_title': "Courses",
         'username': request.user.username,
-        'courses': Course.objects.all(),
+        'courses': courses,
+        'user_profiles_details': user_profiles_details,
         'nav_current': 'courses',
     }
 
     response = render(request, 'core/courses.html', context)
 
-    if user_profile:
-        response.set_cookie('ltw-course-section', f'{user_profile.current_course.slug}-{user_profile.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
+    if user_profiles:
+        user_profile_for_cookie = user_profiles.latest('current_course__term__start_date')
+        response.set_cookie('ltw-course-section', f'{user_profile_for_cookie.current_course.slug}-{user_profile_for_cookie.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
 
     return response
 
@@ -40,24 +50,31 @@ def courses(request):
 @login_required
 def course_grades(request, course_id):
     try:
-        course = Course.objects.get(slug=course_id)
+        user_profiles = UserProfile.objects.filter(user=request.user).select_related('current_course', 'current_course__term')
     except:
-        return redirect('core:courses')
+        user_profiles = None
 
-    try:
-        user_profile = UserProfile.objects.get(user=request.user)
-    except:
+    user_profiles_details = CourseHelper.user_profiles_as_dict(user_profiles) if user_profiles else None
+
+    if user_profiles_details and course_id in user_profiles_details:
+        user_profile = user_profiles_details[course_id]
+        course = Course.objects.get(pk=user_profiles_details[course_id]['current_course_id'])
+    else:
         user_profile = None
+        course = Course.objects.get(slug=course_id, term=settings.COURSES['SELF_DIRECTED_ID'])
+
+    if not course:
+        return redirect('core:courses')
 
     user_grades = UserProgress.objects.filter(user=request.user)
     current_grade = decimal.Decimal(0.0)
     max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
 
     for a in course.data['assessments']:
-        if user_profile and 'due_dates_algonquin' in a and user_profile.current_section in a['due_dates_algonquin']:
-            a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][user_profile.current_section])
+        if user_profile and 'due_dates_algonquin' in a and user_profile['current_section'] in a['due_dates_algonquin']:
+            a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][user_profile['current_section']])
 
-    if user_profile and user_profile.current_section:
+    if user_profile and user_profile['current_section']:
         course.data['assessments'] = sorted(course.data['assessments'], key=lambda k: k['user_due_date_algonquin'])
     assessment_index = build_dict_index(course.data['assessments'], 'uri')
 
@@ -75,8 +92,8 @@ def course_grades(request, course_id):
             course.data['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             current_grade += grade_helper.calc_grade(prog, assessment_index, course.data['assessments'])
 
-    if user_profile and user_profile.current_course.slug == course_id and user_profile.current_section in max_assessments_per_section:
-        current_grade_max = max_assessments_per_section[user_profile.current_section]
+    if user_profile and user_profile['current_course_slug'] == course_id and user_profile['current_section'] in max_assessments_per_section:
+        current_grade_max = max_assessments_per_section[user_profile['current_section']]
     else:
         current_grade_max = False
 
@@ -99,8 +116,9 @@ def course_grades(request, course_id):
 
     response = render(request, 'core/grades.html', context)
 
-    if user_profile:
-        response.set_cookie('ltw-course-section', f'{course.data["course"]}-{user_profile.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
+    if user_profiles:
+        user_profile_for_cookie = user_profiles.latest('current_course__term__start_date')
+        response.set_cookie('ltw-course-section', f'{user_profile_for_cookie.current_course.slug}-{user_profile_for_cookie.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
 
     return response
 

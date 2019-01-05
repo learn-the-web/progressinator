@@ -9,8 +9,8 @@ class UserProfileSectionChoices(ChoiceEnum):
     SECTION_040 = '040'
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
-    current_course = models.ForeignKey('Course', on_delete=models.CASCADE, related_name='profiles', blank=True, null=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
+    current_course = models.ForeignKey('Course', on_delete=models.SET_NULL, related_name='profiles', blank=True, null=True)
     current_section = models.CharField(choices=UserProfileSectionChoices.choices(), max_length=3, blank=True, null=True)
 
     def __str__(self):

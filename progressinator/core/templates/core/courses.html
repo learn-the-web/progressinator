@@ -1,7 +1,7 @@
 {% extends 'default.html' %}
 
 {% block wrapper %}
-  {% for course in courses %}
+  {% for k, course in courses.items %}
     <div class="wrapper gutter-1-2 pad-t pad-b-1-2">
       <section class="topic-section pad-t pad-b" tabindex="-1">
         <div class="wrapper">
@@ -16,6 +16,13 @@
               <div class="unit [ xs-1-2 ]">
                 <div class="push-1-4">
                   <a class="exa bold" href="{% url 'core:grades' course_id=course.slug %}">{{course.data.title}}</a>
+                  {% if k in user_profiles_details %}
+                    {% for id, det in user_profiles_details.items %}
+                      {% if id == k %}
+                        <span class="color-grey exa">({{det.current_term_name}})</span>
+                      {% endif %}
+                    {% endfor %}
+                  {% endif %}
                 </div>
               </div>
               <div class="unit [ xs-1-2 ] text-right">
