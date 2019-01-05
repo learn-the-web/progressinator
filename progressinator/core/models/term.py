@@ -14,4 +14,4 @@ class Term(models.Model):
     class Meta:
         verbose_name = "term"
         verbose_name_plural = "terms"
-        ordering = ('start_date',)
+        ordering = ('-end_date',)
