@@ -84,7 +84,7 @@
               {% for student in students %}
                 <tr class="grade-status-{{student.current_grade_average | grade_as_status_fine_grained | slugify}}" data-course-section="{{student.current_section}}">
                   <th class="grade-item-name" scope="row" colspan="8">
-                    <a href="{% url 'core:teacher_user_grades' course_id=course.data.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
+                    <a href="{% url 'core:teacher_user_grades' term_id=course.term.slug course_id=course.data.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
                     <a class="icon i-1-2 link-box-no-mark color-grey" href="mailto:{{student.user.email}}"><svg><use xlink:href="#icon-mail"></use></svg></a>
                   </th>
                   <td class="grade-item-grade color-pass-dark" colspan="2">
@@ -111,7 +111,7 @@
               <li class="pad-t-1-8"><a href="mailto:?bcc={% for student in students %}{% if student.current_grade < .5 %}{{student.user.email}}{% if not forloop.last %},{% endif %}{% endif %}{% endfor %}">Email failing students</a></li>
             </ul>
           {% else %}
-            <strong class="giga">No students registered in this course for the term.</strong>
+            <strong class="block pad-t-1-2 giga">No students registered in this course for the term.</strong>
           {% endif %}
         </div>
       </section>

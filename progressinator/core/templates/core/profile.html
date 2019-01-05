@@ -13,7 +13,7 @@
     </section>
     <section class="class section-lightest unit [ xs-1 s-1 m-1-2 ] gutter-1-4 pad-t-1-2 pad-b">
       <div class="class-desc gutter-1-4">
-        <h2 class="class-heading giga push-1-2">Algonquin registration</h2>
+        <h2 class="class-heading giga push-1-2">Algonquin College registration</h2>
         <dl class="mega push-0">
           <dt class="italic milli">Name (from GitHub)</dt>
           <dd class="push-1-2">{{first_name}} {{last_name}}</dd>
@@ -21,16 +21,30 @@
           <dd class="push-1-2"><a href="mailto:{{email}}">{{email}}</a></dd>
           {% if current_section %}
             <dt class="italic milli">Currently registered course</dt>
-            <dd class="push-1-2"><a href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/">{{current_course.data.title}} ({{current_course.data.course_code}})</a></dd>
-            <dt class="italic milli">Section</dt>
-            <dd class="push-1-2">{{current_section}}</dd>
+            <dd class="push-1-2">
+              <a href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/">{{current_course.data.title}} ({{current_course.data.course_code}})</a> ({{current_section}})
+              <p class="push-0 micro italic">If this information is incorrect, please <a href="mailto:{{current_course.data.professors.0.email}}">contact your teacher</a>.</p>
+            </dd>
           {% endif %}
         </dl>
         {% if not current_section %}
-          <div class="max-length not-centered">
-            <p class="push-0"><strong>You are not currently a registered <a href="https://algonquindesign.ca" rel="external">Algonquin College Graphic Design</a> student.</strong></p>
-            <small class="block italic">If you know you’re an Algonquin student, check with your teacher to confirm you’ve been assigned a course &amp; section</small>
-          </div>
+          <form method="post" action="{% url 'core:profile_save' %}">
+            <label class="block push-1-4 bold" for="select-current-section">Select your <strong class="italic">{{current_term.name}}</strong> Algonquin course &amp; section</label>
+            <select class="push-1-4" id="select-current-section" name="current_section" required>
+              <option value="">Select a course &amp; section</option>
+              {% for course in all_courses %}
+                <optgroup label="{{course.data.title}}">
+                  {% for sect in course.data.sections %}
+                    <option value="{{course.id}}::{{sect.title}}">{{course.data.title}} — {{sect.title}}</option>
+                  {% endfor %}
+                </optgroup>
+              {% endfor %}
+            </select>
+            <p class="push-1-2 milli italic">If you are a currently registered Algonquin College Graphic Design student, use this to select your section, for due dates, &amp; to show in the teacher’s class lists.</p>
+            <button class="btn milli" type="submit">Save course &amp; section</button>
+            {% for hidden in FORM.hidden_fields %}{{hidden}}{% endfor %}
+            {% csrf_token %}
+          </form>
         {% endif %}
       </div>
     </section>

@@ -1,4 +1,4 @@
-import decimal, math
+import decimal, math, datetime
 import pendulum
 
 from django.http import HttpResponse, JsonResponse
@@ -12,40 +12,40 @@ from django import forms
 
 from progressinator.common.util import build_dict_index, build_queryset_index
 import progressinator.common.grades as grade_helper
-from progressinator.core.models import UserProgress, UserProgressForm, UserProgressLatenessChoices, UserProfile, Course, Term
+from progressinator.core.models import Term, Course, UserProgress, UserProgressForm, UserProgressLatenessChoices, UserProfile
 from progressinator.core.serializers import UserProgressSerializer
-
-import logging
 
 
 @staff_member_required(login_url='core:sign_in')
 def courses(request):
+    terms = Term.objects.filter(end_date__gte=datetime.date(1982, 10, 28))[:2]
+    courses = Course.objects.filter(term__in=terms)
+
     context = {
         'app_version': settings.APP_PKG['version'],
         'doc_title': "Courses · Teachers",
         'username': request.user.username,
-        'courses': Course.objects.all(),
+        'courses': courses,
         'nav_current': 'teachers',
         'h1_title': "Teachers ·",
         'hide_markbot': True,
     }
 
     for course in context['courses']:
-        course.data['totals']['students'] = Course.objects.get(slug=course.slug).profiles.count()
+        course.data['totals']['students'] = Course.objects.get(pk=course.pk).profiles.count()
 
     return render(request, 'core/teachers/courses.html', context)
 
 
 @staff_member_required(login_url='core:sign_in')
-def course_status(request, course_id):
-    course_in_db = get_object_or_404(Course, slug=course_id);
-
+def course_status(request, term_id, course_id):
     try:
-        course = Course.objects.get(slug=course_id)
+        term = Term.objects.get(slug=term_id)
+        course = Course.objects.get(slug=course_id, term=term)
     except:
         return redirect('core:teacher_courses')
 
-    students = UserProfile.objects.filter(current_course=course_in_db).select_related('user').order_by('user__last_name', 'user__first_name')
+    students = UserProfile.objects.filter(current_course=course).select_related('user').order_by('user__last_name', 'user__first_name')
     assessment_index = build_dict_index(course.data['assessments'], 'uri')
     all_grades = UserProgress.objects.filter(user_id__in=(s.user_id for s in students))
     max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
@@ -64,7 +64,7 @@ def course_status(request, course_id):
         student_grades = (grade_helper.calc_grade(g, assessment_index, course.data['assessments']) for g in all_grades if g.user_id == student.user_id)
         student.current_grade = decimal.Decimal(math.fsum(student_grades))
         student.current_grade_max = max_assessments_per_section[student.current_section]
-        student.current_grade_average = student.current_grade / student.current_grade_max
+        student.current_grade_average = student.current_grade / student.current_grade_max if student.current_grade_max > 0 else 0
         stats_grade_total += student.current_grade_average
         stats_actual_total += student.current_grade
         stats_max_total += student.current_grade_max
@@ -105,18 +105,13 @@ def course_status(request, course_id):
 
 
 @staff_member_required(login_url='core:sign_in')
-def user_grades(request, course_id, user_id):
-    course_in_db = get_object_or_404(Course, slug=course_id);
-
+def user_grades(request, term_id, course_id, user_id):
     try:
-        course = Course.objects.get(slug=course_id)
+        term = Term.objects.get(slug=term_id)
+        course = Course.objects.get(slug=course_id, term=term)
+        student_profile = UserProfile.objects.get(user=user_id, current_course=course)
     except:
         return redirect('core:teacher_courses')
-
-    try:
-        student_profile = UserProfile.objects.get(user=user_id)
-    except:
-        student_profile = None
 
     user_grades = list(UserProgress.objects.filter(user=user_id))
     current_grade = decimal.Decimal(0.0)
@@ -165,7 +160,7 @@ def user_grades(request, course_id, user_id):
         'hide_markbot': True,
         'current_grade': current_grade,
         'current_grade_max': current_grade_max,
-        'current_grade_average': current_grade / current_grade_max,
+        'current_grade_average': current_grade / current_grade_max if current_grade_max > 0 else 0,
         'course': course,
         'excuse_lateness_options': UserProgressLatenessChoices.choices(),
         'today': pendulum.now(tz='America/Toronto')
@@ -178,15 +173,15 @@ def user_grades(request, course_id, user_id):
 
 
 @staff_member_required(login_url='core:sign_in')
-def user_grades_save(request, course_id, user_id):
+def user_grades_save(request, term_id, course_id, user_id):
     if request.method != 'POST' and 'user_progress_id' not in request.POST:
         return redirect('core:teacher_user_grades', course_id=course_id, user_id=user_id)
 
-    course_in_db = get_object_or_404(Course, slug=course_id);
     posted_grades = {'update': [], 'create': []}
 
     try:
-        course = Course.objects.get(slug=course_id)
+        term = Term.objects.get(slug=term_id)
+        course = Course.objects.get(slug=course_id, term=term)
     except:
         return redirect('core:teacher_courses')
 
@@ -256,15 +251,14 @@ def user_grades_save(request, course_id, user_id):
                 pass
 
     # return render(request, 'core/teachers/assessment-grades.html')
-    return redirect('core:teacher_user_grades', course_id=course_id, user_id=user_id)
+    return redirect('core:teacher_user_grades', term_id=term_id, course_id=course_id, user_id=user_id)
 
 
 @staff_member_required(login_url='core:sign_in')
-def assessment_grades(request, course_id, assessment_id):
-    course_in_db = get_object_or_404(Course, slug=course_id);
-
+def assessment_grades(request, term_id, course_id, assessment_id):
     try:
-        course = Course.objects.get(slug=course_id)
+        term = Term.objects.get(slug=term_id)
+        course = Course.objects.get(slug=course_id, term=term)
     except:
         return redirect('core:teacher_courses')
 

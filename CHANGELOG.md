@@ -5,7 +5,16 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.10.0]
+## [2.0.0] — 2019-01-06
+
+### Changed
+
+- The whole system now revolves around terms, multiple terms with students assigned to specific terms.
+  Students can only see their work done for the term they’re assigned to—and they can choose their own section & course once at the start of the term.
+
+---
+
+## [1.10.0] — 2019-01-05
 
 ### Added
 

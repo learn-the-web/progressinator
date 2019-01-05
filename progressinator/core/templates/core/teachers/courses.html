@@ -7,11 +7,14 @@
         <div class="grid grid-middle pad-t-1-4 pad-b-1-4">
           <div class="unit [ xs-1-2 ]">
             <div class="push-1-4">
-              <h2 class="exa push-0"><a href="{% url 'core:teacher_course' course_id=course.slug %}">{{course.data.title}}</a></h2>
+              <h2 class="exa push-0">
+                <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{course.data.title}}</a>
+                <span class="color-grey not-bold exa">({{course.term.name}})</span>
+              </h2>
             </div>
           </div>
           <div class="unit [ xs-1-2 ] text-right">
-            <a class="btn btn-muted milli" href="{% url 'core:teacher_course' course_id=course.slug %}" aria-label="View {{course.data.title}} progress">
+            <a class="btn btn-muted milli" href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}" aria-label="View {{course.data.title}} progress">
               <span class="icon-label">View grades</span>
               <i class="icon i-20 i-shift-right"><svg><use xlink:href="#icon-right" /></svg></i>
             </a>

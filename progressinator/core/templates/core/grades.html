@@ -13,7 +13,7 @@
           <h2 class="push-0">{{student_profile.user.first_name}} {{student_profile.user.last_name}}</h2>
           <a class="mega ib push-1-4" href="https://github.com/{{student_profile.user.username}}" rel="external">{{student_profile.user.username}} »</a>
           <p class="push-0 mega italic">
-            <a href="{% url 'core:teacher_course' course_id=course.slug %}">{{student_profile.current_course.data.title}}</a>
+            <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{student_profile.current_course.data.title}}</a>
             · {{student_profile.current_section}}
           </p>
         </section>
@@ -75,7 +75,7 @@
       <div class="class-desc gutter-1-4">
         <h2 class="class-heading push-1-2 giga">Assessments</h2>
         {% if allow_grade_editing and perms.progress_core.change_userprogress %}
-          <form method="post" id="grades-form" action="{% url 'core:teacher_user_grades_save' course_id=course.slug user_id=student_profile.user_id %}">
+          <form method="post" id="grades-form" action="{% url 'core:teacher_user_grades_save' term_id=course.term.slug course_id=course.slug user_id=student_profile.user_id %}">
             <div class="grade-form-actions island-1-4 text-right milli relative">
               <div class="grade-actions-default pin-lc gutter-1-4" id="grade-actions-default-controls" hidden>
                 <label class="push-r-1-4" for="grade-actions-default">Set ungraded as:</label>
