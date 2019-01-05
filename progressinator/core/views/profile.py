@@ -21,16 +21,10 @@ def index(request):
 
     if current_term:
         try:
-            all_courses = Course.objects.filter(term=current_term)
-        except:
-            all_courses = None
-
-        try:
             user_profile = UserProfile.objects.get(user=request.user, current_course__term=current_term)
         except:
             user_profile = None
     else:
-        all_courses = None
         user_profile = None
 
     context = {
@@ -43,12 +37,20 @@ def index(request):
         'api_token': api_token,
         'nav_current': 'profile',
         'current_term': current_term,
-        'all_courses': all_courses,
     }
 
     if user_profile:
         context['current_course'] = user_profile.current_course
         context['current_section'] = user_profile.current_section
+    else:
+        if current_term:
+            try:
+                all_courses = Course.objects.filter(term=current_term)
+            except:
+                all_courses = None
+        else:
+            all_courses = None
+        context['all_courses'] = all_courses
 
     response = render(request, 'core/profile.html', context)
 

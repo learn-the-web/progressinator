@@ -23,7 +23,7 @@
             <dt class="italic milli">Currently registered course</dt>
             <dd class="push-1-2">
               <a href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/">{{current_course.data.title}} ({{current_course.data.course_code}})</a> ({{current_section}})
-              <p class="push-0 micro italic">If this information is incorrect, contact your teacher.</p>
+              <p class="push-0 micro italic">If this information is incorrect, please <a href="mailto:{{current_course.data.professors.0.email}}">contact your teacher</a>.</p>
             </dd>
           {% endif %}
         </dl>
