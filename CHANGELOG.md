@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.1.0] — 2019-01-12
+
+### Added
+
+- Added the ability to email a specific section of students.
+
+---
+
 ## [2.0.0] — 2019-01-06
 
 ### Changed
