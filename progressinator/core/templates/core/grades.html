@@ -105,9 +105,15 @@
                               <svg><use xlink:href="#icon-grade-pass"></use></svg>
                             </i>
                           {% else %}
-                            <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
-                              <svg><use xlink:href="#icon-grade-pass"></use></svg>
-                            </i>
+                            {% if item.grade.grade > .5 %}
+                              <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
+                                <svg><use xlink:href="#icon-grade-pass"></use></svg>
+                              </i>
+                            {% else %}
+                              <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
+                                <svg><use xlink:href="#icon-grade-fail"></use></svg>
+                              </i>
+                            {% endif %}
                           {% endif %}
                         {% endif %}
                       {% else %}
