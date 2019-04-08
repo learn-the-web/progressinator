@@ -195,6 +195,7 @@
 
 .grade-form textarea {
   width: 100%;
+  resize: vertical;
 }
 
 .grade-form-item,
