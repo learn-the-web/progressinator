@@ -309,3 +309,28 @@
   }
 
 }
+
+.student-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-controls-list {
+  display: none;
+  margin-right: auto;
+  width: 18em;
+}
+
+.student-controls-list select {
+  background-color: transparent;
+  border-color: #a8a6af;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .student-controls-list {
+    display: block;
+  }
+
+}

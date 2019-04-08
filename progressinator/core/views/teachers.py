@@ -115,6 +115,7 @@ def user_grades(request, term_id, course_id, user_id):
 
     user_grades = list(UserProgress.objects.filter(user=user_id))
     current_grade = decimal.Decimal(0.0)
+    all_students = UserProfile.objects.filter(current_course=course).select_related('user').order_by('user__last_name', 'user__first_name')
     max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
 
     for a in course.data['assessments']:
@@ -163,7 +164,8 @@ def user_grades(request, term_id, course_id, user_id):
         'current_grade_average': current_grade / current_grade_max if current_grade_max > 0 else 0,
         'course': course,
         'excuse_lateness_options': UserProgressLatenessChoices.choices(),
-        'today': pendulum.now(tz='America/Toronto')
+        'today': pendulum.now(tz='America/Toronto'),
+        'all_students': all_students,
     }
 
     if student_profile:

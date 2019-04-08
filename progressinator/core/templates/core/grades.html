@@ -6,6 +6,20 @@
 
 {% block wrapper %}
 
+  {% if allow_grade_editing and user.is_staff %}
+    <div class="student-controls gutter-1-4 pad-t-1-4 pad-b-1-4 section-dark">
+      <div class="student-controls-prev gutter-1-4">
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">← Prev</a>
+      </div>
+      <div class="student-controls-list gutter-1-4">
+        <select id="student-controls-list"></select>
+      </div>
+      <div class="student-controls-next gutter-1-4">
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">Next →</a>
+      </div>
+    </div>
+  {% endif %}
+
   <div class="grid">
     <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2 {% if not allow_grade_editing or not user.is_staff %}pad-t-1-2{% endif %}">
       {% if allow_grade_editing and user.is_staff %}
@@ -257,6 +271,41 @@
   </div>
 
   {% if allow_grade_editing and perms.progress_core.change_userprogress %}
+    <script>
+      const allStudentsIds = [
+        {% for student in all_students %}
+          {
+            id: {{student.user_id}},
+            name: "{{student.user.last_name}}, {{student.user.first_name}}",
+            section: "{{student.current_section}}",
+          },
+        {% endfor %}
+      ];
+      const currentStudentId = {{student_profile.user.id}};
+
+      const studentList = document.getElementById('student-controls-list');
+      const studentPrev = document.getElementById('student-controls-prev');
+      const studentNext = document.getElementById('student-controls-next');
+      const currentStudentIndex = allStudentsIds.map(function(x) {return x.id; }).indexOf(currentStudentId);
+      const prevStudentIndex = (currentStudentIndex - 1 >= 0) ? currentStudentIndex - 1 : allStudentsIds.length - 1;
+      const nextStudentIndex = (currentStudentIndex + 1 < allStudentsIds.length) ? currentStudentIndex + 1 : 0;
+
+      studentPrev.href = window.location.href.replace(/\/\d+\/$/i, `/${allStudentsIds[prevStudentIndex].id}/`);
+      studentNext.href = window.location.href.replace(/\/\d+\/$/i, `/${allStudentsIds[nextStudentIndex].id}/`);
+
+      allStudentsIds.forEach(function (std, ind) {
+        const opt = document.createElement('option');
+        opt.value = ind;
+        opt.innerText = std.name;
+        if (std.id == currentStudentId) opt.selected = true;
+        studentList.appendChild(opt);
+      });
+
+      studentList.addEventListener('change', function (e) {
+        window.location = window.location.href.replace(/\/\d+\/$/i, `/${allStudentsIds[studentList.value].id}/`);
+      });
+    </script>
+
     <script>
       const btnEdit = document.getElementById('grades-edit');
       const btnSave = document.getElementById('grades-save');
