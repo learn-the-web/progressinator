@@ -52,7 +52,7 @@
           {% if current_grade_max %}
             <div class="unit [ xs-1-2 s-1-2 m-1 l-1-2 ] brand-dark relative">
               <dt class="giga color-grey italic absolute pin-lb">of course completed</dt>
-              <dd class="tenamega color-grey">{{current_grade_max | pretty_percent_small}}</dd>
+              <dd class="tenamega color-grey">{% if current_grade_max >= 1 %}{{current_grade_max | pretty_percent_strip}}{% else %}{{current_grade_max | pretty_percent_small}}{% endif %}</dd>
             </div>
           {% endif %}
         </dl>

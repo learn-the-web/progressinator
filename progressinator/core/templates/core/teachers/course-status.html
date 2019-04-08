@@ -15,11 +15,11 @@
           </div>
           <div class="unit [ xs-1-2 m-1-5 ]">
             <dt class="italic milli">Actual avg</dt>
-            <dd class="push-0 yotta bold brand-dark">{{stats_actual_avg | pretty_percent_small}}</dd>
+            <dd class="push-0 yotta bold brand-dark">{% if stats_actual_avg >= 1 %}{{stats_actual_avg | pretty_percent_strip}}{% else %}{{stats_actual_avg | pretty_percent_small}}{% endif %}</dd>
           </div>
           <div class="unit [ xs-1-2 m-1-5 ]">
             <dt class="italic milli">Max avg</dt>
-            <dd class="push-0 yotta brand-dark">{{stats_max_avg | pretty_percent_small}}</dd>
+            <dd class="push-0 yotta brand-dark">{% if stats_max_avg >= 1 %}{{stats_max_avg | pretty_percent_strip}}{% else %}{{stats_max_avg | pretty_percent_small}}{% endif %}</dd>
           </div>
           <div class="unit [ xs-1-2 m-2-5 ]">
             <dt class="italic milli">Status avg</dt>
@@ -94,7 +94,7 @@
                     {% endif %}
                   </td>
                   <td class="color-grey-dark" colspan="3"><span class="{% if student.current_grade_max > .65 and student.current_grade < .5 %}grade-actual-highlight-low{% endif %}">{{student.current_grade | pretty_percent_small}}</span></td>
-                  <td class="color-grey" colspan="3">{{student.current_grade_max | pretty_percent_small}}</td>
+                  <td class="color-grey" colspan="3">{% if student.current_grade_max >= 1 %}{{student.current_grade_max | pretty_percent_strip}}{% else %}{{student.current_grade_max | pretty_percent_small}}{% endif %}</td>
                   <td class="milli italic" colspan="3">{{student.current_grade_average | grade_as_status}}</td>
                   <td class="milli" colspan="5">
                     <a href="https://github.com/{{student.user.username}}" rel="external">{{student.user.username}}</a>
