@@ -41,13 +41,13 @@ watch-css-copy-dist:
 	fswatch --verbose -0 $(publicdist)/* | xargs -0 -n 1 -I {} cp {} $(public)/core/
 
 build-js:
-	cat $(apppath)/js/*.js | $(uglifyjs) --compress --mangle --output $(publicdist)/main.min.js
+	cat $(apppath)/js/*.js > $(publicdist)/main.min.js
 
 watch-js:
 	fswatch --verbose -0 $(apppath)/js/*.js | xargs -0 -n 1 make watch-build-js
 
 watch-build-js:
-	cat $(apppath)/js/*.js | $(uglifyjs) --beautify --output $(publicdist)/main.min.js
+	cat $(apppath)/js/*.js > $(publicdist)/main.min.js
 	cp $(publicdist)/main.min.js $(public)/core/
 
 install:

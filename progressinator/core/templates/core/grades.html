@@ -1,6 +1,7 @@
 {% extends 'default.html' %}
 
 {% load tz %}
+{% load static %}
 {% load data %}
 {% load grades %}
 
@@ -12,7 +13,16 @@
         <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">← Prev</a>
       </div>
       <div class="student-controls-list gutter-1-4">
+        <label class="visually-hidden" for="student-controls-list">Switch student</label>
         <select id="student-controls-list"></select>
+      </div>
+      <div class="student-controls-section gutter-1-4" aria-role="toolbar" aria-label="Group by section" aria-controls="student-sections">
+        <ol class="course-section-list course-section-list-muted list-group-inline push-0 italic milli">
+          <li><button class="course-section-btn course-section-btn-muted btn btn-invisible" data-course-section="all" aria-pressed="true" data-section="all">All</button></li>
+          {% for section in course.data.assessments.1.due_dates %}
+            <li><button class="course-section-btn course-section-btn-muted btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false" data-section="{{section.course_section}}">{{section.course_section}}</button></li>
+          {% endfor %}
+        </ol>
       </div>
       <div class="student-controls-next gutter-1-4">
         <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">Next →</a>
@@ -282,59 +292,7 @@
         {% endfor %}
       ];
       const currentStudentId = {{student_profile.user.id}};
-
-      const studentList = document.getElementById('student-controls-list');
-      const studentPrev = document.getElementById('student-controls-prev');
-      const studentNext = document.getElementById('student-controls-next');
-      const currentStudentIndex = allStudentsIds.map(function(x) {return x.id; }).indexOf(currentStudentId);
-      const prevStudentIndex = (currentStudentIndex - 1 >= 0) ? currentStudentIndex - 1 : allStudentsIds.length - 1;
-      const nextStudentIndex = (currentStudentIndex + 1 < allStudentsIds.length) ? currentStudentIndex + 1 : 0;
-
-      studentPrev.href = window.location.href.replace(/\/\d+\/$/i, `/${allStudentsIds[prevStudentIndex].id}/`);
-      studentNext.href = window.location.href.replace(/\/\d+\/$/i, `/${allStudentsIds[nextStudentIndex].id}/`);
-
-      allStudentsIds.forEach(function (std, ind) {
-        const opt = document.createElement('option');
-        opt.value = ind;
-        opt.innerText = std.name;
-        if (std.id == currentStudentId) opt.selected = true;
-        studentList.appendChild(opt);
-      });
-
-      studentList.addEventListener('change', function (e) {
-        window.location = window.location.href.replace(/\/\d+\/$/i, `/${allStudentsIds[studentList.value].id}/`);
-      });
     </script>
-
-    <script>
-      const btnEdit = document.getElementById('grades-edit');
-      const btnSave = document.getElementById('grades-save');
-      const defaultControls = document.getElementById('grade-actions-default-controls');
-      const btnDefaultGo = document.getElementById('grade-actions-default-go');
-      const inputDefault = document.getElementById('grade-actions-default');
-
-      btnEdit.addEventListener('click', (e) => {
-        e.preventDefault();
-        defaultControls.hidden = false;
-        [].forEach.call(document.querySelectorAll('.grade-form-wrap'), (gradeForm) => {
-          gradeForm.hidden = false;
-          btnSave.hidden = btnSave.disabled = false;
-          btnEdit.hidden = btnEdit.disabled = true;
-        });
-      });
-
-      btnDefaultGo.addEventListener('click', (e) => {
-        e.preventDefault();
-        [].forEach.call(document.querySelectorAll('.grade-form input[name="grade"]'), (gradeInput) => {
-          if (gradeInput.value === '') gradeInput.value = inputDefault.value;
-        });
-      });
-
-      document.getElementById('grades-form').addEventListener('keydown', (e) => {
-        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
-          e.currentTarget.submit();
-        }
-      });
-    </script>
+    <script src="{% static 'core/main.min.js' %}"></script>
   {% endif %}
 {% endblock %}
