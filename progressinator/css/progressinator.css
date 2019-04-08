@@ -288,6 +288,10 @@
   border-bottom: .15em solid #fff;
 }
 
+.course-section-btn-muted {
+  border-bottom-color: #dfdcda;
+}
+
 .course-section-btn:focus {
   position: relative;
   z-index: 10;
@@ -318,7 +322,6 @@
 
 .student-controls-list {
   display: none;
-  margin-right: auto;
   width: 18em;
 }
 
@@ -327,9 +330,27 @@
   border-color: #a8a6af;
 }
 
+.student-controls-section {
+  display: none;
+  margin-right: auto;
+}
+
 @media only screen and (min-width: 38em) {
 
   .student-controls-list {
+    display: block;
+    margin-right: auto;
+  }
+
+}
+
+@media only screen and (min-width: 50em) {
+
+  .student-controls-list {
+    margin-right: 0;
+  }
+
+  .student-controls-section {
     display: block;
   }
 
