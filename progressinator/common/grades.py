@@ -2,7 +2,7 @@ import decimal, math
 import pendulum
 
 
-TWO_DECIMALS = decimal.Decimal('0.000')
+TWO_DECIMALS = decimal.Decimal('0.00')
 
 
 def grade_as_letter(grade):

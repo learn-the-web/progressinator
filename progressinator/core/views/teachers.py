@@ -229,7 +229,7 @@ def user_grades_save(request, term_id, course_id, user_id):
             else:
                 current_user_progress = user_grades[user_grades_index[user_progress_model['assessment_uri']]]
 
-                if (current_user_progress.grade != user_progress_model['grade']
+                if (decimal.Decimal(current_user_progress.grade).quantize(grade_helper.TWO_DECIMALS) != decimal.Decimal(user_progress_model['grade']).quantize(grade_helper.TWO_DECIMALS)
                     or comment_is_different(current_user_progress.details, user_progress_model)
                     or current_user_progress.excuse_lateness != user_progress_model['excuse_lateness']
                     ):
