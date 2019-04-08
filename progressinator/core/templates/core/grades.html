@@ -132,7 +132,15 @@
                         </i>
                       {% endif %}
                     {% endif %}
-                    <a href="{{item.url}}">{{item.name}}</a>
+                    {% if allow_grade_editing and user.is_staff %}
+                      {% if item.assessment_type == 'exercise' or item.assessment_type == 'lesson' or item.assessment_type == 'project' %}
+                        <a href="https://{{github_username}}.github.io/{{item.id}}/">{{item.name}} »</a>
+                      {% else %}
+                        <span class="color-grey-dark">{{item.name}}</span>
+                      {% endif %}
+                    {% else %}
+                      <a href="{{item.url}}">{{item.name}}</a>
+                    {% endif %}
                     <strong>
                       {% if item.grade and item.grading_type == 'letter_grade' %}
                         {% if 'Markbot' in item.grade.submitted_by %}
@@ -161,7 +169,14 @@
                       {% if item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
                       {% if item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
                     </span>
-                    {% if item.assessment_type == 'exercise' or item.assessment_type == 'lesson' or item.assessment_type == 'project' %} <span class="color-grey-dark">·</span> <a class="italic" href="https://{{github_username}}.github.io/{{item.id}}/">View on GitHub »</a>{% endif %}
+                    {% if item.assessment_type == 'exercise' or item.assessment_type == 'lesson' or item.assessment_type == 'project' %}
+                      <span class="color-grey-dark">·</span>
+                      <a class="italic" href="https://github.com/{{github_username}}/{{item.id}}/">Repo »</a>
+                      {% if not allow_grade_editing or not user.is_staff %}
+                        <span class="color-grey-dark">·</span>
+                        <a class="italic" href="https://{{github_username}}.github.io/{{item.id}}/">Live site »</a>
+                      {% endif %}
+                    {% endif %}
                   </small>
                   {% if item.grade %}
                     <details class="assessment-details micro push-0">
