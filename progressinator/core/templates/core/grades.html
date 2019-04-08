@@ -292,6 +292,7 @@
         {% endfor %}
       ];
       const currentStudentId = {{student_profile.user.id}};
+      const currentCourseSlug = '{{course.slug}}';
     </script>
     <script src="{% static 'core/main.min.js' %}"></script>
   {% endif %}

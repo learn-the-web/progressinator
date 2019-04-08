@@ -197,12 +197,15 @@
   </div>
 
   <script>
+    const currentCourseSlug = '{{course.slug}}';
+    const cookieId = `progressinator-${currentCourseSlug}-section`;
     const courseSectionBtnList = document.querySelector('.course-section-list');
 
     courseSectionBtnList.addEventListener('click', (e) => {
       if (e.target.dataset.courseSection) {
         document.querySelector('.course-section-btn[aria-pressed="true"]').setAttribute('aria-pressed', false);
         e.target.setAttribute('aria-pressed', true);
+        localStorage.setItem(cookieId, e.target.dataset.courseSection);
 
         [].forEach.call(document.querySelectorAll('#student-sections tr[data-course-section]'), (elem) => {
           elem.hidden = false;
@@ -219,8 +222,13 @@
     });
 
     window.addEventListener('load', (e) => {
-      if (window.location.hash) {
-        const btn = courseSectionBtnList.querySelector(`a[href="${window.location.hash}"]`);
+      const savedSection = localStorage.getItem(cookieId) || 'all';
+      let hash = (window.location.hash) ? window.location.hash : '#';
+
+      if (savedSection && savedSection != 'all') hash = `#${savedSection}`;
+
+      if (hash) {
+        const btn = courseSectionBtnList.querySelector(`a[href="${hash}"]`);
         if (btn) btn.click();
       }
     });

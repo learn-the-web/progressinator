@@ -1,12 +1,13 @@
 (function () {
   'use strict';
 
-  let studentIds = [];
-
+  const cookieId = `progressinator-${currentCourseSlug}-section`;
   const studentList = document.getElementById('student-controls-list');
   const studentSection = document.querySelector('.student-controls-section');
   const studentPrev = document.getElementById('student-controls-prev');
   const studentNext = document.getElementById('student-controls-next');
+
+  let studentIds = [];
   let currentStudentIndex = false;
   let prevStudentIndex = false;
   let nextStudentIndex = false;
@@ -51,9 +52,9 @@
   });
 
   studentSection.addEventListener('click', (e) => {
-    localStorage.setItem('progressinator-current-section', e.target.dataset.section);
+    localStorage.setItem(cookieId, e.target.dataset.section);
     setStudentSection(e.target.dataset.section);
   });
 
-  setStudentSection(localStorage.getItem('progressinator-current-section') || 'all');
+  setStudentSection(localStorage.getItem(cookieId) || 'all');
 }());
