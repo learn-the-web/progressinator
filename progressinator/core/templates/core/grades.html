@@ -10,7 +10,10 @@
   {% if allow_grade_editing and user.is_staff %}
     <div class="student-controls gutter-1-4 pad-t-1-4 pad-b-1-4 section-dark">
       <div class="student-controls-prev gutter-1-4">
-        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">←&nbsp;Prev</a>
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">
+          <i class="icon i-1-2 push-r-1-8"><svg><use xlink:href="#icon-left"></use></svg></i>
+          <span class="icon-label">Prev</span>
+        </a>
       </div>
       <div class="student-controls-list gutter-1-4">
         <label class="visually-hidden" for="student-controls-list">Switch student</label>
@@ -25,7 +28,10 @@
         </ol>
       </div>
       <div class="student-controls-next gutter-1-4">
-        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">Next&nbsp;→</a>
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">
+          <span class="icon-label ib push-r-1-8">Next</span>
+          <i class="icon i-1-2"><svg><use xlink:href="#icon-right"></use></svg></i>
+        </a>
       </div>
     </div>
   {% endif %}
