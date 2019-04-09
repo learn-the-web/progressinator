@@ -330,6 +330,10 @@
   border-color: #a8a6af;
 }
 
+.student-controls-list select:hover {
+  border-color: #000;
+}
+
 .student-controls-section {
   display: none;
   margin-right: auto;
