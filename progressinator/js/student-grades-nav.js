@@ -33,7 +33,7 @@
     studentIds.forEach((std, ind) => {
       const opt = document.createElement('option');
       opt.value = ind;
-      opt.innerText = std.name;
+      opt.innerHTML = std.name;
       if (std.id == currentStudentId) opt.selected = true;
       studentList.appendChild(opt);
     });
@@ -41,7 +41,7 @@
     if (currentStudentIndex < 0) {
       const opt = document.createElement('option');
       opt.value = '';
-      opt.innerText = '';
+      opt.innerHTML = '';
       opt.selected = true;
       studentList.prepend(opt);
     }
