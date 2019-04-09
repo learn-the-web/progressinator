@@ -10,7 +10,7 @@
   {% if allow_grade_editing and user.is_staff %}
     <div class="student-controls gutter-1-4 pad-t-1-4 pad-b-1-4 section-dark">
       <div class="student-controls-prev gutter-1-4">
-        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">← Prev</a>
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">←&nbsp;Prev</a>
       </div>
       <div class="student-controls-list gutter-1-4">
         <label class="visually-hidden" for="student-controls-list">Switch student</label>
@@ -25,7 +25,7 @@
         </ol>
       </div>
       <div class="student-controls-next gutter-1-4">
-        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">Next →</a>
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">Next&nbsp;→</a>
       </div>
     </div>
   {% endif %}
@@ -158,7 +158,7 @@
                     {% endif %}
                     {% if allow_grade_editing and user.is_staff %}
                       {% if item.assessment_type == 'exercise' or item.assessment_type == 'lesson' or item.assessment_type == 'project' %}
-                        <a href="https://{{github_username}}.github.io/{{item.id}}/">{{item.name}} »</a>
+                        <a href="https://{{github_username}}.github.io/{{item.id}}/">{{item.name}}&nbsp;»</a>
                       {% else %}
                         <span class="color-grey-dark">{{item.name}}</span>
                       {% endif %}
@@ -195,10 +195,10 @@
                     </span>
                     {% if item.assessment_type == 'exercise' or item.assessment_type == 'lesson' or item.assessment_type == 'project' %}
                       <span class="color-grey-dark">·</span>
-                      <a class="italic" href="https://github.com/{{github_username}}/{{item.id}}/">Repo »</a>
+                      <a class="italic" href="https://github.com/{{github_username}}/{{item.id}}/">Repo&nbsp;»</a>
                       {% if not allow_grade_editing or not user.is_staff %}
                         <span class="color-grey-dark">·</span>
-                        <a class="italic" href="https://{{github_username}}.github.io/{{item.id}}/">Live site »</a>
+                        <a class="italic" href="https://{{github_username}}.github.io/{{item.id}}/">Live&nbsp;site&nbsp;»</a>
                       {% endif %}
                     {% endif %}
                   </small>
