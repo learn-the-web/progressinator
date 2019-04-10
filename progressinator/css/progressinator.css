@@ -365,11 +365,19 @@
   margin-right: auto;
 }
 
+.student-controls-course {
+  display: none;
+}
+
 @media only screen and (min-width: 38em) {
 
   .student-controls-list {
     display: block;
     margin-right: auto;
+  }
+
+  .student-controls-course {
+    display: block;
   }
 
 }

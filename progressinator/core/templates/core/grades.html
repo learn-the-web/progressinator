@@ -9,11 +9,8 @@
 
   {% if allow_grade_editing and user.is_staff %}
     <div class="student-controls gutter-1-4 pad-t-1-4 pad-b-1-4 section-dark">
-      <div class="student-controls-prev gutter-1-4">
-        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">
-          <i class="icon i-1-2 push-r-1-8"><svg><use xlink:href="#icon-left"></use></svg></i>
-          <span class="icon-label">Prev</span>
-        </a>
+      <div class="student-controls-course gutter-1-4">
+        <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{student_profile.current_course.data.title}}</a>
       </div>
       <div class="student-controls-list gutter-1-4">
         <label class="visually-hidden" for="student-controls-list">Switch student</label>
@@ -26,6 +23,12 @@
             <li><button class="course-section-btn course-section-btn-muted btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false" data-section="{{section.course_section}}">{{section.course_section}}</button></li>
           {% endfor %}
         </ol>
+      </div>
+      <div class="student-controls-prev gutter-1-4">
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">
+          <i class="icon i-1-2 push-r-1-8"><svg><use xlink:href="#icon-left"></use></svg></i>
+          <span class="icon-label">Prev</span>
+        </a>
       </div>
       <div class="student-controls-next gutter-1-4">
         <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">

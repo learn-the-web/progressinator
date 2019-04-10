@@ -56,5 +56,26 @@
     setStudentSection(e.target.dataset.section);
   });
 
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key === 'ArrowLeft') {
+      const btn = document.getElementById('student-controls-prev');
+      if (btn) {
+        btn.focus();
+        btn.click();
+      }
+    }
+    if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key === 'ArrowRight') {
+      const btn = document.getElementById('student-controls-next');
+      if (btn) {
+        btn.focus();
+        btn.click();
+      }
+    }
+    if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.key === 'ArrowUp') {
+      const btn = document.getElementById('student-controls-list');
+      if (btn) btn.focus();
+    }
+  });
+
   setStudentSection(localStorage.getItem(cookieId) || 'all');
 }());
