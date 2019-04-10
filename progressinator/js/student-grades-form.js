@@ -7,6 +7,8 @@
   const btnDefaultGo = document.getElementById('grade-actions-default-go');
   const inputDefault = document.getElementById('grade-actions-default');
 
+  if (!btnEdit || !btnDefaultGo) return;
+
   btnEdit.addEventListener('click', (e) => {
     e.preventDefault();
     defaultControls.hidden = false;

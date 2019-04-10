@@ -286,7 +286,7 @@
     </section>
   </div>
 
-  {% if allow_grade_editing and perms.progress_core.change_userprogress %}
+  {% if allow_grade_editing and user.is_staff %}
     <script>
       const allStudentsIds = [
         {% for student in all_students %}
