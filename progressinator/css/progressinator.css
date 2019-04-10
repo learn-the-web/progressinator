@@ -10,6 +10,32 @@
   color: #fff;
 }
 
+.btn-edit-single-grade {
+  display: inline;
+  padding: 0;
+  border-bottom: .15em solid color(#000 alpha(20%));
+  color: rgba(0, 0, 0, .7);
+  line-height: 1.2;
+}
+
+.btn-edit-single-grade:hover {
+  color: #4484c2;
+  border-color: #4484c2;
+}
+
+.btn-invisible-bright {
+  color: rgba(255, 255, 255, .8);
+  margin-right: .5em;
+  padding: 0;
+  border-bottom: .15em solid color(#fff alpha(20%));
+  line-height: 1.2;
+}
+
+.btn-invisible-bright:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
 .section-lightest .class-heading {
   border-color: #25796e;
 }

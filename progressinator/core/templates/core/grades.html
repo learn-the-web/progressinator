@@ -41,7 +41,7 @@
       {% if allow_grade_editing and user.is_staff %}
         <section class="section-lightest gutter-1-2 pad-t-1-2 pad-b push-1-2">
           <h2 class="push-0">{{student_profile.user.first_name}} {{student_profile.user.last_name}}</h2>
-          <a class="mega ib push-1-4" href="https://github.com/{{student_profile.user.username}}" rel="external">{{student_profile.user.username}} »</a>
+          <a class="mega ib push-1-4" href="https://github.com/{{student_profile.user.username}}" rel="external">{{student_profile.user.username}}&nbsp;»</a>
           <p class="push-0 mega italic">
             <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{student_profile.current_course.data.title}}</a>
             · {{student_profile.current_section}}
@@ -113,7 +113,8 @@
                 <button class="pico btn" id="grade-actions-default-go" type="button"><span class="ib gutter-1-4">Set</span></button>
               </div>
               <div class="grade-actions-save-edit">
-                <button class="milli btn" id="grades-edit" type="button">Edit grades</button>
+                <button class="milli btn btn-invisible btn-invisible-bright push-r-1-2" id="grades-cancel" type="button" hidden disabled>Cancel</button>
+                <button class="milli btn" id="grades-edit" type="button">Edit all grades</button>
                 <button class="milli btn btn-light" id="grades-save" type="submit" hidden disabled>Save grades</button>
               </div>
             </div>
@@ -183,6 +184,12 @@
                         {{item.grade.grade_as_letter}}
                       {% endif %}
                     </strong>
+                    {% if allow_grade_editing and perms.progress_core.change_userprogress and item.assessment_each_algonquin > 0 %}
+                      <span class="ib gutter-1-4">
+                        <button class="btn btn-invisible btn-edit-single-grade micro not-bold" data-control="edit-single-grade" data-grade-id="{{item.grade.assessment_uri}}" type="button">Edit</button>
+                        <button class="btn btn-invisible btn-edit-single-grade micro not-bold" data-control="cancel-single-grade" data-grade-id="{{item.grade.assessment_uri}}" type="button" hidden disabled>Cancel</button>
+                      </span>
+                    {% endif %}
                   </h3>
                   <small class="assessment-info block micro">
                     {% if item.user_due_date_algonquin %}
