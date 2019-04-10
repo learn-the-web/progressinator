@@ -179,7 +179,7 @@ def user_grades_save(request, term_id, course_id, user_id):
     if request.method != 'POST' and 'user_progress_id' not in request.POST:
         return redirect('core:teacher_user_grades', course_id=course_id, user_id=user_id)
 
-    posted_grades = {'update': [], 'create': []}
+    posted_grades = {'update': [], 'create': [], 'delete': []}
 
     try:
         term = Term.objects.get(slug=term_id)
@@ -243,6 +243,10 @@ def user_grades_save(request, term_id, course_id, user_id):
                         if not isinstance(current_user_progress.details, dict): current_user_progress.details = {}
                         current_user_progress.details['comment'] = user_progress_model['details']['comment']
                     posted_grades['update'].append(current_user_progress)
+        else:
+            if prog_id.strip():
+                if user_progress_model['assessment_uri'] in user_grades_index:
+                    posted_grades['delete'].append(user_grades[user_grades_index[user_progress_model['assessment_uri']]])
 
     for model_type in ('update', 'create'):
         for prog in posted_grades[model_type]:
@@ -251,6 +255,12 @@ def user_grades_save(request, term_id, course_id, user_id):
                 prog.save()
             except:
                 pass
+
+    for prog in posted_grades['delete']:
+        try:
+            prog.delete()
+        except:
+            pass
 
     # return render(request, 'core/teachers/assessment-grades.html')
     return redirect('core:teacher_user_grades', term_id=term_id, course_id=course_id, user_id=user_id)
