@@ -179,6 +179,9 @@
                           {{item.grade.grade_as_letter}}
                         {% endif %}
                       {% endif %}
+                      {% if item.grade and item.grading_type != 'letter_grade' and item.grade.grade > 0 and item.grade.grade < 1 %}
+                        {{item.grade.grade_as_letter}}
+                      {% endif %}
                     </strong>
                   </h3>
                   <small class="assessment-info block micro">
