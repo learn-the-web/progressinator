@@ -1,5 +1,6 @@
 {% extends 'default.html' %}
 
+{% load static %}
 {% load data %}
 {% load grades %}
 
@@ -82,7 +83,7 @@
             </thead>
             <tbody id="student-sections">
               {% for student in students %}
-                <tr class="grade-status-{{student.current_grade_average | grade_as_status_fine_grained | slugify}}" data-course-section="{{student.current_section}}">
+                <tr class="grade-status-{{student.current_grade_average | grade_as_status_fine_grained | slugify}}" data-filter-course-section="{{student.current_section}}">
                   <th class="grade-item-name" scope="row" colspan="8">
                     <a href="{% url 'core:teacher_user_grades' term_id=course.term.slug course_id=course.data.course user_id=student.user.id %}">{{student.user.last_name}}, {{student.user.first_name}}</a>
                     <a class="icon i-1-2 link-box-no-mark color-grey" href="mailto:{{student.user.email}}"><svg><use xlink:href="#icon-mail"></use></svg></a>
@@ -179,9 +180,9 @@
                 <tr>
                   <th scope="row" colspan="11">
                     {% if item.assessment_each_algonquin == 0 %}
-                      <a class="not-bold" href="#">{{item.name}}</a>
+                      <a class="not-bold" href="{% url 'core:teacher_assessment_grades' term_id=course.term.slug course_id=course.data.course assessment_id=item.uri %}">{{item.name}}</a>
                     {% else %}
-                      <a href="#">{{item.name}}</a>
+                      <a href="{% url 'core:teacher_assessment_grades' term_id=course.term.slug course_id=course.data.course assessment_id=item.uri %}">{{item.name}}</a>
                     {% endif %}
                   </th>
                   <td class="milli color-grey" colspan="4">{{item.assessment_type | title}}</td>
@@ -198,39 +199,6 @@
 
   <script>
     const currentCourseSlug = '{{course.slug}}';
-    const cookieId = `progressinator-${currentCourseSlug}-section`;
-    const courseSectionBtnList = document.querySelector('.course-section-list');
-
-    courseSectionBtnList.addEventListener('click', (e) => {
-      if (e.target.dataset.courseSection) {
-        document.querySelector('.course-section-btn[aria-pressed="true"]').setAttribute('aria-pressed', false);
-        e.target.setAttribute('aria-pressed', true);
-        localStorage.setItem(cookieId, e.target.dataset.courseSection);
-
-        [].forEach.call(document.querySelectorAll('#student-sections tr[data-course-section]'), (elem) => {
-          elem.hidden = false;
-          elem.removeAttribute('aria-hidden');
-        });
-
-        if (e.target.dataset.courseSection !== 'all') {
-          [].forEach.call(document.querySelectorAll(`#student-sections tr:not([data-course-section="${e.target.dataset.courseSection}"])`), (elem) => {
-            elem.hidden = true;
-            elem.setAttribute('aria-hidden', true);
-          });
-        }
-      }
-    });
-
-    window.addEventListener('load', (e) => {
-      const savedSection = localStorage.getItem(cookieId) || 'all';
-      let hash = (window.location.hash) ? window.location.hash : '#';
-
-      if (savedSection && savedSection != 'all') hash = `#${savedSection}`;
-
-      if (hash) {
-        const btn = courseSectionBtnList.querySelector(`a[href="${hash}"]`);
-        if (btn) btn.click();
-      }
-    });
   </script>
+  <script src="{% static 'core/main.min.js' %}"></script>
 {% endblock %}

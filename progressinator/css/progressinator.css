@@ -362,7 +362,10 @@
 
 .student-controls-section {
   display: none;
-  margin-right: auto;
+}
+
+.student-controls-prev {
+  margin-left: auto;
 }
 
 .student-controls-course {
@@ -373,7 +376,6 @@
 
   .student-controls-list {
     display: block;
-    margin-right: auto;
   }
 
   .student-controls-course {
@@ -383,10 +385,6 @@
 }
 
 @media only screen and (min-width: 50em) {
-
-  .student-controls-list {
-    margin-right: 0;
-  }
 
   .student-controls-section {
     display: block;

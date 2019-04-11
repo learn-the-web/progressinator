@@ -1,0 +1,10 @@
+<section class="section-lightest gutter-1-2 pad-t-1-2 pad-b push-1-2">
+  <h2 class="push-0">{{title}}</h2>
+  <a class="mega ib push-1-4" href="{{details_url}}" rel="external">{{details_text}}&nbsp;»</a>
+  <p class="push-0 mega italic">
+    <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{course.data.title}}</a>
+    {% if course_extra %}
+    · {{course_extra}}
+    {% endif %}
+  </p>
+</section>
