@@ -1,5 +1,103 @@
 {% extends 'default.html' %}
 
+{% load tz %}
+{% load static %}
+{% load data %}
+{% load grades %}
+
 {% block wrapper %}
 
+  {% if allow_grade_editing and user.is_staff %}
+    <div class="student-controls gutter-1-4 pad-t-1-4 pad-b-1-4 section-dark">
+      <div class="student-controls-course gutter-1-4">
+        <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{course.data.title}}</a>
+      </div>
+      <div class="student-controls-list gutter-1-4">
+        <label class="visually-hidden" for="student-controls-list">Switch assessment</label>
+        <select id="student-controls-list"></select>
+      </div>
+      <div class="student-controls-prev gutter-1-4">
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">
+          <i class="icon i-1-2 push-r-1-8"><svg><use xlink:href="#icon-left"></use></svg></i>
+          <span class="icon-label">Prev</span>
+        </a>
+      </div>
+      <div class="student-controls-next gutter-1-4">
+        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">
+          <span class="icon-label ib push-r-1-8">Next</span>
+          <i class="icon i-1-2"><svg><use xlink:href="#icon-right"></use></svg></i>
+        </a>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="grid">
+    <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2 {% if not allow_grade_editing or not user.is_staff %}pad-t-1-2{% endif %}">
+      {% include 'grade-details.html' with title=assessment.name details_url=assessment.url details_text="Assessment details" course_extra=assessment.assessment_type|title %}
+      <section class="class-desc gutter-1-2">
+        <h2 class="class-heading push giga">Assessment</h2>
+        <dl class="grid push">
+          <div class="unit [ xs-1 ] brand-dark relative">
+            <dt class="giga italic absolute pin-lb">Submissions</dt>
+            <dd class="tenamega bold">{{stats_total_submissions}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 s-1-2 m-1 l-1-2 ] color-grey relative">
+            <dt class="giga italic absolute pin-lb">Worth</dt>
+            <dd class="tenamega">{{assessment.assessment_each_algonquin | pretty_percent_small}}</dd>
+          </div>
+          <div class="unit [ xs-1-2 s-1-2 m-1 l-1-2 ] color-grey relative">
+            <dt class="giga italic absolute pin-lb">Pass rate</dt>
+            <dd class="tenamega">{{stats_pass_rate_avg | pretty_percent_small}}</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+    <section class="class class-outside unit [ xs-1 s-1 m-3-5 ] gutter-1-4 pad-t-1-2 pad-b-1-4">
+      <div class="class-desc gutter-1-4">
+        <div class="relative">
+          <h2 class="class-heading push-1-2 giga">Students</h2>
+          <div class="pin-rc italic milli" aria-role="toolbar" aria-label="Group by section" aria-controls="student-sections">
+            <ol class="course-section-list course-section-list-muted list-group-inline push-0">
+              <li><a class="course-section-btn btn btn-invisible course-section-btn-muted" data-course-section="all" aria-pressed="true" href="#">All</a></li>
+              {% for section in course.data.assessments.1.due_dates %}
+                <li><a class="course-section-btn btn btn-invisible course-section-btn-muted" data-course-section="{{section.course_section}}" aria-pressed="false" href="#{{section.course_section}}">{{section.course_section}}</a></li>
+              {% endfor %}
+            </ol>
+          </div>
+        </div>
+        {% if allow_grade_editing and perms.progress_core.change_userprogress %}
+          <form method="post" id="grades-form" action="{% url 'core:teacher_assessment_grades_save' term_id=course.term.slug course_id=course.slug assessment_id=assessment.uri %}">
+            {% include 'edit-grades-toolbar.html' %}
+        {% endif %}
+        <ol class="assessment-list list-group push-0">
+          {% for item in all_student_grades %}
+            <li class="assessment-item relative push-1-2" data-filter-course-section="{{item.student_section}}">
+              {% include 'grade-item.html' with grade_item=item github_username=item.github_username user_id=item.user_id %}
+            </li>
+          {% endfor %}
+        </ol>
+        {% if allow_grade_editing and perms.progress_core.change_userprogress %}
+          {% csrf_token %}
+          </form>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+
+  {% if allow_grade_editing and user.is_staff %}
+    <script>
+      const allStudentsIds = [
+        {% for item in course.data.assessments %}
+          {
+            id: '{{item.uri}}',
+            name: '{{item.name}}',
+            section: '---',
+          },
+        {% endfor %}
+      ];
+      const currentStudentId = '{{assessment.uri}}';
+      const currentCourseSlug = '{{course.slug}}';
+    </script>
+    <script src="{% static 'core/main.min.js' %}"></script>
+  {% endif %}
 {% endblock %}

@@ -1,0 +1,169 @@
+{% load tz %}
+{% load data %}
+{% load grades %}
+
+<div class="assessment-item-content relative">
+  <h3 class="assessment-title kilo push-0">
+    {% if grade_item.grade %}
+      {% if grade_item.grade.grade > 0 %}
+        {% if grade_item.grade.late %}
+          <i class="icon i-3-4 color-warning" aria-label="Pass — Late" title="Pass — Late">
+            <svg><use xlink:href="#icon-grade-pass"></use></svg>
+          </i>
+        {% else %}
+          {% if grade_item.grade and grade_item.grading_type == 'letter_grade' and 'Markbot' in grade_item.grade.submitted_by %}
+            <i class="icon i-3-4 color-grey" aria-label="Submission accepted, ungraded" title="Submission accepted, ungraded">
+              <svg><use xlink:href="#icon-grade-pass"></use></svg>
+            </i>
+          {% else %}
+            {% if grade_item.grade.grade >= .5 %}
+              <i class="icon i-3-4 color-pass" aria-label="Pass" title="Pass">
+                <svg><use xlink:href="#icon-grade-pass"></use></svg>
+              </i>
+            {% else %}
+              <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
+                <svg><use xlink:href="#icon-grade-fail"></use></svg>
+              </i>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% else %}
+        <i class="icon i-3-4 color-fail" aria-label="Fail" title="Fail">
+          <svg><use xlink:href="#icon-grade-fail"></use></svg>
+        </i>
+      {% endif %}
+    {% else %}
+      {% if grade_item.assessment_each_algonquin == 0 %}
+        <i class="icon i-3-4 color-grey" aria-label="Doesn’t contribute to your grade" title="Doesn’t contribute to your grade">
+          <svg><use xlink:href="#icon-grade-closed"></use></svg>
+        </i>
+      {% else %}
+        <i class="icon i-3-4" aria-label="Not submitted" title="Not submitted">
+          <svg><use xlink:href="#icon-grade-open"></use></svg>
+        </i>
+      {% endif %}
+    {% endif %}
+    {% if allow_grade_editing and user.is_staff %}
+      {% if grade_item.assessment_type == 'exercise' or grade_item.assessment_type == 'lesson' or grade_item.assessment_type == 'project' %}
+        <a href="https://{{github_username}}.github.io/{{grade_item.id}}/">{{grade_item.name}}&nbsp;»</a>
+      {% else %}
+        <span class="color-grey-dark">{{grade_item.name}}</span>
+      {% endif %}
+    {% else %}
+      <a href="{{grade_item.url}}">{{grade_item.name}}</a>
+    {% endif %}
+    <strong>
+      {% if grade_item.grade and grade_item.grading_type == 'letter_grade' %}
+        {% if 'Markbot' in grade_item.grade.submitted_by %}
+          Ungraded
+        {% else %}
+          {{grade_item.grade.grade|grade_as_letter}}
+        {% endif %}
+      {% endif %}
+      {% if grade_item.grade and grade_item.grading_type != 'letter_grade' and grade_item.grade.grade > 0 and grade_item.grade.grade < 1 %}
+        {{grade_item.grade.grade|grade_as_letter}}
+      {% endif %}
+    </strong>
+    {% if allow_grade_editing and perms.progress_core.change_userprogress and grade_item.assessment_each_algonquin > 0 %}
+      <span class="ib gutter-1-4">
+        <button class="btn btn-invisible btn-edit-single-grade micro not-bold" data-control="edit-single-grade" data-grade-id="{{grade_item.grade.assessment_uri}}" type="button">Edit</button>
+        <button class="btn btn-invisible btn-edit-single-grade micro not-bold" data-control="cancel-single-grade" data-grade-id="{{grade_item.grade.assessment_uri}}" type="button" hidden disabled>Cancel</button>
+      </span>
+    {% endif %}
+  </h3>
+  <small class="assessment-info block micro">
+    {% if grade_item.user_due_date_algonquin %}
+      <time datetime="{{grade_item.user_due_date_algonquin | timezone:'America/Toronto' | date:'c'}}">
+        Due:
+        {% if grade_item.assessment_each_algonquin != 0 %}
+          {% if not grade_item.grade %}<strong>{% endif %}
+        {% endif %}
+        {{grade_item.user_due_date_algonquin | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}
+        {% if grade_item.assessment_each_algonquin != 0 %}
+          {% if not grade_item.grade %}</strong>{% endif %}
+        {% endif %}
+      </time> ·
+    {% endif %}
+    <span class="italic">{{grade_item.assessment_type | title}} @ ≈{{grade_item.assessment_each_algonquin | pretty_percent_small}}</span>
+    <span class="color-grey-dark italic">
+      {% if grade_item.grading_type == 'pass_fail' %}· Complete/incomplete{% endif %}
+      {% if grade_item.grading_type == 'letter_grade' %}· Letter grade{% endif %}
+    </span>
+    {% if grade_item.assessment_type == 'exercise' or grade_item.assessment_type == 'lesson' or grade_item.assessment_type == 'project' %}
+      <span class="color-grey-dark">·</span>
+      <a class="italic" href="https://github.com/{{github_username}}/{{grade_item.id}}/">Repo&nbsp;»</a>
+      {% if not allow_grade_editing or not user.is_staff %}
+        <span class="color-grey-dark">·</span>
+        <a class="italic" href="https://{{github_username}}.github.io/{{grade_item.id}}/">Live&nbsp;site&nbsp;»</a>
+      {% endif %}
+    {% endif %}
+  </small>
+  {% if grade_item.grade %}
+    <details class="assessment-details micro push-0">
+      <summary class="bold">Details &amp; comments…</summary>
+      <dl class="list-group-inline push-0">
+        <dt class="italic push-0">Submission time</dt>
+        <dd class="push-0"><time datetime="{{grade_item.grade.created | timezone:'America/Toronto' | date:'c'}}">{{grade_item.grade.created | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</time></dd>
+        <dt class="italic push-0">Graded by</dt>
+        <dd class="push-0">{{grade_item.grade.submitted_by}}</dd>
+        {% if grade_item.grade.excuse_lateness %}
+          <dt class="italic push-0">Lateness excused</dt>
+          <dd class="push-0">
+            {% for opt in excuse_lateness_options %}
+              {% if grade_item.grade.excuse_lateness == opt.0 %}{{opt.1}}{% endif %}
+            {% endfor %}
+          </dd>
+        {% endif %}
+        {% if grade_item.grade.details.started %}
+          <dt class="italic push-0">Start time</dt>
+          <dd class="push-0">{{grade_item.grade.details.started | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
+        {% endif %}
+        {% if grade_item.grade.details.finished %}
+          <dt class="italic push-0">End time</dt>
+          <dd class="push-0">{{grade_item.grade.details.finished | timezone:'America/Toronto' | date:'N j, Y @ H:i'}}</dd>
+        {% endif %}
+        {% if grade_item.grade.details.estimated_time %}
+          <dt class="italic push-0">Estimated completion</dt>
+          <dd class="push-0">~{{grade_item.grade.details.estimated_time}} h</dd>
+        {% endif %}
+        {% if grade_item.grade.details.number_of_commits %}
+          <dt class="italic push-0">№ of commits</dt>
+          <dd class="push-0">{{grade_item.grade.details.number_of_commits}}</dd>
+        {% endif %}
+      </dl>
+      {% if grade_item.grade.details.comment %}
+        <strong class="italic push-0 not-bold">Comments</strong>
+        <p class="assessment-details-comments push-0">{{grade_item.grade.details.comment}}</p>
+      {% endif %}
+    </details>
+  {% endif %}
+  {% if allow_grade_editing and grade_item.assessment_each_algonquin > 0 and perms.progress_core.change_userprogress %}
+    <div class="grade-form-wrap pad-t-1-4 pad-b-1-4" hidden>
+      <fieldset class="grade-form push-0 milli">
+        <legend class="visually-hidden">Update grade for {{grade_item.name}}</legend>
+        <div class="grade-form-item grade-form-item-grade">
+          <label for="grade-{{grade_item.uri | slugify}}">Grade:</label>
+          <input type="number" name="grade" id="grade-{{grade_item.uri | slugify}}" value="{{grade_item.grade.grade}}" step="0.001">
+        </div>
+        <div class="grade-form-item grade-form-item-excuse-lateness pad-t-1-8">
+          <label for="lateness-{{grade_item.uri | slugify}}">Excuse&nbsp;lateness:</label>
+          <select name="excuse_lateness" id="lateness-{{grade_item.uri | slugify}}">
+            <option value=""></option>
+            {% for opt in excuse_lateness_options %}
+              <option value="{{opt.0}}" {% if grade_item.grade.excuse_lateness == opt.0 %}selected{% endif %}>{{opt.1}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <hr class="grade-form-sep">
+        <div class="grade-form-comment">
+          <label for="comment-{{grade_item.uri | slugify}}">Comments:</label>
+          <textarea class="micro" name="comment" id="comment-{{grade_item.uri | slugify}}">{{grade_item.grade.details.comment | escape}}</textarea>
+        </div>
+        <input name="submitted_by" type="hidden" value="{{submitted_by}}">
+        <input name="assessment_uri" type="hidden" value="{{grade_item.uri}}">
+        <input name="user_progress_id" type="hidden" value="{{grade_item.grade.id}}">
+        <input name="user_id" type="hidden" value="{{user_id}}">
+      </fieldset>
+    </div>
+  {% endif %}
+</div>

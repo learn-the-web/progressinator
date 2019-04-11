@@ -15,6 +15,7 @@ urlpatterns = [
     path('teachers/courses/<slug:term_id>/<slug:course_id>/', teachers.course_status, name='teacher_course'),
     path('teachers/courses/<slug:term_id>/<slug:course_id>/users/<int:user_id>/', teachers.user_grades, name='teacher_user_grades'),
     path('teachers/courses/<slug:term_id>/<slug:course_id>/users/<int:user_id>/save/', teachers.user_grades_save, name='teacher_user_grades_save'),
-    path('teachers/courses/<slug:term_id>/<slug:course_id>/assessments/<int:assessment_id>/', teachers.assessment_grades, name='teacher_assessment_grades'),
+    path('teachers/courses/<slug:term_id>/<slug:course_id>/assessments/<str:assessment_id>/', teachers.assessment_grades, name='teacher_assessment_grades'),
+    path('teachers/courses/<slug:term_id>/<slug:course_id>/assessments/<str:assessment_id>/save/', teachers.assessment_grades_save, name='teacher_assessment_grades_save'),
     path('api/v1/submit-assessment', api.submit_assessment, name='submit'),
 ]
