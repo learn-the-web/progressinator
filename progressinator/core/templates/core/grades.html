@@ -8,35 +8,7 @@
 {% block wrapper %}
 
   {% if allow_grade_editing and user.is_staff %}
-    <div class="student-controls gutter-1-4 pad-t-1-4 pad-b-1-4 section-dark">
-      <div class="student-controls-course gutter-1-4">
-        <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{course.data.title}}</a>
-      </div>
-      <div class="student-controls-list gutter-1-4">
-        <label class="visually-hidden" for="student-controls-list">Switch student</label>
-        <select id="student-controls-list"></select>
-      </div>
-      <div class="student-controls-section gutter-1-4" aria-role="toolbar" aria-label="Group by section" aria-controls="student-sections">
-        <ol class="course-section-list course-section-list-muted list-group-inline push-0 italic milli">
-          <li><button class="course-section-btn course-section-btn-muted btn btn-invisible" data-course-section="all" aria-pressed="true" data-section="all">All</button></li>
-          {% for section in course.data.assessments.1.due_dates %}
-            <li><button class="course-section-btn course-section-btn-muted btn btn-invisible" data-course-section="{{section.course_section}}" aria-pressed="false" data-section="{{section.course_section}}">{{section.course_section}}</button></li>
-          {% endfor %}
-        </ol>
-      </div>
-      <div class="student-controls-prev gutter-1-4">
-        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-prev" href="">
-          <i class="icon i-1-2 push-r-1-8"><svg><use xlink:href="#icon-left"></use></svg></i>
-          <span class="icon-label">Prev</span>
-        </a>
-      </div>
-      <div class="student-controls-next gutter-1-4">
-        <a class="btn btn-ghost btn-muted nano bold" id="student-controls-next" href="">
-          <span class="icon-label ib push-r-1-8">Next</span>
-          <i class="icon i-1-2"><svg><use xlink:href="#icon-right"></use></svg></i>
-        </a>
-      </div>
-    </div>
+    {% include 'next-prev-nav.html' with show_sections=True %}
   {% endif %}
 
   <div class="grid">
