@@ -277,6 +277,13 @@ def assessment_grades(request, term_id, course_id, assessment_id):
     student_grade_index = build_queryset_index(student_grades, 'user_id')
     all_student_grades = []
     stats_pass_rate_total = 0
+    show_markbot_stats = False
+    markbot_commits_min = 10000000
+    markbot_commits_max = 0
+    markbot_commits_total = 0
+    markbot_time_min = 10000000
+    markbot_time_max = 0
+    markbot_time_total = 0
 
     if assessment_id not in assessment_index:
         return redirect('core:teacher_courses')
@@ -287,8 +294,26 @@ def assessment_grades(request, term_id, course_id, assessment_id):
         grade_info = assessment.copy()
         if student.user.id in student_grade_index:
             grade_info['grade'] = model_to_dict(student_grades[student_grade_index[student.user.id]])
+
             if grade_info['grade']['grade'] > 0:
                 stats_pass_rate_total += 1;
+
+            if grade_info['grade']['details'] and 'number_of_commits' in grade_info['grade']['details']:
+                show_markbot_stats = True
+                markbot_commits_total += grade_info['grade']['details']['number_of_commits']
+                if grade_info['grade']['details']['number_of_commits'] < markbot_commits_min:
+                    markbot_commits_min = grade_info['grade']['details']['number_of_commits']
+                if grade_info['grade']['details']['number_of_commits'] > markbot_commits_max:
+                    markbot_commits_max = grade_info['grade']['details']['number_of_commits']
+
+            if grade_info['grade']['details'] and 'estimated_time' in grade_info['grade']['details']:
+                show_markbot_stats = True
+                markbot_time_total += float(grade_info['grade']['details']['estimated_time'])
+                if float(grade_info['grade']['details']['estimated_time']) < markbot_time_min:
+                    markbot_time_min = float(grade_info['grade']['details']['estimated_time'])
+                if float(grade_info['grade']['details']['estimated_time']) > markbot_time_max:
+                    markbot_time_max = float(grade_info['grade']['details']['estimated_time'])
+
         grade_info['name'] = f"{student.user.last_name}, {student.user.first_name}"
         grade_info['user_id'] = student.user.id
         grade_info['student_section'] = student.current_section
@@ -322,6 +347,13 @@ def assessment_grades(request, term_id, course_id, assessment_id):
         'all_student_grades': all_student_grades,
         'stats_total_submissions': len(student_grades),
         'stats_pass_rate_avg': stats_pass_rate_total / len(students),
+        'show_markbot_stats': show_markbot_stats,
+        'markbot_commits_min': markbot_commits_min,
+        'markbot_commits_max': markbot_commits_max,
+        'markbot_commits_avg': round(markbot_commits_total / len(students)),
+        'markbot_time_min': round(markbot_time_min, 2),
+        'markbot_time_max': round(markbot_time_max, 2),
+        'markbot_time_avg': round(markbot_time_total / len(students), 1),
     }
     return render(request, 'core/teachers/assessment-grades.html', context)
 
