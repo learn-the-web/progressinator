@@ -3,6 +3,8 @@
 This file documents all the notable changes for each version of Progressinator.
 Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
+---
+
 ## [2.4.0] — 2019-04-18
 
 ### Added
