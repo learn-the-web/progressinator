@@ -30,7 +30,7 @@ def comment_is_different(data1, data2):
     return empty_is_none(comment1) != empty_is_none(comment2)
 
 
-def crud_grades(request, user_grades, user_grades_index):
+def crud_grades(request, user_grades, assessment_uri_index=None, user_id_index=None):
     posted_grades = {'update': [], 'create': [], 'delete': []}
     post_user_progress_id = request.POST.getlist('user_progress_id')
     post_grade = request.POST.getlist('grade')
@@ -45,7 +45,7 @@ def crud_grades(request, user_grades, user_grades_index):
         user_progress_model = {
             'grade': decimal.Decimal(the_grade) if the_grade is not '' else '',
             'assessment_uri': strip_tags(post_assessment_uri[i].strip()),
-            'user_id': post_user_id[i],
+            'user_id': int(post_user_id[i]),
             'submitted_by': strip_tags(post_submitted_by[i].strip()),
             'excuse_lateness': post_excuse_lateness[i],
             'details': {
@@ -57,7 +57,10 @@ def crud_grades(request, user_grades, user_grades_index):
             if prog_id.strip() is '':
                 posted_grades['create'].append(UserProgress(**user_progress_model))
             else:
-                current_user_progress = user_grades[user_grades_index[user_progress_model['assessment_uri']]]
+                if assessment_uri_index:
+                    current_user_progress = user_grades[assessment_uri_index[user_progress_model['assessment_uri']]]
+                else:
+                    current_user_progress = user_grades[user_id_index[user_progress_model['user_id']]]
 
                 if (decimal.Decimal(current_user_progress.grade).quantize(grade_helper.TWO_DECIMALS) != decimal.Decimal(user_progress_model['grade']).quantize(grade_helper.TWO_DECIMALS)
                     or comment_is_different(current_user_progress.details, user_progress_model)
@@ -67,14 +70,17 @@ def crud_grades(request, user_grades, user_grades_index):
                     current_user_progress.submitted_by = f"{request.user.first_name} {request.user.last_name}"
                     current_user_progress.cheated = False
                     current_user_progress.excuse_lateness = user_progress_model['excuse_lateness']
-                    if 'details' in user_progress_model:
-                        if not isinstance(current_user_progress.details, dict): current_user_progress.details = {}
-                        current_user_progress.details['comment'] = user_progress_model['details']['comment']
+                    if not isinstance(current_user_progress.details, dict): current_user_progress.details = {}
+                    current_user_progress.details['comment'] = user_progress_model['details']['comment']
                     posted_grades['update'].append(current_user_progress)
         else:
             if prog_id.strip():
-                if user_progress_model['assessment_uri'] in user_grades_index:
-                    posted_grades['delete'].append(user_grades[user_grades_index[user_progress_model['assessment_uri']]])
+                if assessment_uri_index:
+                    if user_progress_model['assessment_uri'] in assessment_uri_index:
+                        posted_grades['delete'].append(user_grades[assessment_uri_index[user_progress_model['assessment_uri']]])
+                else:
+                    if user_progress_model['user_id'] in user_id_index:
+                        posted_grades['delete'].append(user_grades[user_id_index[user_progress_model['user_id']]])
 
     for model_type in ('update', 'create'):
         for prog in posted_grades[model_type]:
@@ -258,9 +264,9 @@ def user_grades_save(request, term_id, course_id, user_id):
         return redirect('core:teacher_courses')
 
     user_grades = list(UserProgress.objects.filter(user=user_id))
-    user_grades_index = build_queryset_index(user_grades, 'assessment_uri')
+    assessment_uri_index = build_queryset_index(user_grades, 'assessment_uri')
 
-    crud_grades(request=request, user_grades=user_grades, user_grades_index=user_grades_index)
+    crud_grades(request=request, user_grades=user_grades, assessment_uri_index=assessment_uri_index)
 
     return redirect('core:teacher_user_grades', term_id=term_id, course_id=course_id, user_id=user_id)
 
@@ -372,8 +378,8 @@ def assessment_grades_save(request, term_id, course_id, assessment_id):
 
     students = UserProfile.objects.filter(current_course=course).select_related('user').order_by('user__last_name', 'user__first_name')
     user_grades = list(UserProgress.objects.filter(user__in=[s.user.id for s in students], assessment_uri=assessment_id))
-    user_grades_index = build_queryset_index(user_grades, 'assessment_uri')
+    user_id_index = build_queryset_index(user_grades, 'user_id')
 
-    crud_grades(request=request, user_grades=user_grades, user_grades_index=user_grades_index)
+    crud_grades(request=request, user_grades=user_grades, user_id_index=user_id_index)
 
     return redirect('core:teacher_assessment_grades', term_id=term_id, course_id=course_id, assessment_id=assessment_id)
