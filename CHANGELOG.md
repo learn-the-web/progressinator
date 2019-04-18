@@ -3,6 +3,54 @@
 This file documents all the notable changes for each version of Progressinator.
 Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.4.0] — 2019-04-18
+
+### Added
+
+- The ability to press `Esc` to exit grade editing mode.
+- Added Markbot stats to the assessment grade page.
+
+### Fixed
+
+- Fixed label & input IDs to work on assessment grading page.
+- Fixed a saving bug on the assessment grading page related to user IDs.
+- Fixed a saving bug related to mismatch lateness excuse options.
+- Fixed the latness excuses so they show on the assessment grading page.
+- Reorganize some code for better reusability.
+
+---
+
+## [2.3.0] — 2019-04-10
+
+### Added
+
+- Add the ability to grade all students for a single assignment at a time.
+- Add the ability to edit a single grade at a time.
+- Add shortcut keys to the grading navigation.
+- Add the ability to clear a grade and have it removed from the system.
+- Show letter grades for pass/fail assignments that aren’t 1 or 0.
+
+### Fixed
+
+- Fixed a bug related to user staff & permissions levels.
+
+---
+
+## [2.2.0] — 2019-04-08
+
+### Added
+
+- Next/previous student navigation to the student’s grade pages.
+
+### Changed
+
+- Adjusted the links for each assessment for better findability of the repos & live websites.
+- Simplified percentage decimal places if they’re above 100%.
+
+### Fixed
+
+- Prevent the textarea from being horizontally scaled.
+
 ---
 
 ## [2.1.0] — 2019-01-12
