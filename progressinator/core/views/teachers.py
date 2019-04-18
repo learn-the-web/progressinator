@@ -16,6 +16,10 @@ from progressinator.core.models import Term, Course, UserProgress, UserProgressF
 from progressinator.core.serializers import UserProgressSerializer
 
 
+def empty_is_none(data):
+    return data if data else None
+
+
 def comment_is_different(data1, data2):
     comment1 = ''
     comment2 = ''
@@ -23,7 +27,7 @@ def comment_is_different(data1, data2):
     if data1 and 'comment' in data1: comment1 = data1['comment']
     if 'details' in data2 and 'comment' in data2['details']: comment2 = data2['details']['comment']
 
-    return comment1 != comment2
+    return empty_is_none(comment1) != empty_is_none(comment2)
 
 
 def crud_grades(request, user_grades, user_grades_index):
@@ -44,11 +48,10 @@ def crud_grades(request, user_grades, user_grades_index):
             'user_id': post_user_id[i],
             'submitted_by': strip_tags(post_submitted_by[i].strip()),
             'excuse_lateness': post_excuse_lateness[i],
+            'details': {
+                'comment': post_comments[i].strip(),
+            },
         }
-        if post_comments[i].strip() is not '':
-            user_progress_model['details'] = {
-                'comment': post_comments[i].strip()
-            }
 
         if post_grade[i].strip() is not '':
             if prog_id.strip() is '':
@@ -58,7 +61,7 @@ def crud_grades(request, user_grades, user_grades_index):
 
                 if (decimal.Decimal(current_user_progress.grade).quantize(grade_helper.TWO_DECIMALS) != decimal.Decimal(user_progress_model['grade']).quantize(grade_helper.TWO_DECIMALS)
                     or comment_is_different(current_user_progress.details, user_progress_model)
-                    or current_user_progress.excuse_lateness != user_progress_model['excuse_lateness']
+                    or empty_is_none(current_user_progress.excuse_lateness) != empty_is_none(user_progress_model['excuse_lateness'])
                     ):
                     current_user_progress.grade = user_progress_model['grade']
                     current_user_progress.submitted_by = f"{request.user.first_name} {request.user.last_name}"
@@ -259,7 +262,6 @@ def user_grades_save(request, term_id, course_id, user_id):
 
     crud_grades(request=request, user_grades=user_grades, user_grades_index=user_grades_index)
 
-    # return render(request, 'core/teachers/assessment-grades.html')
     return redirect('core:teacher_user_grades', term_id=term_id, course_id=course_id, user_id=user_id)
 
 
@@ -330,8 +332,6 @@ def assessment_grades(request, term_id, course_id, assessment_id):
                 grade_info['grade']['late'] = True
         all_student_grades.append(grade_info)
 
-    import logging
-
     context = {
         'app_version': settings.APP_PKG['version'],
         'doc_title': f"{assessment['name']} · Teachers",
@@ -375,5 +375,4 @@ def assessment_grades_save(request, term_id, course_id, assessment_id):
 
     crud_grades(request=request, user_grades=user_grades, user_grades_index=user_grades_index)
 
-    # return render(request, 'core/teachers/assessment-grades.html', context)
     return redirect('core:teacher_assessment_grades', term_id=term_id, course_id=course_id, assessment_id=assessment_id)
