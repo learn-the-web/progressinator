@@ -344,6 +344,7 @@ def assessment_grades(request, term_id, course_id, assessment_id):
         'course': course,
         'students': students,
         'assessment': assessment,
+        'excuse_lateness_options': UserProgressLatenessChoices.choices(),
         'all_student_grades': all_student_grades,
         'stats_total_submissions': len(student_grades),
         'stats_pass_rate_avg': stats_pass_rate_total / len(students),
