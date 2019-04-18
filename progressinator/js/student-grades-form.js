@@ -79,6 +79,16 @@
     }
   });
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      hideDefaultControls();
+      showAllSingleEditBtns();
+      [].forEach.call(document.querySelectorAll('.grade-form-wrap'), (gradeForm) => {
+        hideGradeForm(gradeForm);
+      });
+    }
+  });
+
   gradesForm.addEventListener('click', (e) => {
     if (e.target && e.target.dataset.control == 'edit-single-grade') {
       const gradeForm = e.target.parentNode.parentNode.parentNode.querySelector('.grade-form-wrap');
