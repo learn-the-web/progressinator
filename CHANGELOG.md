@@ -5,6 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.6.0] — 2019-04-30
+
+### Added
+
+- Added the ability to download a single student’s grades.
+- Hover states for the course status tables.
+
+---
+
 ## [2.5.0] — 2019-04-30
 
 ### Added
