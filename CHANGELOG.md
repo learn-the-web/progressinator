@@ -17,7 +17,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 - Fixed label & input IDs to work on assessment grading page.
 - Fixed a saving bug on the assessment grading page related to user IDs.
 - Fixed a saving bug related to mismatch lateness excuse options.
-- Fixed the latness excuses so they show on the assessment grading page.
+- Fixed the lateness excuses so they show on the assessment grading page.
 - Reorganize some code for better reusability.
 
 ---
