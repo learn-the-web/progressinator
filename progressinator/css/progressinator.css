@@ -144,6 +144,11 @@
   min-width: 36em;
 }
 
+.grade-statuses tr:hover,
+.assessment-statuses tr:hover {
+  background-color: rgba(0, 0, 0, .05);
+}
+
 .grade-status-failing {
 
 }
