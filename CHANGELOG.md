@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.6.1] — 2019-04-30
+
+### Fixed
+
+- Fixed a bug when student names had UTF-8 characters in them instead of basic ASCII.
+
+---
+
 ## [2.6.0] — 2019-04-30
 
 ### Added

@@ -1,4 +1,4 @@
-import decimal, math, datetime
+import decimal, math, datetime, urllib
 import pendulum
 import csv
 
@@ -105,7 +105,7 @@ def user_grades_download(request, term_id, course_id, user_id):
 
     response = HttpResponse(content_type='text/csv; charset=utf-8')
     # response = HttpResponse(content_type='text/plain; charset=utf-8')
-    response['Content-Disposition'] = f"attachment; filename=\"{student_profile.user.last_name}-{student_profile.user.first_name}-{course.slug}-{term.slug}.csv\""
+    response['Content-Disposition'] = f"attachment; filename*=UTF-8''{urllib.parse.quote_plus(student_profile.user.last_name)}-{urllib.parse.quote_plus(student_profile.user.first_name)}-{course.slug}-{term.slug}.csv"
     writer = csv.writer(response, quoting=csv.QUOTE_ALL)
 
     first_row = ['Name:', f"{student_profile.user.first_name} {student_profile.user.last_name}"]
