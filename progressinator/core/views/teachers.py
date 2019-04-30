@@ -1,5 +1,6 @@
 import decimal, math, datetime
 import pendulum
+import csv
 
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -10,7 +11,7 @@ from django.conf import settings
 from django.utils.html import strip_tags
 from django import forms
 
-from progressinator.common.util import build_dict_index, build_queryset_index, model_to_dict
+from progressinator.common.util import build_dict_index, build_queryset_index, model_to_dict, NumberFormatter
 import progressinator.common.grades as grade_helper
 from progressinator.core.models import Term, Course, UserProgress, UserProgressForm, UserProgressLatenessChoices, UserProfile
 from progressinator.core.serializers import UserProgressSerializer
@@ -172,6 +173,7 @@ def course_status(request, term_id, course_id):
         'h1_title': f"{course.data['title']} ·",
         'hide_markbot': True,
         'course': course,
+        'term': term,
         'students': students,
         'stats_grade_avg': stats_grade_total / students.count() if students.count() > 0 else 0,
         'stats_actual_avg': stats_actual_total / students.count() if students.count() > 0 else 0,
@@ -183,6 +185,47 @@ def course_status(request, term_id, course_id):
     }
 
     return render(request, 'core/teachers/course-status.html', context)
+
+
+@staff_member_required(login_url='core:sign_in')
+def download(request, term_id, course_id, student_grade_group='all'):
+    try:
+        term = Term.objects.get(slug=term_id)
+        course = Course.objects.get(slug=course_id, term=term)
+    except:
+        return redirect('core:teacher_courses')
+
+    if student_grade_group not in ['all', 'failures']:
+        return redirect('core:teacher_courses')
+
+    students = UserProfile.objects.filter(current_course=course).select_related('user').order_by('user__last_name', 'user__first_name')
+    assessment_index = build_dict_index(course.data['assessments'], 'uri')
+    all_grades = UserProgress.objects.filter(user_id__in=(s.user_id for s in students))
+    max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
+
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = f"attachment; filename=\"{course.slug}-{term.slug}-{student_grade_group}.csv\""
+    writer = csv.writer(response, quoting=csv.QUOTE_ALL)
+    writer.writerow(['Last name','First name','GitHub username','Section','Grade','Actual','Status'] + [a['name'] for a in course.data['assessments'] if a['assessment_each_algonquin'] > 0])
+
+    for student in students:
+        student_grades = (grade_helper.calc_grade(g, assessment_index, course.data['assessments']) for g in all_grades if g.user_id == student.user_id)
+        student.current_grade = decimal.Decimal(math.fsum(student_grades))
+        student.current_grade_max = max_assessments_per_section[student.current_section]
+        student.current_grade_average = student.current_grade / student.current_grade_max if student.current_grade_max > 0 else 0
+        if student_grade_group == 'failures' and student.current_grade_average >= decimal.Decimal(.5): continue
+        student_assessment_index = {g.assessment_uri:g.grade for g in all_grades if g.user_id == student.user_id}
+        student_details = [student.user.last_name, student.user.first_name, student.user.username, student.current_section, grade_helper.grade_as_letter(student.current_grade_average), NumberFormatter.percent_humanize(student.current_grade, small=True), grade_helper.grade_as_status(student.current_grade_average)]
+        student_grade_data = []
+        for assessment in course.data['assessments']:
+            if assessment['assessment_each_algonquin'] > 0:
+                if assessment['uri'] in student_assessment_index:
+                    student_grade_data.append(NumberFormatter.percent_humanize(student_assessment_index[assessment['uri']], small=True))
+                else:
+                    student_grade_data.append('')
+        writer.writerow(student_details + student_grade_data)
+
+    return response
 
 
 @staff_member_required(login_url='core:sign_in')

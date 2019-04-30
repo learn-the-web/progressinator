@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.5.0] — 2019-04-30
+
+### Added
+
+- Added the ability to download the course grades as a CSV file.
+
+---
+
 ## [2.4.0] — 2019-04-18
 
 ### Added

@@ -120,6 +120,15 @@
                 </ul>
               </div>
             </div>
+            <div class="pad-t-1-2">
+              <div class="course-email-links relative">
+                <h3 class="color-grey-dark pin-lc" aria-label="Download grades…"><i class="icon i-3-4"><svg><use xlink:href="#icon-down"></use></svg></i></h3>
+                <ul class="list-group-inline push-0 italic week-list-tasks">
+                  <li class="pad-t-1-8"><a href="{% url 'core:teacher_download' term_id=term.slug course_id=course.slug student_grade_group='all' %}" download="{{course.slug}}-{{term.slug}}-all.csv">Download everybody</a></li>
+                  <li class="pad-t-1-8"><a href="{% url 'core:teacher_download' term_id=term.slug course_id=course.slug student_grade_group='failures' %}" download="{{course.slug}}-{{term.slug}}-failures.csv">Download failing students</a></li>
+                </ul>
+              </div>
+            </div>
           {% else %}
             <strong class="block pad-t-1-2 giga">No students registered in this course for the term.</strong>
           {% endif %}
