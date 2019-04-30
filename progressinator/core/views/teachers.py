@@ -203,7 +203,7 @@ def download(request, term_id, course_id, student_grade_group='all'):
     all_grades = UserProgress.objects.filter(user_id__in=(s.user_id for s in students))
     max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
 
-    response = HttpResponse(content_type='text/csv')
+    response = HttpResponse(content_type='text/csv; charset=utf-8')
     response['Content-Disposition'] = f"attachment; filename=\"{course.slug}-{term.slug}-{student_grade_group}.csv\""
     writer = csv.writer(response, quoting=csv.QUOTE_ALL)
     writer.writerow(['Last name','First name','GitHub username','Section','Grade','Actual','Status'] + [a['name'] for a in course.data['assessments'] if a['assessment_each_algonquin'] > 0])
