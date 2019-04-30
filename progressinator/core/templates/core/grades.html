@@ -66,6 +66,13 @@
             <span class="nano">(<span class="marking-scheme-total">{{course.data.totals.projects}}</span> @ <data value="{{course.data.totals.projects_each_algonquin | times:100}}%" title="{{course.data.totals.projects_each_algonquin | times:100}}%">≈{{course.data.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
         </dl>
+        <hr>
+        <div class="course-email-links relative">
+          <h3 class="color-grey-dark pin-lc" aria-label="Download grades…"><i class="icon i-3-4"><svg><use xlink:href="#icon-down"></use></svg></i></h3>
+          <ul class="list-group-inline push-0 italic week-list-tasks">
+            <li class="pad-t-1-8"><a href="{% url 'core:user_grades_download' term_id=term.slug course_id=course.slug user_id=student_user_id %}" download="{{student_profile.user.last_name}}-{{student_profile.user.first_name}}-{{course.slug}}-{{term.slug}}.csv">Download grades</a></li>
+          </ul>
+        </div>
       </section>
     </div>
 

@@ -101,9 +101,11 @@ def course_grades(request, course_id):
         'h1_title': course.data['title'],
         'username': request.user.username,
         'github_username': request.user.username,
+        'student_user_id': request.user.id,
         'current_grade': current_grade,
         'current_grade_max': current_grade_max,
         'current_grade_average': current_grade / current_grade_max if current_grade_max else False,
+        'term': course.term,
         'course': course,
         'excuse_lateness_options': UserProgressLatenessChoices.choices(),
         'today': pendulum.now(tz='America/Toronto')
