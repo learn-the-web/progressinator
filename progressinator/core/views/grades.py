@@ -80,6 +80,7 @@ def course_grades(request, course_id):
         if prog.assessment_uri in assessment_index:
             prog.late = False
             if (prog.created
+                and user_profile and user_profile['current_section']
                 and 'user_due_date_algonquin' in course.data['assessments'][assessment_index[prog.assessment_uri]]
                 and prog.created > course.data['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']
                 and (prog.excuse_lateness == 'LATENESS_NOT_EXCUSED' or not prog.excuse_lateness)

@@ -145,7 +145,10 @@ def course_status(request, term_id, course_id):
     for student in students:
         student_grades = (grade_helper.calc_grade(g, assessment_index, course.data['assessments']) for g in all_grades if g.user_id == student.user_id)
         student.current_grade = decimal.Decimal(math.fsum(student_grades))
-        student.current_grade_max = max_assessments_per_section[student.current_section]
+        if student.current_section in max_assessments_per_section:
+            student.current_grade_max = max_assessments_per_section[student.current_section]
+        else:
+            student.current_grade_max = 1
         student.current_grade_average = student.current_grade / student.current_grade_max if student.current_grade_max > 0 else 0
         stats_grade_total += student.current_grade_average
         stats_actual_total += student.current_grade
@@ -246,6 +249,9 @@ def user_grades(request, term_id, course_id, user_id):
         if student_profile and 'due_dates_algonquin' in a and student_profile.current_section in a['due_dates_algonquin']:
             a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][student_profile.current_section], tz='America/Toronto')
 
+    import logging
+    logging.debug(student_profile.current_section)
+
     if student_profile and student_profile.current_section:
         course.data['assessments'] = sorted(course.data['assessments'], key=lambda k: k['user_due_date_algonquin'])
     assessment_index = build_dict_index(course.data['assessments'], 'uri')
@@ -254,6 +260,7 @@ def user_grades(request, term_id, course_id, user_id):
         if prog.assessment_uri in assessment_index:
             prog.late = False
             if (prog.created
+                and student_profile and student_profile.current_section
                 and 'user_due_date_algonquin' in course.data['assessments'][assessment_index[prog.assessment_uri]]
                 and prog.created > course.data['assessments'][assessment_index[prog.assessment_uri]]['user_due_date_algonquin']
                 and (prog.excuse_lateness == 'LATENESS_NOT_EXCUSED' or not prog.excuse_lateness)
@@ -264,7 +271,10 @@ def user_grades(request, term_id, course_id, user_id):
             course.data['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             current_grade += grade_helper.calc_grade(prog, assessment_index, course.data['assessments'])
 
-    current_grade_max = max_assessments_per_section[student_profile.current_section]
+    if student_profile.current_section in max_assessments_per_section:
+        current_grade_max = max_assessments_per_section[student_profile.current_section]
+    else:
+        current_grade_max = 1
 
     context = {
         'app_version': settings.APP_PKG['version'],
@@ -372,15 +382,19 @@ def assessment_grades(request, term_id, course_id, assessment_id):
         grade_info['student_section'] = student.current_section
         grade_info['github_username'] = student.user.username
         grade_info['assessment_each_algonquin'] = assessment['assessment_each_algonquin']
-        grade_info['user_due_date_algonquin'] = pendulum.parse(assessment['due_dates_algonquin'][student.current_section])
-        if 'grade' in grade_info:
-            grade_info['grade']['late'] = False
-            if ('created' in grade_info['grade']
-                and grade_info['grade']['created']
-                and grade_info['grade']['created'] > grade_info['user_due_date_algonquin']
-                and (grade_info['grade']['excuse_lateness'] == 'LATENESS_NOT_EXCUSED' or not grade_info['grade']['excuse_lateness'])
-                ):
-                grade_info['grade']['late'] = True
+        if student.current_section:
+            grade_info['user_due_date_algonquin'] = pendulum.parse(assessment['due_dates_algonquin'][student.current_section])
+            if 'grade' in grade_info:
+                grade_info['grade']['late'] = False
+                if ('created' in grade_info['grade']
+                    and grade_info['grade']['created']
+                    and grade_info['grade']['created'] > grade_info['user_due_date_algonquin']
+                    and (grade_info['grade']['excuse_lateness'] == 'LATENESS_NOT_EXCUSED' or not grade_info['grade']['excuse_lateness'])
+                    ):
+                    grade_info['grade']['late'] = True
+        else:
+            if 'grade' in grade_info:
+                grade_info['grade']['late'] = False
         all_student_grades.append(grade_info)
 
     context = {

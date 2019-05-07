@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.6.2] — 2019-05-07
+
+### Fixed
+
+- Fixed a few bugs for self-directed summer courses when students aren’t assigned to sections, but still have course profiles.
+
+---
+
 ## [2.6.1] — 2019-04-30
 
 ### Fixed
