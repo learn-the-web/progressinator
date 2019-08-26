@@ -122,4 +122,3 @@ def course_grades(request, course_id):
         response.set_cookie('ltw-course-section', f'{user_profile_for_cookie.current_course.slug}-{user_profile_for_cookie.current_section}', max_age=settings.SESSION_COOKIE_AGE, domain=settings.SESSION_COOKIE_DOMAIN, secure=settings.SESSION_COOKIE_SECURE)
 
     return response
-

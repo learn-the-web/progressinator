@@ -1,36 +1,38 @@
 {% extends 'default.html' %}
 
 {% block wrapper %}
-  <div class="wrapper gutter-1-2 push pad-t pad-b-1-8">
+  <div class="pad-t pad-b">
     {% for course in courses %}
-      <section class="push" tabindex="-1">
-        <div class="grid grid-middle pad-t-1-4 pad-b-1-4">
-          <div class="unit [ xs-1-2 ]">
-            <div class="push-1-4">
-              <h2 class="exa push-0">
+      <section class="{% if course.term_id == current_term.id %}{% cycle 'incremental-section-3' 'incremental-section-4' %}{% else %}{% cycle '' 'incremental-section-1' %}{% endif %} pad-t-1-4 pad-b-1-4 gutter-1-4" tabindex="-1">
+        <div class="wrapper">
+          <div class="grid grid-middle">
+            <div class="unit [ m-3-4 ]">
+              <h2 class="{% if course.term_id == current_term.id %}exa{% else %}giga{% endif %} push-0">
                 <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{course.data.title}}</a>
-                <span class="color-grey not-bold exa">({{course.term.name}})</span>
+                <span class="color-grey not-bold">({{course.term.name}})</span>
               </h2>
+              <ol class="week-list-tasks list-group-inline milli italic push-0">
+                <li><strong>{{course.data.totals.students | default:0}} student{% if course.data.totals.students != 1 %}s{% endif %}</strong></li>
+                <li>{{course.data.totals.weeks}} week{% if course.data.totals.weeks != 1 %}s{% endif %}</li>
+                <li>{{course.data.totals.videos}} video playlist{% if course.data.totals.videos != 1 %}s{% endif %}</li>
+                <li>{{course.data.totals.activities}} activit{% if course.data.totals.videos == 1 %}y{% else %}ies{% endif %}</li>
+                <li>{{course.data.totals.lessons}} step-by-step lesson{% if course.data.totals.lessons != 1 %}s{% endif %}</li>
+                <li>{{course.data.totals.exercises}} exercise{% if course.data.totals.exercises != 1 %}s{% endif %}</li>
+                <li>{{course.data.totals.projects}} big project{% if course.data.totals.projects != 1 %}s{% endif %}</li>
+              </ol>
+            </div>
+            <div class="unit [ m-1-4 ] text-right">
+              <a class="btn btn-muted {% if course.term_id == current_term.id %}milli{% else %}nano{% endif %}" href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}" aria-label="View {{course.data.title}} progress">
+                <span class="icon-label">View grades</span>
+                <i class="icon i-20 i-shift-right"><svg><use xlink:href="#icon-right"></use></svg></i>
+              </a>
             </div>
           </div>
-          <div class="unit [ xs-1-2 ] text-right">
-            <a class="btn btn-muted milli" href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}" aria-label="View {{course.data.title}} progress">
-              <span class="icon-label">View grades</span>
-              <i class="icon i-20 i-shift-right"><svg><use xlink:href="#icon-right" /></svg></i>
-            </a>
-          </div>
         </div>
-        <hr class="push-1-8">
-        <ol class="week-list-tasks list-group-inline milli italic pad-t-1-4 push-0">
-          <li><strong>{{course.data.totals.students | default:0}} student{% if course.data.totals.students != 1 %}s{% endif %}</strong></li>
-          <li>{{course.data.totals.weeks}} week{% if course.data.totals.weeks != 1 %}s{% endif %}</li>
-          <li>{{course.data.totals.videos}} video playlist{% if course.data.totals.videos != 1 %}s{% endif %}</li>
-          <li>{{course.data.totals.activities}} activit{% if course.data.totals.videos == 1 %}y{% else %}ies{% endif %}</li>
-          <li>{{course.data.totals.lessons}} step-by-step lesson{% if course.data.totals.lessons != 1 %}s{% endif %}</li>
-          <li>{{course.data.totals.exercises}} exercise{% if course.data.totals.exercises != 1 %}s{% endif %}</li>
-          <li>{{course.data.totals.projects}} big project{% if course.data.totals.projects != 1 %}s{% endif %}</li>
-        </ol>
       </section>
+      {% if forloop.counter == total_courses_in_current_term %}
+        <div class="pad-t"><hr class="push-1-2"></div>
+      {% endif %}
     {% endfor %}
   </div>
 {% endblock %}

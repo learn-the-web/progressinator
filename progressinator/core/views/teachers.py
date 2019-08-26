@@ -100,8 +100,19 @@ def crud_grades(request, user_grades, assessment_uri_index=None, user_id_index=N
 
 @staff_member_required(login_url='core:sign_in')
 def courses(request):
-    terms = Term.objects.filter(end_date__gte=datetime.date(1982, 10, 28))[:2]
+    current_term = None
+    total_courses_in_current_term = 0
+    terms = Term.objects.filter(end_date__gte=datetime.date(1982, 10, 28))
     courses = Course.objects.filter(term__in=terms)
+
+    for term in terms:
+        if pendulum.now() >= pendulum.instance(datetime.datetime.combine(term.start_date, datetime.time.min)) and pendulum.now() <= pendulum.instance(datetime.datetime.combine(term.end_date, datetime.time.max)):
+            current_term = term
+
+    if current_term:
+        for course in courses:
+            if course.term_id == current_term.id:
+                total_courses_in_current_term += 1
 
     context = {
         'app_version': settings.APP_PKG['version'],
@@ -111,6 +122,8 @@ def courses(request):
         'nav_current': 'teachers',
         'h1_title': "Teachers ·",
         'hide_markbot': True,
+        'current_term': current_term,
+        'total_courses_in_current_term': total_courses_in_current_term,
     }
 
     for course in context['courses']:

@@ -15,4 +15,4 @@ class Course(models.Model):
     class Meta:
         verbose_name = "course"
         verbose_name_plural = "courses"
-        ordering = ('order',)
+        ordering = ('term', 'order',)
