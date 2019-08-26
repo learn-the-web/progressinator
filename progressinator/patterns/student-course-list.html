@@ -1,0 +1,5 @@
+{% for k, course in courses.items %}
+  {% if course.term_id != current_term.id %}
+    {% include 'student-course-list-item.html' %}
+  {% endif %}
+{% endfor %}

@@ -1,4 +1,4 @@
-import decimal, math
+import decimal, math, datetime
 import pendulum
 
 from django.http import HttpResponse, JsonResponse
@@ -23,9 +23,60 @@ def courses(request):
         user_profiles = None
 
     courses = CourseHelper.courses_as_dict(Course.objects.filter(term=settings.COURSES['SELF_DIRECTED_ID']))
+    grades = {}
     user_courses = CourseHelper.courses_as_dict(Course.objects.filter(id__in=(p.current_course_id for p in user_profiles))) if user_profiles else None
     if user_courses: courses.update(user_courses)
     user_profiles_details = CourseHelper.user_profiles_as_dict(user_profiles) if user_profiles else None
+
+    # compare_date = datetime.date.today()
+    compare_date = datetime.date(2019, 9, 4)
+    current_week = None
+    current_week_number = None
+    next_week = None
+
+    try:
+        current_term = Term.objects.get(start_date__lte=compare_date, end_date__gte=compare_date)
+        for slug, course in courses.items():
+            if course['term_id'] == current_term.id:
+                current_course = course
+    except:
+        current_term = None
+        current_course = None
+
+    user_grades = UserProgress.objects.filter(user=request.user)
+    for slug, course in courses.items():
+        user_profile = None
+        grades[slug] = {}
+        for ups, up in user_profiles_details.items():
+            if up['current_course_id'] == course['id']:
+                user_profile = up
+        grades[slug]['grade'] = decimal.Decimal(0)
+        grades[slug]['max_assessments_per_section'] = grade_helper.max_assessments_per_section(course['data']['assessments'])
+        assessment_index = build_dict_index(course['data']['assessments'], 'uri')
+        for prog in user_grades:
+            if prog.assessment_uri in assessment_index:
+                grades[slug]['grade'] += grade_helper.calc_grade(prog, assessment_index, course['data']['assessments'])
+        if user_profile and user_profile['current_course_slug'] == slug and user_profile['current_section'] in grades[slug]['max_assessments_per_section']:
+            grades[slug]['current_grade_max'] = grades[slug]['max_assessments_per_section'][user_profile['current_section']]
+        else:
+            grades[slug]['current_grade_max'] = False
+
+    if current_course and 'weeks' in current_course['data']:
+        for week_number, week in current_course['data']['weeks'].items():
+            if 'start_date' not in week or 'end_date' not in week:
+                continue
+            if pendulum.instance(datetime.datetime.combine(compare_date, datetime.time.min)) >= pendulum.parse(week['start_date']) and pendulum.instance(datetime.datetime.combine(compare_date, datetime.time.min)) <= pendulum.parse(week['end_date']):
+                current_week = week
+                current_week['start_date'] = pendulum.parse(current_week['start_date'])
+                current_week['end_date'] = pendulum.parse(current_week['end_date'])
+                current_week_number = int(week_number)
+                break
+
+    if current_week:
+        if str(current_week_number + 1) in current_course['data']['weeks']:
+            next_week = current_course['data']['weeks'][str(current_week_number + 1)]
+            next_week['start_date'] = pendulum.parse(next_week['start_date'])
+            next_week['end_date'] = pendulum.parse(next_week['end_date'])
 
     context = {
         'app_version': settings.APP_PKG['version'],
@@ -34,9 +85,17 @@ def courses(request):
         'courses': courses,
         'user_profiles_details': user_profiles_details,
         'nav_current': 'courses',
+        'current_term': current_term,
+        'current_course': current_course,
+        'grades': grades,
+        'current_week': current_week,
+        'next_week': next_week,
     }
 
-    response = render(request, 'core/courses.html', context)
+    if current_term:
+        response = render(request, 'core/courses-with-term.html', context)
+    else:
+        response = render(request, 'core/courses-without-term.html', context)
 
     if user_profiles:
         user_profile_for_cookie = user_profiles.latest('current_course__term__start_date')

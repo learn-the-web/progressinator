@@ -1,0 +1,62 @@
+{% load data %}
+{% load courses %}
+
+<div class="wrapper">
+  <section class="topic-section pad-t pad-b" tabindex="-1">
+    <div class="wrapper">
+      <div class="topic-wrap">
+        {% if is_current %}
+          <strong class="italic push-0 mega color-grey-dark">Current term</strong>
+        {% endif %}
+        <string class="progress-meter icon pin-lc push-0" aria-label="{% if grades|get_course_grade:course.slug|pretty_percent_raw > 100 %}100{% else %}{{grades|get_course_grade:course.slug|pretty_percent_raw|floatformat:'0'}}{% endif %} complete the {{course.data.title}}">
+          <svg width="256" height="256" viewBox="0 0 256 256">
+            <path fill="none" stroke="#a8a6af" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M128 12A113 113 0 1 1 15 125 113 113 0 0 1 128 12"/>
+            <path stroke-dasharray="710" stroke-dashoffset="{{grades|course_grade_meter:course.slug}}" fill="none" stroke="#00675a" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" d="M128 12A113 113 0 1 1 15 125 113 113 0 0 1 128 12"/>
+            {% with tick=grades|course_grade_meter_tick:course.slug %}
+              <g transform="rotate({{tick}} 128 128)" id="max-tick" fill="none" stroke="#00deaf" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" {% if tick <= 0 or tick >= 100 %}opacity="0"{% endif %}>
+                <line id="tick" x1="128" x2="128" y2="25"/>
+                <line id="arm" x1="128" x2="128" y1="9" y2="125" opacity="0"/>
+              </g>
+            {% endwith %}
+          </svg>
+          <span class="pin-ct milli brand-dark not-bold pad-t-1-2 color-grey-dark">%</span>
+          <span class="pin-c zetta brand-dark bold">{% if grades|get_course_grade:course.slug|pretty_percent_raw > 100 %}100{% else %}{{grades|get_course_grade:course.slug|pretty_percent_raw|floatformat:'0'}}{% endif %}</span>
+        </string>
+        <div class="grid grid-middle">
+          <div class="unit [ xs-1-2 ]">
+            <div class="push-1-4">
+              <h2 class="{% if is_current %}exa{% else %}tera{% endif %} ib push-0"><a href="{% url 'core:grades' course_id=course.slug %}">{{course.data.title}}</a></h2>
+              {% if course.slug in user_profiles_details %}
+                {% for id, det in user_profiles_details.items %}
+                  {% if id == course.slug %}
+                    <span class="color-grey push-r-1-4 {% if is_current %}exa{% else %}tera{% endif %}">({{det.current_term_name}})</span>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              {% if is_current %}
+                <a class="icon icon-feed i-3-4 link-box-no-mark color-grey-dark push-1-4" href="https://learn-the-web.algonquindesign.ca/courses/calendar-feeds/" title="Calendar feed" aria-label="Calendar feed">
+                  <svg><use xlink:href="#icon-feed"></use></svg>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+          <div class="unit [ xs-1-2 ] text-right">
+            <a class="btn btn-muted {% if is_current %}milli{% else %}nano{% endif %}" href="{% url 'core:grades' course_id=course.slug %}" aria-label="View {{course.data.title}} progress">
+              <span class="icon-label">View progress</span>
+              <i class="icon i-20 i-shift-right"><svg><use xlink:href="#icon-right" /></svg></i>
+            </a>
+          </div>
+        </div>
+        <ol class="week-list-tasks list-group-inline milli italic push-0">
+          <li>{{course.data.totals.weeks}} week{% if course.data.totals.weeks != 1 %}s{% endif %}</li>
+          <li>{{course.data.totals.videos}} video playlist{% if course.data.totals.videos != 1 %}s{% endif %}</li>
+          <li>{{course.data.totals.activities}} activit{% if course.data.totals.videos == 1 %}y{% else %}ies{% endif %}</li>
+          <li>{{course.data.totals.lessons}} step-by-step lesson{% if course.data.totals.lessons != 1 %}s{% endif %}</li>
+          <li>{{course.data.totals.exercises}} exercise{% if course.data.totals.exercises != 1 %}s{% endif %}</li>
+          <li>{{course.data.totals.projects}} big project{% if course.data.totals.projects != 1 %}s{% endif %}</li>
+        </ol>
+        <p class="push-0 milli">{{course.data.description}}</p>
+      </div>
+    </div>
+  </section>
+</div>

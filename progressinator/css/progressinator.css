@@ -396,3 +396,25 @@
   }
 
 }
+
+.progress-meter {
+  display: none;
+  height: 5rem;
+  width: 5rem;
+}
+
+@media only screen and (min-width: 60em) {
+
+  .progress-meter {
+    display: block;
+  }
+
+}
+
+.progress-arrow {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 42px;
+  left: 100%;
+}

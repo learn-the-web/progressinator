@@ -52,6 +52,11 @@ def setup_course(course):
             print(f"The assessment “{a['uri']}” from “{course['course']}” already exists.")
         assessment_uris.append(a['uri'])
 
+    for week_number, week in course['weeks'].items():
+        this_week = str(course['start_week'] + int(week_number) - 1).zfill(2)
+        course['weeks'][week_number]['start_date'] = pendulum.parse(f"{course['year']}-W{this_week}-1").to_date_string()
+        course['weeks'][week_number]['end_date'] = pendulum.parse(f"{course['year']}-W{this_week}-5").to_date_string()
+
     return course
 
 

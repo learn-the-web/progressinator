@@ -71,6 +71,8 @@ def calc_grade(grade, assessment_index, assessments):
 def max_assessments_per_section(assessments):
     max_per_section = {}
     for assessment in assessments:
+        if 'due_dates_algonquin' not in assessment:
+            continue
         if len(assessment['due_dates_algonquin']) > 0:
             for (due_date_section, due_date) in assessment['due_dates_algonquin'].items():
                 if due_date_section not in max_per_section: max_per_section[due_date_section] = 0
