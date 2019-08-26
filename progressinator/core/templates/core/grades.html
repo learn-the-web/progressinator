@@ -66,6 +66,14 @@
           </dd>
         </dl>
         {% include 'markbot-stats.html' %}
+        {% if user.is_staff and all_student_courses %}
+          <h2 class="class-heading push-1-2 giga">Other registered courses</h2>
+          <ul>
+            {% for course in all_student_courses %}
+              <li><a href="{% url 'core:teacher_user_grades' term_id=term.slug course_id=course.current_course.slug user_id=student_profile.user.id %}">{{course.current_course.data.title}} ({{term.name}})</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
         <hr>
         <div class="course-email-links relative">
           <h3 class="color-grey-dark pin-lc" aria-label="Download grades…"><i class="icon i-3-4"><svg><use xlink:href="#icon-down"></use></svg></i></h3>

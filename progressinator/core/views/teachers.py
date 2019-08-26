@@ -253,6 +253,7 @@ def user_grades(request, term_id, course_id, user_id):
     except:
         return redirect('core:teacher_courses')
 
+    all_student_courses = UserProfile.objects.filter(user=user_id).exclude(current_course=course).select_related('current_course')
     user_grades = list(UserProgress.objects.filter(user=user_id))
     current_grade = decimal.Decimal(0.0)
     all_students = UserProfile.objects.filter(current_course=course).select_related('user').order_by('user__last_name', 'user__first_name')
@@ -333,6 +334,7 @@ def user_grades(request, term_id, course_id, user_id):
             'full_name': f"{student_profile.user.first_name} {student_profile.user.last_name}",
             'github_url': f"https://github.com/{student_profile.user.username}",
         },
+        'all_student_courses': all_student_courses,
         'all_students': all_students,
         'markbot_commits_min': markbot_commits_min,
         'markbot_commits_max': markbot_commits_max,
