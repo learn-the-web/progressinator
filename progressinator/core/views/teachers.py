@@ -257,13 +257,16 @@ def user_grades(request, term_id, course_id, user_id):
     current_grade = decimal.Decimal(0.0)
     all_students = UserProfile.objects.filter(current_course=course).select_related('user').order_by('user__last_name', 'user__first_name')
     max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
+    markbot_commits_min = 10000000
+    markbot_commits_max = 0
+    markbot_commits_total = 0
+    markbot_time_min = 10000000
+    markbot_time_max = 0
+    markbot_time_total = 0
 
     for a in course.data['assessments']:
         if student_profile and 'due_dates_algonquin' in a and student_profile.current_section in a['due_dates_algonquin']:
             a['user_due_date_algonquin'] = pendulum.parse(a['due_dates_algonquin'][student_profile.current_section], tz='America/Toronto')
-
-    import logging
-    logging.debug(student_profile.current_section)
 
     if student_profile and student_profile.current_section:
         course.data['assessments'] = sorted(course.data['assessments'], key=lambda k: k['user_due_date_algonquin'])
@@ -284,10 +287,29 @@ def user_grades(request, term_id, course_id, user_id):
             course.data['assessments'][assessment_index[prog.assessment_uri]]['grade'] = prog
             current_grade += grade_helper.calc_grade(prog, assessment_index, course.data['assessments'])
 
+            if prog.details and 'number_of_commits' in prog.details:
+                markbot_commits_total += prog.details['number_of_commits']
+                if prog.details['number_of_commits'] < markbot_commits_min:
+                    markbot_commits_min = prog.details['number_of_commits']
+                if prog.details['number_of_commits'] > markbot_commits_max:
+                    markbot_commits_max = prog.details['number_of_commits']
+
+            if prog.details and 'estimated_time' in prog.details:
+                markbot_time_total += float(prog.details['estimated_time'])
+                if float(prog.details['estimated_time']) < markbot_time_min:
+                    markbot_time_min = float(prog.details['estimated_time'])
+                if float(prog.details['estimated_time']) > markbot_time_max:
+                    markbot_time_max = float(prog.details['estimated_time'])
+
     if student_profile.current_section in max_assessments_per_section:
         current_grade_max = max_assessments_per_section[student_profile.current_section]
     else:
         current_grade_max = 1
+
+    if markbot_commits_min >= 10000000:
+        markbot_commits_min = 0
+    if markbot_time_min >= 10000000:
+        markbot_time_min = 0
 
     context = {
         'app_version': settings.APP_PKG['version'],
@@ -312,6 +334,12 @@ def user_grades(request, term_id, course_id, user_id):
             'github_url': f"https://github.com/{student_profile.user.username}",
         },
         'all_students': all_students,
+        'markbot_commits_min': markbot_commits_min,
+        'markbot_commits_max': markbot_commits_max,
+        'markbot_commits_avg': round(markbot_commits_total / len(all_students)),
+        'markbot_time_min': round(markbot_time_min, 2),
+        'markbot_time_max': round(markbot_time_max, 2),
+        'markbot_time_avg': round(markbot_time_total / len(all_students), 1),
     }
 
     if student_profile:
@@ -376,19 +404,25 @@ def assessment_grades(request, term_id, course_id, assessment_id):
 
             if grade_info['grade']['details'] and 'number_of_commits' in grade_info['grade']['details']:
                 show_markbot_stats = True
-                markbot_commits_total += grade_info['grade']['details']['number_of_commits']
-                if grade_info['grade']['details']['number_of_commits'] < markbot_commits_min:
-                    markbot_commits_min = grade_info['grade']['details']['number_of_commits']
-                if grade_info['grade']['details']['number_of_commits'] > markbot_commits_max:
-                    markbot_commits_max = grade_info['grade']['details']['number_of_commits']
+                if (grade_info['grade']['details']['estimated_time'] is not None
+                    and grade_info['grade']['details']['estimated_time'] is not False
+                    and float(grade_info['grade']['details']['estimated_time']) > 0):
+                    markbot_commits_total += grade_info['grade']['details']['number_of_commits']
+                    if grade_info['grade']['details']['number_of_commits'] < markbot_commits_min:
+                        markbot_commits_min = grade_info['grade']['details']['number_of_commits']
+                    if grade_info['grade']['details']['number_of_commits'] > markbot_commits_max:
+                        markbot_commits_max = grade_info['grade']['details']['number_of_commits']
 
             if grade_info['grade']['details'] and 'estimated_time' in grade_info['grade']['details']:
                 show_markbot_stats = True
-                markbot_time_total += float(grade_info['grade']['details']['estimated_time'])
-                if float(grade_info['grade']['details']['estimated_time']) < markbot_time_min:
-                    markbot_time_min = float(grade_info['grade']['details']['estimated_time'])
-                if float(grade_info['grade']['details']['estimated_time']) > markbot_time_max:
-                    markbot_time_max = float(grade_info['grade']['details']['estimated_time'])
+                if (grade_info['grade']['details']['estimated_time'] is not None
+                    and grade_info['grade']['details']['estimated_time'] is not False
+                    and float(grade_info['grade']['details']['estimated_time']) > 0):
+                    markbot_time_total += float(grade_info['grade']['details']['estimated_time'])
+                    if float(grade_info['grade']['details']['estimated_time']) < markbot_time_min:
+                        markbot_time_min = float(grade_info['grade']['details']['estimated_time'])
+                    if float(grade_info['grade']['details']['estimated_time']) > markbot_time_max:
+                        markbot_time_max = float(grade_info['grade']['details']['estimated_time'])
 
         grade_info['name'] = f"{student.user.last_name}, {student.user.first_name}"
         grade_info['user_id'] = student.user.id
@@ -409,6 +443,11 @@ def assessment_grades(request, term_id, course_id, assessment_id):
             if 'grade' in grade_info:
                 grade_info['grade']['late'] = False
         all_student_grades.append(grade_info)
+
+    if markbot_commits_min >= 10000000:
+        markbot_commits_min = 0
+    if markbot_time_min >= 10000000:
+        markbot_time_min = 0
 
     context = {
         'app_version': settings.APP_PKG['version'],

@@ -42,8 +42,7 @@
             (<span class="not-bold italic color-grey-dark">{{current_grade_average | grade_as_status}}</span>)
           </strong>
         {% endif %}
-        <hr class="push-1-2">
-        <h3 class="mega not-bold push-1-4">Marking scheme</h3>
+        <h2 class="class-heading push-1-2 giga">Marking scheme</h2>
         <dl class="marking-scheme list-group-inline milli color-grey-dark">
           <dt class="push-0">Videos</dt>
           <dd class="push-0">
@@ -66,6 +65,7 @@
             <span class="nano">(<span class="marking-scheme-total">{{course.data.totals.projects}}</span> @ <data value="{{course.data.totals.projects_each_algonquin | times:100}}%" title="{{course.data.totals.projects_each_algonquin | times:100}}%">≈{{course.data.totals.projects_each_algonquin | pretty_percent_small}}</data> each)</span>
           </dd>
         </dl>
+        {% include 'markbot-stats.html' %}
         <hr>
         <div class="course-email-links relative">
           <h3 class="color-grey-dark pin-lc" aria-label="Download grades…"><i class="icon i-3-4"><svg><use xlink:href="#icon-down"></use></svg></i></h3>
