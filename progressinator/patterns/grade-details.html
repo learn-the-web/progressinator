@@ -1,10 +1,19 @@
 <section class="section-lightest gutter-1-2 pad-t-1-2 pad-b push-1-2">
-  <h2 class="push-0">{{title}}</h2>
+  <h2 class="push-0">
+    {{title}}
+    {% if email_link %}
+      <a class="icon i-3-4 link-box-no-mark" href="mailto:{{email_link}}"><svg><use xlink:href="#icon-mail"></use></svg></a>
+    {% endif %}
+  </h2>
   <a class="mega ib push-1-4" href="{{details_url}}" rel="external">{{details_text}}&nbsp;»</a>
   <p class="push-0 mega italic">
     <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}">{{course.data.title}}</a>
     {% if course_extra %}
-    · {{course_extra}}
+      {% if link_course_extra %}
+        · <a href="{% url 'core:teacher_course' term_id=course.term.slug course_id=course.slug %}#{{course_extra}}">{{course_extra}}</a>
+      {% else %}
+        · {{course_extra}}
+      {% endif %}
     {% endif %}
   </p>
 </section>

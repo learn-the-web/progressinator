@@ -14,7 +14,7 @@
   <div class="grid">
     <div class="class unit [ xs-1 s-1 m-2-5 ] pad-b-1-2 {% if not allow_grade_editing or not user.is_staff %}pad-t-1-2{% endif %}">
       {% if allow_grade_editing and user.is_staff %}
-        {% include 'grade-details.html' with title=student_details.full_name details_url=student_details.github_url details_text=student_profile.user.username course_extra=student_profile.current_section %}
+        {% include 'grade-details.html' with title=student_details.full_name email_link=student_profile.user.email details_url=student_details.github_url details_text=student_profile.user.username course_extra=student_profile.current_section link_course_extra=True %}
       {% endif %}
       <section class="class-desc gutter-1-2">
         <h2 class="class-heading push giga">Grade</h2>
