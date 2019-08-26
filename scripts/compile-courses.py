@@ -6,6 +6,7 @@ import simplejson as json
 
 
 registered_courses = ('web-dev-1', 'web-dev-2', 'web-dev-3', 'web-dev-4', 'web-dev-5', 'web-dev-6', 'javascript')
+assessment_uris = []
 
 
 def json_serial(obj):
@@ -46,6 +47,10 @@ def setup_course(course):
                     a['due_dates_algonquin'][dd['course_section']] = pendulum.parse(dd['due'], tz='America/Toronto')
             else:
                 a['due_dates_algonquin'] = []
+
+        if 'video' not in a['uri'] and a['uri'] in assessment_uris:
+            print(f"The assessment “{a['uri']}” from “{course['course']}” already exists.")
+        assessment_uris.append(a['uri'])
 
     return course
 
