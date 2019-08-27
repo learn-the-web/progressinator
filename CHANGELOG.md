@@ -5,6 +5,21 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.7.0] — 2019-08-26
+
+### Added
+
+- Added Markbot stats on the student views.
+- Added email links when looking directly at a student.
+- Added a list of all the courses a student has been registered in previously.
+
+### Changed
+
+- Redesigned the homepage for students to be more obvious & helpful.
+- Redesigned the homepage for teachers to be more helpful.
+
+---
+
 ## [2.6.2] — 2019-05-07
 
 ### Fixed
