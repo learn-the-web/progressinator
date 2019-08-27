@@ -28,8 +28,8 @@ def courses(request):
     if user_courses: courses.update(user_courses)
     user_profiles_details = CourseHelper.user_profiles_as_dict(user_profiles) if user_profiles else None
 
-    # compare_date = datetime.date.today()
-    compare_date = datetime.date(2019, 9, 4)
+    compare_date = datetime.date.today()
+    # compare_date = datetime.date(2019, 9, 4)
     current_week = None
     current_week_number = None
     next_week = None
