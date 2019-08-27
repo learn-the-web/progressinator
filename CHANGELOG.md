@@ -5,6 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.7.4] — 2019-08-27
+
+### Fixed
+
+- Fixed some spacing around elements on smaller screen sizes.
+
+
+---
+
 ## [2.7.3] — 2019-08-26
 
 ### Fixed
