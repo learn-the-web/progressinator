@@ -227,7 +227,10 @@ def download(request, term_id, course_id, student_grade_group='all'):
     for student in students:
         student_grades = (grade_helper.calc_grade(g, assessment_index, course.data['assessments']) for g in all_grades if g.user_id == student.user_id)
         student.current_grade = decimal.Decimal(math.fsum(student_grades))
-        student.current_grade_max = max_assessments_per_section[student.current_section]
+        if student.current_section in max_assessments_per_section:
+            student.current_grade_max = max_assessments_per_section[student.current_section]
+        else:
+            student.current_grade_max = len(course.data['assessments'])
         student.current_grade_average = student.current_grade / student.current_grade_max if student.current_grade_max > 0 else 0
         if student_grade_group == 'failures' and student.current_grade_average >= decimal.Decimal(.5): continue
         student_assessment_index = {g.assessment_uri:g.grade for g in all_grades if g.user_id == student.user_id}

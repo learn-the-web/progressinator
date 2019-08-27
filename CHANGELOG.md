@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.7.2] — 2019-08-26
+
+### Fixed
+
+- Fixed a bug when downloading grades for courses without sections.
+
+---
+
 ## [2.7.1] — 2019-08-26
 
 ### Fixed
