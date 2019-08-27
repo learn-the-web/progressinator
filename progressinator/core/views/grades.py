@@ -44,23 +44,23 @@ def courses(request):
         current_course = None
 
     user_grades = UserProgress.objects.filter(user=request.user)
-    if user_profiles_details:
-        for slug, course in courses.items():
-            user_profile = None
-            grades[slug] = {}
+    for slug, course in courses.items():
+        user_profile = None
+        grades[slug] = {}
+        if user_profiles_details:
             for ups, up in user_profiles_details.items():
                 if up['current_course_id'] == course['id']:
                     user_profile = up
-            grades[slug]['grade'] = decimal.Decimal(0)
-            grades[slug]['max_assessments_per_section'] = grade_helper.max_assessments_per_section(course['data']['assessments'])
-            assessment_index = build_dict_index(course['data']['assessments'], 'uri')
-            for prog in user_grades:
-                if prog.assessment_uri in assessment_index:
-                    grades[slug]['grade'] += grade_helper.calc_grade(prog, assessment_index, course['data']['assessments'])
-            if user_profile and user_profile['current_course_slug'] == slug and user_profile['current_section'] in grades[slug]['max_assessments_per_section']:
-                grades[slug]['current_grade_max'] = grades[slug]['max_assessments_per_section'][user_profile['current_section']]
-            else:
-                grades[slug]['current_grade_max'] = False
+        grades[slug]['grade'] = decimal.Decimal(0)
+        grades[slug]['max_assessments_per_section'] = grade_helper.max_assessments_per_section(course['data']['assessments'])
+        assessment_index = build_dict_index(course['data']['assessments'], 'uri')
+        for prog in user_grades:
+            if prog.assessment_uri in assessment_index:
+                grades[slug]['grade'] += grade_helper.calc_grade(prog, assessment_index, course['data']['assessments'])
+        if user_profile and user_profile['current_course_slug'] == slug and user_profile['current_section'] in grades[slug]['max_assessments_per_section']:
+            grades[slug]['current_grade_max'] = grades[slug]['max_assessments_per_section'][user_profile['current_section']]
+        else:
+            grades[slug]['current_grade_max'] = False
 
     if current_course and 'weeks' in current_course['data']:
         for week_number, week in current_course['data']['weeks'].items():
