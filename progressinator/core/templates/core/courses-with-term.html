@@ -1,5 +1,7 @@
 {% extends 'default.html' %}
 
+{% load data %}
+
 {% block wrapper %}
   <div class="grid">
     <div class="class unit [ xs-1 s-1 m-1 l-3-5 ] pad-b">
@@ -23,7 +25,7 @@
               <span class="kilo block italic not-bold color-grey-dark pin-rt">{{current_week.start_date|date:'M. j'}} – {{current_week.end_date|date:'M. j'}}</span>
             </h2>
             {% if current_week.videos %}
-              <h3 class="kilo not-bold italic push-1-4">Videos to watch before class this week</h3>
+              <h3 class="kilo not-bold italic push-1-4">Videos to watch before class this week:</h3>
               <ol class="push-1-2">
                 {% for video in current_week.videos %}
                   <li><a href="https://learn-the-web.algonquindesign.ca{{video.url}}">{{video.title}}</a></li>
@@ -31,7 +33,7 @@
               </ol>
             {% endif %}
             {% if current_week.assessments %}
-              <h3 class="kilo not-bold italic push-1-4">Exercises to complete</h3>
+              <h3 class="kilo not-bold italic push-1-4">Exercises to complete:</h3>
               <ol class="push-1-2">
                 {% for exercise in current_week.assessments %}
                   <li><a href="{{video.exercise}}">{{exercise.title}}</a></li>
@@ -51,7 +53,7 @@
               <span class="kilo block italic not-bold color-grey-dark pin-rt">{{next_week.start_date|date:'M. j'}} – {{next_week.end_date|date:'M. j'}}</span>
             </h2>
             {% if next_week.videos %}
-              <h3 class="kilo not-bold italic push-1-4">Videos to watch before class next week</h3>
+              <h3 class="kilo not-bold italic push-1-4">Videos to watch before class next week:</h3>
               <ol class="push-1-2">
                 {% for video in next_week.videos %}
                   <li><a href="https://learn-the-web.algonquindesign.ca{{video.url}}">{{video.title}}</a></li>
@@ -59,12 +61,62 @@
               </ol>
             {% endif %}
             {% if next_week.assessments %}
-              <h3 class="kilo not-bold italic push-1-4">Upcoming exercises</h3>
+              <h3 class="kilo not-bold italic push-1-4">Upcoming exercises:</h3>
               <ol class="push-1-2">
                 {% for exercise in next_week.assessments %}
                   <li><a href="{{video.exercise}}">{{exercise.title}}</a></li>
                 {% endfor %}
               </ol>
+            {% endif %}
+          </section>
+        {% endif %}
+        {% if current_course.data.sections %}
+          <section>
+            <h2 class="class-heading push-1-2 giga relative color-grey-dark">
+              <span>Class times</span>
+              <a class="icon icon-feed i-1-2 pin-rc link-box-no-mark color-grey-dark" href="https://learn-the-web.algonquindesign.ca/courses/calendar-feeds/" title="Calendar feed" aria-label="Calendar feed">
+                <svg><use xlink:href="#icon-feed"></use></svg>
+              </a>
+            </h2>
+            <ul class="list-group push-1-2">
+              {% for time in current_course.data.sections %}
+                <li>{{time.day|day_num_to_text}} {{time.start_time|time_24_to_12}} – {{time.end_time|time_24_to_12}} @ {{time.room}}</li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endif %}
+        {% if current_course.data.labs %}
+          <section>
+            <h2 class="class-heading push-1-2 giga relative color-grey-dark">
+              <span>Lab times</span>
+              <a class="icon icon-feed i-1-2 pin-rc link-box-no-mark color-grey-dark" href="https://learn-the-web.algonquindesign.ca/courses/calendar-feeds/" title="Calendar feed" aria-label="Calendar feed">
+                <svg><use xlink:href="#icon-feed"></use></svg>
+              </a>
+            </h2>
+            <ul class="list-group push-1-2">
+              {% for time in current_course.data.labs %}
+                <li>{{time.day|day_num_to_text}} {{time.start_time|time_24_to_12}} – {{time.end_time|time_24_to_12}} @ {{time.room}}</li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endif %}
+        {% if current_course.data %}
+          <section>
+            <h2 class="class-heading push-1-2 giga relative color-grey-dark">Teacher</h2>
+            <strong class="block">{{current_course.data.professors.0.name}}</strong>
+            <a href="mailto:{{current_course.data.professors.0.email}}">{{current_course.data.professors.0.email}}</a>
+            {% if current_course.data.professors.0.office_hours %}
+              <p class="push-0">{{current_course.data.professors.0.office}}</p>
+            {% endif %}
+            <h3 class="pad-t-1-2 kilo push-0">Office hours</h3>
+            {% if current_course.data.professors.0.office_hours %}
+              <ul>
+                {% for time in current_course.data.professors.0.office_hours %}
+                  <li>{{time.day|day_num_to_text}} {{time.start_time|time_24_to_12}} – {{time.end_time|time_24_to_12}}</li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              <p class="push-1-2 italic">By appointment only.</p>
             {% endif %}
           </section>
         {% endif %}

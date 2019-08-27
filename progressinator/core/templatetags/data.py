@@ -98,3 +98,19 @@ def append_value(value, append):
     Kind of the opposite to the `default` filter
     """
     if value: return f"{value}{append}"
+
+
+@register.filter
+def time_24_to_12(time):
+    if time > 12:
+        return time - 12
+    return time
+
+
+@register.filter
+def day_num_to_text(day):
+    if day == 1: return 'Mo.'
+    if day == 2: return 'Tu.'
+    if day == 3: return 'We.'
+    if day == 4: return 'Th.'
+    if day == 5: return 'Fr.'
