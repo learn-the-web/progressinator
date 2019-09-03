@@ -28,7 +28,10 @@
               <h3 class="kilo not-bold italic push-1-4">Videos to watch before class this week:</h3>
               <ol class="push-1-2">
                 {% for video in current_week.videos %}
-                  <li><a href="https://learn-the-web.algonquindesign.ca{{video.url}}">{{video.title}}</a></li>
+                  <li>
+                    <a href="https://learn-the-web.algonquindesign.ca{{video.url}}">{{video.title}}</a>
+                    <i class="icon i-16 color-grey-dark"><svg><use xlink:href="#icon-play"></use></svg></i>
+                  </li>
                 {% endfor %}
               </ol>
             {% endif %}
@@ -56,7 +59,10 @@
               <h3 class="kilo not-bold italic push-1-4">Videos to watch before class next week:</h3>
               <ol class="push-1-2">
                 {% for video in next_week.videos %}
-                  <li><a href="https://learn-the-web.algonquindesign.ca{{video.url}}">{{video.title}}</a></li>
+                  <li>
+                    <a href="https://learn-the-web.algonquindesign.ca{{video.url}}">{{video.title}}</a>
+                    <i class="icon i-16 color-grey-dark"><svg><use xlink:href="#icon-play"></use></svg></i>
+                  </li>
                 {% endfor %}
               </ol>
             {% endif %}

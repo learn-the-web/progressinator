@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.7.6] — 2019-09-03
+
+### Added
+
+- Added the standard video icon next to required videos.
+
+---
+
 ## [2.7.5] — 2019-09-03
 
 ### Fixed
