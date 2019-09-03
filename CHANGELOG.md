@@ -5,9 +5,17 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.7.7] — 2019-09-03
+
+### Changed
+
+- Added the missing arrow beside the next week link to make it consistent with the current week link.
+
+---
+
 ## [2.7.6] — 2019-09-03
 
-### Added
+### Changed
 
 - Added the standard video icon next to required videos.
 
