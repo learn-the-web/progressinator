@@ -8,7 +8,7 @@
         {% if is_current %}
           <strong class="italic push-0 mega color-grey-dark">Current term</strong>
         {% endif %}
-        <string class="progress-meter icon pin-lc push-0" aria-label="{% if grades|get_course_grade:course.slug|pretty_percent_raw > 100 %}100{% else %}{{grades|get_course_grade:course.slug|pretty_percent_raw|floatformat:'0'}}{% endif %} complete the {{course.data.title}}">
+        <div class="progress-meter icon pin-lc push-0" aria-label="{% if grades|get_course_grade:course.slug|pretty_percent_raw > 100 %}100{% else %}{{grades|get_course_grade:course.slug|pretty_percent_raw|floatformat:'0'}}{% endif %} complete the {{course.data.title}}">
           <svg width="256" height="256" viewBox="0 0 256 256">
             <path fill="none" stroke="#a8a6af" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M128 12A113 113 0 1 1 15 125 113 113 0 0 1 128 12"/>
             <path stroke-dasharray="710" stroke-dashoffset="{{grades|course_grade_meter:course.slug}}" fill="none" stroke="#00675a" stroke-linecap="round" stroke-linejoin="round" stroke-width="18" d="M128 12A113 113 0 1 1 15 125 113 113 0 0 1 128 12"/>
@@ -21,7 +21,7 @@
           </svg>
           <span class="pin-ct milli brand-dark not-bold pad-t-1-2 color-grey-dark">%</span>
           <span class="pin-c zetta brand-dark bold">{% if grades|get_course_grade:course.slug|pretty_percent_raw > 100 %}100{% else %}{{grades|get_course_grade:course.slug|pretty_percent_raw|floatformat:'0'}}{% endif %}</span>
-        </string>
+        </div>
         <div class="grid grid-middle">
           <div class="unit [ xs-1-2 ]">
             <div class="push-1-4">

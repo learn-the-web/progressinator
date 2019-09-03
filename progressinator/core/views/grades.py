@@ -30,6 +30,7 @@ def courses(request):
 
     compare_date = datetime.date.today()
     # compare_date = datetime.date(2019, 9, 4)
+    current_course = None
     current_week = None
     current_week_number = None
     next_week = None
@@ -93,7 +94,7 @@ def courses(request):
         'next_week': next_week,
     }
 
-    if current_term:
+    if current_course:
         response = render(request, 'core/courses-with-term.html', context)
     else:
         response = render(request, 'core/courses-without-term.html', context)

@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.7.5] — 2019-09-03
+
+### Fixed
+
+- Fixed a couple bugs when the user didn’t have a course registered this term.
+
+---
+
 ## [2.7.4] — 2019-08-27
 
 ### Fixed
