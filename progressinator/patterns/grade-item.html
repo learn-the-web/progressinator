@@ -139,25 +139,27 @@
   {% endif %}
   {% if allow_grade_editing and grade_item.assessment_each_algonquin > 0 and perms.progress_core.change_userprogress %}
     <div class="grade-form-wrap pad-t-1-4 pad-b-1-4" hidden>
-      <fieldset class="grade-form push-0 milli">
+      <fieldset class="push-0 milli">
         <legend class="visually-hidden">Update grade for {{grade_item.name}}</legend>
-        <div class="grade-form-item grade-form-item-grade">
-          <label for="grade-{{grade_item.uri | slugify}}-{{github_username}}">Grade:</label>
-          <input type="number" name="grade" id="grade-{{grade_item.uri | slugify}}-{{github_username}}" value="{{grade_item.grade.grade}}" step="0.001">
-        </div>
-        <div class="grade-form-item grade-form-item-excuse-lateness pad-t-1-8">
-          <label for="lateness-{{grade_item.uri | slugify}}-{{github_username}}">Excuse&nbsp;lateness:</label>
-          <select name="excuse_lateness" id="lateness-{{grade_item.uri | slugify}}-{{github_username}}">
-            <option value=""></option>
-            {% for opt in excuse_lateness_options %}
-              <option value="{{opt.0}}" {% if grade_item.grade.excuse_lateness == opt.0 %}selected{% endif %}>{{opt.1}}</option>
-            {% endfor %}
-          </select>
-        </div>
-        <hr class="grade-form-sep">
-        <div class="grade-form-comment">
-          <label for="comment-{{grade_item.uri | slugify}}-{{github_username}}">Comments:</label>
-          <textarea class="micro" name="comment" id="comment-{{grade_item.uri | slugify}}-{{github_username}}">{{grade_item.grade.details.comment | escape}}</textarea>
+        <div class="grade-form">
+          <div class="grade-form-item grade-form-item-grade">
+            <label for="grade-{{grade_item.uri | slugify}}-{{github_username}}">Grade:</label>
+            <input type="number" name="grade" id="grade-{{grade_item.uri | slugify}}-{{github_username}}" value="{{grade_item.grade.grade}}" step="0.001">
+          </div>
+          <div class="grade-form-item grade-form-item-excuse-lateness pad-t-1-8">
+            <label for="lateness-{{grade_item.uri | slugify}}-{{github_username}}">Excuse&nbsp;lateness:</label>
+            <select name="excuse_lateness" id="lateness-{{grade_item.uri | slugify}}-{{github_username}}">
+              <option value=""></option>
+              {% for opt in excuse_lateness_options %}
+                <option value="{{opt.0}}" {% if grade_item.grade.excuse_lateness == opt.0 %}selected{% endif %}>{{opt.1}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <hr class="grade-form-sep">
+          <div class="grade-form-comment">
+            <label for="comment-{{grade_item.uri | slugify}}-{{github_username}}">Comments:</label>
+            <textarea class="micro" name="comment" id="comment-{{grade_item.uri | slugify}}-{{github_username}}">{{grade_item.grade.details.comment | escape}}</textarea>
+          </div>
         </div>
         <input name="submitted_by" type="hidden" value="{{submitted_by}}">
         <input name="assessment_uri" type="hidden" value="{{grade_item.uri}}">

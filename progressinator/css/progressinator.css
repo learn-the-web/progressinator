@@ -185,6 +185,10 @@
   min-width: 24em;
 }
 
+.grade-form-wrap fieldset {
+  border: 0;
+}
+
 .grade-form {
   display: flex;
   flex-wrap: wrap;
