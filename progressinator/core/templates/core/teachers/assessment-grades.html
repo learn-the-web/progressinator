@@ -52,13 +52,17 @@
           <form method="post" id="grades-form" action="{% url 'core:teacher_assessment_grades_save' term_id=course.term.slug course_id=course.slug assessment_id=assessment.uri %}">
             {% include 'edit-grades-toolbar.html' %}
         {% endif %}
-        <ol class="assessment-list list-group push-0">
-          {% for item in all_student_grades %}
-            <li class="assessment-item relative push-1-2" data-filter-course-section="{{item.student_section}}">
-              {% include 'grade-item.html' with grade_item=item github_username=item.github_username user_id=item.user_id %}
-            </li>
-          {% endfor %}
-        </ol>
+        {% if all_student_grades %}
+          <ol class="assessment-list list-group push-0">
+            {% for item in all_student_grades %}
+              <li class="assessment-item relative push-1-2" data-filter-course-section="{{item.student_section}}">
+                {% include 'grade-item.html' with grade_item=item github_username=item.github_username user_id=item.user_id %}
+              </li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <strong class="block giga">No students registered in this course for the term.</strong>
+        {% endif %}
         {% if allow_grade_editing and perms.progress_core.change_userprogress %}
           {% csrf_token %}
           </form>

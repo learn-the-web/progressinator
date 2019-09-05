@@ -469,14 +469,14 @@ def assessment_grades(request, term_id, course_id, assessment_id):
         'excuse_lateness_options': UserProgressLatenessChoices.choices(),
         'all_student_grades': all_student_grades,
         'stats_total_submissions': len(student_grades),
-        'stats_pass_rate_avg': stats_pass_rate_total / len(students),
+        'stats_pass_rate_avg': stats_pass_rate_total / len(students) if students else 0,
         'show_markbot_stats': show_markbot_stats,
         'markbot_commits_min': markbot_commits_min,
         'markbot_commits_max': markbot_commits_max,
-        'markbot_commits_avg': round(markbot_commits_total / len(students)),
+        'markbot_commits_avg': round(markbot_commits_total / len(students)) if students else 0,
         'markbot_time_min': round(markbot_time_min, 2),
         'markbot_time_max': round(markbot_time_max, 2),
-        'markbot_time_avg': round(markbot_time_total / len(students), 1),
+        'markbot_time_avg': round(markbot_time_total / len(students), 1) if students else 0,
     }
     return render(request, 'core/teachers/assessment-grades.html', context)
 
