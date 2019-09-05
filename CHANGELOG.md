@@ -5,6 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.7.8] — 2019-09-05
+
+### Fixed
+
+- Fixed a display bug on the teacher’s grade form in Chrome.
+- Fixed a division by 0 bug when grading all students for a single assignment.
+
+---
+
 ## [2.7.7] — 2019-09-03
 
 ### Changed
