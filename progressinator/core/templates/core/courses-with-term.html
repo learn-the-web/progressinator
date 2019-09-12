@@ -39,7 +39,12 @@
               <h3 class="kilo not-bold italic push-1-4">Exercises to complete:</h3>
               <ol class="push-1-2">
                 {% for exercise in current_week.assessments %}
-                  <li><a href="{{video.exercise}}">{{exercise.title}}</a></li>
+                  <li>
+                    <a href="{% if 'http' not in exercise.url %}https://learn-the-web.algonquindesign.ca{% endif %}{{exercise.url}}">{{exercise.title}}</a>
+                    {% if exercise.uri in completed_assignments %}
+                      <span class="ib gutter-1-8 color-grey-dark" title="Submitted" aria-label="Submitted">✔</span>
+                    {% endif %}
+                  </li>
                 {% endfor %}
               </ol>
             {% endif %}
@@ -70,7 +75,12 @@
               <h3 class="kilo not-bold italic push-1-4">Upcoming exercises:</h3>
               <ol class="push-1-2">
                 {% for exercise in next_week.assessments %}
-                  <li><a href="{{video.exercise}}">{{exercise.title}}</a></li>
+                  <li>
+                    <a href="{{exercise.url}}">{{exercise.title}}</a>
+                    {% if exercise.uri in completed_assignments %}
+                      <span class="ib gutter-1-8 color-grey-dark" title="Submitted" aria-label="Submitted">✔</span>
+                    {% endif %}
+                  </li>
                 {% endfor %}
               </ol>
             {% endif %}

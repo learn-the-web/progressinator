@@ -92,6 +92,7 @@ def courses(request):
         'grades': grades,
         'current_week': current_week,
         'next_week': next_week,
+        'completed_assignments': [a.assessment_uri for a in user_grades],
     }
 
     if current_course:

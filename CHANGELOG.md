@@ -5,6 +5,18 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.8.0] — 2019-09-12
+
+### Added
+
+- Added a checkmark beside assessments that have been submitted.
+
+### Fixed
+
+- Fixed a few broken URLs in the week overviews for activities.
+
+---
+
 ## [2.7.8] — 2019-09-05
 
 ### Fixed
