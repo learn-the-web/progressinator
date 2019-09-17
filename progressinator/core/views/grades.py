@@ -130,10 +130,10 @@ def course_grades(request, course_id):
     current_grade = decimal.Decimal(0.0)
     max_assessments_per_section = grade_helper.max_assessments_per_section(course.data['assessments'])
     markbot_total_assessments = 0
-    markbot_commits_min = 10000000
+    markbot_commits_min = 10000
     markbot_commits_max = 0
     markbot_commits_total = 0
-    markbot_time_min = 10000000
+    markbot_time_min = 10000
     markbot_time_max = 0
     markbot_time_total = 0
 
@@ -164,22 +164,23 @@ def course_grades(request, course_id):
                 markbot_total_assessments += 1
                 if (prog.details['number_of_commits'] is not None
                     and prog.details['number_of_commits'] is not False
-                    and prog.details['number_of_commits'] > 0):
+                    and int(prog.details['number_of_commits'] > 0)):
                     markbot_commits_total += prog.details['number_of_commits']
-                    if prog.details['number_of_commits'] < markbot_commits_min:
+                    if prog.details['number_of_commits'] <= markbot_commits_min:
                         markbot_commits_min = prog.details['number_of_commits']
-                    if prog.details['number_of_commits'] > markbot_commits_max:
+                    if prog.details['number_of_commits'] >= markbot_commits_max:
                         markbot_commits_max = prog.details['number_of_commits']
 
             if prog.details and 'estimated_time' in prog.details:
                 if (prog.details['estimated_time'] is not None
                     and prog.details['estimated_time'] is not False
                     and float(prog.details['estimated_time']) > 0):
-                    markbot_time_total += float(prog.details['estimated_time'])
-                    if float(prog.details['estimated_time']) < markbot_time_min:
-                        markbot_time_min = float(prog.details['estimated_time'])
-                    if float(prog.details['estimated_time']) > markbot_time_max:
-                        markbot_time_max = float(prog.details['estimated_time'])
+                    estimated_time = float(prog.details['estimated_time']) if float(prog.details['estimated_time']) <= 50 else 50
+                    markbot_time_total += estimated_time
+                    if estimated_time < markbot_time_min:
+                        markbot_time_min = estimated_time
+                    if estimated_time > markbot_time_max:
+                        markbot_time_max = estimated_time
 
     if user_profile and user_profile['current_course_slug'] == course_id and user_profile['current_section'] in max_assessments_per_section:
         current_grade_max = max_assessments_per_section[user_profile['current_section']]
@@ -191,9 +192,9 @@ def course_grades(request, course_id):
         markbot_commits_min = 0
         markbot_time_min = 0
 
-    if markbot_commits_min >= 10000000:
+    if markbot_commits_min >= 10000:
         markbot_commits_min = 0
-    if markbot_time_min >= 10000000:
+    if markbot_time_min >= 10000:
         markbot_time_min = 0
 
     context = {
@@ -213,8 +214,8 @@ def course_grades(request, course_id):
         'markbot_commits_min': markbot_commits_min,
         'markbot_commits_max': markbot_commits_max,
         'markbot_commits_avg': round(markbot_commits_total / markbot_total_assessments),
-        'markbot_time_min': round(markbot_time_min, 2),
-        'markbot_time_max': round(markbot_time_max, 2),
+        'markbot_time_min': round(markbot_time_min, 1),
+        'markbot_time_max': round(markbot_time_max, 1),
         'markbot_time_avg': round(markbot_time_total / markbot_total_assessments, 1),
     }
 

@@ -5,6 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.8.1] — 2019-09-17
+
+### Fixed
+
+- Capped the maximum counted hours per assignment to 50.
+- Fix the display of average commits & average estimated time.
+
+---
+
 ## [2.8.0] — 2019-09-12
 
 ### Added
