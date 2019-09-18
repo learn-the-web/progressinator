@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.8.3] — 2019-09-18
+
+### Fixed
+
+- Fixed the student grade view to show the current term’s assessments.
+
+---
+
 ## [2.8.2] — 2019-09-18
 
 ### Fixed
