@@ -20,4 +20,4 @@ class UserProfile(models.Model):
         verbose_name = "user profile"
         verbose_name_plural = "user profile"
         get_latest_by = 'created'
-        ordering = ('user',)
+        ordering = ('id', 'user',)

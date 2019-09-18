@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.8.2] — 2019-09-18
+
+### Fixed
+
+- Fixed the term & profile selection for students who are repeating a course.
+
+---
+
 ## [2.8.1] — 2019-09-17
 
 ### Fixed

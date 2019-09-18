@@ -22,5 +22,6 @@ class CourseHelper:
     def courses_as_dict(cls, courses):
         courses_dict = {}
         for c in courses:
-            courses_dict[c.slug] = model_to_dict(c)
+            if c.slug not in courses_dict:
+                courses_dict[c.slug] = model_to_dict(c)
         return courses_dict
