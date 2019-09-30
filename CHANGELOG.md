@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.8.4] — 2019-09-30
+
+### Fixed
+
+- Fixed the links to each week: the numbers below 10 were missing the 0 prefix.
+
+---
+
 ## [2.8.3] — 2019-09-18
 
 ### Fixed

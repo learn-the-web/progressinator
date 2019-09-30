@@ -21,7 +21,7 @@
           <section class="push">
             <h2 class="class-heading push-1-2 tera relative">
               <span class="kilo block italic color-grey-dark">This week…</span>
-              <a class="link-box-no-mark" href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/week-{{current_week.week_number}}/">Week {{current_week.week_number}} — {{current_week.title}} ➔</a>
+              <a class="link-box-no-mark" href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/week-{% if current_week.week_number < 10 %}0{% endif %}{{current_week.week_number}}/">Week {{current_week.week_number}} — {{current_week.title}} ➔</a>
               <span class="kilo block italic not-bold color-grey-dark pin-rt">{{current_week.start_date|date:'M. j'}} – {{current_week.end_date|date:'M. j'}}</span>
             </h2>
             {% if current_week.videos %}
@@ -57,7 +57,7 @@
           <section class="push">
             <h2 class="class-heading push-1-2 tera relative">
               <span class="kilo block italic color-grey-dark">Next week…</span>
-              <a class="link-box-no-mark" href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/week-{{next_week.week_number}}/">Week {{next_week.week_number}} — {{next_week.title}} ➔</a>
+              <a class="link-box-no-mark" href="https://learn-the-web.algonquindesign.ca/courses/{{current_course.slug}}/week-{% if next_week.week_number < 10 %}0{% endif %}{{next_week.week_number}}/">Week {{next_week.week_number}} — {{next_week.title}} ➔</a>
               <span class="kilo block italic not-bold color-grey-dark pin-rt">{{next_week.start_date|date:'M. j'}} – {{next_week.end_date|date:'M. j'}}</span>
             </h2>
             {% if next_week.videos %}
