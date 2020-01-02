@@ -132,7 +132,11 @@
                 {% endfor %}
               </ul>
             {% else %}
-              <p class="push-1-2 italic">By appointment only.</p>
+              {% if current_course.data.professors.0.office_hours_form %}
+                <p class="push-1-2"><em><a href="{{current_course.data.professors.0.office_hours_form}}" rel="external">Book an appointment</a></em></p>
+              {% else %}
+                <p class="push-1-2"><em>By appointment only.</em></p>
+              {% endif %}
             {% endif %}
           </section>
         {% endif %}
