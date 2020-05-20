@@ -5,7 +5,15 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.8.4] — 2019-09-30
+## [2.9.1] — 2020-05-20
+
+### Fixed
+
+- Fixed the missing email student icon, it got broken when adding the pair icon.
+
+---
+
+## [2.9.0] — 2020-05-20
 
 ### Added
 
