@@ -93,7 +93,7 @@
         {% endif %}
           <ol class="assessment-list list-group push-0">
             {% for item in course.data.assessments %}
-              <li class="assessment-item relative push-1-2 {% if item.user_due_date_algonquin < today %}assessment-item-past-due{% else %}assessment-item-pre-due pad-t-1-2{% endif %}">
+              <li class="assessment-item relative push-1-2 {% if item.user_due_date_algonquin < today %}assessment-item-past-due{% else %}assessment-item-pre-due{% endif %}">
                 {% include 'grade-item.html' with grade_item=item user_id=student_profile.user_id %}
               </li>
             {% endfor %}
