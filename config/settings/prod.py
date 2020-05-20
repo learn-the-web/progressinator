@@ -1,16 +1,9 @@
-from .base import *
+"""Define the production environment settings."""
+
+from .base import *  # noqa: F403
 from .base import env
 
 
-ALLOWED_HOSTS += [
+ALLOWED_HOSTS += [  # noqa: F405
+    env("DJANGO_ALLOWED_HOST"),
 ]
-
-
-SESSION_COOKIE_DOMAIN = 'learn-the-web.algonquindesign.ca'
-SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_DOMAIN = SESSION_COOKIE_DOMAIN
-CSRF_COOKIE_SECURE = SESSION_COOKIE_SECURE
-SESSION_COOKIE_SECURE = True
-SESSION_COOKIE_AGE = 60 * 60 * 24 * 30
-
-SECURE_SSL_REDIRECT = True

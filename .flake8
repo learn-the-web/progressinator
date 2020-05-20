@@ -1,0 +1,13 @@
+[flake8]
+max-line-length = 88
+select = A,B,C,D,E,F,I,N,W,DJ,CFQ,CCR,RST
+ignore = E501,W503,E722,E231,B001
+exclude = .git,__pycache__,public,public-dist,node_modules,data
+per-file-ignores =
+    *__init__*:F401,F403,D104,I100,I101
+    *_test*:D100,D103
+    test_*:D100,D103
+    config/urls.py:D100
+import-order-style = appnexus
+application-import-names = progressinator
+max-function-length = 25

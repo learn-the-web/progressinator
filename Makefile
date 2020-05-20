@@ -1,20 +1,38 @@
 postcss := ./node_modules/postcss-cli/bin/postcss --config ./config/postcss.config.js
-uglifyjs := ./node_modules/uglify-js/bin/uglifyjs
+terser := ./node_modules/terser/bin/terser
 
 apppath := ./progressinator
 publicdist := ./public-dist
 public := ./public
 
-.PHONY: build-docker start stop watch-css build-css watch-build-css watch-css-copy-dist build-js watch-js watch-build-js install migrate debug django-super-user docker-shell docker-clean
+install:
+	brew install node fswatch yarn parallel mkcert nss pyenv pipenv pre-commit
+	brew cask install postgres
+	yarn install
+	pipenv install --dev
+	pre-commit install
 
-build-docker:
-	sudo docker-compose build
+build:
+	mkcert --install
+	mkcert progressinator.dev
+	mv ./progressinator.dev-key.pem ./config/certs/progressinator.dev-key.pem
+	mv ./progressinator.dev.pem ./config/certs/progressinator.dev.pem
+	make build-static
+
+start-pgsql:
+	open /Applications/Postgres.app
+
+start-server:
+	heroku local --port=8000 --procfile=Procfile.dev
+
+watch-django-templates:
+	fswatch --verbose -0 --recursive $(apppath)/templates/* $(apppath)/patterns/* $(apppath)/core/templates/* | xargs -0 -I {} cat .gunicorn.pid | xargs -n 1 -I [] kill -HUP []
 
 start:
-	sudo docker-compose up
+	parallel --ungroup ::: "make start-server" "make watch-django-templates"
 
-stop:
-	sudo docker container stop progressinator_django_1 progressinator_postgres_1
+test:
+	pytest
 
 copy-courses:
 	cp /db/learn-the-web/www/_site/courses/web-dev-1/course.json ./config/courses/web-dev-1.json
@@ -28,80 +46,110 @@ copy-courses:
 build-courses:
 	pipenv run python ./scripts/compile-courses.py
 
+##################################################
+# STATIC FILES
+##################################################
+
 build-css:
 	$(postcss) $(apppath)/css/main.css --output $(publicdist)/main.min.css
+	python ./scripts/sri_resource.py "$(publicdist)/main.min.css"
 
-watch-css:
-	parallel --ungroup ::: "make watch-build-css" "make watch-css-copy-dist"
-
-watch-build-css:
+watch-build-main-css:
 	$(postcss) $(apppath)/css/main.css --output $(publicdist)/main.min.css --watch
 
 watch-css-copy-dist:
 	fswatch --verbose -0 $(publicdist)/* | xargs -0 -n 1 -I {} cp {} $(public)/core/
 
+watch-css-copy-dist-sri:
+	fswatch --verbose -0 $(publicdist)/main.min.css | xargs -0 -I {} python ./scripts/sri_resource.py "$(publicdist)/main.min.css"
+
+watch-css:
+	parallel --ungroup ::: "make watch-build-main-css" "make watch-css-copy-dist" "make watch-css-copy-dist-sri"
+
 build-js:
-	cat $(apppath)/js/*.js > $(publicdist)/main.min.js
+	cat $(apppath)/js/*.js | $(terser) --compress --mangle --output $(publicdist)/main.min.js
+	python ./scripts/sri_resource.py "$(publicdist)/main.min.js"
 
-watch-js:
-	fswatch --verbose -0 $(apppath)/js/*.js | xargs -0 -n 1 make watch-build-js
-
-watch-build-js:
-	cat $(apppath)/js/*.js > $(publicdist)/main.min.js
+watch-build-js-app:
+	cat $(apppath)/js/*.js | $(terser) --beautify --output $(publicdist)/main.min.js
 	cp $(publicdist)/main.min.js $(public)/core/
 
-install:
-	brew install node terraform fswatch yarn parallel
-	brew cask install docker
-	yarn install
+watch-js-app:
+	fswatch --verbose -0 $(apppath)/js/*.js | xargs -0 -I {} make watch-build-js-app
+
+watch-js-app-sri:
+	fswatch --verbose -0 $(publicdist)/main.min.js | xargs -0 -I {} python ./scripts/sri_resource.py "$(publicdist)/main.min.js"
+
+watch-js:
+	parallel --ungroup ::: "make watch-js-app" "make watch-js-app-sri"
+
+build-django-collectstatic:
+	python manage.py collectstatic --noinput
+
+build-all-sri:
+	find $(public)/core/*.css -exec python ./scripts/sri_resource.py {} \;
+	find $(public)/core/*.js -exec python ./scripts/sri_resource.py {} \;
+
+build-static:
+	make build-css build-js build-django-collectstatic build-all-sri
+
+##################################################
+# POSTGRES & DJANGO DB
+##################################################
 
 migrate:
-	sudo docker-compose exec django python manage.py makemigrations progress_core
-	sudo docker-compose exec django python manage.py migrate
+	python manage.py makemigrations progress_core
+	python manage.py migrate
 
 dbload:
-	sudo docker-compose exec django python manage.py loaddata data/all.json
+	python manage.py loaddata data/all.json
 
-dbloadmodel:
-	sudo docker-compose exec django python manage.py loaddata data/$(MODEL).json
+dbload-model:
+	python manage.py loaddata data/$(model).json
+
+dbload-fixtures:
+	ls progressinator/core/fixtures/ | xargs -I {} python manage.py loaddata {}
 
 dbdump:
-	sudo docker-compose exec django python manage.py dumpdata --indent=2 -o data/all.json progress_core
+	python manage.py dumpdata --indent=2 -o data/all.json progress_core
 
-dbdumpmodel:
-	sudo docker-compose exec django python manage.py dumpdata --indent=2 -o data/$(MODEL).json progress_core.$(MODEL)
+dbdump-model:
+	python manage.py dumpdata --indent=2 -o data/$(model).json progress_core.$(model)
+
+dbdump-fixture:
+	python manage.py dumpdata --indent=2 -o $(apppath)/core/fixtures/$(model).json progress_core.$(model)
 
 django-super-user:
-	sudo docker-compose exec django python manage.py createsuperuser
+	python manage.py createsuperuser
 
-debug:
-	# https://blog.lucasferreira.org/howto/2017/06/03/running-pdb-with-docker-and-gunicorn.html
-	# Ctrl P + Ctrl Q
-	sudo docker attach progressinator_django_1
+##################################################
+# HEROKU
+##################################################
 
-docker-shell:
-	sudo docker exec -it progressinator_django_1 bash
-
-docker-clean:
-	sudo docker system prune -f
-	sudo docker system prune -f --volumes
-
-heroku:
+heroku-setup:
 	# https://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
 	heroku create --buildpack https://github.com/heroku/heroku-buildpack-python
 
-	heroku buildpacks:add --index 1 heroku/nodejs
-	heroku buildpacks:add --index 2 heroku/python
+	heroku buildpacks:add heroku/nodejs
+	heroku buildpacks:add heroku/python
 
-	heroku addons:create heroku-postgresql:hobby-dev
-	heroku pg:promote DATABASE_URL
+	heroku addons:create --wait heroku-postgresql:hobby-dev
+	heroku pg:backups schedule --at '02:00 America/Toronto' DATABASE_URL
 
 	heroku config:set PYTHONHASHSEED=random
+	heroku config:set PYTHONIOENCODING=utf8
 	heroku config:set WEB_CONCURRENCY=4
+	heroku config:set DISABLE_COLLECTSTATIC=1
 	heroku config:set DJANGO_DEBUG=False
 	heroku config:set DJANGO_SETTINGS_MODULE=config.settings.prod
 	heroku config:set DJANGO_SECRET_KEY="$(openssl rand -base64 64)"
 	heroku config:set DJANGO_ADMIN_URL="$(openssl rand -base64 4096 | tr -dc 'A-HJ-NP-Za-km-z2-9' | head -c 32)/"
+
+	git push heroku
+
+	heroku ps:resize web=hobby
+	heroku certs:auto:enable
+	heroku domains:add progress.learn-the-web.algonquindesign.ca
 
 heroku-migrate:
 	heroku run python manage.py migrate
@@ -109,12 +157,18 @@ heroku-migrate:
 heroku-django-super-user:
 	heroku run python manage.py createsuperuser
 
-heroku-push-local-db:
-	heroku pg:push DATABASE_URL postgresql-fluffy-48259 --app learn-the-web-progress
+heroku-db-push:
+	heroku pg:push postgres://localhost:5432/progressinator DATABASE_URL --app learn-the-web-progress
 
-heroku-pull-remote-db:
-	heroku pg:pull postgresql-fluffy-48259 DATABASE_URL --app learn-the-web-progress
+heroku-db-pull:
+	heroku pg:pull DATABASE_URL postgres://localhost:5432/progressinator --app learn-the-web-progress
 
-heroku-schedule-db-backup:
-	# https://devcenter.heroku.com/articles/heroku-postgres-backups
-	heroku pg:backups:schedule DATABASE_URL --at '02:00 America/Toronto' --app learn-the-web-progress
+heroku-rebuild:
+	git commit --allow-empty -m 'empty commit' && git push heroku master
+
+##################################################
+# FUN
+##################################################
+
+cloc:
+	cloc --exclude-dir=node_modules,public,public-dist,__pycache__,data --exclude-ext=lock,json .

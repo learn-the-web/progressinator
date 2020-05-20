@@ -1,0 +1,5 @@
+# For local running of the application
+
+release: python manage.py migrate
+
+web: gunicorn --config=python:config.gunicorn_dev config.wsgi:application

@@ -1,7 +1,15 @@
 # Application
 public/*
 public-dist/*
+progressinator/js-vendor/*.js
 *.min.css
+/data
+/scenario.json
+/log.json
+/config/certs/*.pem
+/config/sri.json
+*.pid
+.vscode
 data
 config/courses
 
@@ -22,6 +30,7 @@ env
 node_modules
 npm-debug.log
 vendor
+.markbot.yml
 
 # Temporary files
 tmp

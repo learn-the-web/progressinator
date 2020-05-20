@@ -1,0 +1,57 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v2.5.0"
+    hooks:
+      - id: check-added-large-files
+      - id: check-byte-order-marker
+      - id: check-case-conflict
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: name-tests-test
+        args: ["--django"]
+      - id: trailing-whitespace
+  - repo: https://github.com/Lucas-C/pre-commit-hooks
+    rev: "v1.1.7"
+    hooks:
+      - id: remove-crlf
+      - id: remove-tabs
+  - repo: https://github.com/psf/black
+    rev: "19.10b0"
+    hooks:
+      - id: black
+  - repo: https://github.com/prettier/prettier
+    rev: "1.19.1"
+    hooks:
+      - id: prettier
+        exclude_types: ["html"]
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: "3.7.9"
+    hooks:
+      - id: flake8
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: "v6.8.0"
+    hooks:
+      - id: eslint
+  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
+    rev: "0.0.2"
+    hooks:
+      - id: stylelint
+        additional_dependencies:
+          [
+            "stylelint",
+            "stylelint-config-standard",
+            "stylelint-config-recommended",
+            "stylelint-config-prettier",
+          ]
+  - repo: https://github.com/adrienverge/yamllint
+    rev: "v1.20.0"
+    hooks:
+      - id: yamllint
+  - repo: https://github.com/markdownlint/markdownlint
+    rev: "v0.8.0"
+    hooks:
+      - id: markdownlint
