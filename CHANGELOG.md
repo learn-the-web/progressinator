@@ -7,6 +7,22 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.8.4] — 2019-09-30
 
+### Added
+
+- Added user impersonation to allow a more fluid ability to see student grades.
+
+### Changed
+
+- Upgraded all dependencies & ditched Docker (it was more complex than useful).
+
+### Fixed
+
+- Fixed a few grade view bugs to allow sections that don’t exist—especially useful for remote, user-driven courses.
+
+---
+
+## [2.8.4] — 2019-09-30
+
 ### Fixed
 
 - Fixed the links to each week: the numbers below 10 were missing the 0 prefix.
@@ -88,7 +104,6 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Fixed some spacing around elements on smaller screen sizes.
-
 
 ---
 
