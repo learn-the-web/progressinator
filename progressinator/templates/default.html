@@ -4,7 +4,7 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>{{doc_title}} · Progress · Learn the Web</title>
+  <title>{% block doc_title %}{% endblock %}{{doc_title}} · Progress · Learn the Web</title>
   {% include 'shared/head.html' %}
   <link href="{% static 'core/main.min.css' %}" rel="stylesheet">
 </head>
@@ -22,6 +22,10 @@
       {% include 'shared/markbot.html' %}
     {% endif %}
   </main>
+
+  {% if user.is_impersonate %}
+    {% include 'shared/stop-impersonate.html' %}
+  {% endif %}
 
   {% include 'shared/footer.html' %}
 

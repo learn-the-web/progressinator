@@ -1,0 +1,42 @@
+{% extends 'default.html' %}
+
+{% load tz %}
+{% load static %}
+{% load data %}
+{% load grades %}
+
+{% block doc_title %}Find user to impersonate{% endblock %}
+
+{% block wrapper %}
+  <div class="max-length gutter pad-b pad-t">
+    <h1>Find user to impersonate</h1>
+
+    <form class="impersonate-search push" action="{% url 'impersonate-search' %}" method="GET">
+      <div class="">
+        <label for="q">Find user by name</label>
+        <input id="q" name="q" value="{% if query %}{{ query }}{% endif %}">
+      </div>
+      {{redirect_field}}
+      <button class="btn milli" type="submit">Search</button>
+    </form>
+
+    {% if query and page.object_list %}
+      <hr>
+      <h2 class="push-0">Select user to impersonate…</h2>
+      <h3 class="color-grey-dark not-bold italic">Page: {{ page_number }}</h3>
+      <ul>
+        {% for user in page.object_list %}
+          <li><a href="{% url 'impersonate-start' user.pk %}{{redirect}}">{{ user }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if query and page.has_previous %}
+      <a class="btn nano btn-muted" href="{% url 'impersonate-search' %}?page={{ page.previous_page_number }}&q={{ query|urlencode }}">Previous Page</a>
+    {% endif %}
+
+    {% if query and page.has_next %}
+      <a class="btn nano btn-muted" href="{% url 'impersonate-search' %}?page={{ page.next_page_number }}&q={{ query|urlencode }}">Next Page</a>
+    {% endif %}
+  </div>
+{% endblock %}

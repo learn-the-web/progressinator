@@ -26,7 +26,7 @@ start-server:
 	heroku local --port=8000 --procfile=Procfile.dev
 
 watch-django-templates:
-	fswatch --verbose -0 --recursive $(apppath)/templates/* $(apppath)/patterns/* $(apppath)/core/templates/* | xargs -0 -I {} cat .gunicorn.pid | xargs -n 1 -I [] kill -HUP []
+	fswatch --verbose -0 --recursive $(apppath)/templates/* $(apppath)/templates/*/* $(apppath)/patterns/* $(apppath)/core/templates/* | xargs -0 -I {} cat .gunicorn.pid | xargs -n 1 -I [] kill -HUP []
 
 start:
 	parallel --ungroup ::: "make start-server" "make watch-django-templates"

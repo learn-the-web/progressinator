@@ -13,8 +13,8 @@
 .btn-edit-single-grade {
   display: inline;
   padding: 0;
-  border-bottom: .15em solid color(#000 alpha(20%));
-  color: rgba(0, 0, 0, .7);
+  border-bottom: 0.15em solid color(#000 alpha(20%));
+  color: rgba(0, 0, 0, 0.7);
   line-height: 1.2;
 }
 
@@ -24,10 +24,10 @@
 }
 
 .btn-invisible-bright {
-  color: rgba(255, 255, 255, .8);
-  margin-right: .5em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-right: 0.5em;
   padding: 0;
-  border-bottom: .15em solid color(#fff alpha(20%));
+  border-bottom: 0.15em solid color(#fff alpha(20%));
   line-height: 1.2;
 }
 
@@ -42,10 +42,6 @@
 
 .section-muted-medium .class-heading {
   border-color: #63666a;
-}
-
-.marking-scheme {
-
 }
 
 .marking-scheme-total {
@@ -65,21 +61,19 @@
 }
 
 .assessment-item-past-due + .assessment-item-pre-due {
-  border-top: .2em dotted #63666a;
+  border-top: 0.2em dotted #63666a;
 }
 
 .assessment-item-past-due + .assessment-item-pre-due::before {
   content: "Today";
   left: 50%;
   margin: 0;
-  padding: .2em 1em;
+  padding: 0.2em 1em;
   position: absolute;
   top: -1em;
   width: auto;
-
   background-color: #f5f2f0;
   transform: translateX(-50%);
-
   color: #63666a;
   font-size: 60%;
   font-weight: bold;
@@ -94,7 +88,7 @@
 .assessment-title .icon {
   position: absolute;
   left: 0;
-  top: .2em;
+  top: 0.2em;
 }
 
 .assessment-details {
@@ -113,13 +107,12 @@
 .assessment-details summary::before {
   content: " ";
   position: absolute;
-  left: -.9em;
-  height: .8em;
-  width: .8em;
-  top: .25em;
-
-  background: inline("../img-embed/details-triangle.svg") no-repeat center center / contain transparent;
-
+  left: -0.9em;
+  height: 0.8em;
+  width: 0.8em;
+  top: 0.25em;
+  background: inline("../img-embed/details-triangle.svg") no-repeat center center /
+    contain transparent;
   list-style-type: none;
 }
 
@@ -128,15 +121,15 @@
 }
 
 .assessment-details-comments {
-  margin-left: .2em;
-  padding-left: .4em;
-  border-left: .15em solid #d9d8e3;
+  margin-left: 0.2em;
+  padding-left: 0.4em;
+  border-left: 0.15em solid #d9d8e3;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
 #api-token {
-  padding: .2em .4em;
+  padding: 0.2em 0.4em;
   height: auto;
 }
 
@@ -146,15 +139,11 @@
 
 .grade-statuses tr:hover,
 .assessment-statuses tr:hover {
-  background-color: rgba(0, 0, 0, .05);
-}
-
-.grade-status-failing {
-
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .grade-item-grade-icon {
-  transform: translateY(-.1em) scale(.8);
+  transform: translateY(-0.1em) scale(0.8);
 }
 
 .grade-projected-excellent,
@@ -178,7 +167,7 @@
 }
 
 .grade-actual-highlight-low {
-  border-bottom: .05em dotted var(--color-fail-dark);
+  border-bottom: 0.05em dotted var(--color-fail-dark);
 }
 
 .assessment-statuses {
@@ -193,9 +182,9 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  background-color: rgba(255, 255, 255, .6);
-  border: .15em solid #d9d8e3;
-  border-radius: .2em;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 0.15em solid #d9d8e3;
+  border-radius: 0.2em;
 }
 
 .grade-form:focus-within {
@@ -203,7 +192,7 @@
 }
 
 .grade-form label {
-  padding: 0 .5em;
+  padding: 0 0.5em;
   font-style: italic;
 }
 
@@ -213,11 +202,10 @@
 .grade-form textarea {
   background-color: transparent;
   border: 0;
-  /*width: auto;*/
 }
 
-.grade-form input[type="text"]:focus ,
-.grade-form input[type="number"]:focus ,
+.grade-form input[type="text"]:focus,
+.grade-form input[type="number"]:focus,
 .grade-form select:focus,
 .grade-form textarea:focus {
   border: 0;
@@ -239,12 +227,12 @@
   align-items: baseline;
   justify-content: space-between;
   position: relative;
-  border-radius: .2em;
+  border-radius: 0.2em;
 }
 
 .grade-form-item:focus-within,
 .grade-form-comment:focus-within {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, .6);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
 
@@ -269,9 +257,9 @@
 }
 
 .grade-form-item-checkbox label::before {
-  transform: scale(.7);
-  border-radius: .2em;
-  border-width: .2em;
+  transform: scale(0.7);
+  border-radius: 0.2em;
+  border-width: 0.2em;
   border-color: #63666a;
 }
 
@@ -282,7 +270,7 @@
 .grade-form-sep {
   width: 100%;
   margin: 0;
-  border-top: .15em solid #d9d8e3;
+  border-top: 0.15em solid #d9d8e3;
 }
 
 .grade-form-actions {
@@ -291,13 +279,12 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-
   background-color: #00675a;
   box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .grade-form-actions .btn[disabled] {
-  opacity: .7;
+  opacity: 0.7;
   pointer-events: none;
 }
 
@@ -309,18 +296,14 @@
 
 #grade-actions-default {
   width: 3em;
-  border-radius: .2em;
+  border-radius: 0.2em;
   border: 0;
   color: #000;
 }
 
-.course-section-list {
-
-}
-
 .course-section-btn {
   color: #4484c2;
-  border-bottom: .15em solid #fff;
+  border-bottom: 0.15em solid #fff;
 }
 
 .course-section-btn-muted {
@@ -333,7 +316,7 @@
 }
 
 .course-section-btn[aria-pressed="true"] {
-  border-color: currentcolor;
+  border-color: currentColor;
 }
 
 .course-email-links {
@@ -341,12 +324,10 @@
 }
 
 @media only screen and (min-width: 80em) {
-
   .grade-statuses-scroll,
   .assessment-statuses-scroll {
     overflow: visible;
   }
-
 }
 
 .student-controls {
@@ -382,7 +363,6 @@
 }
 
 @media only screen and (min-width: 38em) {
-
   .student-controls-list {
     display: block;
   }
@@ -390,15 +370,12 @@
   .student-controls-course {
     display: block;
   }
-
 }
 
 @media only screen and (min-width: 50em) {
-
   .student-controls-section {
     display: block;
   }
-
 }
 
 .progress-meter {
@@ -408,11 +385,9 @@
 }
 
 @media only screen and (min-width: 60em) {
-
   .progress-meter {
     display: block;
   }
-
 }
 
 .progress-arrow {
@@ -421,4 +396,27 @@
   height: 100%;
   width: 42px;
   left: 100%;
+}
+
+.impersonate-toolbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.impersonate-btn {
+  background-color: #000;
+  border-color: #000;
+  border-radius: 0.4em 0.4em 0 0;
+}
+
+.impersonate-search {
+  display: flex;
+  align-items: flex-end;
+}
+
+.impersonate-search div {
+  flex-grow: 1;
+  margin-right: 1em;
 }

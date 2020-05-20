@@ -41,6 +41,7 @@ THIRD_PARTY_APPS = [
     "social_django",
     "rest_framework",
     "rest_framework.authtoken",
+    "impersonate",
 ]
 LOCAL_APPS = [
     "progressinator.core",
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "impersonate.middleware.ImpersonateMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]

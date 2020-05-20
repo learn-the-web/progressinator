@@ -14,21 +14,27 @@
           {% if request.user.is_staff %}
             <li>
               <a class="btn btn-ghost micro {% if nav_current == 'teachers' %}nav-current{% endif %}" href="{% url 'core:teacher_courses' %}">
-                <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-star" /></svg></i>
+                <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-star"></use></svg></i>
                 <span class="icon-label">Teachers</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn btn-ghost micro" href="{% url 'impersonate-search' %}">
+                <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-pair"></use></svg></i>
+                <span class="icon-label">Impersonate</span>
               </a>
             </li>
           {% endif %}
           <li>
             <a class="btn btn-ghost micro {% if nav_current == 'courses' %}nav-current{% endif %}" href="{% url 'core:courses' %}">
-              <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-nav" /></svg></i>
+              <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-nav"></use></svg></i>
               <span class="icon-label">{% if request.user.is_staff %}Student View{% else %}Courses{% endif %}</span>
             </a>
           </li>
           <li>
             <a class="btn btn-ghost micro {% if nav_current == 'profile' %}nav-current{% endif %}" href="{% url 'core:profile' %}">
-              <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-user" /></svg></i>
-              <span class="icon-label">{{username}}</span>
+              <i class="icon i-16 push-r-1-4"><svg><use xlink:href="#icon-user"></use></svg></i>
+              <span class="icon-label">{{request.user.username}}</span>
             </a>
           </li>
         </ul>
