@@ -128,10 +128,12 @@ django-super-user:
 
 heroku-setup:
 	# https://cookiecutter-django.readthedocs.io/en/latest/deployment-on-heroku.html
-	heroku create --buildpack https://github.com/heroku/heroku-buildpack-python
+	heroku create learn-the-web-progress
 
-	heroku buildpacks:add heroku/nodejs
+	heroku git:remote -a learn-the-web-progress
+
 	heroku buildpacks:add heroku/python
+	heroku buildpacks:add heroku/nodejs
 
 	heroku addons:create --wait heroku-postgresql:hobby-dev
 	heroku pg:backups schedule --at '02:00 America/Toronto' DATABASE_URL
@@ -143,7 +145,7 @@ heroku-setup:
 	heroku config:set DJANGO_DEBUG=False
 	heroku config:set DJANGO_SETTINGS_MODULE=config.settings.prod
 	heroku config:set DJANGO_SECRET_KEY="$(openssl rand -base64 64)"
-	heroku config:set DJANGO_ADMIN_URL="$(openssl rand -base64 4096 | tr -dc 'A-HJ-NP-Za-km-z2-9' | head -c 32)/"
+	heroku config:set DJANGO_ALLOWED_HOST=progress.learn-the-web.algonquindesign.ca
 
 	git push heroku
 
