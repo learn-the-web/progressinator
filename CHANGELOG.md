@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.9.2] — 2020-05-21
+
+### Fixed
+
+- Change the session cookie samesite policy to “Lax” to make SocialAuth work properly.
+
+---
+
 ## [2.9.1] — 2020-05-20
 
 ### Fixed
