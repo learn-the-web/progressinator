@@ -9,7 +9,6 @@ import environ
 env = environ.Env()
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
-
 root = environ.Path(__file__) - 3
 SITE_ROOT = root()
 APPS_DIR = root.path("progressinator/")
@@ -100,6 +99,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 ##################################################
 # LOGGING

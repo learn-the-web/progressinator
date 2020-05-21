@@ -146,6 +146,7 @@ heroku-setup:
 	heroku config:set DJANGO_SETTINGS_MODULE=config.settings.prod
 	heroku config:set DJANGO_SECRET_KEY="$(openssl rand -base64 64)"
 	heroku config:set DJANGO_ALLOWED_HOST=progress.learn-the-web.algonquindesign.ca
+	# heroku config:set SENTRY_DSN=
 
 	git push heroku
 
