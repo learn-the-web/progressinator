@@ -5,6 +5,14 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
+## [2.9.3] — 2020-05-21
+
+### Fixed
+
+- Remove Postgres, Gunicorn, Gevent connection pooling—SocialAuth creates SSL recursion errors.
+
+---
+
 ## [2.9.2] — 2020-05-21
 
 ### Fixed
