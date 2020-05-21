@@ -134,14 +134,7 @@ LOGGING = {
 DATABASES = {
     "default": env.db(),
 }
-# Setup for Gevent connection pooling
-# https://github.com/jneight/django-db-geventpool
-# https://medium.com/@bfirsh/squeezing-every-drop-of-performance-out-of-a-django-app-on-heroku-4b5b1e5a3d44
-DATABASES["default"]["ENGINE"] = "django_db_geventpool.backends.postgresql_psycopg2"
-DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=0)
-DATABASES["default"]["OPTIONS"] = {
-    "MAX_CONNS": 24,
-}
+DATABASES["default"]["CONN_MAX_AGE"] = env.int("CONN_MAX_AGE", default=500)
 
 
 ##################################################
@@ -207,6 +200,8 @@ CSRF_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = "Strict"
 
+SOCIAL_AUTH_SANITIZE_REDIRECTS = True
+SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 SOCIAL_AUTH_GITHUB_KEY = env("SOCIAL_AUTH_GITHUB_KEY")
 SOCIAL_AUTH_GITHUB_SECRET = env("SOCIAL_AUTH_GITHUB_SECRET")
