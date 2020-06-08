@@ -677,7 +677,7 @@ def assessment_grades(request, term_id, course_id, assessment_id):
         grade_info["assessment_each_algonquin"] = assessment[
             "assessment_each_algonquin"
         ]
-        if student.current_section:
+        if student.current_section and "due_dates_algonquin" in assessment:
             grade_info["user_due_date_algonquin"] = pendulum.parse(
                 assessment["due_dates_algonquin"][student.current_section]
             )
