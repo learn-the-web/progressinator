@@ -35,6 +35,8 @@ test:
 	pytest
 
 copy-courses:
+	cp /db/learn-the-web/www/_site/courses/web-design-1/course.json ./config/courses/web-design-1.json
+	cp /db/learn-the-web/www/_site/courses/web-design-2/course.json ./config/courses/web-design-2.json
 	cp /db/learn-the-web/www/_site/courses/web-dev-1/course.json ./config/courses/web-dev-1.json
 	cp /db/learn-the-web/www/_site/courses/web-dev-2/course.json ./config/courses/web-dev-2.json
 	cp /db/learn-the-web/www/_site/courses/web-dev-3/course.json ./config/courses/web-dev-3.json
