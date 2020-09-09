@@ -63,7 +63,9 @@ def crud_grades(request, user_grades, assessment_uri_index=None, user_id_index=N
             "user_id": int(post_user_id[i]),
             "submitted_by": strip_tags(post_submitted_by[i].strip()),
             "excuse_lateness": post_excuse_lateness[i],
-            "details": {"comment": post_comments[i].strip(),},
+            "details": {
+                "comment": post_comments[i].strip(),
+            },
         }
 
         if post_grade[i].strip() != "":
@@ -144,6 +146,8 @@ def courses(request):
     total_courses_in_current_term = 0
     terms = Term.objects.filter(end_date__gte=datetime.date(1982, 10, 28))
     courses = Course.objects.filter(term__in=terms)
+    top_courses = []
+    bottom_courses = []
 
     for term in terms:
         if pendulum.now() >= pendulum.instance(
@@ -156,13 +160,16 @@ def courses(request):
     if current_term:
         for course in courses:
             if course.term_id == current_term.id:
+                top_courses.append(course)
                 total_courses_in_current_term += 1
+            else:
+                bottom_courses.append(course)
 
     context = {
         "app_version": settings.APP_PKG["version"],
         "doc_title": "Courses · Teachers",
         "username": request.user.username,
-        "courses": courses,
+        "courses": [*top_courses, *bottom_courses],
         "nav_current": "teachers",
         "h1_title": "Teachers ·",
         "hide_markbot": True,
