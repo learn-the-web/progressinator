@@ -62,6 +62,7 @@
 
 .assessment-item-past-due + .assessment-item-pre-due {
   border-top: 0.2em dotted #63666a;
+  padding-top: 0.7rem;
 }
 
 .assessment-item-past-due + .assessment-item-pre-due::before {
