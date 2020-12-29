@@ -63,9 +63,7 @@ def crud_grades(request, user_grades, assessment_uri_index=None, user_id_index=N
             "user_id": int(post_user_id[i]),
             "submitted_by": strip_tags(post_submitted_by[i].strip()),
             "excuse_lateness": post_excuse_lateness[i],
-            "details": {
-                "comment": post_comments[i].strip(),
-            },
+            "details": {"comment": post_comments[i].strip(),},
         }
 
         if post_grade[i].strip() != "":
@@ -157,13 +155,12 @@ def courses(request):
         ):
             current_term = term
 
-    if current_term:
-        for course in courses:
-            if course.term_id == current_term.id:
-                top_courses.append(course)
-                total_courses_in_current_term += 1
-            else:
-                bottom_courses.append(course)
+    for course in courses:
+        if current_term and course.term_id == current_term.id:
+            top_courses.append(course)
+            total_courses_in_current_term += 1
+        else:
+            bottom_courses.append(course)
 
     context = {
         "app_version": settings.APP_PKG["version"],
