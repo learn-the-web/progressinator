@@ -164,7 +164,7 @@ def courses(request):
 
     context = {
         "app_version": settings.APP_PKG["version"],
-        "doc_title": "Courses · Teachers",
+        "doc_title": "Courses · Teachers",
         "username": request.user.username,
         "courses": [*top_courses, *bottom_courses],
         "nav_current": "teachers",
@@ -260,7 +260,7 @@ def course_status(request, term_id, course_id):
 
     context = {
         "app_version": settings.APP_PKG["version"],
-        "doc_title": f"{course.data['title']} · Teachers",
+        "doc_title": f"{course.data['title']} · Teachers",
         "username": request.user.username,
         "nav_current": "teachers",
         "h1_title": f"{course.data['title']} ·",
@@ -509,7 +509,7 @@ def user_grades(request, term_id, course_id, user_id):
 
     context = {
         "app_version": settings.APP_PKG["version"],
-        "doc_title": f"{student_profile.user.first_name} {student_profile.user.last_name} · Teachers",
+        "doc_title": f"{student_profile.user.first_name} {student_profile.user.last_name} · Teachers",
         "username": request.user.username,
         "submitted_by": f"{request.user.first_name} {request.user.last_name}",
         "github_username": student_profile.user.username,
@@ -710,7 +710,7 @@ def assessment_grades(request, term_id, course_id, assessment_id):
 
     context = {
         "app_version": settings.APP_PKG["version"],
-        "doc_title": f"{assessment['name']} · Teachers",
+        "doc_title": f"{assessment['name']} · Teachers",
         "username": request.user.username,
         "submitted_by": f"{request.user.first_name} {request.user.last_name}",
         "nav_current": "teachers",
