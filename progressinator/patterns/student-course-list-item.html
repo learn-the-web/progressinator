@@ -23,7 +23,7 @@
           <span class="pin-c zetta brand-dark bold">{% if grades|get_course_grade:course.slug|pretty_percent_raw > 100 %}100{% else %}{{grades|get_course_grade:course.slug|pretty_percent_raw|floatformat:'0'}}{% endif %}</span>
         </div>
         <div class="grid grid-middle">
-          <div class="unit [ xs-1-2 ]">
+          <div class="unit [ xs-2-3 ]">
             <div class="push-1-4">
               <h2 class="{% if is_current %}exa{% else %}tera{% endif %} ib push-0"><a href="{% url 'core:grades' course_id=course.slug %}">{{course.data.title}}</a></h2>
               {% if course.slug in user_profiles_details %}
@@ -40,7 +40,7 @@
               {% endif %}
             </div>
           </div>
-          <div class="unit [ xs-1-2 ] text-right">
+          <div class="unit [ xs-1-3 ] text-right">
             <a class="btn btn-muted {% if is_current %}milli{% else %}nano{% endif %}" href="{% url 'core:grades' course_id=course.slug %}" aria-label="View {{course.data.title}} progress">
               <span class="icon-label">View progress</span>
               <i class="icon i-20 i-shift-right"><svg><use xlink:href="#icon-right"></use></svg></i>
