@@ -1,6 +1,6 @@
 {
   "name": "progressinator",
-  "version": "2.9.8",
+  "version": "2.9.9",
   "author": "Thomas J Bradley <hey@thomasjbradley.ca>",
   "engines": {
     "node": "14.x",
