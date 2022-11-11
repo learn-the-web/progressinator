@@ -147,14 +147,14 @@ heroku-setup:
 	heroku config:set DJANGO_DEBUG=False
 	heroku config:set DJANGO_SETTINGS_MODULE=config.settings.prod
 	heroku config:set DJANGO_SECRET_KEY="$(openssl rand -base64 64)"
-	heroku config:set DJANGO_ALLOWED_HOST=progress.learn-the-web.algonquindesign.ca
+	heroku config:set DJANGO_ALLOWED_HOST=progress.learntheweb.courses
 	# heroku config:set SENTRY_DSN=
 
 	git push heroku
 
 	heroku ps:resize web=hobby
 	heroku certs:auto:enable
-	heroku domains:add progress.learn-the-web.algonquindesign.ca
+	heroku domains:add progress.learntheweb.courses
 
 heroku-migrate:
 	heroku run python manage.py migrate

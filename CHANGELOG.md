@@ -5,7 +5,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.9.3] — 2020-05-21
+## [2.9.3] — 2020-05-21
 
 ### Fixed
 
@@ -13,7 +13,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.9.2] — 2020-05-21
+## [2.9.2] — 2020-05-21
 
 ### Fixed
 
@@ -21,7 +21,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.9.1] — 2020-05-20
+## [2.9.1] — 2020-05-20
 
 ### Fixed
 
@@ -29,7 +29,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.9.0] — 2020-05-20
+## [2.9.0] — 2020-05-20
 
 ### Added
 
@@ -45,7 +45,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.8.4] — 2019-09-30
+## [2.8.4] — 2019-09-30
 
 ### Fixed
 
@@ -53,7 +53,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.8.3] — 2019-09-18
+## [2.8.3] — 2019-09-18
 
 ### Fixed
 
@@ -61,7 +61,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.8.2] — 2019-09-18
+## [2.8.2] — 2019-09-18
 
 ### Fixed
 
@@ -90,7 +90,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.8] — 2019-09-05
+## [2.7.8] — 2019-09-05
 
 ### Fixed
 
@@ -99,7 +99,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.7] — 2019-09-03
+## [2.7.7] — 2019-09-03
 
 ### Changed
 
@@ -107,7 +107,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.6] — 2019-09-03
+## [2.7.6] — 2019-09-03
 
 ### Changed
 
@@ -115,7 +115,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.5] — 2019-09-03
+## [2.7.5] — 2019-09-03
 
 ### Fixed
 
@@ -123,7 +123,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.4] — 2019-08-27
+## [2.7.4] — 2019-08-27
 
 ### Fixed
 
@@ -131,7 +131,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.3] — 2019-08-26
+## [2.7.3] — 2019-08-26
 
 ### Fixed
 
@@ -139,7 +139,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.2] — 2019-08-26
+## [2.7.2] — 2019-08-26
 
 ### Fixed
 
@@ -147,7 +147,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.1] — 2019-08-26
+## [2.7.1] — 2019-08-26
 
 ### Fixed
 
@@ -155,7 +155,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.7.0] — 2019-08-26
+## [2.7.0] — 2019-08-26
 
 ### Added
 
@@ -170,7 +170,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.6.2] — 2019-05-07
+## [2.6.2] — 2019-05-07
 
 ### Fixed
 
@@ -203,7 +203,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.4.0] — 2019-04-18
+## [2.4.0] — 2019-04-18
 
 ### Added
 
@@ -220,7 +220,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.3.0] — 2019-04-10
+## [2.3.0] — 2019-04-10
 
 ### Added
 
@@ -236,7 +236,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.2.0] — 2019-04-08
+## [2.2.0] — 2019-04-08
 
 ### Added
 
@@ -253,7 +253,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.1.0] — 2019-01-12
+## [2.1.0] — 2019-01-12
 
 ### Added
 
@@ -261,7 +261,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [2.0.0] — 2019-01-06
+## [2.0.0] — 2019-01-06
 
 ### Changed
 
@@ -270,7 +270,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.10.0] — 2019-01-05
+## [1.10.0] — 2019-01-05
 
 ### Added
 
@@ -286,7 +286,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.9.0] — 2018-12-21
+## [1.9.0] — 2018-12-21
 
 ### Added
 
@@ -302,7 +302,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.8.1] — 2018-12-10
+## [1.8.1] — 2018-12-10
 
 ### Fixed
 
@@ -310,7 +310,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.8.0] — 2018-12-10
+## [1.8.0] — 2018-12-10
 
 ### Added
 
@@ -318,7 +318,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.7.5] — 2018-12-06
+## [1.7.5] — 2018-12-06
 
 ### Fixed
 
@@ -326,7 +326,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.7.4] — 2018-12-06
+## [1.7.4] — 2018-12-06
 
 ### Changed
 
@@ -335,7 +335,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.7.3] — 2018-12-06
+## [1.7.3] — 2018-12-06
 
 ### Fixed
 
@@ -344,7 +344,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.7.2] — 2018-12-06
+## [1.7.2] — 2018-12-06
 
 ### Fixed
 
@@ -352,7 +352,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.7.1] — 2018-11-22
+## [1.7.1] — 2018-11-22
 
 ### Fixed
 
@@ -360,7 +360,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.7.0] — 2018-11-20
+## [1.7.0] — 2018-11-20
 
 ### Added
 
@@ -368,7 +368,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.6.3] — 2018-11-19
+## [1.6.3] — 2018-11-19
 
 ### Added
 
@@ -383,7 +383,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.6.2] — 2018-11-03
+## [1.6.2] — 2018-11-03
 
 ### Changed
 
@@ -391,7 +391,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.6.1] — 2018-10-25
+## [1.6.1] — 2018-10-25
 
 ### Fixed
 
@@ -399,7 +399,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.6.0] — 2018-10-25
+## [1.6.0] — 2018-10-25
 
 ### Added
 
@@ -407,7 +407,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.5.3] — 2018-10-22
+## [1.5.3] — 2018-10-22
 
 ### Changed
 
@@ -419,7 +419,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.5.2] — 2018-10-22
+## [1.5.2] — 2018-10-22
 
 ### Fixed
 
@@ -427,7 +427,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.5.1] — 2018-10-21
+## [1.5.1] — 2018-10-21
 
 ### Changed
 
@@ -435,7 +435,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.5.0] — 2018-10-21
+## [1.5.0] — 2018-10-21
 
 ### Added
 
@@ -455,7 +455,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.4.2] — 2018-10-19
+## [1.4.2] — 2018-10-19
 
 ### Changed
 
@@ -476,7 +476,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.4.0] — 2018-10-18
+## [1.4.0] — 2018-10-18
 
 ### Added
 
@@ -489,7 +489,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.3.0] — 2018-10-18
+## [1.3.0] — 2018-10-18
 
 ### Added
 
@@ -501,7 +501,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.2.2] — 2018-10-15
+## [1.2.2] — 2018-10-15
 
 ### Changed
 
@@ -509,7 +509,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.2.1] — 2018-10-09
+## [1.2.1] — 2018-10-09
 
 ### Changed
 
@@ -522,7 +522,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.2.0] — 2018-10-08
+## [1.2.0] — 2018-10-08
 
 ### Added
 
@@ -539,7 +539,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.1.1] — 2018-10-02
+## [1.1.1] — 2018-10-02
 
 ### Fixed
 
@@ -547,7 +547,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.1.0] — 2018-10-02
+## [1.1.0] — 2018-10-02
 
 ### Added
 
@@ -566,7 +566,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.0.2] — 2018-10-01
+## [1.0.2] — 2018-10-01
 
 ### Fixed
 
@@ -574,7 +574,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.0.1] — 2018-09-30
+## [1.0.1] — 2018-09-30
 
 ### Added
 
@@ -590,7 +590,7 @@ Progressinator adheres to [Semantic Versioning](http://semver.org/).
 
 ---
 
-## [1.0.0] — 2018-09-30
+## [1.0.0] — 2018-09-30
 
 ### Added
 

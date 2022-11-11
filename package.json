@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:acgd-learn-the-web/progressinator.git"
+    "url": "git@github.com:ltw-learn-the-web/progressinator.git"
   },
   "bugs": {
-    "url": "https://github.com/acgd-learn-the-web/progressinator/issues"
+    "url": "https://github.com/ltw-learn-the-web/progressinator/issues"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",

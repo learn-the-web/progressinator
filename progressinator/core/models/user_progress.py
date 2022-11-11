@@ -39,9 +39,9 @@ class UserProgress(LifecycleModelMixin, models.Model):
 
     def __str__(self):
         if self.cheated:
-            return f'{self.user.username} — {self.assessment_uri} — {self.grade} — cheated'
+            return f'{self.user.username} — {self.assessment_uri} — {self.grade} — cheated'
         else:
-            return f'{self.user.username} — {self.assessment_uri} — {self.grade}'
+            return f'{self.user.username} — {self.assessment_uri} — {self.grade}'
 
     class Meta:
         verbose_name = "user progress"
